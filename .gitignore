@@ -1,0 +1,6 @@
+# Database esterno (CMaNGOS classic-db), 13 MB: si riscarica da
+# https://github.com/cmangos/classic-db/tree/master/Full_DB
+tools/fonti/
+
+# Cache Python
+tools/__pycache__/
