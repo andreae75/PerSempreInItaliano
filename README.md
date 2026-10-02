@@ -20,8 +20,9 @@ La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco
 
 ## Installazione
 
-1. Copia la cartella `PerSempreInItaliano` in `Interface\AddOns\` del tuo client WoW Forever.
-2. Avvia il gioco e controlla che l'addon sia attivo nella schermata AddOn.
+1. Scarica [PerSempreInItaliano.zip](https://github.com/andreae75/PerSempreInItaliano/releases/latest/download/PerSempreInItaliano.zip) dall'ultima [release](https://github.com/andreae75/PerSempreInItaliano/releases/latest).
+2. Decomprimilo in `Interface\AddOns\` del tuo client WoW Forever: deve comparire la cartella `PerSempreInItaliano`.
+3. Avvia il gioco e controlla che l'addon sia attivo nella schermata AddOn.
 
 Il nome della cartella deve essere `PerSempreInItaliano`, uguale a quello del file `.toc`.
 
