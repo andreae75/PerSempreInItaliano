@@ -5186,6 +5186,7 @@ T[98319] = {
   title = "Mettere in sicurezza la montagna",
   desc = "Già è brutto avere un problema di troll, ma le montagne sono piene zeppe di wendigo! Di solito restano nelle loro caverne, ma si stanno moltiplicando come conigli. Ora hanno invaso la Grizzled Den a nord di qui.$B$BSe vogliamo il rapporto di Whitebeard, dobbiamo trovare il mio compagno Cornelius. Quella testa dura si è entusiasmato troppo ed è entrato a testa bassa. Coraggioso, ma stupido.$B$BEntra nella caverna e scopri dove si trova. E sentiti libero di abbattere qualche bestia, già che ci sei.",
   obj = "Trova Mountaineer Cornelius nella Grizzled Den per conto di Mountaineer Gretchen.",
+  progress = "Novità? Ho detto a Cornelius di non addentrarsi da solo nel Grizzled Den, ma è sempre stato un tipo testardo.",
   en_title = "Secure the Mountain",
   en_obj = "Find Mountaineer Cornelius in the Grizzled Den for Mountaineer Gretchen.",
 }
