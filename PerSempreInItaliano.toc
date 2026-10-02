@@ -4,7 +4,7 @@
 ## Author: Andrea
 ## X-Curse-Project-ID: 1723113
 ## X-Website: https://github.com/andreae75/PerSempreInItaliano
-## Version: 0.5.0
+## Version: 0.5.1
 ## IconTexture: Interface\AddOns\PerSempreInItaliano\Media\Bandiera.tga
 ## SavedVariables: QuestTraduttoreDB
 
