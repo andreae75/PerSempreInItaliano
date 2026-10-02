@@ -599,6 +599,107 @@ end
 ---------------------------------------------------------------------------
 -- Pannello opzioni (Opzioni di gioco -> AddOn -> Quest Traduttore)
 ---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+-- Pannello "Informazioni" (sottocategoria delle opzioni)
+---------------------------------------------------------------------------
+local REPO_URL = "https://github.com/andreae75/PerSempreInItaliano"
+local ISSUES_URL = REPO_URL .. "/issues"
+
+local function Meta(field)
+  local get = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+  return get and get(ADDON, field)
+end
+
+local function CountEntries(t)
+  local n = 0
+  for _ in pairs(t) do n = n + 1 end
+  return n
+end
+
+local function CreateAboutPanel()
+  local panel = CreateFrame("Frame")
+  panel.name = "Informazioni"
+
+  local title = panel:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
+  title:SetPoint("TOPLEFT", 16, -16)
+  title:SetText("Per Sempre in Italiano")
+
+  local flag = panel:CreateTexture(nil, "ARTWORK")
+  flag:SetSize(32, 32)
+  flag:SetPoint("LEFT", title, "RIGHT", 8, 0)
+  flag:SetTexture("Interface\\AddOns\\PerSempreInItaliano\\Media\\Bandiera")
+
+  local info = panel:CreateFontString(nil, "ARTWORK", "GameFontDisableSmall")
+  info:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -2)
+  info:SetText("versione " .. VERSION .. "  ·  autore " .. (Meta("Author") or "?") .. "  ·  licenza MIT")
+
+  local y = -64
+  local function Heading(text)
+    local fs = panel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    fs:SetPoint("TOPLEFT", 16, y)
+    fs:SetText(text)
+    y = y - 22
+  end
+  local function Body(text, font)
+    local fs = panel:CreateFontString(nil, "ARTWORK", font or "GameFontHighlightSmall")
+    fs:SetPoint("TOPLEFT", 16, y)
+    fs:SetWidth(560)
+    fs:SetJustifyH("LEFT")
+    fs:SetSpacing(3)
+    fs:SetText(text)
+    y = y - fs:GetStringHeight() - 16
+    return fs
+  end
+  -- il client non apre link: li mostriamo in un campo da cui si copia con Ctrl+C
+  local function LinkBox(label, url)
+    local l = panel:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+    l:SetPoint("TOPLEFT", 16, y)
+    l:SetText(label)
+    y = y - 18
+    local eb = CreateFrame("EditBox", nil, panel, "InputBoxTemplate")
+    eb:SetSize(430, 22)
+    eb:SetPoint("TOPLEFT", 22, y)
+    eb:SetAutoFocus(false)
+    eb:SetText(url)
+    eb:SetCursorPosition(0)
+    eb:SetScript("OnEditFocusGained", function(self) self:HighlightText() end)
+    eb:SetScript("OnTextChanged", function(self, byUser)
+      if byUser then self:SetText(url) self:HighlightText() end
+    end)
+    eb:SetScript("OnEscapePressed", function(self) self:ClearFocus() end)
+    y = y - 34
+  end
+
+  Heading("Cosa fa")
+  Body("Traduce in italiano le quest e i dialoghi degli NPC di WoW Forever, mostrando la traduzione "
+    .. "in un riquadro accanto alla finestra del gioco, senza toccare il testo originale.")
+
+  Heading("Traduzioni disponibili")
+  local function CountsText()
+    return CountEntries(QuestTraduttoreData) .. " quest e " .. CountEntries(QuestTraduttoreGossip)
+      .. " dialoghi tradotti. Quando manca una traduzione il riquadro mostra \"non tradotta\" "
+      .. "e il testo inglese viene salvato per poterlo tradurre in seguito."
+  end
+  local counts = Body(CountsText())
+  panel:SetScript("OnShow", function() counts:SetText(CountsText()) end)
+
+  Heading("Avviso")
+  Body("|cffffd100Progetto artigianale.|r Questo addon è un hobby fatto in casa da un appassionato, "
+    .. "non un prodotto professionale. Le traduzioni sono parziali e in gran parte prodotte con l'aiuto "
+    .. "di un'intelligenza artificiale (Claude): possono contenere errori, imprecisioni o scelte discutibili. "
+    .. "Lo sviluppo procede quando c'è tempo, senza garanzie di aggiornamenti, tempi o supporto. "
+    .. "Usalo a tuo rischio; segnalazioni e correzioni sono benvenute.", "GameFontHighlight")
+
+  Heading("Link (seleziona e copia con Ctrl+C)")
+  LinkBox("Codice sorgente e download", REPO_URL)
+  LinkBox("Segnalazioni e correzioni", ISSUES_URL)
+
+  Body("Progetto non ufficiale e non affiliato a Blizzard Entertainment. World of Warcraft e WoW Forever "
+    .. "sono marchi di Blizzard Entertainment.", "GameFontDisableSmall")
+
+  return panel
+end
+
 local function CreateOptionsPanel()
   local panel = CreateFrame("Frame")
   panel.name = "Per Sempre in Italiano"
@@ -708,11 +809,17 @@ local function CreateOptionsPanel()
   end
   panel:SetScript("OnShow", panel.RefreshAll)
 
+  local about = CreateAboutPanel()
   if Settings and Settings.RegisterCanvasLayoutCategory then
     local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
+    if Settings.RegisterCanvasLayoutSubcategory then
+      Settings.RegisterCanvasLayoutSubcategory(category, about, about.name)
+    end
     Settings.RegisterAddOnCategory(category)
   elseif InterfaceOptions_AddCategory then
     InterfaceOptions_AddCategory(panel)
+    about.parent = panel.name
+    InterfaceOptions_AddCategory(about)
   end
 
   return panel

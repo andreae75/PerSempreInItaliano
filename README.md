@@ -18,7 +18,7 @@ La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco
 - **Tracker degli obiettivi e tooltip:** i titoli e gli obiettivi delle quest compaiono in italiano.
 - **Segnaposto:** `$N` (nome), `$C` (classe), `$R` (razza) e le forme maschile/femminile (`$Gmaschile:femminile;`) vengono sostituiti con i dati del tuo personaggio.
 - **Raccolta dei testi non tradotti:** quando una quest o un dialogo non ha ancora la traduzione, il riquadro lo dice e l'addon salva il testo inglese, così si può tradurre in seguito.
-- Riquadri spostabili (Shift + trascina), scala regolabile e pannello opzioni in *Opzioni di gioco → AddOn*.
+- Riquadri spostabili (Shift + trascina), scala regolabile e pannello opzioni in *Opzioni di gioco → AddOn*, con una scheda *Informazioni* (versione, numero di traduzioni, avviso sul progetto artigianale e link).
 
 ## Installazione
 
