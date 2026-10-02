@@ -1,0 +1,8 @@
+package-as: PerSempreInItaliano
+
+ignore:
+  - tools
+  - assets
+  - .github
+  - .gitignore
+  - .pkgmeta

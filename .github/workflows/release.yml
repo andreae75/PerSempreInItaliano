@@ -53,3 +53,17 @@ jobs:
             --title "$GITHUB_REF_NAME" \
             --notes-file note.md \
             --generate-notes
+
+  curseforge:
+    # Carica anche su CurseForge. Se fallisce (es. progetto non ancora approvato) la release
+    # su GitHub resta valida: si rilancia dalla scheda Actions.
+    needs: release
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: BigWigsMods/packager@v2
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
