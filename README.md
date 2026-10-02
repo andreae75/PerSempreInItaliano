@@ -4,8 +4,6 @@ Addon per **WoW Forever** (client Classic) che traduce in italiano quest e dialo
 
 La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco, senza toccare il testo originale: puoi leggere l'inglese e l'italiano insieme.
 
-![bandiera](Media/Bandiera.tga)
-
 ## Cosa fa
 
 - **Quest:** descrizione, obiettivi, avanzamento e completamento nella finestra dell'NPC.
