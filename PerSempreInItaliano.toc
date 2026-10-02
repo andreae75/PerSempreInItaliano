@@ -2,7 +2,7 @@
 ## Title: Per Sempre in Italiano
 ## Notes: Traduce quest e dialoghi in italiano per WoW Forever, in un riquadro accanto alla finestra dell'NPC.
 ## Author: Andrea
-## Version: 0.2.0
+## Version: 0.3.0
 ## IconTexture: Interface\AddOns\PerSempreInItaliano\Media\Bandiera.tga
 ## SavedVariables: QuestTraduttoreDB
 
