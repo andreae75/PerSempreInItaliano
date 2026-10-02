@@ -3204,6 +3204,136 @@
     "progress": "Oh, sei tornat$Go:a;, $N! Hai il samophlange?",
     "reward": "È... ehm... interessante... sì. Lo farò spedire al quartier generale del Tinkers' Union a Undermine. Sono certo che, dopo un'attenta dissezione e qualche ricerca, riusciranno a capirci qualcosa.$B$BMa forse prima gli darò una piccola occhiata io stesso..."
   },
+  "903": {
+    "en_title": "Prowlers of the Barrens",
+    "en_obj": "Collect 7 Prowler Claws from Savannah Prowlers for Sergra Darkthorn in the Crossroads.",
+    "title": "Prowlers of the Barrens",
+    "desc": "Ora è tempo di dare la caccia a qualcosa che morde davvero. I prowler dei Barrens sono una razza tenace. Tenaci, pieni di risorse, astuti... e letali. Li troverai tra le erbe alte. Ne vedrai molti a sudovest del Crossroads.$B$BSta' in guardia mentre li cacci, $N, o potresti ritrovarti non più predatore, ma preda.",
+    "obj": "Raccogli 7 Prowler Claws dai Savannah Prowlers per Sergra Darkthorn al Crossroads.",
+    "progress": "Come procede la caccia, $N? Hai trovato i prowler?",
+    "reward": "Ah, vedo che sei stat$Go:a; impegnat$Go:a;, appostato tra le erbe a dare la caccia ai prowler. Credi dunque sia giunto il momento di affrontare un campione tra di loro?"
+  },
+  "905": {
+    "en_title": "The Angry Scytheclaws",
+    "en_obj": "Kill Sunscale raptors and collect their feathers. Use the feathers on the 3 Scytheclaw nests. Return to Sergra Darkthorn in the Crossroads.",
+    "title": "Gli Scytheclaw infuriati",
+    "desc": "Ora, $N, la caccia si fa più profonda. Ora devi sconfiggere la tua preda e poi trovare la via fino alla sua tana.$B$BDai la caccia ai raptor Sunscale a sud. Uccidili e strappa le piume che portano. Poi posa le piume sui nidi degli Scytheclaw a sudovest della Stagnant Oasis. Mostra ai loro simili che non li temi!",
+    "obj": "Uccidi i raptor Sunscale e raccogli le loro piume. Usa le piume sui 3 nidi degli Scytheclaw. Torna da Sergra Darkthorn al Crossroads.",
+    "progress": "Sei stato ai nidi, $N?",
+    "reward": "Il tuo compito è finito? Rifletti sulla vita dello Scytheclaw mentre lo svolgi. In ogni creatura, per quanto breve sia la sua esistenza, ci sono lezioni importanti.$B$BAlcuni degli altri credono che io sia stato troppo pesante nella mia lezione. So che stai solo eseguendo i miei ordini, ma voglio che tu pensi alla vita delle creature che stai massacrando.$B$BSebbene a volte siano una seccatura, diventano pericolose solo quando siamo noi a cercarne la strage. La profanazione di oggi ci causerà più guai di quanti ne risolverà..."
+  },
+  "907": {
+    "en_title": "Enraged Thunder Lizards",
+    "en_obj": "Bring 3 Thunder Lizard Blood to Jorn Skyseer at Camp Taurajo.",
+    "title": "Thunder Lizard infuriate",
+    "desc": "Ora, $N, devi affrontare i grandi thunder lizard. Queste bestie sono così enormi che il terreno rimbomba quando attraversano le pianure. Fa' attenzione mentre le combatti: un passo falso e potresti ritrovarti sotto i loro piedi.$B$BTroverai i thunder lizard nei Barrens meridionali. Sono noti come Stormsnout, Stormhide e Thunderhead. Torna da me dopo averli sconfitti.",
+    "obj": "Porta 3 Thunder Lizard Blood a Jorn Skyseer a Camp Taurajo.",
+    "progress": "I thunder lizard sono stati sconfitti, $N?",
+    "reward": "È bello vederti tornare con la prova della vittoria. Ed è bello sapere che ci sei riuscit$Go:a; con le ossa intatte."
+  },
+  "913": {
+    "en_title": "Cry of the Thunderhawk",
+    "en_obj": "Find and slay a Thunderhawk, return its wings to Jorn Skyseer at Camp Taurajo.",
+    "title": "Il grido del Thunderhawk",
+    "desc": "Il thunderhawk, $N, è una bestia feroce. È ora che tu li affronti. Devi scoprire dove si aggira e portarmi le sue ali come prova della tua caccia riuscita.$B$BFallo, e il tuo tempo con me volgerà al termine.",
+    "obj": "Trova e uccidi un Thunderhawk, poi porta le sue ali a Jorn Skyseer a Camp Taurajo.",
+    "progress": "È fatta? Hai ucciso il thunderhawk?",
+    "reward": "Tu, come il thunderhawk, dovresti essere fier$Go:a;. Hai sconfitto ogni nemico che ti abbiamo posto davanti, e lo hai fatto con forza, coraggio e onore.$B$BMa il tuo cammino, $N, continua. Anzi, scoprirai che i veri cacciatori non smettono mai di migliorarsi, e percorrono per sempre la loro strada con lo stesso orgoglio che hai mostrato a me.$B$BOra è tempo di andare avanti."
+  },
+  "916": {
+    "en_title": "Webwood Venom",
+    "en_obj": "Bring 10 Webwood Venom Sacs to Gilshalan Windwalker at Aldrassil.",
+    "title": "Veleno dei Webwood",
+    "desc": "Sono venut$Go:a; a Shadowglen per osservare i ragni Webwood che abitano la Shadowthread Cave. Sono cugini di una varietà di ragni molto più piccola; credo che l'albero del mondo abbia avuto su di loro un effetto profondo, e vorrei dei campioni da studiare per confermarlo.$B$BPer prima cosa vorrei un po' del loro veleno. Raccogli le sacche di veleno Webwood dai ragni dentro e intorno alla Shadowthread Cave, a nord. Potrò così esaminarle e cercare somiglianze con il veleno dei loro cugini più piccoli.",
+    "obj": "Porta 10 Webwood Venom Sacs a Gilshalan Windwalker ad Aldrassil.",
+    "progress": "Hai raccolto le sacche di veleno, $N?",
+    "reward": "Grazie, $N. Quando tornerò a Darnassus confronterò il veleno contenuto in queste sacche con quello di altri ragni. Credo che abbia proprietà legate alla recente crescita del nostro nuovo albero del mondo."
+  },
+  "917": {
+    "en_title": "Webwood Egg",
+    "en_obj": "Bring a Webwood Egg to Gilshalan in Aldrassil.",
+    "title": "Webwood Egg",
+    "desc": "Ora che ho il veleno dei ragni, vorrei degli esemplari vivi da studiare. Purtroppo catturare un ragno gigante vivo è più di quanto possa chiederti, giovane $C. E un ragno gigante è più di quanto potrei gestire io stess$Go:a;!$B$BMa se riesci a trovare un uovo non ancora schiuso, consegnare degli esemplari sarà molto più semplice, e potrò far custodire i piccoli ragni prima della schiusa.$B$BDeve esserci un nido nel profondo della Shadowthread Cave. Ti prego, cerca un uovo nel nido e portamelo.",
+    "obj": "Porta un Webwood Egg a Gilshalan ad Aldrassil.",
+    "progress": "Sei stat$Go:a; dentro la Shadowthread Cave, $N? Hai trovato un uovo di ragno?",
+    "reward": "Ah, benissimo. Farò trasportare questo uovo e il veleno a Darnassus, e tornerò laggiù quando i miei studi qui saranno terminati. Mi aspetto di scoprire moltissimo da questi esemplari, $N. Mi sei stat$Go:a; di grande aiuto."
+  },
+  "918": {
+    "en_title": "Timberling Seeds",
+    "en_obj": "Bring 8 Timberling Seeds to Denelan at Lake Al'Ameth.",
+    "title": "Semi dei Timberling",
+    "desc": "I timberling di Teldrassil sono elementali della natura. In certi aspetti riflettono l'ordine naturale di piante e animali del nostro grande albero.$B$BPerciò è inquietante vedere quanto siano diventati furiosi.$B$BCredo che c'entri il terreno. Ho lavorato a diversi metodi per nutrire le piante e vorrei provarli sui semi dei timberling. Ti prego, puoi raccogliere i semi dai timberling intorno a Lake Al'Ameth e portarmeli?",
+    "obj": "Porta 8 Timberling Seeds a Denelan a Lake Al'Ameth.",
+    "progress": "Hai i semi? Non vedo l'ora di piantarli.",
+    "reward": "Ce l'hai fatta. Ottimo!$B$BPianterò questi semi nel terreno speciale che ho preparato. Credo che i semi germoglieranno in timberling molto più docili. Magari più avanti potrai vederne i risultati!"
+  },
+  "919": {
+    "en_title": "Timberling Sprouts",
+    "en_obj": "Bring 12 Timberling Sprouts to Denalan at Lake Al'Ameth.",
+    "title": "Germogli dei Timberling",
+    "desc": "Piccoli timberling stanno germogliando intorno alle acque di Lake Al'Ameth. Temo che questi germogli siano ormai perduti: dovremmo ripulire la terra da loro prima che crescano abbastanza da causare problemi.$B$BQuando ti aggiri intorno al lago, se vedi dei germogli di timberling, ti prego di prenderli. Aiutaci a tenere pulita la nostra terra!",
+    "obj": "Porta 12 Timberling Sprouts a Denalan a Lake Al'Ameth.",
+    "progress": "Salve, $N. Hai trovato dei germogli vicino alle acque?",
+    "reward": "Quanti! Temo che si stiano diffondendo a un ritmo pericoloso. Spero di riuscire a risolvere l'enigma di ciò che li sta corrompendo.$B$BGrazie per il tuo aiuto, $N. Grazie ai tuoi sforzi la terra è un posto più pulito."
+  },
+  "920": {
+    "en_title": "Tenaron's Summons",
+    "en_obj": "Speak with Tenaron Stormgrip atop Aldrassil in Shadowglen.",
+    "title": "La convocazione di Tenaron",
+    "desc": "$N, giusto? Ho sentito che Tenaron ti sta cercando. Lo troverai nella stanza più alta in cima ad Aldrassil.$B$BPotremo anche vivere a lungo, ma è meglio non farlo aspettare troppo.",
+    "obj": "Parla con Tenaron Stormgrip in cima ad Aldrassil, a Shadowglen.",
+    "reward": "Ah, $N. Speravo che avresti risposto con prontezza alla mia convocazione. Ho un compito importante che vorrei affidarti."
+  },
+  "921": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Fill the Crystal Phial and bring it back to Tenaron Stormgrip atop Aldrassil.",
+    "title": "La corona della Terra",
+    "desc": "È tempo che tu parta in cerca del tuo destino, $N. Ma prima di essere pront$Go:a; ad avventurarti nel mondo oltre le nostre foreste incantate, c'è molto che devi imparare sulla nostra storia recente.$B$BMolto è cambiato per il nostro popolo dopo la Battle of Mount Hyjal. Nordrassil è l'ombra pallida di ciò che era un tempo, il suo potere usato per sconfiggere Archimonde e respingere la Burning Legion...$B$BC'è un compito che devi svolgere. Va' al pozzo lunare a nord di Aldrassil e portami una fiala della sua acqua.",
+    "obj": "Riempi la Crystal Phial e riportala a Tenaron Stormgrip in cima ad Aldrassil.",
+    "progress": "I pozzi lunari contengono le acque del Well of Eternity, l'antica fonte di magia che ha causato tanti orrori nel nostro mondo.$B$BI druidi sfruttano le sue proprietà e le Sentinel venerano i pozzi come santuari di Elune, ma la stregoneria è proibita a tutti.",
+    "reward": "Dunque hai ascoltato la prima parte delle conseguenze della Battle of Mount Hyjal. C'è molto altro da raccontare, e il compito che hai iniziato qui proseguirà per tutto il tuo viaggio attraverso Teldrassil fino a Darnassus."
+  },
+  "922": {
+    "en_title": "Rellian Greenspyre",
+    "en_obj": "Bring a Timberling Seed to Rellian Greenspyre in Darnassus.",
+    "title": "Rellian Greenspyre",
+    "desc": "$N, puoi portare uno dei semi che mi hai consegnato al mio amico Rellian Greenspyre? È un druido a Darnassus e, l'ultima volta che ci siamo parlati, ha mostrato interesse per il mio lavoro con i Timberling. Aveva anche alcune idee sue e gradirà un seme da usare per i suoi esperimenti.$B$BGrazie, $N. Mi sei stat$Go:a; di grande aiuto. Spero che un giorno vedrai i frutti del mio lavoro.$B$BDi solito troverai Rellian a passeggio lungo i sentieri del Cenarion Enclave a Darnassus.",
+    "obj": "Porta un Timberling Seed a Rellian Greenspyre a Darnassus.",
+    "progress": "Salve...$B$BE come posso aiutarti?",
+    "reward": "Ah, un seme di timberling? Volevo provare a farne crescere uno per aiutare Denalan con i suoi studi.$B$BMa temo di aver scoperto che una corruzione si è diffusa in molti timberling, e i semi di tali creature portano la macchia del loro genitore. Sono oltre le mie capacità di guarigione.$B$BDenalan è molto abile con ciò che cresce. Potrebbe trovare una cura per i futuri timberling. Potrebbe essere la loro unica speranza."
+  },
+  "923": {
+    "en_title": "Tumors",
+    "en_obj": "Bring 5 Mossy Tumors to Rellian Greenspyre in Darnassus.",
+    "title": "Tumori",
+    "desc": "Una malvagità sta crescendo nei timberling. Stiamo cercando di trovarne l'origine, ma fino ad allora, per mantenere Teldrassil al sicuro, dobbiamo abbattere i timberling ormai perduti. Quelli che vagano intorno a Wellspring Lake, nel nord di Teldrassil, sono i più corrotti. Vanno eliminati!$B$BDistruggi i Timberling che trovi laggiù e raccogli i tumori muschiosi che crescono su di loro. Portameli, così che possano essere bruciati.",
+    "obj": "Porta 5 Mossy Tumors a Rellian Greenspyre a Darnassus.",
+    "progress": "Sei stat$Go:a; a Wellspring Lake, $N? Hai dato la caccia ai timberling laggiù?",
+    "reward": "Ben fatto! Questi tumori sono il sintomo della malattia dei timberling. Sono pieni di un veleno che dobbiamo purificare dalla nostra nuova terra.$B$BMe ne occuperò io. Grazie, $N."
+  },
+  "924": {
+    "en_title": "The Demon Seed",
+    "en_obj": "Grab a Flawed Power Stone.  Bring it to the Altar of Fire before the stone expires, then return to Ak'Zeloth.",
+    "title": "Il Seme Demoniaco",
+    "desc": "Il Demon Seed è un potente strumento della Burning Legion. Giace in una caverna su Dreadmist Peak, sopra un altare demoniaco del fuoco.$B$BHo preparato delle pietre del potere che, poste vicino al Seed, ne spezzeranno il legame con la Legion.$B$BPrendi una pietra dal tavolo e portala all'altare del fuoco in cima a Dreadmist Peak. Viaggia a ovest, poi a nord quando la strada si biforca. Il Peak sarà alla tua sinistra. La salita più sicura verso la cima è sul versante nord.$B$BE sbrigati: il potere della pietra si consumerà col tempo.",
+    "obj": "Prendi una Flawed Power Stone. Portala all'Altar of Fire prima che la pietra si esaurisca, poi torna da Ak'Zeloth.",
+    "progress": "Il Demon Seed esiste ancora. Sento il suo potere...",
+    "reward": "Il tuo compito è compiuto. Hai distrutto il Demon Seed come Neeru aveva ordinato. Ma questa non è la fine...$B$BLa distruzione del Demon Seed ha inviato onde di potere attraverso l'etere, onde di forza impressionante. Le ho percepite, e sono certo che l'abbiano fatto anche altri esseri. Altri che si chiederanno chi ha rotto il loro giocattolo...$B$BMa a prescindere dai guai futuri, ho qualcosa per te. Neeru l'ha mandato come ricompensa e mi ha chiesto di ringraziarti.$B$BQuindi, grazie."
+  },
+  "926": {
+    "en_title": "Flawed Power Stone",
+    "title": "Flawed Power Stone",
+    "reward": "Queste pietre sono intrise di energia magica, ma volutamente difettose. Sono molto instabili e, una volta rimosse dal tavolo, si consumeranno rapidamente."
+  },
+  "927": {
+    "en_title": "The Moss-twined Heart",
+    "en_obj": "Bring the Moss-twined Heart to Denalan at Lake Al'Ameth.",
+    "title": "Il cuore intrecciato di muschio",
+    "desc": "Il cuore di Blackmoss the Fetid è ricoperto da un muschio scuro e oleoso. Anzi, l'unico modo per capire che si tratta di un cuore è il suo battito lento e ritmico... Un battito che continua ancora adesso.$B$BForse Denalan vorrà vedere questo cuore.",
+    "obj": "Porta il Moss-twined Heart a Denalan a Lake Al'Ameth.",
+    "progress": "$N! Hai qualcosa per me?",
+    "reward": "...Cos'è questo? Un cuore di timberling?? È coperto da un muschio disgustoso!$B$BGrazie per avermelo portato, $N. Esaminerò il cuore e, se la fortuna ci assiste, scoprirò la natura del muschio che lo avvolge."
+  },
   "952": {
     "en_title": "Grove of the Ancients",
     "en_obj": "Deliver Fandral's message to Onu in the Grove of the Ancients in Darkshore, south of Auberdine.",

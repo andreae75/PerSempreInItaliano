@@ -39,5 +39,5 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" dist/*.zip \
             --title "$GITHUB_REF_NAME" \
-            --notes "Scarica PerSempreInItaliano.zip e decomprimilo nella cartella Interface/AddOns del client: deve comparire la cartella PerSempreInItaliano." 
+            --notes "Scarica PerSempreInItaliano.zip e decomprimilo nella cartella Interface/AddOns del client: deve comparire la cartella PerSempreInItaliano." \
             --generate-notes
