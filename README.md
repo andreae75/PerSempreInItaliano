@@ -6,6 +6,8 @@
 
 Addon per **WoW Forever** (client Classic) che traduce in italiano quest e dialoghi degli NPC.
 
+**[⬇ Scarica l'ultima versione](https://github.com/andreae75/PerSempreInItaliano/releases/latest/download/PerSempreInItaliano.zip)** · [note di rilascio](https://github.com/andreae75/PerSempreInItaliano/releases/latest)
+
 La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco, senza toccare il testo originale: puoi leggere l'inglese e l'italiano insieme.
 
 ## Cosa fa
