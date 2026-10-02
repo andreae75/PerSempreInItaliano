@@ -1,0 +1,43 @@
+# Pubblica una release con lo zip pronto da decomprimere in Interface/AddOns/.
+# Si attiva quando si fa il push di un tag "vX.Y.Z" uguale alla versione nel .toc:
+#   git tag v0.3.0 && git push origin v0.3.0
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verifica che il tag corrisponda alla versione del .toc
+        run: |
+          v=$(grep -m1 '^## Version:' PerSempreInItaliano.toc | sed 's/^## Version:[[:space:]]*//' | tr -d '\r')
+          if [ "v$v" != "$GITHUB_REF_NAME" ]; then
+            echo "Il tag $GITHUB_REF_NAME non corrisponde alla versione nel .toc (v$v)"
+            exit 1
+          fi
+
+      - name: Crea lo zip
+        run: |
+          mkdir -p dist/PerSempreInItaliano
+          cp PerSempreInItaliano.toc Core.lua Traduzioni.lua Data_Esempi.lua README.md LICENSE dist/PerSempreInItaliano/
+          cp -r Media dist/PerSempreInItaliano/
+          cd dist
+          zip -r "PerSempreInItaliano-${GITHUB_REF_NAME#v}.zip" PerSempreInItaliano
+          cp "PerSempreInItaliano-${GITHUB_REF_NAME#v}.zip" PerSempreInItaliano.zip
+
+      - name: Pubblica la release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/*.zip \
+            --title "$GITHUB_REF_NAME" \
+            --notes "Scarica **PerSempreInItaliano.zip** e decomprimilo in \`Interface\AddOns\\` (deve comparire la cartella \`PerSempreInItaliano\`)." \
+            --generate-notes
