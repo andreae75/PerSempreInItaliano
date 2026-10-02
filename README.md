@@ -1,5 +1,9 @@
 # Per Sempre in Italiano
 
+> **Progetto artigianale.** Questo addon è un hobby fatto in casa da un appassionato, non un prodotto professionale.
+> Le traduzioni sono parziali e in gran parte prodotte con l'aiuto di un'intelligenza artificiale (Claude): possono contenere errori, imprecisioni o scelte discutibili.
+> Lo sviluppo procede quando c'è tempo, senza garanzie di aggiornamenti, tempi o supporto. Usalo a tuo rischio; segnalazioni e correzioni sono benvenute.
+
 Addon per **WoW Forever** (client Classic) che traduce in italiano quest e dialoghi degli NPC.
 
 La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco, senza toccare il testo originale: puoi leggere l'inglese e l'italiano insieme.
