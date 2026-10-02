@@ -64,7 +64,7 @@ python tools/qt.py genera      # rigenera Traduzioni.lua
 
 Altri comandi di `qt.py`: `importa "<zona>"` (aggiunge le quest di una zona del gioco originale da un database esterno), `zone`, `unisci`, `unisci-dialoghi`, `inglese`, `prepara`.
 
-`tools/aggiorna.ps1` esegue tutto in sequenza, comprese le traduzioni delle voci nuove tramite [Claude Code](https://claude.com/claude-code) da riga di comando: dopo `/reload` lanci lo script, poi fai di nuovo `/reload`.
+`tools/aggiorna.ps1` esegue tutto in sequenza, comprese le traduzioni delle voci nuove tramite [Claude Code](https://claude.com/claude-code) da riga di comando: dopo `/reload` lanci lo script, poi fai di nuovo `/reload`. Traduce a blocchi e salva dopo ogni blocco, quindi se lo interrompi puoi rilanciarlo senza perdere nulla. Opzioni: `-Zona "Elwynn Forest"` per una sola zona, `-Blocco 15` per la dimensione dei blocchi, `-Max 50` per fermarsi dopo 50 quest (utile per tenere d'occhio il consumo).
 
 Per segnalare traduzioni mancanti o sbagliate apri una issue. Se non vuoi usare gli strumenti, puoi mandare i file `*_da_tradurre.json`: contengono solo il testo inglese e l'ID, nessun dato personale.
 
@@ -78,7 +78,8 @@ Data_Esempi.lua           traduzioni di esempio
 Media/Bandiera.tga        icona
 tools/qt.py               estrazione, importazione e generazione
 tools/aggiorna.ps1        aggiornamento automatico
-tools/*.json              testi da tradurre e tradotti
+tools/traduzioni.json       traduzioni delle quest (sorgente di Traduzioni.lua)
+tools/dialoghi_tradotti.json traduzioni dei dialoghi
 ```
 
 `tools/fonti/` (il database delle quest del gioco originale usato da `importa`) non fa parte di questo repository: va scaricato a parte.

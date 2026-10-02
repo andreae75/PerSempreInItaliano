@@ -1,4 +1,8 @@
 {
+  "0190addc": {
+    "npc": "Ironforge Guard",
+    "text": "Per dove vi servono indicazioni?"
+  },
   "0b3a27f7": {
     "npc": "Alamar Grimm",
     "text": "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."
@@ -54,6 +58,10 @@
   "aadb260f": {
     "npc": "Thamner Pol",
     "text": "Posso addestrarti nelle tecniche di First Aid."
+  },
+  "adbc51c2": {
+    "npc": "Loslor Rudge",
+    "text": "Benvenuti al Steelgrill's Depot!"
   },
   "aee7f885": {
     "npc": "Granis Swiftaxe",

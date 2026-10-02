@@ -6,6 +6,24 @@ QuestTraduttoreData = QuestTraduttoreData or {}
 QuestTraduttoreGossip = QuestTraduttoreGossip or {}
 local T, G = QuestTraduttoreData, QuestTraduttoreGossip
 
+T[6] = {
+  title = "Taglia su Garrick Padfoot",
+  desc = "Garrick Padfoot, un tagliagole che da settimane tormenta i nostri contadini e mercanti, è stato avvistato in una baracca vicino ai vigneti, a est dell'Abbazia, oltre il ponte.  Portami la testa di quel furfante e riscuoterai la sua taglia!$B$BMa sta in guardia, $N.  Garrick si è circondato di una banda di furfanti.  Non sarà facile raggiungerlo.",
+  obj = "Uccidi Garrick Padfoot e porta la sua testa a Deputy Willem all'Abbazia di Northshire.",
+  progress = "Hai trovato la baracca di Garrick? Siamo finalmente liberi da quel furfante?",
+  reward = "Ah! Lo hai preso! Hai reso un grande servizio a Elwynn e ti sei guadagnat$Go:a; una bella taglia!",
+  en_title = "Bounty on Garrick Padfoot",
+  en_obj = "Kill Garrick Padfoot and bring his head to Deputy Willem at Northshire Abbey.",
+}
+T[7] = {
+  title = "Pulizia dell'accampamento dei coboldi",
+  desc = "Il tuo primo compito è una purificazione, $N.  Un clan di coboldi ha infestato i boschi a nord.  Recati là e combatti i parassiti coboldi che troverai.  Riduci il loro numero, così che un giorno possiamo scacciarli da Northshire.",
+  obj = "Uccidi 10 Kobold Vermin, poi torna da Marshal McBride.",
+  progress = "Come procede la caccia, $N? Hai trovato e sconfitto quei parassiti?",
+  reward = "Ben fatto, cittadino. Quei coboldi sono ladri e codardi, ma in gran numero rappresentano una minaccia per noi. E gli umani di Stormwind non hanno bisogno di un'altra minaccia.$B$BPer averli sconfitti, hai la mia gratitudine.",
+  en_title = "Kobold Camp Cleanup",
+  en_obj = "Kill 10 Kobold Vermin, then return to Marshal McBride.",
+}
 T[161] = {
   title = "Un'oscura minaccia incombe",
   desc = "Se i miei sospetti sono fondati, questa è una specie di polvere esplosiva. Va analizzata da un esperto di esplosivi, così sapremo con cosa abbiamo a che fare. Ashlan Stonesmirk è stato assegnato al reggimento che sorveglia Dun Modr e il Thandol Span. Devo chiederti di intraprendere un viaggio lungo e pericoloso, $N.$B$BAttraversa l'Algaz Gate, segui la strada attraverso le Wetlands e cerca Stonesmirk a Dun Modr. Dai retta a me: resta sulle strade e non fermarti per nessun motivo!",
@@ -105,6 +123,14 @@ T[234] = {
   en_title = "Coldridge Valley Mail Delivery",
   en_obj = "Deliver the letter to Grelin Whitebeard.",
 }
+T[235] = {
+  title = "La caccia di Ashenvale",
+  desc = "Attenzione, giovani avventurieri! Le terre selvagge di Ashenvale vi aspettano!$B$BL'Orda ha stabilito una forte presenza nelle terre a nord dei Barrens. I nostri due avamposti, Splintertree Post e Zoram Strand Outpost, si impegnano a portare gloria all'Orda! Chi vuole mettersi alla prova dovrebbe cercare lì una guida. In particolare: Senani Thunderheart, a Splintertree Post, appena a nord dei Barrens, cerca avventurieri disposti a partecipare a una grande caccia di Ashenvale!",
+  obj = "Parla con Senani Thunderheart a Splintertree Post, Ashenvale.",
+  reward = "Benvenut$Go:a; sulla nuova frontiera, $N. Ashenvale è una terra di opportunità, dove un giovane $C come te può trovare infinite occasioni per dimostrare il proprio valore. Dai un'occhiata all'avamposto qui intorno e assicurati di recarti anche a Zoram Strand, perché l'Orda ha un altro avamposto laggiù.$B$BLa tua presenza qui mi dice che sei venut$Go:a; per saperne di più sulla caccia. Ascolta con attenzione e ti dirò volentieri ciò che ti serve sapere.",
+  en_title = "The Ashenvale Hunt",
+  en_obj = "Speak with Senani Thunderheart at Splintertree Post, Ashenvale.",
+}
 T[237] = {
   title = "In difesa delle terre del re",
   desc = "Mountaineer Cobbleflint ha detto solo cose buone su di te, $R. Per questo ti affiderò una missione della massima importanza. Dobbiamo tenere sotto pressione le forze dei trogg invasori finché i nostri fratelli nani non torneranno dal fronte dell'Alleanza.$B$BParti per le colline meridionali e uccidi 10 Stonesplinter Skullthumpers e 10 Stonesplinter Seers. I tuoi attacchi ci faranno guadagnare tempo. Torna a fare rapporto quando la missione sarà compiuta.",
@@ -166,6 +192,15 @@ T[263] = {
   reward = "Nel momento stesso in cui ti ho vist$Go:a;, $N, ho capito che avresti reso orgogliosa Ironforge. Hai servito bene re Magni. Ora che hai dimostrato di essere un aiuto così leale per il Regno, forse dovresti parlare con il Capitano: potrebbe affidarti un incarico più importante.$B$BTi saluto, $N.",
   en_title = "In Defense of the King's Lands",
   en_obj = "Mountaineer Wallbang in the southern guard tower wants you to kill 10 Stonesplinter Shaman and 10 Stonesplinter Bonesnappers.",
+}
+T[264] = {
+  title = "Finché morte non ci separi",
+  desc = "Lurido miserabile! Mi lascia per la sua maledetta crociata. Perché «la Luce è la cosa più importante che abbiamo contro le minacce dei non morti».$B$BEbbene, e i suoi figli?! E io?! Notte dopo notte l'ho aspettato pazientemente... sempre seconda al suo dannato dovere!$B$BEbbene, guarda cosa ti porta la «giustizia», $N! È morto e io porto in grembo proprio ciò che lui cercava di fermare!$B$BPrendi questo ciarpame e mettilo sulla sua tomba al Sepulcher. Non voglio più averci a che fare... né con lui!",
+  obj = "Deponi il Clarice's Pendant su Yuriv's Tomb a Silverpine.",
+  progress = "La pietra è fredda al tatto, ma è evidente che è stata maltrattata. Rifiuti ricoprono la zona; scheggiature e sfregi decorano il rilievo sopra la bara; e il fogliame intorno alla tomba ha cominciato a coprire il sito.$B$BA nessuno importa di chi sia sepolto qui, men che meno delle vittime della piaga.",
+  reward = "Posi il ciondolo senza valore sulla tomba, e la gemma incastonata sembra spegnersi in modo evidente.$B$BMentre ti rialzi per andartene, abbassi lo sguardo sul ciondolo: giace senza vita sulle mani del rilievo scolpito sul coperchio della bara. I tuoi pensieri sono interrotti da una brezza fredda e rigida che attraversa il Sepulcher. Per un momento tutto intorno a te è silenzio.",
+  en_title = "Until Death Do Us Part",
+  en_obj = "Place Clarice's Pendant on Yuriv's Tomb in Silverpine.",
 }
 T[267] = {
   title = "La minaccia dei trogg",
@@ -403,6 +438,51 @@ T[320] = {
   en_title = "Return to Bellowfiz",
   en_obj = "Give the cask of Evershine to Pilot Bellowfiz at Steelgrill's Depot.",
 }
+T[332] = {
+  title = "Pubblicità per l'enoteca",
+  desc = "Se parli di vino con qualcuno, saprai che noi Gallina vendiamo il miglior vino di Stormwind. E non siamo lontani, sempre nel Trade District, lungo i bei canali della città.$B$BEcco, prendi questo opuscolo. Portalo a mia sorella Suzetta nel nostro negozio per una bottiglia in omaggio del nostro famoso pinot noir. Non te ne pentirai!",
+  obj = "Vai alla Gallina Winery e porta a Suzetta Gallina il Wine Ticket per una bottiglia di vino gratis.",
+  progress = "Salve, $Gsignore:signora;, e benvenut$Go:a;. Avete già assaggiato uno dei nostri vini pregiati?",
+  reward = "Ah, dunque avete visto Renato? Ecco a voi, $Gsignore:signora;. Una bottiglia del nostro speciale pinot noir. Non ne troverete uguali in tutta Azeroth!",
+  en_title = "Wine Shop Advert",
+  en_obj = "Go to the Gallina Winery, and bring Suzetta Gallina the Wine Ticket for a free bottle of wine.",
+}
+T[333] = {
+  title = "Harlan ha bisogno di rifornimenti",
+  desc = "Ultimamente facciamo molti affari. Sembra che tutti comprino armature e abiti robusti. Quasi come se si aspettassero una stagione fredda e dura...$B$BMa queste sono preoccupazioni future. La mia preoccupazione di oggi è che sto finendo gli abiti di maglia da vendere. Mi serve un altro carico dal nostro fornitore.$B$BSe puoi portare questa richiesta a Rema Schneider al Canal Tailor and Fit Shop, ti sarei molto grato.",
+  obj = "Vai al Canal Tailor Shop e porta a Rema Schneider la Cloth Request di Harlan Bagley.",
+  progress = "Porti notizie dal signor Bagley?",
+  reward = "Qui dice che gli affari di Harlan vanno a gonfie vele. È una buona notizia, ma mi chiedo perché la gente abbia bisogno di tutte quelle armature. Non ho sentito parlare di guerra aperta... c'è qualcosa che i nobili non ci dicono?$B$BBene, grazie per aver portato la richiesta. Ecco il tuo compenso, e mi assicurerò che Harlan riceva le sue forniture.",
+  en_title = "Harlan Needs a Resupply",
+  en_obj = "Go to the Canal Tailor Shop and bring Rema Schneider the Cloth Request from Harlan Bagley.",
+}
+T[334] = {
+  title = "Un pacco per Thurman",
+  desc = "Mio figlio Thurman è apprendista alla Larson Clothiers, nel Mage's Quarter. Oggi aveva fretta e ha dimenticato forbici e aghi. So che un grande $C come te avrà compiti importanti da svolgere, ma senza i suoi attrezzi Thurman non può fare il suo lavoro di apprendista!$B$BPer favore, $N. Puoi portargli il kit da cucito di mio figlio? La Larson Clothiers è uno dei due negozi di abbigliamento nel Mage's Quarter: è quello più all'interno, vicino alla Mage's Tower.",
+  obj = "Vai alla Larson Clothiers nello Stormwind Mage Quarter e consegna a Thurman Schneider il suo Sewing Kit.",
+  progress = "Sei qui per comprare dei vestiti?",
+  reward = "Oh, accidenti! Pensavo che dimenticare il kit mi avrebbe liberato dal lavoro. Adesso immagino che dovrò aiutare i Larson a cucire...$B$BVa be', il divertimento verrà più tardi, suppongo.",
+  en_title = "Package for Thurman",
+  en_obj = "Go to the Larson Clothiers in the Stormwind Mage Quarter, and give Thurman Schneider his Sewing Kit.",
+}
+T[353] = {
+  title = "La consegna per Stormpike",
+  desc = "Gli Stormpike sono un rispettato clan di nani, noti per i loro gusti raffinati ed esigenti. Non c'è da stupirsi, quindi, che Gringer Stormpike, un Mountaineer di Ironforge, mi abbia commissionato la fabbricazione di un'arma.$B$BL'arma è finita, ma... il Mountaineer Stormpike è lontano, nella remota Loch Modan. Se hai intenzione di viaggiare verso nord, puoi consegnargli questo pacco?$B$BL'ultimo messaggio del Mountaineer Stormpike diceva che è di stanza alla torre di guardia settentrionale di Loch Modan.",
+  obj = "Consegna il Package for Stormpike al Mountaineer Stormpike a Loch Modan.",
+  progress = "Vieni da Stormwind fin qui? Sento che laggiù nelle terre degli umani le cose si fanno rischiose, con briganti e orchi in giro. Un posto perfetto perché un $C dimostri il proprio valore!",
+  reward = "Aha! Quindi Grimand ha finalmente finito la mia ascia! Non vedo l'ora di provarla contro qualche trogg e qualche kobold!$B$BGrazie mille, $N. C'era molta strada da fare per questa consegna. Ecco qualche moneta per il disturbo.",
+  en_title = "Stormpike's Delivery",
+  en_obj = "Deliver the Package for Stormpike to Mountaineer Stormpike in Loch Modan.",
+}
+T[357] = {
+  title = "L'identità del lich",
+  desc = "C'è un lich che vive sull'isola nel Brightwater Lake, a nord. Sebbene sia un Rinnegato dotato di libero arbitrio, crede che tutti gli altri non morti siano schiavi della Scourge e fa attaccare dai suoi servitori chiunque si avvicini.$B$BMa poiché è un Rinnegato, la Regina lo vorrà. E se è esperto di Negromanzia, le sue conoscenze ci sarebbero... assai utili.$B$BPer scoprire la sua identità e i suoi talenti devo vedere il suo libro degli incantesimi. Infiltrati nel suo accampamento, procuralo e torna da me.",
+  obj = "Porta il Lich's Spellbook a Bethor Iceshard a Undercity.",
+  progress = "$N, hai preso il libro?",
+  reward = "Molto bene, $N. Studierò questo libro e stabilirò l'identità di quel lich. Hai servito bene la tua Regina.$B$B<Bethor apre il libro e fissa intensamente le sue pagine luminose...>$B$BSorprendente! Il libro che hai recuperato appartiene a nientemeno che Gunther Arcanus!$B$BGunther era un abile Negromante in vita; io e lui eravamo amici e compagni d'armi, prima della Piaga. E a giudicare dal suo libro è diventato ancora più potente nella morte.$B$BLe sue capacità sarebbero un grande vantaggio per noi.",
+  en_title = "The Lich's Identity",
+  en_obj = "Bring the Lich's Spellbook to Bethor Iceshard in the Undercity.",
+}
 T[384] = {
   title = "Costine di cinghiale alla birra",
   desc = "Niente piace ai clienti della mia taverna quanto le Beer Basted Boar Ribs! L'unico problema è che il cacciatore di zona che mi portava le provviste si è arruolato nell'esercito del re per combattere sul fronte dell'Alleanza.$B$BForse puoi aiutarmi tu? Se mi porti sei costine di crag boar e una Rhapsody Malt dalla taverna, ti darò la ricetta di famiglia delle mie famose Beer Basted Boar Ribs, e in più un assaggio gratis! Il segreto è nel malto!",
@@ -420,6 +500,15 @@ T[385] = {
   reward = "Bene bene, questi che hai raccolto sono esemplari eccellenti, $N. Bei soldi per materiali di alta qualità, questo è certo.",
   en_title = "Crocolisk Hunting",
   en_obj = "Get 5 pieces of Crocolisk Meat and 6 Crocolisk Skins for Marek Ironheart at the Farstrider Lodge.",
+}
+T[399] = {
+  title = "Umili inizi",
+  desc = "Mi sembra passata un'eternità da quando ero un ragazzo che lavorava nella fattoria a Westfall. Dicono che non si possa mai tornare indietro, ed è vero. Doppiamente vero nel mio caso: la casa della mia famiglia è stata bruciata e occupata dai ladri.$B$BHo parlato con mio padre della sorte di alcuni miei averi, tra cui la mia prima bussola. Non è riuscito a salvarli. Tuttavia dice anche che dovrebbero essere nascosti nella fattoria.$B$BTroverai l'Alexston Farmstead a ovest di Sentinel Hill. Forse potresti andare a recuperarla per me?",
+  obj = "Vai alla casa di Baros Alexston a Westfall, cerca la sua bussola e riportagliela nella Cathedral Square di Stormwind.",
+  progress = "$N! Hai avuto fortuna?",
+  reward = "Oh, grazie, $N! Non ha alcuna utilità pratica per me, ma il valore affettivo... Inutile dire grazie per avermela portata... a costo del tuo benessere, senza contare il tempo che ci è voluto per scendere fino a Westfall. Hai la mia gratitudine, e prendi questo come segno di ringraziamento.",
+  en_title = "Humble Beginnings",
+  en_obj = "Go to Baros Alexston's house in Westfall and search for his compass, then return it to him in Cathedral Square of Stormwind.",
 }
 T[400] = {
   title = "Attrezzi per Steelgrill",
@@ -574,6 +663,89 @@ T[531] = {
   en_title = "Vyrin's Revenge",
   en_obj = "Bring Ol' Sooty's head to Vyrin Swiftwind at the Farstrider Lodge.",
 }
+T[579] = {
+  title = "La biblioteca di Stormwind",
+  progress = "Re Anduin attribuisce grande importanza all'istruzione, e per questo ha stanziato fondi per rendere disponibili al pubblico copie di vari tomi e scritti. È molto semplice. Mi porti un library scrip e posso darti una copia di uno dei libri disponibili.",
+  reward = "Qualcuno di questi titoli ti interessa, $N?",
+  en_title = "Stormwind Library",
+}
+T[730] = {
+  title = "Guai a Darkshore?",
+  desc = "Che piacere vedere un $c interessato alle grandi meraviglie archeologiche del nostro mondo.$B$BSpesso il nostro lavoro è liquidato come un semplice hobby dai nostri amici dell'Alleanza. Ma molti non si rendono conto che le recenti scoperte a Khaz Modan hanno dimostrato che una forza grande e potente minaccia tutta Azeroth, da Lordaeron a Kalimdor.$B$BSono molto preoccupato per la mia squadra che ho mandato a Darkshore. Non mandano notizie da settimane.$B$BVai ad Auberdine e cerca un indizio su dove si trovino.",
+  obj = "Recati ad Auberdine e cerca tracce della squadra di scavo dei nani.",
+  reward = "Sono così felice che Chief Archeologist Greywhisker ci abbia mandato a chiamare... ",
+  en_title = "Trouble In Darkshore?",
+  en_obj = "Travel to Auberdine and look for signs of the dwarven excavation team.",
+}
+T[742] = {
+  title = "La caccia di Ashenvale",
+  desc = "Attenzione, giovani avventurieri! Le terre selvagge di Ashenvale vi aspettano!$B$BL'Orda ha stabilito una forte presenza nelle terre a nord dei Barrens. I nostri due avamposti, Splintertree Post e Zoram Strand Outpost, si impegnano a portare gloria all'Orda! Chi vuole mettersi alla prova dovrebbe cercare lì una guida. In particolare: Senani Thunderheart, a Splintertree Post, appena a nord dei Barrens, cerca avventurieri disposti a partecipare a una grande caccia di Ashenvale!",
+  obj = "Parla con Senani Thunderheart a Splintertree Post, Ashenvale.",
+  reward = "Benvenut$Go:a; sulla nuova frontiera, $N. Ashenvale è una terra di opportunità, dove un giovane $C come te può trovare infinite occasioni per dimostrare il proprio valore. Dai un'occhiata all'avamposto qui intorno e assicurati di recarti anche a Zoram Strand, perché l'Orda ha un altro avamposto laggiù.$B$BLa tua presenza qui mi dice che sei venut$Go:a; per saperne di più sulla caccia. Ascolta con attenzione e ti dirò volentieri ciò che ti serve sapere.",
+  en_title = "The Ashenvale Hunt",
+  en_obj = "Speak with Senani Thunderheart at Splintertree Post, Ashenvale.",
+}
+T[744] = {
+  title = "Preparativi per la cerimonia",
+  desc = "$N, mio fratello sta per presentarsi davanti a Chief Bloodhoof, ed è un onore per me realizzare il suo copricapo.$B$BVorrei chiederti un favore mentre finisco di conciare queste strisce di cuoio. Non ho il tempo di trovare abbastanza piume, e mi chiedevo se potresti raccoglierne altre per me.$B$BPuoi trovare piume della misura giusta presso le arpie che vivono lontano a nord e a nordovest di Thunder Bluff. Me ne servono solo 6 azzurre e 6 bronzee per completare il disegno.",
+  obj = "Raccogli 6 Azure Feathers e 6 Bronze Feathers e portale a Eyahn Eagletalon a Thunder Bluff.",
+  progress = "Questo copricapo sarà certamente un magnifico regalo per mio fratello.",
+  reward = "Grazie per il tuo aiuto, $N.$B$BLa mia parte nella cerimonia di mio fratello è quasi completa. Consegnargli il copricapo e assistere alla cerimonia sono tutto ciò che il mio dovere richiede.",
+  en_title = "Preparation for Ceremony",
+  en_obj = "Collect 6 Azure Feathers and 6 Bronze Feathers, and bring them to Eyahn Eagletalon in Thunder Bluff.",
+}
+T[768] = {
+  title = "Raccogliere cuoio",
+  desc = "Salute, giovane. Hai una luce negli occhi; si vede che sei ansios$Go:a; di tornare sulle pianure per la caccia. Che tu possa portare onore al tuo clan!$B$BLavoro le pelli delle bestie, ricavandone abiti e armature per la gente di Thunder Bluff.$B$BSe cacci bestie e mi porti le loro pelli, ti confezionerò qualcosa.",
+  obj = "Porta 12 Light Leather a Veren Tallstrider a Thunder Bluff.",
+  progress = "Di nuovo qui. Hai cacciato? Hai delle pelli per me?",
+  reward = "Ah, sono pezzi molto belli. Ne verranno ottimi oggetti di cuoio.$B$BEcco, $N. Prendi questo in cambio...",
+  en_title = "Gathering Leather",
+  en_obj = "Bring 12 pieces of Light Leather to Veren Tallstrider in Thunder Bluff.",
+}
+T[769] = {
+  title = "Borsa di pelle di kodo",
+  desc = "I kodo di Mulgore sono forti e robusti, qualità molto rispettate tra noi. Se sei abile nella lavorazione del cuoio e desideri conoscere il modo di fabbricare una Kodo Hide Bag, portami le provviste per il mio mestiere.$B$BFallo, e condividerò con te il mio sapere.",
+  obj = "Porta 4 Light Leather e 4 Coarse Thread a Veren Tallstrider a Thunder Bluff.",
+  progress = "Hai le mie provviste, $N?",
+  reward = "Ah, bene. Grazie, $N. Il mio cuore si gonfia d'orgoglio nel vedere dei giovani interessati all'arte della lavorazione del cuoio.",
+  en_title = "Kodo Hide Bag",
+  en_obj = "Bring 4 Light Leather and 4 Coarse Thread to Veren Tallstrider in Thunder Bluff.",
+}
+T[952] = {
+  title = "Grove of the Ancients",
+  desc = "Se hai avuto tempo di portare messaggi per l'Oracle Tree, sono certo di poterti arruolare per consegnare un messaggio al Grove of the Ancients, a Darkshore, subito a sud di Auberdine.$B$BCon ogni probabilità dovrai procurarti un passaggio su un ippogrifo, ma ho abbastanza fiducia in te da credere che ce la farai. Porta questo a Onu, l'Ancient of Lore. Attende notizie da me, così come io attendevo notizie dall'Oracle Glade.",
+  obj = "Consegna il messaggio di Fandral a Onu nel Grove of the Ancients a Darkshore, a sud di Auberdine.",
+  progress = "Ah. $C. In che modo Onu può esserti d'aiuto?",
+  reward = "Ah. Grazie, $N. È strano, però. L'Arch Druid sembra sempre avere una gran fretta. La foresta sa che tutto accadrà a tempo debito. Shan'do Stormrage lo capiva.",
+  en_title = "Grove of the Ancients",
+  en_obj = "Deliver Fandral's message to Onu in the Grove of the Ancients in Darkshore, south of Auberdine.",
+}
+T[1064] = {
+  title = "Aiuto dai Rinnegati",
+  desc = "I tauren hanno un legame con la terra, e mi addolora sentire delle sofferenze di Stonetalon. Ma temo che, per guarire la terra, dobbiamo prima eliminare il male che la affligge.$B$BNon è una fortuna che i Rinnegati siano nostri alleati? Sanno molto di malattie. Credo che possano aiutarci, e così facendo rafforzeranno la fiducia tra i nostri popoli.$B$BParla con Apothecary Zamah. È una studiosa e un'emissaria dei Rinnegati. La troverai nelle Pools of Vision, sotto Spirit Rise.",
+  obj = "Parla con Apothecary Zamah nelle Pools of Vision a Thunder Bluff.",
+  reward = "Magatha mi ha avvisata del tuo arrivo, $N. Anche se il mio cuore non batte più, provo ancora dolore per gli spiriti di Stonetalon.$B$BI Rinnegati sono ansiosi di offrire l'aiuto che possiamo.",
+  en_title = "Forsaken Aid",
+  en_obj = "Speak with Apothecary Zamah in the Pools of Vision in Thunder Bluff.",
+}
+T[1065] = {
+  title = "Viaggio a Tarren Mill",
+  desc = "Per liberare Stonetalon dalla Venture Company servono misure estreme. Estreme, ma senza spargimenti di sangue.$B$BUn mio collega potrebbe avere proprio lo strumento che ci serve. Si chiama Lydon e vive nella città di Tarren Mill, nelle Hillsbrad Foothills, nella lontana terra di Lordaeron.$B$BPer raggiungere Hillsbrad, viaggia in dirigibile fino alla nostra capitale, Undercity. Poi vai a nord fino a Tirisfal Glades, a sudovest fino a Silverpine e a sud fino a Hillsbrad.$B$BCerca Lydon e consegnagli questa nota. Gli spiega ciò di cui abbiamo bisogno.",
+  obj = "Porta la Zamah's Note ad Apothecary Lydon a Tarren Mill.",
+  progress = "Ah, sei qui con i miei nuovi soggetti di prova?",
+  reward = "Una nota di Zamah? Le sue necessità devono essere grandi, se manda un messaggio da così lontano. Vediamo cosa dice...$B$BAh, splendido! So esattamente cosa fare!",
+  en_title = "Journey to Tarren Mill",
+  en_obj = "Bring Zamah's Note to Apothecary Lydon in Tarren Mill.",
+}
+T[1097] = {
+  title = "Il compito di Elmore",
+  desc = "C'è un fabbro d'armi nano a Stormwind, Grimand Elmore, che mi ha fatto sapere di aver bisogno di aiuto per una consegna. Credo voglia far recapitare un pacco nella sua terra natale, a nord.$B$BHai un bel paio di gambe robuste! Quindi, se ti va di fare un po' di strada, parla con Grimand. Ci faresti comodo qui, ma dobbiamo anche mantenere saldi i legami con i nani.$B$BPuoi trovare Grimand Elmore nell'armeria del Dwarven District di Stormwind, nella zona nordest della città.",
+  obj = "Parla con Grimand Elmore.",
+  reward = "Sei qui per aiutarmi con la consegna? Benissimo!",
+  en_title = "Elmore's Task",
+  en_obj = "Speak with Grimand Elmore.",
+}
 T[1338] = {
   title = "L'ordine di Stormpike",
   desc = "C'è un armaiolo nano di cui ammiro moltissimo il lavoro. Si chiama Furen Longbeard, e la sua abilità non ha pari. Mi serve uno scudo nuovo, e deve essere uno dei suoi!$B$BIl problema è che... Furen è molto a sud, nel quartiere dei nani dentro Stormwind. Nelle terre degli umani! Non riesco a immaginare perché viva lì, così lontano da Ironforge. Gli umani devono pagarlo una fortuna per tenerlo là!$B$BAllora, se ti va di viaggiare e non ti dispiace guadagnare qualcosa, porteresti a Furen la mia richiesta per uno scudo?",
@@ -591,6 +763,24 @@ T[1339] = {
   en_title = "Mountaineer Stormpike's Task",
   en_obj = "Speak with Mountaineer Stormpike.",
 }
+T[1358] = {
+  title = "Campione per Helbrim",
+  desc = "Un collega a Kalimdor, Apothecary Helbrim, sta studiando gli effetti delle tossine di Lordaeron sulle bestie di Kalimdor. Sarebbe molto interessato a un campione dei cuori di lupo che Renferrel mi ha mandato.$B$BHelbrim è di stanza nei Barrens, in un villaggio chiamato Crossroads. Per raggiungerlo devi viaggiare in dirigibile fino alla capitale degli orchi, Orgrimmar, poi proseguire a piedi verso sud, a Durotar. Vai a ovest nei Barrens e raggiungerai presto il Crossroads.",
+  obj = "Porta il Wolf Heart Sample ad Apothecary Helbrim nei Barrens.",
+  progress = "Hai un pacco per me?",
+  reward = "Ah, molto bene. Se i rapporti iniziali sono veri, la tossicità di questi cuori potrebbe portare a ulteriori progressi nella nostra conoscenza dei veleni.$B$BÈ una consegna gradita, $N. La tua ricompensa è meritata.",
+  en_title = "Sample for Helbrim",
+  en_obj = "Bring the Wolf Heart Sample to Apothecary Helbrim in the Barrens.",
+}
+T[1359] = {
+  title = "La consegna per Zinge",
+  desc = "I cuori di lupo che hai procurato hanno una qualità mai vista in esemplari simili. Hanno una tossicità che dovrebbe essere letale per gli stessi lupi nei quali quei cuori battono!$B$BÈ davvero incredibile, e dobbiamo studiarlo ulteriormente. Ho tenuto qualche campione dei cuori ottenuti. Portali alla mia collega, Apothecary Zinge. La troverai nel nostro quartier generale a Undercity.",
+  obj = "Porta i Wolf Heart Samples ad Apothecary Zinge a Undercity.",
+  progress = "Hai qualcosa per me?",
+  reward = "Ah sì, i campioni di cuore di cui parlava Renferrel. Sono ansiosa di sperimentare con questi... alla Royal Apothecary Society interessa sempre quando si scoprono nuove forme di tossine.",
+  en_title = "Zinge's Delivery",
+  en_obj = "Bring the Wolf Heart Samples to Apothecary Zinge in the Undercity.",
+}
 T[1599] = {
   title = "Inizi",
   desc = "Devi essere lo stregone nuovo di cui tutti bisbigliano. Qualcuno deve avertela presa a benvolere, se mi hanno chiesto di distogliermi dalle mie ricerche per iniziare il tuo addestramento.\n\nNon preoccuparti, non te ne farò una colpa.\n\nIl più semplice degli incantesimi di evocazione che imparerai è quello dell'imp. Prima però di insegnartelo, devi dimostrare di possedere le capacità magiche e fisiche necessarie.\n\nPortami tre feather charms dai frostmane novices della caverna a sud-ovest.",
@@ -607,6 +797,22 @@ T[2038] = {
   reward = "Hai reso un grande servizio al movimento, $N. I trogg e gli gnomi lebbrosi che infestano Gnomeregan sentiranno presto tutto il peso di un attacco aereo gnomico!",
   en_title = "Bingles' Missing Supplies",
   en_obj = "Find and return Bingles' supplies:$B$BBingles' Wrench, Bingles' Screwdriver, Bingles' Hammer, and Bingles' Blastencapper.",
+}
+T[2039] = {
+  title = "Trova Bingles",
+  desc = "Abbiamo perso i contatti con Bingles! Era stato mandato in ricognizione su Gnomeregan e non si fa sentire da più di una settimana. Sono certo che sia andato a farsi saltare in aria.$B$BÈ stato visto per l'ultima volta mentre volava sul Loch. Forse puoi indagare, $N.",
+  obj = "Trova Bingles Blastenheimer a Loch Modan.",
+  reward = "Quindi Gnoarn non si fida delle mie capacità di ricognizione? Chissà perché...$B$BMa lascia perdere, ho bisogno del tuo aiuto! Anzi! Il movimento ha bisogno del tuo aiuto!",
+  en_title = "Find Bingles",
+  en_obj = "Find Bingles Blastenheimer in Loch Modan.",
+}
+T[2041] = {
+  title = "Parla con Shoni",
+  desc = "Forse... forse puoi aiutarci nella battaglia per Gnomeregan.$B$BA Stormwind troverai il comandante della nostra squadra d'assalto sotterranea, Shoni the Shilent. Shoni ha bisogno di aiuto con i suoi gyrodrillmatic excavationators.$B$BProbabilmente la troverai tra i nani di Stormwind.$B$BBuona fortuna, $N. ",
+  obj = "Parla con Shoni the Shilent a Stormwind.",
+  reward = "Porti notizie dal comando centrale?",
+  en_title = "Speak with Shoni",
+  en_obj = "Speak with Shoni the Shilent in Stormwind.",
 }
 T[2160] = {
   title = "Provviste per Tannok",
@@ -634,6 +840,32 @@ T[2501] = {
   reward = "Da alchimista ad alchimista, ti saluto. Ecco, prendi questa ricetta e imparala a memoria. Che ti porti il successo e le ricompense che ha portato a me in tutti questi anni!",
   en_title = "Badlands Reagent Run II",
   en_obj = "Use the empty thaumaturgy vessels on scorched guardian dragons found in the Badlands.  Once you have them filled, bring them to Ghak Healtouch in Thelsamar.",
+}
+T[2518] = {
+  title = "Lacrime della Luna",
+  desc = "Lady Sathrah era un tempo amata da Elune. Aggraziata e pura, il ragno filava i suoi fili d'argento alla luce della luna, catturando la foschia della sera. La rugiada argentea aveva forti poteri curativi ed era custodita qui nel tempio.$B$BMa di recente Sathrah è precipitata nella follia. Anche le sue future generazioni sono ora in pericolo.$B$BTrova Lady Sathrah, $N, e metti fine alla sua sofferenza. Vive lungo i confini settentrionali di Teldrassil, vicino a Wellspring Lake. Raccogli le sue filiere argentee e riportamele.",
+  obj = "Priestess A'moora nel Temple of the Moon a Darnassus vuole che le porti le Lady Sathrah's Silvery Spinnerets.",
+  progress = "Mi dispiace per il compito che ti ho chiesto di svolgere; ma Lady Sathrah è oltre ogni speranza.$B$BSperiamo di offrire a Elune il sacrificio delle filiere. Con questo sacrificio, Elune benedirà Sathrah affinché possa rinascere, in pace.",
+  reward = "La foresta piange Lady Sathrah, ma era qualcosa che andava fatto.$B$BGrazie, $N.",
+  en_title = "Tears of the Moon",
+  en_obj = "Priestess A'moora in the Temple of the Moon at Darnassus wants you to bring her Lady Sathrah's Silvery Spinnerets.",
+}
+T[2519] = {
+  title = "Il Temple of the Moon",
+  desc = "Una creatura un tempo grandiosa della foresta ha bisogno di aiuto, $r.$B$BC'è un compito difficile da portare a termine.$B$BCerca Priestess A'moora: ti spiegherà tutto. La troverai a sudest di qui, dentro il Temple of the Moon.",
+  obj = "Sister Aquinne vuole che tu parli con Priestess A'moora nel Temple of the Moon.",
+  reward = "Dunque ti ha mandato Sister Aquinne?",
+  en_title = "The Temple of the Moon",
+  en_obj = "Sister Aquinne wants you to speak with Priestess A'moora in the Temple of the Moon.",
+}
+T[2520] = {
+  title = "Il sacrificio di Sathrah",
+  desc = "Ora devi portare a termine il compito che ti è stato affidato. Prendi le filiere e offri il sacrificio di Lady Sathrah a Elune; dai pace alla grande aracnide.$B$BDentro questo tempio trova la fontana centrale. È lì che puoi lasciare il sacrificio. Le acque sacre purificheranno e puliranno la corruzione che ha fatto impazzire Sathrah.$B$BQuando hai finito, torna da me.",
+  obj = "Priestess A'moora vuole che tu deponga le Lady Sathrah's Silvery Spinnerets alla fontana dentro il tempio, e che poi torni da lei.",
+  progress = "Hai deposto il sacrificio alla fontana, $n?",
+  reward = "La perdita di Lady Sathrah è angosciante, ma solo così può rinascere con uno spirito rinnovato.$B$BPossa Elune accogliere di buon grado il sacrificio che le hai offerto.",
+  en_title = "Sathrah's Sacrifice",
+  en_obj = "Priestess A'moora wants you to place Lady Sathrah's silvery spinnerets at the fountain inside the temple, and then return to her.",
 }
 T[3115] = {
   title = "Il memorandum contaminato",
@@ -689,6 +921,40 @@ T[5541] = {
   en_title = "Ammo for Rumbleshot",
   en_obj = "Bring Rumbleshot's Ammo to Hegnar Rumbleshot in Dun Morogh.",
 }
+T[5726] = {
+  title = "Nemici nascosti",
+  desc = "Una cosa che non tollero sono i traditori in mezzo a noi, $N. Ma sarei uno sciocco a scoprire le mie carte così presto: non basterebbe a estirpare la corruzione dalle nostre terre e farebbe solo peggiorare l'infezione.$B$BTu, invece, giovane avventuriero, puoi andare dove i miei agenti non possono... scoprire la verità... trovare il vero capo della bestia.$B$BSe hai abbastanza coraggio, entra a Skull Rock, a est di Orgrimmar, prendi l'insegna di un tenente a uno dei Burning Blade che ci sono e riportamela.",
+  obj = "Porta una Lieutenant's Insignia a Thrall a Orgrimmar.",
+  progress = "Hai già l'insegna, $N?$B$BSarà uno strumento fondamentale per infiltrarti in quella che credo sia la più grave minaccia per l'Orda e per la pace che finalmente potremo trovare nella nostra nuova casa.$B$BScoprirai quanto sia intricata la trama che uomini e orchi sanno tessere quando li muovono l'avidità e il potere. Le trame nascoste, la corruzione, tutto diventerà chiaro. Ti ritroverai in mezzo a una guerra di cui non sospettavi l'esistenza.",
+  reward = "Bene, $N! Siano lodati gli spiriti, forse sarai tu a placare finalmente le mie paure più grandi! Chi avrebbe immaginato che qualcuno così giovane e coraggioso si sarebbe levato a difendere la nostra causa? Mi ricordi me stesso alla tua età. Farò in modo che tu sia ricompensat$Go:a; come meriti per i tuoi sforzi, se sopravvivremo entrambi alla tempesta che viene.$B$BMa ci sarà tempo per altre lodi. Non hai ancora compiuto nulla in confronto a ciò che dovrai affrontare... ma è un buon inizio.",
+  en_title = "Hidden Enemies",
+  en_obj = "Bring a Lieutenant's Insignia to Thrall in Orgrimmar.",
+}
+T[5727] = {
+  title = "Nemici nascosti",
+  desc = "Vediamo ora se l'insegna che hai trovato vale la fatica.$B$BIn città c'è uno stregone convinto di godere della mia fiducia. Non sa che conosco la sua vera lealtà: è in realtà il capo dei Burning Blade. Ma non precipitarti a combatterlo; ha uno scopo, e lo useremo contro i nostri nemici.$B$BPorta questa insegna da lui, nella Cleft of Shadow qui a Orgrimmar, parlagli e vedi se crede che tu sia uno dei suoi, poi torna da me.",
+  obj = "Porta la Lieutenant's Insignia a Neeru Fireblade e parlagli. Capisci se crede che tu sia un membro dei Burning Blade, poi torna da Thrall a Orgrimmar.",
+  progress = "Allora, $c? Crede al nostro inganno, o le cose vanno peggio di quanto stimassi all'inizio?$B$BDimostrarti utile a Neeru renderà molto più facile infiltrarci nello Shadow Council. Avrà molte informazioni che potremo usare per stanare chi vuole distruggere tutto ciò che abbiamo costruito a Durotar.",
+  reward = "Eccellente! Davvero eccellente, $C!$B$BCiò che hai fatto oggi è solo il primo passo di una base molto più ampia: una base su cui costruiremo, una volta per tutte, la distruzione dello Shadow Council.$B$BDimmi tutto ciò che ha detto... e non tralasciare una sola parola: potrebbe essere più importante di quanto credi.",
+  en_title = "Hidden Enemies",
+  en_obj = "Take the Lieutenant's Insignia to Neeru Fireblade and speak to him. Gauge if he believes you are a member of the Burning Blade and then return to Thrall in Orgrimmar.",
+}
+T[5729] = {
+  title = "Nemici nascosti",
+  desc = "Penso che il prossimo passo sia farti stare vicino a Neeru. Se è agitato quanto dicono i rapporti, potremmo ottenere due cose. Primo, potresti imparare qualcosa di più sul Council, o almeno sui Burning Blade; secondo, potrebbe iniziare a fidarsi abbastanza di te da chiederti di aiutarlo. Potrebbe benissimo vederti come qualcuno in grado di colmare il vuoto ora che parte dei vertici è in subbuglio.$B$BTorna alla Cleft e parlagli di nuovo, ma senza dare troppo nell'occhio.",
+  obj = "Parla con Neeru Fireblade a Orgrimmar.",
+  reward = "Che c'è?! Oh, sei tu, $C... mi scuso. La mia rabbia rivaleggia con quella di un toro kodo rabbioso... ma forse la colpa è mia. Mandando viaggiatori a Ragefire Chasm avrei dovuto prevedere che ne sarebbe derivato qualche danno. Sembra che sia Bazzalan sia Jergosh siano stati colti di sorpresa e uccisi da alcuni dei bravi samaritani di Thrall. Un momento davvero inopportuno, ma ormai non c'è nulla da fare.",
+  en_title = "Hidden Enemies",
+  en_obj = "Speak to Neeru Fireblade in Orgrimmar.",
+}
+T[5730] = {
+  title = "Nemici nascosti",
+  desc = "Sei uno dei miei tenenti! Preparati, $c. Presto ti chiamerò.$B$BIl tempo che ho passato sulla Searing Blade potrebbe ormai essere quasi sprecato, ma ciò non significa che i piani dello Shadow Council altrove debbano risentirne. Farò il possibile per ridurre i danni qui a Ragefire Chasm. Nel frattempo i miei agenti nei Barrens e ad Ashenvale cominceranno a lavorare al nostro nuovo piano. Torna presto da me.",
+  obj = "Parla con Thrall a Orgrimmar e digli ciò che hai appreso.",
+  reward = "Ashenvale? Hmm, non avevo sentito di alcuna presenza del Council o dei Burning Blade ad Ashenvale. I miei informatori indagheranno, $N. Hai fatto bene.$B$BPer ora riposa e tieniti occupat$Go:a; con altri compiti. Presto ti chiamerò di nuovo.$B$BLok-Tar Ogar!",
+  en_title = "Hidden Enemies",
+  en_obj = "Speak to Thrall in Orgrimmar and tell him what you've learned.",
+}
 T[5841] = {
   title = "Benvenut$Go:a;!",
   desc = "Benvenut$Go:a; in World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Yori Crackhelm a Coldridge Valley. Riceverai in dono un piccolo compagno che ti accompagnerà nella tua ricerca di avventura e gloria.$B$BGrazie ancora e buona permanenza in World of Warcraft!",
@@ -697,6 +963,14 @@ T[5841] = {
   reward = "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!",
   en_title = "Welcome!",
   en_obj = "Bring the Coldridge Valley Gift Voucher to Yori Crackhelm.",
+}
+T[6344] = {
+  title = "Nessa Shadowsong",
+  desc = "Una mia amica, Nessa Shadowsong, è una commerciante di pesce a Rut'theran Village. Ha bisogno che un pacco venga portato a Darkshore e cerca qualcuno che la aiuti.$B$BSe ti interessa, per raggiungere Nessa devi prendere il portale a Darnassus per Rut'theran Village. Il portale si trova a ovest dei Temple Gardens.",
+  obj = "Parla con Nessa Shadowsong.",
+  reward = "Sì, mi serve un corriere che porti un pacco a Darkshore. Mi aiuterai?",
+  en_title = "Nessa Shadowsong",
+  en_obj = "Speak with Nessa Shadowsong.",
 }
 T[6387] = {
   title = "Studenti d'onore",
@@ -822,6 +1096,7 @@ T[99158] = {
   en_obj = "Bring the crate of candles to Father Gavin at Misty Pine Refuge.",
 }
 
+G["0190addc"] = "Per dove vi servono indicazioni?"  -- Ironforge Guard
 G["0b3a27f7"] = "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."  -- Alamar Grimm
 G["270ead6d"] = "Di cosa hai bisogno da me, figlio di Zephras?"  -- Rorian the Dayseeker
 G["2bee4217"] = "Vendo i migliori indumenti di stoffa e di cuoio di tutta la valle!"  -- Durnan Furcutter
@@ -836,6 +1111,7 @@ G["778fe32c"] = "Salute, viaggiatore."  -- Eric Brighthammer
 G["81398f94"] = "Cerchi il corriere? È volato via come un uccellino.$B$BNon posso biasimare il poveretto. Questi wendigo sono una brutta faccenda."  -- Mountaineer Gretchen
 G["9d8be0c9"] = "Ciao, $C."  -- Ailee Farheart
 G["aadb260f"] = "Posso addestrarti nelle tecniche di First Aid."  -- Thamner Pol
+G["adbc51c2"] = "Benvenuti al Steelgrill's Depot!"  -- Loslor Rudge
 G["aee7f885"] = "Tu non sei un guerriero... Non resisteresti nemmeno un giorno sotto il mio addestramento!$B$BUn cacciatore che si crede un guerriero. Ah!"  -- Granis Swiftaxe
 G["b670d8ed"] = "Vuoi imparare a ricavare il cuoio dalle bestie uccise? O ti servono degli attrezzi nuovi?"  -- Brighid Stormflayer
 G["b899980b"] = "Salute, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per studiare la minaccia rappresentata dal numero crescente di troll a Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."  -- Grelin Whitebeard

@@ -8,8 +8,9 @@
   python qt.py zone              -> elenca le zone disponibili con il numero di quest
   python qt.py unisci file.json  -> aggiunge nuove traduzioni a traduzioni.json
   python qt.py inglese           -> completa i testi inglesi di riferimento (en_title, en_obj)
-  python qt.py prepara           -> scrive lavoro_quest.json e lavoro_dialoghi.json con i soli
-                                    campi ancora da tradurre (usato da aggiorna.ps1)
+  python qt.py prepara [--zona "Elwynn Forest"] [--blocco 15]
+                                 -> scrive lavoro_quest.json e lavoro_dialoghi.json con il prossimo
+                                    blocco di campi ancora da tradurre (usato da aggiorna.ps1)
   python qt.py unisci-dialoghi file.json -> aggiunge nuovi dialoghi a dialoghi_tradotti.json
   python qt.py genera            -> legge traduzioni.json e dialoghi_tradotti.json
                                     e rigenera ../Traduzioni.lua
@@ -181,21 +182,44 @@ WORK_Q = os.path.join(HERE, "lavoro_quest.json")
 WORK_G = os.path.join(HERE, "lavoro_dialoghi.json")
 
 
-def prepara():
-    """Scrive i file di lavoro con i soli campi non ancora tradotti; stampa i conteggi."""
+def prepara(args=()):
+    """Scrive i file di lavoro con il prossimo blocco di campi non ancora tradotti.
+
+    Opzioni: --zona "<nome>" (solo le quest di quella zona), --blocco N (quest per blocco, 15).
+    Stampa una riga "BLOCCO q=.. d=.. resto_q=.. resto_d=.." letta da aggiorna.ps1."""
+    args = list(args)
+    zona, blocco = None, 15
+    if "--zona" in args:
+        i = args.index("--zona")
+        zona = args[i + 1]
+        del args[i:i + 2]
+    if "--blocco" in args:
+        i = args.index("--blocco")
+        blocco = int(args[i + 1])
+        del args[i:i + 2]
     done, todo = load_json(DONE), load_json(TODO)
+    allowed = None
+    if zona:
+        zid, _ = find_zone(zona)
+        zone_ids = {zid, *SUBZONES.get(zid, [])}
+        allowed = {q for q, v in load_quest_db().items() if v["zone"] in zone_ids}
     quests = {}
     for qid, e in todo.items():
+        if allowed is not None and qid not in allowed:
+            continue
         miss = {k: e[k] for k in FIELDS if e.get(k) and not done.get(qid, {}).get(k)}
         if miss:
             quests[str(qid)] = miss
     g_done = load_json(G_DONE, int_keys=False)
     g_todo = load_json(G_TODO, int_keys=False)
     dialoghi = {k: v for k, v in g_todo.items() if k not in g_done}
+    resto_q, resto_d = len(quests), len(dialoghi)
+    quests = dict(list(quests.items())[:blocco])
+    dialoghi = dict(list(dialoghi.items())[:40])
     for path, data in ((WORK_Q, quests), (WORK_G, dialoghi)):
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"{len(quests)} quest e {len(dialoghi)} dialoghi da tradurre")
+    print(f"BLOCCO q={len(quests)} d={len(dialoghi)} resto_q={resto_q} resto_d={resto_d}")
 
 
 def unisci_dialoghi(args):
@@ -337,6 +361,15 @@ def zone():
         print(f"{name:24} (ID {zid:5})  {n:4} quest")
 
 
+def controlla(qid, src, tr):
+    """Avvisa se una traduzione perde segnaposto ($N, $C, $R) o a capo ($B) dell'originale."""
+    tok = lambda t: sorted(x.lower() for x in re.findall(r"\$[nNcCrR]\b", t))
+    for k in FIELDS:
+        if src.get(k) and tr.get(k):
+            if tok(src[k]) != tok(tr[k]) or src[k].count("$B") != tr[k].count("$B"):
+                print(f"ATTENZIONE quest {qid}, campo {k}: segnaposto o a capo diversi dall'originale")
+
+
 def unisci(args):
     """Aggiunge un file di traduzioni a traduzioni.json, con i testi inglesi di riferimento."""
     if not args:
@@ -351,6 +384,7 @@ def unisci(args):
         if src.get("obj"):
             d.setdefault("en_obj", src["obj"])
         d.update(e)
+        controlla(qid, src, e)
     save_json(DONE, done)
     missing = {q: [k for k in FIELDS if todo.get(q, {}).get(k) and not done[q].get(k)] for q in new}
     missing = {q: m for q, m in missing.items() if m}
@@ -417,7 +451,7 @@ if __name__ == "__main__":
     elif cmd == "unisci":
         unisci(sys.argv[2:])
     elif cmd == "prepara":
-        prepara()
+        prepara(sys.argv[2:])
     elif cmd == "unisci-dialoghi":
         unisci_dialoghi(sys.argv[2:])
     elif cmd == "genera":

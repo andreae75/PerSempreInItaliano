@@ -4,3 +4,10 @@ tools/fonti/
 
 # Cache Python
 tools/__pycache__/
+
+# Testi inglesi in attesa di traduzione e file di lavoro (generati da qt.py, non si pubblicano)
+tools/da_tradurre.json
+tools/dialoghi_da_tradurre.json
+tools/lavoro_*.json
+tools/nuove_traduzioni.json
+tools/nuovi_dialoghi.json
