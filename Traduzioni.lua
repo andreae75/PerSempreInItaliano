@@ -1,12 +1,10 @@
 -- File GENERATO da tools/qt.py (comando "genera"). Non modificarlo a mano:
 -- modifica tools/traduzioni.json e tools/dialoghi_tradotti.json
--- e rigeneralo con: python qt.py genera --lang it
+-- e rigeneralo con: python qt.py genera
 
 QuestTraduttoreData = QuestTraduttoreData or {}
-QuestTraduttoreData.it = QuestTraduttoreData.it or {}
 QuestTraduttoreGossip = QuestTraduttoreGossip or {}
-QuestTraduttoreGossip.it = QuestTraduttoreGossip.it or {}
-local T, G = QuestTraduttoreData.it, QuestTraduttoreGossip.it
+local T, G = QuestTraduttoreData, QuestTraduttoreGossip
 
 T[161] = {
   title = "Un'oscura minaccia incombe",
@@ -756,6 +754,37 @@ T[7676] = {
   progress = "Se mi porti il tuo vecchio mechanostrider veloce, lo scambierò con uno del nuovo lotto. Il nuovo mechanostrider sarà veloce quanto il vecchio, ma avrà un aspetto diverso. Puoi guardare i mechanostrider veloci che abbiamo già qui nel cortile per vedere come sarà.",
   en_title = "White Mechanostrider Replacement",
 }
+T[92460] = {
+  title = "La maggiore età",
+  desc = "Guarda un po', con gli occhi luminosi e pront$Go:a; all'avventura! Qui al Villaggio di Thendal abbiamo bisogno di tutto l'aiuto possibile, e il tuo arrivo è più che gradito. Immagino che tu sia teso per ciò che ti aspetta. Dopotutto, si diventa adulti una sola volta nella vita.$B$BVai a cercare il nostro capo villaggio, Rorian the Dayseeker, all'ingresso dell'albero del grande padre, poco a ovest di qui. Sarà lui a farti iniziare il tuo viaggio.",
+  obj = "Parla con Rorian the Dayseeker nel Bosco di Thendal.",
+  reward = "I saluti del Vento, $N. Sono onorato di consegnarti oggi la tua reliquia della maggiore età, ora che ti viene riconosciuto il potenziale che porti agli shen'dorei. Il nostro popolo ha affrontato grandi sofferenze e persecuzioni nella sua complessa storia.$B$BOggi ricevi questa reliquia, una delle tante custodite da chi ti ha preceduto. Un giorno, quando le tue ceneri saranno disperse nei venti, passerà a un altro per proseguire la nostra tradizione.$B$BPortando con te questa reliquia, sappi che i venti di casa ti accompagneranno ovunque viaggerai.",
+  en_title = "Coming of Age",
+  en_obj = "Speak with Rorian the Dayseeker in Thendal Grove.",
+}
+T[92461] = {
+  title = "Armonia nell'equilibrio",
+  desc = "Viviamo tempi di grande incertezza per il nostro popolo. Affrontiamo sfide senza precedenti che potrebbero richiedere soluzioni audaci, ma dobbiamo anche occuparci delle faccende ordinarie e banali qui nel Bosco di Thendal. Prendi, ad esempio, il recente aumento insostenibile della popolazione di vuldren.$B$BI vuldren sono una parte vitale del nostro ecosistema. Tuttavia, gli squilibri vanno corretti per mantenere la delicata armonia che tutte le creature del Bosco di Thendal condividono.$B$BVai a est e abbatti un po' di vuldren.",
+  obj = "Uccidi 8 Vuldren Juveniles nel Bosco di Thendal.",
+  en_title = "Harmony in Balance",
+  en_obj = "Slay 8 Vuldren Juveniles in Thendal Grove.",
+}
+T[96608] = {
+  title = "Il grande aperto",
+  desc = "Salute, cacciatore. Vedo che hai l'aspetto di un avventuriero. Bene. Il mondo ha bisogno di più anime inquiete come noi, in cerca di fortuna e gloria.$B$BPer avere successo in questo mestiere dovrai imparare a cavartela nelle terre selvagge. Non so come te la cavi all'aria aperta, ma posso insegnarti qualche trucco, se hai voglia di imparare.$B$BSiediti vicino al fuoco e mettiti comodo. Ti guiderò io.",
+  obj = "Siediti vicino a Eric's Basic Campfire e attendi di ricevere il beneficio Boosted Rest.",
+  en_title = "The Great Outdoors",
+  en_obj = "Sit near Eric's Basic Campfire and wait until you receive the Boosted Rest buff.",
+}
+T[96628] = {
+  title = "L'avventuriero",
+  desc = "Aspetta, $N. Ho un'altra richiesta per te, prima che tu affronti quel tunnel.$B$BI miei alpinisti hanno segnalato un avventuriero comparso appena fuori Kharanos. Potresti consegnargli queste provviste?",
+  obj = "Consegna il Supply Bundle a Eric Brighthammer vicino a Kharanos.",
+  progress = "Sei qui per imparare ad accamparti nelle terre selvagge?",
+  reward = "Dici che arrivano dai montanari? Eh, mi torneranno utili. Grazie, cacciatore.$B$BEhi, anche tu hai l'aspetto di un avventuriero. Ti andrebbe di imparare come si accampa?",
+  en_title = "The Adventurer",
+  en_obj = "Deliver the Supply Bundle to Eric Brighthammer near Kharanos.",
+}
 T[97277] = {
   title = "Grund e Gozwin",
   desc = "Ehi, avevo le spalle voltate mentre preparavo l'arrosto di cinghiale quando ho sentito il mio amico Gozwin urlare per salvarsi la vita!\n\nZanne feroci e un lampo veloce: ecco tutto quello che ho visto voltandomi. Che zampe enormi! Uno snow leopard stava trascinando via la sua preda gnomica. Ho afferrato il mio fucile e ho sparato sopra la bestia. Ha mollato la presa ed è scappata via di corsa.\n\nPer fortuna, non aveva fatto altro che lasciare al vecchio Goz qualche graffio profondo.\n\nTorna al campo sulle colline a nord-ovest e recupera il Gozwin's Mechanic's Log. Se lo vedi, uccidi anche quello snow leopard!",
@@ -763,9 +792,55 @@ T[97277] = {
   en_title = "Grund and Gozwin",
   en_obj = "Find Grund and Gozwin's camp in the hills to the northwest. Recover Gozwin's Mechanic's Log and kill the Snow Leopard Prowler.",
 }
+T[98319] = {
+  title = "Mettere in sicurezza la montagna",
+  desc = "Già è brutto avere un problema di troll, ma le montagne sono piene zeppe di wendigo! Di solito restano nelle loro caverne, ma si stanno moltiplicando come conigli. Ora hanno invaso la Grizzled Den a nord di qui.$B$BSe vogliamo il rapporto di Whitebeard, dobbiamo trovare il mio compagno Cornelius. Quella testa dura si è entusiasmato troppo ed è entrato a testa bassa. Coraggioso, ma stupido.$B$BEntra nella caverna e scopri dove si trova. E sentiti libero di abbattere qualche bestia, già che ci sei.",
+  obj = "Trova Mountaineer Cornelius nella Grizzled Den per conto di Mountaineer Gretchen.",
+  en_title = "Secure the Mountain",
+  en_obj = "Find Mountaineer Cornelius in the Grizzled Den for Mountaineer Gretchen.",
+}
+T[98321] = {
+  title = "La spedizione di Flintfire",
+  desc = "Hoha! Che piacere vedere un nano che non teme di sporcarsi le mani.$B$BSe cerchi lavoro, temo di essere un po' a corto di provviste al momento. La nostra fonte di minerale più affidabile è stata invasa dai wendigo e la caverna è stata abbandonata. I minatori hanno dovuto lasciare tutto quando sono fuggiti!$B$BSenti, perché non dai un'occhiata alla Grizzled Den, a ovest, e vedi se riesci a trovare qualcuna delle nostre spedizioni perdute? Ci risparmieresti un bel po' di guai.",
+  obj = "Raccogli 8 Flintfire Shipments dalla Grizzled Den per Tongus Flintfire a Kharanos.",
+  en_title = "Flintfire's Shipment",
+  en_obj = "Collect 8 Flintfire Shipments from the Grizzled Den for Tongus Flintfire in Kharanos.",
+}
+T[98322] = {
+  title = "Mettere in sicurezza la montagna",
+  desc = "Esplorare caverne buie è roba da avventurieri. Il mio compito è solo scrivere rapporti e spedirli a Ironforge.$B$BIl guaio è che uno dei miei rapporti non si è... be', fatto vivo. Ho chiesto a qualche montanaro di indagare sul problema dei wendigo qui fuori, ma non ho più avuto notizie.$B$BSe comunque stai andando in giro, che ne dici di far visita a Mountaineer Gretchen, appena a ovest della città? Io sono già in ritardo come sono!",
+  obj = "Fai visita a Mountaineer Gretchen a ovest di Kharanos.",
+  reward = "Ti manda il vecchio Whitebeard, eh?$B$BIl suo rapporto l'ho ricevuto, sì. Che disastro, questa situazione!",
+  en_title = "Secure the Mountain",
+  en_obj = "Check in on Mountaineer Gretchen west of Kharanos.",
+}
+T[99158] = {
+  title = "Alba tra le montagne",
+  desc = "Tra le montagne c'è un sacerdote che appartiene a un'organizzazione chiamata Argent Dawn. È un ordine sacro dedito a scovare e distruggere ciò che è empio e innaturale.$B$BFather Gavin, però, è più il tipo che cerca di aiutare e guarire tutti piuttosto che impugnare un'arma. Ha rimesso a posto un vecchio edificio per farne un luogo di riposo per i viaggiatori e l'ha chiamato Misty Pine Refuge. Ho una spedizione di candele sacre da fargli avere. Potresti portargliela, se passi da quelle parti?",
+  obj = "Porta la cassa di candele a Father Gavin al Misty Pine Refuge.",
+  en_title = "Dawn in the Mountains",
+  en_obj = "Bring the crate of candles to Father Gavin at Misty Pine Refuge.",
+}
 
 G["0b3a27f7"] = "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."  -- Alamar Grimm
+G["270ead6d"] = "Di cosa hai bisogno da me, figlio di Zephras?"  -- Rorian the Dayseeker
+G["2bee4217"] = "Vendo i migliori indumenti di stoffa e di cuoio di tutta la valle!"  -- Durnan Furcutter
+G["2dab3cc7"] = "Servi bene la Luce, cacciatore."  -- Maxan Anvol
+G["3fff2bae"] = "Salve, $Gragazzo:ragazza;. Sono Grelin Barbabianca. Sono qui per esaminare la minaccia rappresentata dal numero crescente di troll nella Valle di Coldridge. Cosa ho scoperto? È un po' preoccupante..."  -- Grelin Whitebeard
+G["45cd6d77"] = "Che posso fare per voi?"  -- Thorgas Grimson
 G["48b738dc"] = "Vuoi rendere i tuoi demoni più potenti? Ti costerà, ma sei nel posto giusto."  -- Wren Darkspring
+G["5a5eb173"] = "Come posso aiutarti?"  -- Sally Swiftwrench
 G["63e59310"] = "Ah, ma guarda che tipo robusto. Forse puoi darmi una mano con un paio di cose. Qui in giro non c'è molto aiuto, a parte apprendisti alle prime armi, e loro hanno altro a cui pensare."  -- Sten Stoutarm
+G["662b0084"] = "Riempi il boccale e accomodati. Abbiamo storie da raccontare e barili da svuotare."  -- Innkeeper Belm
+G["778fe32c"] = "Salute, viaggiatore."  -- Eric Brighthammer
+G["81398f94"] = "Cerchi il corriere? È volato via come un uccellino.$B$BNon posso biasimare il poveretto. Questi wendigo sono una brutta faccenda."  -- Mountaineer Gretchen
+G["9d8be0c9"] = "Ciao, $C."  -- Ailee Farheart
+G["aadb260f"] = "Posso addestrarti nelle tecniche di First Aid."  -- Thamner Pol
+G["aee7f885"] = "Tu non sei un guerriero... Non resisteresti nemmeno un giorno sotto il mio addestramento!$B$BUn cacciatore che si crede un guerriero. Ah!"  -- Granis Swiftaxe
+G["b670d8ed"] = "Vuoi imparare a ricavare il cuoio dalle bestie uccise? O ti servono degli attrezzi nuovi?"  -- Brighid Stormflayer
 G["b899980b"] = "Salute, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per studiare la minaccia rappresentata dal numero crescente di troll a Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."  -- Grelin Whitebeard
+G["c0efb220"] = "Posso insegnarti a cucinare!"  -- Gremlock Pilsnor
+G["ca234553"] = "Buon giorno a te, ragazzo. Posso esserti utile?"  -- Tognus Flintfire
 G["cd3555d3"] = "Salve, stregone! Bella giornata per la caccia, non trovi? Anch'io ho avuto la mia bella fortuna con i cinghiali. Ti andrebbe di provarci?"  -- Talin Keeneye
+G["d08dcd26"] = "Salute e saluti a voi, buon nano. Magari vi va di condividere un bicchiere con me, per scacciare il gelo del vento? Venite, ne ho più che a sufficienza."  -- Senir Whitebeard
+G["e20388bf"] = "Sei venut$Go:a; ad addestrarti per poi trasmettere tutto ai tuoi animali?"  -- Peria Lamenur

@@ -6,17 +6,13 @@
                                  -> aggiunge a da_tradurre.json tutte le quest di una zona,
                                     prese dal database classic-db (cartella tools/fonti)
   python qt.py zone              -> elenca le zone disponibili con il numero di quest
-  python qt.py unisci file.json [--lang vec]
-                                 -> aggiunge nuove traduzioni a traduzioni.json (o
-                                    traduzioni_<lang>.json per un dialetto diverso da it)
+  python qt.py unisci file.json  -> aggiunge nuove traduzioni a traduzioni.json
   python qt.py inglese           -> completa i testi inglesi di riferimento (en_title, en_obj)
-  python qt.py genera [--lang vec]
-                                 -> legge traduzioni[_<lang>].json e dialoghi_tradotti[_<lang>].json
-                                    e rigenera ../Traduzioni[_<lang>].lua
-
-Dialetti disponibili: it (italiano standard, default), vec (veneto), nap (napoletano),
-rom (romanesco), sic (siciliano). In gioco si scelgono dal pannello opzioni o con
-/qt dialetto <codice>; un dialetto senza traduzioni ripiega automaticamente sull'italiano.
+  python qt.py prepara           -> scrive lavoro_quest.json e lavoro_dialoghi.json con i soli
+                                    campi ancora da tradurre (usato da aggiorna.ps1)
+  python qt.py unisci-dialoghi file.json -> aggiunge nuovi dialoghi a dialoghi_tradotti.json
+  python qt.py genera            -> legge traduzioni.json e dialoghi_tradotti.json
+                                    e rigenera ../Traduzioni.lua
 
 Flusso: gioca -> /reload o esci -> estrai (o importa) -> traduci i file *_da_tradurre
 copiando le voci nei file tradotti (stesso formato, testi in italiano) -> genera -> /reload.
@@ -40,29 +36,6 @@ OUT = os.path.join(ADDON, "Traduzioni.lua")
 FIELDS = ["title", "desc", "obj", "progress", "reward"]
 # testi inglesi originali, usati dall'addon per riconoscerli nel tracker
 EN_FIELDS = ["en_title", "en_obj"]
-DIALECTS = ["it", "vec", "nap", "rom", "sic"]
-
-
-def lang_paths(lang):
-    """Percorsi di traduzioni/dialoghi/output per un dialetto ("it" = i file storici)."""
-    suffix = "" if lang == "it" else f"_{lang}"
-    return (
-        os.path.join(HERE, f"traduzioni{suffix}.json"),
-        os.path.join(HERE, f"dialoghi_tradotti{suffix}.json"),
-        os.path.join(ADDON, f"Traduzioni{suffix}.lua"),
-    )
-
-
-def parse_lang(args):
-    """Estrae --lang <codice> dagli argomenti; ritorna (lang, argomenti restanti)."""
-    lang, args = "it", list(args)
-    if "--lang" in args:
-        i = args.index("--lang")
-        lang = args[i + 1]
-        args = args[:i] + args[i + 2:]
-        if lang not in DIALECTS:
-            sys.exit(f"Dialetto sconosciuto: {lang}. Disponibili: {', '.join(DIALECTS)}")
-    return lang, args
 
 # --- parser minimale per i file SavedVariables di WoW ------------------------
 class LuaParser:
@@ -146,7 +119,7 @@ class LuaParser:
 
 
 def load_saved():
-    files = glob.glob(os.path.join(WOW, "WTF", "Account", "*", "SavedVariables", "QuestTraduttore.lua"))
+    files = glob.glob(os.path.join(WOW, "WTF", "Account", "*", "SavedVariables", "PerSempreInItaliano.lua"))
     if not files:
         sys.exit("Nessun SavedVariables trovato: entra in gioco, apri qualche quest e fai /reload.")
     raccolta, dialoghi = {}, {}
@@ -202,6 +175,38 @@ def estrai():
     g_todo = {k: v for k, v in dialoghi.items() if k not in g_done}
     save_json(G_TODO, g_todo)
     print(f"Dialoghi: {len(dialoghi)} raccolti, {len(g_todo)} da tradurre -> {G_TODO}")
+
+
+WORK_Q = os.path.join(HERE, "lavoro_quest.json")
+WORK_G = os.path.join(HERE, "lavoro_dialoghi.json")
+
+
+def prepara():
+    """Scrive i file di lavoro con i soli campi non ancora tradotti; stampa i conteggi."""
+    done, todo = load_json(DONE), load_json(TODO)
+    quests = {}
+    for qid, e in todo.items():
+        miss = {k: e[k] for k in FIELDS if e.get(k) and not done.get(qid, {}).get(k)}
+        if miss:
+            quests[str(qid)] = miss
+    g_done = load_json(G_DONE, int_keys=False)
+    g_todo = load_json(G_TODO, int_keys=False)
+    dialoghi = {k: v for k, v in g_todo.items() if k not in g_done}
+    for path, data in ((WORK_Q, quests), (WORK_G, dialoghi)):
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(data, f, ensure_ascii=False, indent=1)
+    print(f"{len(quests)} quest e {len(dialoghi)} dialoghi da tradurre")
+
+
+def unisci_dialoghi(args):
+    """Aggiunge un file { chiave: {npc, text} } a dialoghi_tradotti.json."""
+    if not args:
+        sys.exit("Uso: python qt.py unisci-dialoghi nuovi_dialoghi.json")
+    new, done = load_json(args[0], int_keys=False), load_json(G_DONE, int_keys=False)
+    for key, e in new.items():
+        done[key] = e if isinstance(e, dict) else {"text": e}
+    save_json(G_DONE, done)
+    print(f"{len(new)} dialoghi uniti in {G_DONE}")
 
 
 # --- importazione in blocco dal database classic-db (CMaNGOS) ----------------
@@ -333,13 +338,11 @@ def zone():
 
 
 def unisci(args):
-    """Aggiunge un file di traduzioni a traduzioni[_<lang>].json, con i testi inglesi di riferimento."""
-    lang, args = parse_lang(args)
+    """Aggiunge un file di traduzioni a traduzioni.json, con i testi inglesi di riferimento."""
     if not args:
-        sys.exit("Uso: python qt.py unisci nuove_traduzioni.json [--lang vec]")
-    done_path, _, _ = lang_paths(lang)
+        sys.exit("Uso: python qt.py unisci nuove_traduzioni.json")
     new = load_json(args[0])
-    todo, done = load_json(TODO), load_json(done_path)
+    todo, done = load_json(TODO), load_json(DONE)
     for qid, e in new.items():
         d = done.setdefault(qid, {})
         src = todo.get(qid, {})
@@ -348,10 +351,10 @@ def unisci(args):
         if src.get("obj"):
             d.setdefault("en_obj", src["obj"])
         d.update(e)
-    save_json(done_path, done)
+    save_json(DONE, done)
     missing = {q: [k for k in FIELDS if todo.get(q, {}).get(k) and not done[q].get(k)] for q in new}
     missing = {q: m for q, m in missing.items() if m}
-    print(f"{len(new)} quest unite in {done_path} (dialetto: {lang}). Campi mancanti: {missing or 'nessuno'}")
+    print(f"{len(new)} quest unite in {DONE}. Campi mancanti: {missing or 'nessuno'}")
 
 
 def riempi_inglese():
@@ -374,21 +377,17 @@ def lua_str(s):
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n") + '"'
 
 
-def genera(args=()):
-    lang, _ = parse_lang(args)
-    done_path, g_done_path, out_path = lang_paths(lang)
-    done = load_json(done_path)
-    g_done = load_json(g_done_path, int_keys=False)
+def genera():
+    done = load_json(DONE)
+    g_done = load_json(G_DONE, int_keys=False)
     lines = [
         "-- File GENERATO da tools/qt.py (comando \"genera\"). Non modificarlo a mano:",
-        f"-- modifica tools/{os.path.basename(done_path)} e tools/{os.path.basename(g_done_path)}",
-        "-- e rigeneralo con: python qt.py genera --lang " + lang,
+        "-- modifica tools/traduzioni.json e tools/dialoghi_tradotti.json",
+        "-- e rigeneralo con: python qt.py genera",
         "",
         "QuestTraduttoreData = QuestTraduttoreData or {}",
-        f"QuestTraduttoreData.{lang} = QuestTraduttoreData.{lang} or {{}}",
         "QuestTraduttoreGossip = QuestTraduttoreGossip or {}",
-        f"QuestTraduttoreGossip.{lang} = QuestTraduttoreGossip.{lang} or {{}}",
-        f"local T, G = QuestTraduttoreData.{lang}, QuestTraduttoreGossip.{lang}",
+        "local T, G = QuestTraduttoreData, QuestTraduttoreGossip",
         "",
     ]
     for qid in sorted(done):
@@ -406,10 +405,9 @@ def genera(args=()):
         if text:
             npc = e.get("npc", "") if isinstance(e, dict) else ""
             lines.append(f"G[{lua_str(key)}] = {lua_str(text)}" + (f"  -- {npc}" if npc else ""))
-    with open(out_path, "w", encoding="utf-8", newline="\n") as f:
+    with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"{len(done)} quest e {len(g_done)} dialoghi scritti in {out_path} "
-          f"(dialetto: {lang}). In gioco: /reload")
+    print(f"{len(done)} quest e {len(g_done)} dialoghi scritti in {OUT}. In gioco: /reload")
 
 
 if __name__ == "__main__":
@@ -418,8 +416,12 @@ if __name__ == "__main__":
         importa(sys.argv[2:])
     elif cmd == "unisci":
         unisci(sys.argv[2:])
+    elif cmd == "prepara":
+        prepara()
+    elif cmd == "unisci-dialoghi":
+        unisci_dialoghi(sys.argv[2:])
     elif cmd == "genera":
-        genera(sys.argv[2:])
+        genera()
     elif cmd == "inglese":
         riempi_inglese()
     else:

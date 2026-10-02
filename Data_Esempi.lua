@@ -4,8 +4,7 @@
 -- I nomi propri (NPC, mostri, luoghi) restano in inglese per ritrovarli nel gioco.
 
 QuestTraduttoreData = QuestTraduttoreData or {}
-QuestTraduttoreData.it = QuestTraduttoreData.it or {}
-local T = QuestTraduttoreData.it
+local T = QuestTraduttoreData
 
 T[783] = {
   title = "Una minaccia interna",

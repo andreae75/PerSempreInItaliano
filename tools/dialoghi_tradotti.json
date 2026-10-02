@@ -1,22 +1,90 @@
 {
-  "b899980b": {
-    "npc": "Grelin Whitebeard",
-    "text": "Salute, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per studiare la minaccia rappresentata dal numero crescente di troll a Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."
-  },
   "0b3a27f7": {
     "npc": "Alamar Grimm",
     "text": "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."
+  },
+  "270ead6d": {
+    "npc": "Rorian the Dayseeker",
+    "text": "Di cosa hai bisogno da me, figlio di Zephras?"
+  },
+  "2bee4217": {
+    "npc": "Durnan Furcutter",
+    "text": "Vendo i migliori indumenti di stoffa e di cuoio di tutta la valle!"
+  },
+  "2dab3cc7": {
+    "npc": "Maxan Anvol",
+    "text": "Servi bene la Luce, cacciatore."
+  },
+  "3fff2bae": {
+    "npc": "Grelin Whitebeard",
+    "text": "Salve, $Gragazzo:ragazza;. Sono Grelin Barbabianca. Sono qui per esaminare la minaccia rappresentata dal numero crescente di troll nella Valle di Coldridge. Cosa ho scoperto? È un po' preoccupante..."
+  },
+  "45cd6d77": {
+    "npc": "Thorgas Grimson",
+    "text": "Che posso fare per voi?"
   },
   "48b738dc": {
     "npc": "Wren Darkspring",
     "text": "Vuoi rendere i tuoi demoni più potenti? Ti costerà, ma sei nel posto giusto."
   },
+  "5a5eb173": {
+    "npc": "Sally Swiftwrench",
+    "text": "Come posso aiutarti?"
+  },
   "63e59310": {
     "npc": "Sten Stoutarm",
     "text": "Ah, ma guarda che tipo robusto. Forse puoi darmi una mano con un paio di cose. Qui in giro non c'è molto aiuto, a parte apprendisti alle prime armi, e loro hanno altro a cui pensare."
   },
+  "662b0084": {
+    "npc": "Innkeeper Belm",
+    "text": "Riempi il boccale e accomodati. Abbiamo storie da raccontare e barili da svuotare."
+  },
+  "778fe32c": {
+    "npc": "Eric Brighthammer",
+    "text": "Salute, viaggiatore."
+  },
+  "81398f94": {
+    "npc": "Mountaineer Gretchen",
+    "text": "Cerchi il corriere? È volato via come un uccellino.$B$BNon posso biasimare il poveretto. Questi wendigo sono una brutta faccenda."
+  },
+  "9d8be0c9": {
+    "npc": "Ailee Farheart",
+    "text": "Ciao, $C."
+  },
+  "aadb260f": {
+    "npc": "Thamner Pol",
+    "text": "Posso addestrarti nelle tecniche di First Aid."
+  },
+  "aee7f885": {
+    "npc": "Granis Swiftaxe",
+    "text": "Tu non sei un guerriero... Non resisteresti nemmeno un giorno sotto il mio addestramento!$B$BUn cacciatore che si crede un guerriero. Ah!"
+  },
+  "b670d8ed": {
+    "npc": "Brighid Stormflayer",
+    "text": "Vuoi imparare a ricavare il cuoio dalle bestie uccise? O ti servono degli attrezzi nuovi?"
+  },
+  "b899980b": {
+    "npc": "Grelin Whitebeard",
+    "text": "Salute, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per studiare la minaccia rappresentata dal numero crescente di troll a Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."
+  },
+  "c0efb220": {
+    "npc": "Gremlock Pilsnor",
+    "text": "Posso insegnarti a cucinare!"
+  },
+  "ca234553": {
+    "npc": "Tognus Flintfire",
+    "text": "Buon giorno a te, ragazzo. Posso esserti utile?"
+  },
   "cd3555d3": {
     "npc": "Talin Keeneye",
     "text": "Salve, stregone! Bella giornata per la caccia, non trovi? Anch'io ho avuto la mia bella fortuna con i cinghiali. Ti andrebbe di provarci?"
+  },
+  "d08dcd26": {
+    "npc": "Senir Whitebeard",
+    "text": "Salute e saluti a voi, buon nano. Magari vi va di condividere un bicchiere con me, per scacciare il gelo del vento? Venite, ne ho più che a sufficienza."
+  },
+  "e20388bf": {
+    "npc": "Peria Lamenur",
+    "text": "Sei venut$Go:a; ad addestrarti per poi trasmettere tutto ai tuoi animali?"
   }
 }

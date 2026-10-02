@@ -6,36 +6,16 @@ local DB
 
 local DEFAULTS = {
   enabled = true, collect = true, scale = 1, offsetX = 6, offsetY = 0,
-  questlog = true, tracker = true, gossip = true, dialetto = "it",
+  questlog = true, tracker = true, gossip = true,
 }
 local LAYOUT_VERSION = 2
 
--- Dialetti/varianti selezionabili dal pannello opzioni. "it" (italiano standard) è
--- sempre popolato; gli altri partono vuoti finché non si generano le loro traduzioni
--- (tools/qt.py genera --lang <codice>) e nel frattempo ripiegano sull'italiano.
-local DIALETTI = {
-  { code = "it",  nome = "Italiano standard" },
-  { code = "vec", nome = "Veneto" },
-  { code = "nap", nome = "Napoletano" },
-  { code = "rom", nome = "Romanesco" },
-  { code = "sic", nome = "Siciliano" },
-}
-
--- Dati di una quest/dialogo nel dialetto scelto; se assenti, ripiega sull'italiano.
 local function QuestData(id)
-  local variant = QuestTraduttoreData[DB.dialetto]
-  local t = variant and variant[id]
-  if t then return t end
-  local base = QuestTraduttoreData.it
-  return base and base[id]
+  return QuestTraduttoreData[id]
 end
 
 local function GossipText(key)
-  local variant = QuestTraduttoreGossip[DB.dialetto]
-  local t = variant and variant[key]
-  if t then return t end
-  local base = QuestTraduttoreGossip.it
-  return base and base[key]
+  return QuestTraduttoreGossip[key]
 end
 
 local CLASSI = {
@@ -346,6 +326,12 @@ local function ShowDialogue(panel, host, text, quests)
   local npc = NpcName()
   local key = CaptureGossip(text, npc)
   local tr = key and GossipText(key)
+  -- i titoli delle quest in elenco si salvano anche senza aprirle, così sappiamo cosa manca
+  for _, q in ipairs(quests) do
+    if q.id and q.id ~= 0 and q.title and not QuestData(q.id) then
+      Capture(q.id, { title = q.title })
+    end
+  end
   panel:Attach(host)
   panel:SetHeader("Dialogo ID", key or "-", tr ~= nil)
   local blocks = {
@@ -610,22 +596,6 @@ local function AllPanelsHide()
   npcPanel:Hide(); gossipPanel:Hide(); logPanel:Hide()
 end
 
--- Quante quest/dialoghi esistono per un dialetto (per il menu opzioni e /qt stato)
-local function CountVariant(code)
-  local nT, nG = 0, 0
-  local qv = QuestTraduttoreData[code]
-  if qv then for _ in pairs(qv) do nT = nT + 1 end end
-  local gv = QuestTraduttoreGossip[code]
-  if gv then for _ in pairs(gv) do nG = nG + 1 end end
-  return nT, nG
-end
-
-local function DialectLabel(d)
-  local nT = CountVariant(d.code)
-  if d.code == "it" then return d.nome .. " (" .. nT .. ")" end
-  return d.nome .. (nT > 0 and (" (" .. nT .. ")") or " (non ancora disponibile)")
-end
-
 ---------------------------------------------------------------------------
 -- Pannello opzioni (Opzioni di gioco -> AddOn -> Quest Traduttore)
 ---------------------------------------------------------------------------
@@ -636,6 +606,11 @@ local function CreateOptionsPanel()
   local title = panel:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
   title:SetPoint("TOPLEFT", 16, -16)
   title:SetText("Per Sempre in Italiano")
+
+  local flag = panel:CreateTexture(nil, "ARTWORK")
+  flag:SetSize(32, 32)
+  flag:SetPoint("LEFT", title, "RIGHT", 8, 0)
+  flag:SetTexture("Interface\\AddOns\\PerSempreInItaliano\\Media\\Bandiera")
 
   local versionText = panel:CreateFontString(nil, "ARTWORK", "GameFontDisableSmall")
   versionText:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -2)
@@ -664,42 +639,6 @@ local function CreateOptionsPanel()
   Checkbox("Salva i testi inglesi non ancora tradotti", "collect")
 
   y = y - 12
-  local dialectLabel = panel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-  dialectLabel:SetPoint("TOPLEFT", 16, y)
-  dialectLabel:SetText("Dialetto / variante di traduzione")
-
-  y = y - 22
-  local dropdown = CreateFrame("Frame", "QuestTraduttoreDialectDropdown", panel, "UIDropDownMenuTemplate")
-  dropdown:SetPoint("TOPLEFT", 4, y)
-  if UIDropDownMenu_SetWidth then UIDropDownMenu_SetWidth(dropdown, 220) end
-
-  local function RefreshDropdownText()
-    for _, d in ipairs(DIALETTI) do
-      if d.code == DB.dialetto then
-        UIDropDownMenu_SetText(dropdown, DialectLabel(d))
-        return
-      end
-    end
-  end
-
-  if UIDropDownMenu_Initialize then
-    UIDropDownMenu_Initialize(dropdown, function(self, level)
-      for _, d in ipairs(DIALETTI) do
-        local info = UIDropDownMenu_CreateInfo()
-        info.text = DialectLabel(d)
-        info.value = d.code
-        info.checked = (DB.dialetto == d.code)
-        info.func = function()
-          DB.dialetto = d.code
-          UIDropDownMenu_SetSelectedValue(dropdown, d.code)
-          RefreshDropdownText()
-        end
-        UIDropDownMenu_AddButton(info, level)
-      end
-    end)
-  end
-
-  y = y - 46
   local scaleLabel = panel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
   scaleLabel:SetPoint("TOPLEFT", 16, y)
   scaleLabel:SetText("Scala dei riquadri")
@@ -766,8 +705,6 @@ local function CreateOptionsPanel()
     for _, cb in ipairs(checkboxes) do cb.Refresh() end
     scaleSlider:SetValue(DB.scale or 1)
     scaleSlider.Text:SetText("Scala: " .. string.format("%.1f", DB.scale or 1))
-    if UIDropDownMenu_SetSelectedValue then UIDropDownMenu_SetSelectedValue(dropdown, DB.dialetto or "it") end
-    RefreshDropdownText()
   end
   panel:SetScript("OnShow", panel.RefreshAll)
 
@@ -873,20 +810,6 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
   elseif cmd == "reset" then
     DB.offsetX, DB.offsetY, DB.scale = DEFAULTS.offsetX, DEFAULTS.offsetY, DEFAULTS.scale
     Print("posizione ripristinata")
-  elseif cmd == "dialetto" and arg ~= "" then
-    local found
-    for _, d in ipairs(DIALETTI) do
-      if d.code == arg then found = d end
-    end
-    if not found then
-      local codes = {}
-      for _, d in ipairs(DIALETTI) do codes[#codes + 1] = d.code end
-      Print("dialetto sconosciuto. Disponibili: " .. table.concat(codes, ", "))
-    else
-      DB.dialetto = found.code
-      Print("dialetto impostato su: " .. DialectLabel(found))
-      if optionsPanel and optionsPanel.RefreshAll then optionsPanel.RefreshAll() end
-    end
   elseif cmd == "opzioni" then
     if Settings and Settings.OpenToCategory and optionsPanel then
       Settings.OpenToCategory(optionsPanel.name)
@@ -896,13 +819,14 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
       Print("pannello opzioni non disponibile in questo client; usa i comandi /qt.")
     end
   elseif cmd == "stato" then
-    local nT, nG = CountVariant(DB.dialetto)
+    local nT, nG = 0, 0
+    for _ in pairs(QuestTraduttoreData) do nT = nT + 1 end
+    for _ in pairs(QuestTraduttoreGossip) do nG = nG + 1 end
     local nR, nD = 0, 0
     for id in pairs(DB.raccolta) do if not QuestData(id) then nR = nR + 1 end end
     for k in pairs(DB.dialoghi) do if not GossipText(k) then nD = nD + 1 end end
-    Print("dialetto attivo: " .. DB.dialetto)
-    Print(nT .. " quest tradotte in questo dialetto, " .. nR .. " raccolte in attesa di traduzione")
-    Print(nG .. " dialoghi tradotti in questo dialetto, " .. nD .. " raccolti in attesa di traduzione")
+    Print(nT .. " quest tradotte, " .. nR .. " raccolte in attesa di traduzione")
+    Print(nG .. " dialoghi tradotti, " .. nD .. " raccolti in attesa di traduzione")
     Print("ricorda: i testi raccolti vengono scritti su disco con /reload o all'uscita")
   elseif cmd == "diag" then
     Print("registro missioni: " .. (hooks.registro or "|cffff4040nessun aggancio trovato|r"))
@@ -920,7 +844,6 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
     Print("versione " .. VERSION .. " - comandi:")
     Print("  /qt on | off - attiva o disattiva l'addon")
     Print("  /qt opzioni - apre il pannello di configurazione")
-    Print("  /qt dialetto <codice> - it, vec, nap, rom, sic")
     Print("  /qt registro | tracker | dialoghi on | off - singole funzioni")
     Print("  /qt raccolta on | off - salva i testi inglesi non tradotti")
     Print("  /qt nome completo | breve - nome e cognome o solo nome nei testi")
