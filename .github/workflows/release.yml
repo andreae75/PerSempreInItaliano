@@ -37,7 +37,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          quest=$(grep -c '^T\[' Traduzioni.lua)
+          dialoghi=$(grep -c '^G\[' Traduzioni.lua)
+          {
+            echo "## Traduzioni incluse"
+            echo
+            echo "- **$quest quest** tradotte"
+            echo "- **$dialoghi dialoghi** tradotti"
+            echo
+            echo "## Installazione"
+            echo
+            echo "Scarica **PerSempreInItaliano.zip** e decomprimilo nella cartella Interface/AddOns del client: deve comparire la cartella PerSempreInItaliano."
+          } > note.md
           gh release create "$GITHUB_REF_NAME" dist/*.zip \
             --title "$GITHUB_REF_NAME" \
-            --notes "Scarica PerSempreInItaliano.zip e decomprimilo nella cartella Interface/AddOns del client: deve comparire la cartella PerSempreInItaliano." \
+            --notes-file note.md \
             --generate-notes

@@ -775,7 +775,7 @@
   "179": {
     "en_title": "Dwarven Outfitters",
     "title": "Equipaggiamento nanico",
-    "desc": "Cosa abbiamo qui? Sembri proprio avere bisogno di qualcosa per tenerti le mani al caldo, eh?\n\nTi dico io cosa ci vorrebbe: un bel paio di guanti caldi. E, anima gentile quale sono, sarei più che felice di procurartene un paio adatto. Ho però una condizione.\n\nDevi portarmi un po' di carne di lupo. Bell'accordo, eh? Tu mi porti la carne di lupo e io mi assicuro che il gelo non ti porti via nessun dito. Allora, che ne dici?",
+    "desc": "Cosa abbiamo qui? Sembri proprio avere bisogno di qualcosa per tenerti le mani al caldo, eh?$B$BTi dico io cosa ci vorrebbe: un bel paio di guanti caldi. E, anima gentile quale sono, sarei più che felice di procurartene un paio adatto. Ho però una condizione.$B$BDevi portarmi un po' di carne di lupo. Bell'accordo, eh? Tu mi porti la carne di lupo e io mi assicuro che il gelo non ti porti via nessun dito. Allora, che ne dici?",
     "obj": "Sten Stoutarm vuole 8 pezzi di Tough Wolf Meat.",
     "progress": "I lupi ti danno un po' di filo da torcere? Faresti bene a stare alla larga da zanne, artigli e altre parti appuntite, sì?",
     "reward": "Ah! Magnifico. La carne di lupo andrà benissimo. Oh, non preoccuparti, $N, non dimentico la mia parte dell'accordo. Ecco, uno di questi dovrebbe andarti bene.",
@@ -3334,6 +3334,183 @@
     "progress": "$N! Hai qualcosa per me?",
     "reward": "...Cos'è questo? Un cuore di timberling?? È coperto da un muschio disgustoso!$B$BGrazie per avermelo portato, $N. Esaminerò il cuore e, se la fortuna ci assiste, scoprirò la natura del muschio che lo avvolge."
   },
+  "928": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Bring the Partially Filled Vessel to Corithras Moonrage in Dolanaar.",
+    "title": "La Corona della Terra",
+    "desc": "Avrei ancora molto da dirti sui pozzi lunari e su Teldrassil, ma devo mandarti avanti. Corithras Moonrage ti sta aspettando. Ho versato in questo recipiente l'acqua della fiala che mi hai portato, così che tu possa consegnarla a lui.$B$BCerca Corithras. Lo troverai al pozzo lunare di Dolanaar. Segui la strada a sud di Aldrassil, fuori da Shadowglen, e continua lungo il selciato quando la strada gira a ovest.$B$BBada di restare sulla strada, però, $N. Negli ultimi tempi nei boschi si aggirano bestie pericolose.",
+    "obj": "Porta il Partially Filled Vessel a Corithras Moonrage a Dolanaar.",
+    "progress": "Salute, $C. A cosa devo il piacere di questo incontro?",
+    "reward": "Ah, capisco. Ti ha mandat$Go:a; Tenaron. Bene, allora a quanto pare abbiamo molto di cui parlare, molto da fare e poco tempo per farlo.$B$BCredo sia meglio iniziare subito."
+  },
+  "929": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Fill the Jade Phial and bring it back to Corithras Moonrage in Dolanaar.",
+    "title": "La Corona della Terra",
+    "desc": "Per prima cosa, lascia che ti spieghi meglio il compito che devi portare a termine. I druidi di Darnassus usano l'acqua dei pozzi lunari di Teldrassil, e il loro pozzo lunare deve essere rifornito di tanto in tanto. Con queste fiale lavorate appositamente puoi raccogliere l'acqua dei pozzi lunari.$B$BPorta questo recipiente al pozzo lunare fuori da Starbreeze Village, a est, riempilo con un po' delle sue acque e poi torna da me. Quando avrai finito, continuerò la storia da dove l'ha lasciata Tenaron...",
+    "obj": "Riempi la Jade Phial e riportala a Corithras Moonrage a Dolanaar.",
+    "progress": "Ben tornat$Go:a;, $N. Hai portato a termine il tuo compito?",
+    "reward": "Dopo la Battaglia del Monte Hyjal eravamo senza una guida. Nordrassil fumava per il fuoco che aveva scatenato, e la nostra immortalità, la vera essenza del nostro essere, era perduta!$B$BFu in quel periodo difficile che il Traditore venne liberato dalla sua prigione e che Shan'do Stormrage scomparve. Un'epoca oscura per tutti."
+  },
+  "930": {
+    "en_title": "The Glowing Fruit",
+    "en_obj": "Bring the glowing fruit to Denalan at Lake Al'Ameth.",
+    "title": "Il Frutto Luminoso",
+    "desc": "Sotto le fronde di questa pianta luminosa pende un grosso frutto rotondo.$B$BDenalan vorrebbe senza dubbio studiarlo, ne sei sicur$Go:a;.",
+    "obj": "Porta il frutto luminoso a Denalan a Lake Al'Ameth.",
+    "progress": "$N, hai l'aria di chi ha qualcosa da dirmi. Hai notizie sui timberling?",
+    "reward": "L'hai trovato su Teldrassil? Interessante... questo frutto è esotico. Forse i suoi semi sono stati portati qui da molto lontano. Magari persino da Azeroth! E c'è qualcosa in questo frutto... sembra aver reagito in modo stranissimo al terreno di Teldrassil.$B$BGrazie, $N. Ora, se vuoi scusarmi, devo studiarlo meglio..."
+  },
+  "931": {
+    "en_title": "The Shimmering Frond",
+    "en_obj": "Bring a Shimmering Frond to Denalan at Lake Al'Ameth",
+    "title": "La Fronda Scintillante",
+    "desc": "Le fronde di questa pianta scintillano nella luce del bosco, conferendole un'aura contorta e pulsante.$B$BSei convint$Go:a; che Denalan vorrebbe un esemplare di questa pianta.",
+    "obj": "Porta una Shimmering Frond a Denalan a Lake Al'Ameth.",
+    "progress": "Hai qualcosa per me?",
+    "reward": "Dove l'hai presa? Non vedevo una pianta simile da un soggiorno che feci nelle Swamp of Sorrows... decenni fa! È incredibile che un esemplare sia arrivato fino a Teldrassil. E sia cresciuto fino a queste dimensioni!$B$BGrazie, $N. Perdona la mia brevità, ma c'è una prova che vorrei eseguire su questa fronda..."
+  },
+  "932": {
+    "en_title": "Twisted Hatred",
+    "en_obj": "Kill Lord Melenas and bring his head to Tallonkai Swiftroot in Dolanaar.",
+    "title": "Odio Distorto",
+    "desc": "Devo avvertirti, $N: questa faccenda deve restare tra noi. I satiri sono già una vergogna abbastanza grave per noi, e questo è fin troppo vicino a casa.$B$BSi chiama Lord Melenas. Vive nella vicina caverna di Fel Rock, dove ha radunato un folto gruppo di guerrieri grell. Il suo cuore è nero come la notte e trama qualcosa di orribile.$B$BDevi trovarlo nella sua caverna, poco a nord di qui, e portarmi la sua testa.",
+    "obj": "Uccidi Lord Melenas e porta la sua testa a Tallonkai Swiftroot a Dolanaar.",
+    "progress": "Hai già ucciso Lord Melenas? È di vitale importanza che ci si occupi di lui in fretta e in silenzio, $N. La sua stessa esistenza è una vergogna per tutti noi.",
+    "reward": "Ora che Lord Melenas riposa, posso finalmente dedicarmi ad altre questioni. Grazie, $N."
+  },
+  "933": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Fill the Tourmaline Phial and bring it back to Corithras Moonrage in Dolanaar.",
+    "title": "La Corona della Terra",
+    "desc": "C'è un altro pozzo lunare a sud-est dell'ingresso di Darnassus, sulle rive delle Pools of Arlithrien. Le Sentinelle hanno difficoltà a pattugliare la zona a causa degli attacchi e del carattere sempre più irascibile dei furbolg Gnarlpine.$B$BSta' in guardia mentre cerchi il pozzo e tieni le armi a portata di mano.",
+    "obj": "Riempi la Tourmaline Phial e riportala a Corithras Moonrage a Dolanaar.",
+    "progress": "All'inizio i resoconti sugli attacchi dei furbolg impazziti furono ignorati. Chi avrebbe mai pensato che quegli uomini-orso amanti della pace si sarebbero abbandonati a una furia cieca? Ecco un altro dei problemi che ci affliggono nella nostra nuova casa.",
+    "reward": "Shan'do Stormrage non fece mai ritorno, i druidi erano allo sbando e ancora oggi non sappiamo che ne sia stato di lui. Con Malfurion scomparso, l'Arcidruido Fandral Staghelm assunse la guida dei druidi, convincendo il Circle of Ancients di Darkshore che era tempo per il nostro popolo di ricostruire e di riconquistare la propria immortalità.$B$BCon l'approvazione del Circle, Staghelm e i druidi più potenti fecero crescere Teldrassil, il nuovo Albero del Mondo."
+  },
+  "934": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Fill the Amethyst Phial and bring it back to Corithras Moonrage in Dolanaar.",
+    "title": "La Corona della Terra",
+    "desc": "Ma non tutto andava bene con Teldrassil. I piani meticolosi di Staghelm per il nuovo Albero del Mondo erano andati come sperava, ma c'era un piccolo problema, al quale si possono attribuire molti dei guai di Teldrassil.$B$BTuttavia, per ora non ne parlerò. Devi visitare l'ultimo pozzo lunare, a nord-ovest, nell'Oracle Glade. Sotto i rami dell'Oracle Tree si trova il primo e più potente dei nostri pozzi. Recupera una fiala della sua acqua e torna da me.",
+    "obj": "Riempi l'Amethyst Phial e riportala a Corithras Moonrage a Dolanaar.",
+    "progress": "Insieme ai druidi, l'Oracle Tree e l'Arcidruido hanno osservato con attenzione la crescita di Teldrassil. Ma sebbene abbiamo una nuova casa, le nostre vite immortali non ci sono state restituite.",
+    "reward": "Trovarsi al cospetto dell'Oracle Tree... è quasi come sentire la saggezza prendere forma. Lascia che continui il racconto...$B$BUna volta cresciuta Teldrassil, l'Arcidruido si rivolse ai draghi per ottenere la loro benedizione, come i draghi avevano fatto con Nordrassil in tempi antichi. Ma Nozdormu, Signore del Tempo, rifiutò di concederla, rimproverando il druido per la sua arroganza. D'accordo con Nozdormu, anche Alexstrasza rifiutò Staghelm, e senza la sua benedizione la crescita di Teldrassil è stata imperfetta e imprevedibile..."
+  },
+  "935": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Bring the Filled Vessel to Arch Druid Fandral Staghelm in Darnassus.",
+    "title": "La Corona della Terra",
+    "desc": "Senza la benedizione di Alexstrasza la Custode della Vita e di Nozdormu il Senza Tempo, la crescita di Teldrassil non è stata priva di difetti. Si dice che strane bestie emergano dal suolo stesso dell'albero, e che furbolg impazziti attacchino i viaggiatori di passaggio.$B$BNon posso che sperare che la soluzione cercata dall'Arcidruido sia trovata presto. Verserò tutte le fiale che mi hai portato in questo recipiente, perché tu lo consegni a Darnassus.$B$BPortalo a Fandral Staghelm: lo troverai nel boschetto dei druidi.",
+    "obj": "Porta il Filled Vessel all'Arch Druid Fandral Staghelm a Darnassus.",
+    "progress": "So di non averti convocat$Go:a;, perciò non posso fare a meno di chiedermi perché tu sia venut$Go:a; a parlarmi.$B$BQualunque cosa sia, ti prego, sii breve.",
+    "reward": "Ah sì, l'acqua che avevo richiesto. Tenaron e Corithras hanno certo preso il loro tempo per farmela recapitare... forse non hanno scelto i messaggeri più affidabili... hmm.$B$BComunque sia, ora posso finalmente tornare al mio lavoro. Il peso dei problemi di Teldrassil grava sulle mie spalle. Un giogo di cui spero di liberarmi presto.$B$BPrendi questo, potrebbe esserti utile."
+  },
+  "937": {
+    "en_title": "The Enchanted Glade",
+    "en_obj": "Acquire 6 Bloodfeather Belts and bring them to Sentinel Arynia Cloudsbreak in the Oracle Glade.",
+    "title": "La Radura Incantata",
+    "desc": "Sono stato inviato qui con un piccolo gruppo di Sentinelle per proteggere l'Oracle Tree dalle arpie che hanno costruito i loro nidi tutto intorno alla radura. Poco alla volta stiamo cercando di respingerle.$B$BQuando l'Oracle Tree tentò di mandare un corriere a Darnassus con un rapporto, il messaggero fu attaccato e ucciso da un gruppo di arpie.$B$BSe te la senti, va' ai loro nidi, uccidile e portami le loro cinture come prova delle tue imprese.",
+    "obj": "Procurati 6 Bloodfeather Belts e portali alla Sentinel Arynia Cloudsbreak nell'Oracle Glade.",
+    "progress": "I loro artigli taglienti e i becchi penetranti potrebbero rivelarsi un osso duro per le tue capacità, $N, ma ho fiducia che non fallirai in questo compito.",
+    "reward": "Sono colpita da ciò che hai ottenuto qui in così poco tempo, $N. Vorrei poterti chiedere di restare ad assistermi nei miei doveri... ma so in cuor mio che compiti più grandi ti attendono.$B$BHo notato che l'Oracle Tree ha appena perso un pezzo di corteccia. Senza dubbio ha un compito che desidera veder compiuto. Dovresti parlargli."
+  },
+  "938": {
+    "en_title": "Mist",
+    "en_obj": "Escort Mist to Sentinel Arynia Cloudsbreak at the moon well near the Oracle Tree.",
+    "title": "Mist",
+    "desc": "Il pelo della sabercat è di un caratteristico grigio, che si confonde con la foresta circostante. Mentre giace lì, noti che è gravemente ferita, con profonde lacerazioni sulla schiena e sul ventre.$B$BAlza il capo e ti fissa, con una luminosa intelligenza negli occhi azzurri. Sembra voler seguirti.",
+    "obj": "Scorta Mist dalla Sentinel Arynia Cloudsbreak al pozzo lunare vicino all'Oracle Tree.",
+    "progress": "Mist... È stata colpa mia! Le streghe mi hanno colto di sorpresa... Non avrei dovuto lasciare che ti prendessero...",
+    "reward": "Oh, grazie, $N! Temevo di non rivedere mai più Mist, con nel cuore solo la certezza della sua morte, senza mai potermi riunire alla mia fedele compagna. Ti devo più di quanto tu possa immaginare, e hai la mia eterna gratitudine."
+  },
+  "940": {
+    "en_title": "Teldrassil",
+    "en_obj": "Deliver the Oracle Tree's report to Arch Druid Fandral Staghelm in Darnassus.",
+    "title": "Teldrassil",
+    "desc": "La foresta mormora delle tue gesta valorose, $N. Mentre sentivo le arpie cacciate dai loro nidi, una calma più profonda si è diffusa nel bosco, e le sue creature si sentono di nuovo al sicuro. Ho temuto di mandare un altro messaggero all'Arcidruido, ma so che tu porterai il mio messaggio da lui sano e salvo.$B$BConsegnaglielo e sappi che la foresta ti guiderà al sicuro lungo i suoi sentieri fino alla foresta di pietra.",
+    "obj": "Consegna il rapporto dell'Oracle Tree all'Arch Druid Fandral Staghelm a Darnassus.",
+    "progress": "Hmm... Porti con te il forte spirito della foresta, $C. Che affari hai con l'Arcidruido dei Kaldorei?",
+    "reward": "Mi chiedevo perché l'Oracle Tree non comunicasse con me da così tanto tempo... Pare che alcuni problemi si attenuino mentre altri diventino più gravi.$B$BTemo che il mio lavoro su Teldrassil non sarà mai completato e che la nostra immortalità non sarà mai restituita.$B$BCiononostante, hai svolto bene il compito dell'Oracle Tree e meriti di essere ricompensat$Go:a; per la tua diligenza."
+  },
+  "941": {
+    "en_title": "Planting the Heart",
+    "en_obj": "Plant the Tainted Heart in Denalan's Planter.",
+    "title": "Piantare il Cuore",
+    "desc": "Ho rimosso quel muschio immondo dal cuore, ma resta contaminato...$B$BProva a mettere il cuore nel mio vaso. È pieno di un terriccio nutriente che potrebbe purificarlo e guarirlo.",
+    "obj": "Pianta il Tainted Heart nel Denalan's Planter.",
+    "progress": "Questo vaso è pieno di terriccio, preparato appositamente da Denalan.",
+    "reward": "Metti il cuore nel vaso, ed esso si interra subito!$B$BQualche secondo dopo riemerge contorcendosi, purificato. Pulsa debolmente... come per invitarti a prenderlo."
+  },
+  "942": {
+    "en_title": "The Absent Minded Prospector",
+    "en_obj": "Take the mysterious fossil to Archaeologist Flagongut in Menethil Harbor.",
+    "title": "Il Prospettore Distratto",
+    "desc": "Questo fossile somiglia in modo impressionante a uno che vidi una volta a Ironforge. Un archeologo di nome Flagongut lo portò alla nostra conferenza annuale della Explorers' League. Credeva che il fossile avesse un potere che si potesse in qualche modo liberare.$B$BL'ultima volta che ho sentito, Flagongut si era rintanato alla Deepwater Tavern di Menethil Harbor, in attesa di una scorta per il Whelgar Excavation Site. Cercalo e mostragli il fossile di Remtravel. Forse potrà svelare i segreti del passato.$B$BLa nave per Menethil parte da Auberdine.",
+    "obj": "Porta il fossile misterioso all'Archaeologist Flagongut a Menethil Harbor.",
+    "progress": "Che ci hai lì, amico?",
+    "reward": "Oh santo cielo! Dici che viene dalle lontane terre di Kalimdor?$B$BStupefacente! Semplicemente stupefacente!"
+  },
+  "944": {
+    "en_title": "The Master's Glaive",
+    "en_obj": "Gather information, then use the Phial of Scrying to create a Scrying Bowl.  Use the bowl to speak with Onu.",
+    "title": "Il Glaive del Maestro",
+    "desc": "È strano che i naga siano qui, a Darkshore. Ma ancora più strano... è che ci sia il Twilight's Hammer. Quel culto venera gli antichissimi signori della terra. Signori sconfitti da tempo.$B$BIl Master's Glaive, a sud, è un luogo dove uno di quegli antichi signori è caduto.$B$BVa' laggiù e cerca altri cultisti del Twilight's Hammer.$B$BPrendi questa fiala della veggenza. Usala per creare una scrying bowl dopo aver perlustrato il Master's Glaive. Poi parlami attraverso la coppa.",
+    "obj": "Raccogli informazioni, poi usa la Phial of Scrying per creare una Scrying Bowl. Usa la coppa per parlare con Onu.",
+    "progress": "Il Master's Glaive, $N.$B$BVa' là, poi parlami di nuovo.",
+    "reward": "Il Twilight's Hammer è al Master's Glaive?$B$BChe sventura.$B$BL'antico signore trafitto dal glaive è morto da tempo, ma ciò non significa che non restino ancora schegge del suo potere.$B$BIl Twilight's Hammer deve essere in cerca di quel potere."
+  },
+  "945": {
+    "en_title": "Therylune's Escape",
+    "en_obj": "Help Therylune escape, then tell Therysil at the Shrine of Aessina that her sister is safe.",
+    "title": "La Fuga di Therylune",
+    "desc": "Aiuto!$B$BStavo vagando intorno al Master's Glaive e questi sporchi cultisti mi hanno circondata. Per fortuna sono brava a nascondermi!!$B$BPuoi aiutarmi a uscire di qui? E devo far sapere a mia sorella Therysil che sto bene. Si trova ad Ashenvale, a sud, al Shrine of Aessina.",
+    "obj": "Aiuta Therylune a fuggire, poi riferisci a Therysil al Shrine of Aessina che sua sorella è al sicuro.",
+    "reward": "Mia sorella era dove?? A Therylune non dispiace sporcarsi, ma insomma! È una lunga strada da percorrere, e il Master's Glaive è un posto malsano...$B$BBene, grazie, $N. È stato molto gentile da parte tua farmi sapere che sta bene."
+  },
+  "947": {
+    "en_title": "Cave Mushrooms",
+    "en_obj": "Bring 5 Scaber Stalks and 1 Death Cap to Barithras Moonshade in Auberdine.",
+    "title": "Funghi di caverna",
+    "desc": "Sto preparando una pozione che richiede funghi rari, funghi che crescono solo in una certa caverna. La caverna si trova dietro Cliffspring Falls, a est e leggermente a nord lungo le montagne.$B$BCi andrei di persona, ma il Grove of the Ancients mi ha consigliato di starne alla larga. I nostri venerabili alleati sentono che la caverna è il nascondiglio di un nuovo male a Darkshore.$B$BTi prego, $N, raccogli i funghi per me. E già che ci sei, esplora la caverna per confermare i timori degli Ancients.",
+    "obj": "Porta 5 Scaber Stalk e 1 Death Cap a Barithras Moonshade ad Auberdine.",
+    "progress": "Hai i miei funghi, $N? Sei stat$Go:a; nella caverna?",
+    "reward": "Molte grazie, $N. Questi funghi sono esemplari magnifici!$B$BE mentre eri a Cliffspring Falls, hai trovato qualcosa che confermi gli avvertimenti degli Ancients?$B$BGli Ancients sono saggi, ma speravo che, per questa volta, si sbagliassero."
+  },
+  "948": {
+    "en_title": "Onu",
+    "en_obj": "Speak with Onu at the Grove of the Ancients.",
+    "title": "Onu",
+    "desc": "Onu, un Ancient of Lore al Grove of the Ancients, sa del tuo viaggio a Cliffwater Falls e desidera parlarti. Il bosco si trova a sud, adagiato accanto alle montagne.$B$BGli Ancients sono pazienti e saggi, $N. Ma se Onu cerca il tuo parere su ciò che hai visto alle cascate, temo che la cosa sia urgente.",
+    "obj": "Parla con Onu al Grove of the Ancients.",
+    "reward": "$N. Sei qui.$B$BBene.$B$BCi sono questioni... da discutere. Tu ed io."
+  },
+  "949": {
+    "en_title": "The Twilight Camp",
+    "en_obj": "Find a clue in the Twilight's Hammer camp at the Master's Glaive.",
+    "title": "Il campo dei Twilight",
+    "desc": "Lo scopo dei Twilight's Hammer al Master's Glaive non è noto. Ma dev'essere oscuro.$B$BFruga nel loro accampamento al Glaive... Cerca qualcosa che possa rivelarci le loro intenzioni.$B$BPerché dobbiamo conoscere le loro intenzioni prima di elaborare un piano.",
+    "obj": "Trova un indizio nell'accampamento dei Twilight's Hammer al Master's Glaive.",
+    "reward": "Questo libro è stampato a mano in una lingua antica ed è illustrato da un artista sopraffino."
+  },
+  "950": {
+    "en_title": "Return to Onu",
+    "en_obj": "Bring Onu the recovered Insane Scribbles.",
+    "title": "Ritorno da Onu",
+    "desc": "Fissare il Twilight Tome è da impazzire. Il testo comincia a ondeggiare e a danzare dopo un solo istante di sguardo, e i fregi un tempo bellissimi si contorcono in forme grottesche.$B$BStrappare una pagina di folli scarabocchi è tutto ciò che puoi fare prima che un mancamento ti sopraffaccia.",
+    "obj": "Porta a Onu gli Insane Scribbles recuperati.",
+    "progress": "$N. Sei tornat$Go:a;.",
+    "reward": "Una magia caotica e primordiale avvolge questa pergamena di scarabocchi. Vi sento l'opera degli antichi.$B$BSperiamo che riveli lo scopo dei Twilight's Hammer a Darkshore..."
+  },
+  "951": {
+    "en_title": "Mathystra Relics",
+    "en_obj": "Bring 6 Mathystra Relics to Onu at the Grove of the Ancients.",
+    "title": "Reliquie di Mathystra",
+    "desc": "La pergamena che hai trovato al Master's Glaive è una pagina di un antico testo... scritto da elfi! È pesantemente maledetta e contaminata dalla corruzione dei Twilight's Hammer, ma pare che il culto usi l'antica magia elfica per riportare nel nostro mondo i loro vecchi padroni.$B$BRecati alle rovine di Mathystra a nordest e cerca antiche reliquie tra l'erba e le pietre spezzate. Studiandole, potremmo capire come i Twilight's Hammer intendano sfruttare la magia degli elfi.",
+    "obj": "Porta 6 Mathystra Relic a Onu al Grove of the Ancients.",
+    "progress": "$N. Il tuo frugare tra le Ruins of Mathystra è stato fruttuoso?",
+    "reward": "Grazie. Queste reliquie vengono da un tempo in cui Mathystra splendeva. Quel che fu un grande baluardo degli elfi è sbiadito, ma frammenti della sua magia restano. Speriamo di svelare i segreti di quel luogo prima dei nostri nemici...$B$BSii vigile, $N."
+  },
   "952": {
     "en_title": "Grove of the Ancients",
     "en_obj": "Deliver Fandral's message to Onu in the Grove of the Ancients in Darkshore, south of Auberdine.",
@@ -3342,6 +3519,305 @@
     "obj": "Consegna il messaggio di Fandral a Onu nel Grove of the Ancients a Darkshore, a sud di Auberdine.",
     "progress": "Ah. $C. In che modo Onu può esserti d'aiuto?",
     "reward": "Ah. Grazie, $N. È strano, però. L'Arch Druid sembra sempre avere una gran fretta. La foresta sa che tutto accadrà a tempo debito. Shan'do Stormrage lo capiva."
+  },
+  "953": {
+    "en_title": "The Fall of Ameth'Aran",
+    "en_obj": "Study the tablets which tell of Ameth'Aran and of its fall, then return to Sentinel Tysha Moonblade in Darkshore.",
+    "title": "La caduta di Ameth'Aran",
+    "desc": "A est troverai le rovine di Ameth'Aran. Oggi sono abitate dagli spiriti inquieti degli Highborne che un tempo vivevano tra quelle mura, ma una volta era un luogo dove i servitori di Azshara praticavano liberamente le loro potenti magie.$B$BFui mandata a esplorare le rovine e mi imbattei in due grandi tavole, incise con le storie di Ameth'Aran e della sua caduta. Mentre leggevo le rune, fui assalita dagli spiriti e fuggii.$B$BTi prego, se puoi, avventurati nelle rovine e decifra le tavole al posto mio.",
+    "obj": "Studia le tavole che narrano di Ameth'Aran e della sua caduta, poi torna da Sentinel Tysha Moonblade a Darkshore.",
+    "progress": "Quando avrai studiato le tavole e appreso la caduta di Ameth'Aran, porterò la conoscenza ad Auberdine e informerò il Circle of Ancients.",
+    "reward": "Abbiamo pochi documenti del periodo intorno alla War of the Ancients, specie vicino alla distruzione del Well of Eternity. Considerati gli sconvolgimenti e gli eventi cataclismatici di allora, non è una grande sorpresa.$B$BGrazie, $N. Con il tuo aiuto il mio lavoro qui è concluso e potrò consegnare un rapporto completo al Circle."
+  },
+  "954": {
+    "en_title": "Bashal'Aran",
+    "en_obj": "Find the source of the strange blue aura in the ruins of Bashal'Aran.",
+    "title": "Bashal'Aran",
+    "desc": "Le rovine di Bashal'Aran a est sono invase da servitori demoniaci. Gli sprite e i satiri che vi si sono stabiliti si nutrono delle energie magiche del luogo, e i loro poteri crescono con l'esposizione continua.$B$BEppure ho notato che c'è un santuario al quale non si avvicinano. Sul lato occidentale delle rovine, in cima a una piccola altura, si diffonde uno strano alone azzurro... Deve esserci una spiegazione per la riluttanza dei demoni.$B$BVorrei che tu indagassi.",
+    "obj": "Trova la fonte dello strano alone azzurro nelle rovine di Bashal'Aran.",
+    "reward": "Ahh... A cosa devo l'onore tanto speciale della compagnia di un $r come voi? In verità dice molto dei miei attuali compagni — senza offesa per i miei ospiti, i nobili grell e satiri — che la vostra presenza possa essere considerata un miglioramento.$B$BMa vi prego, non lasciate che la mia lingua scortese vi scacci da questo luogo. Sono davvero molti anni, decenni persino, che non ho una compagnia civile."
+  },
+  "955": {
+    "en_title": "Bashal'Aran",
+    "en_obj": "Acquire 8 Grell Earrings for Asterion in Bashal'Aran.",
+    "title": "Bashal'Aran",
+    "desc": "Se dovessi raccontare la storia della mia vita, non dubito che supererebbe i limiti della tua pazienza. Diciamo che la mia è stata una vita lunga e dolorosa, e questa forma spettrale ne è forse il tormento peggiore.$B$BSono trattenuto qui tramite la magia. Sebbene le mie parole possano sembrare insincere, ti assicuro che ti sarei grato oltre ogni parola se mi aiutassi a trovare il mezzo della mia prigionia. Un sigillo mi lega, e esaminando gli orecchini degli sprite e dei grell potrei trovarne una traccia.",
+    "obj": "Procura 8 Grell Earring ad Asterion a Bashal'Aran.",
+    "progress": "Una volta che avrò gli orecchini, lancerò l'incantesimo per cercare dove si trovi il sigillo che mi lega. Per secoli ho pensato alla libertà che la distruzione del sigillo mi porterebbe... Forse quei secoli hanno gravato sulla mia mente al punto che non potrò mai riprendermi...",
+    "reward": "Davvero... I grell di Bashal'Aran non possiedono ciò che cerco... tuttavia sono entrati in contatto con esso di recente. Di recente... direi secondo il tuo tempo, non il mio. Per me il recente si perde nel velo del passato, quasi un'altra Era..."
+  },
+  "956": {
+    "en_title": "Bashal'Aran",
+    "en_obj": "Obtain the Ancient Moonstone Seal and bring it to Asterion in Bashal'Aran.",
+    "title": "Bashal'Aran",
+    "desc": "Se i grell sono venuti a stretto contatto con il sigillo che forma la mia prigione eterna, credo di sapere il motivo. Senza dubbio il sigillo è finito in possesso del satiro che li guida.$B$BSento con forza che dev'essere vero, $n. Uno dei satiri di certo lo possiede. Se riuscirai a ottenerlo, mi porterai così vicino a varcare le sbarre della mia prigione che mi verrebbero le lacrime agli occhi.",
+    "obj": "Ottieni l'Ancient Moonstone Seal e portalo ad Asterion a Bashal'Aran.",
+    "progress": "I pilastri di questo santuario sono per me come le sbarre di una prigione, $N. Nessuna forza che ancora possiedo potrebbe spezzarli, e nessuna magia che padroneggio potrebbe distruggerli...$B$BPer mille anni e più li ho fissati, chiedendomi se, sopravvivendo alla pietra stessa, sarei stato libero. O sarebbero state sbarre invisibili a trattenermi allora...",
+    "reward": "È... è difficile persino credere che ciò che ora stringo sia ciò che mi ha trattenuto così a lungo. Non perdiamo tempo, $N. Quando il sigillo sarà distrutto, potrò camminare di nuovo liberamente per le foreste del mondo."
+  },
+  "957": {
+    "en_title": "Bashal'Aran",
+    "en_obj": "Destroy the Ancient Moonstone Seal at the ancient flame in Ameth'Aran, then return to Asterion in Bashal'Aran.",
+    "title": "Bashal'Aran",
+    "desc": "Fu l'arte di uno dei più potenti tra gli Highborne a creare il sigillo che forma la mia prigione. Ad Ameth'Aran, le rovine a sud gemelle di queste, persiste ancora oggi un'antica fiamma, di colore blu. In questa fiamma il sigillo potrà essere distrutto.$B$BSta' in guardia nelle rovine, $n...",
+    "obj": "Distruggi l'Ancient Moonstone Seal alla fiamma antica di Ameth'Aran, poi torna da Asterion a Bashal'Aran.",
+    "progress": "In verità, $N, ho paura... Paura che il tuo arrivo — tutto questo — sia solo un parto di una mente sconvolta. Puoi immaginare la tortura che è? Io... Ti prego, devi andare in fretta.",
+    "reward": "Sono libero, $N! Ora posso vedere con i miei occhi i cambiamenti giunti nel nostro mondo... Ne ho conosciuti solo frammenti. Pensare che quando camminavo libero per l'ultima volta, il Well era ancora in piedi e gli Highborne tenevano corte con Azshara, la nostra amata regina.$B$BSento che il mio carceriere, il mio antico padrone, Athrikus, vive ancora... Già il mio sconforto cede il posto a pensieri di vendetta."
+  },
+  "958": {
+    "en_title": "Tools of the Highborne",
+    "en_obj": "Retrieve 7 Highborne Relics for Thundris Windweaver in Auberdine.",
+    "title": "Gli strumenti degli Highborne",
+    "desc": "$C. Ho un compito da chiederti.$B$BHai visto le rovine di Ameth'Aran? Se no, le troverai sul lato orientale della strada principale, un po' più a sud. Un tempo furono la casa di molti potenti Highborne, ora sono la testimonianza della distruzione prodotta dai loro esperimenti.$B$BLe Sentinel mi hanno detto che gli spiriti degli Highborne persistono e che brandiscono i loro antichi strumenti magici. Quelle reliquie vanno sottratte, così da poterle distruggere.",
+    "obj": "Recupera 7 Highborne Relic per Thundris Windweaver ad Auberdine.",
+    "progress": "Se solo gli strumenti della loro rovina fossero stati distrutti nel cataclisma che devastò il nostro mondo... Eppure dobbiamo fare ciò che possiamo per assicurarci che gli orrori del nostro passato non si ripetano in futuro.",
+    "reward": "Sarà certo frutto della mia immaginazione, ma mi pare quasi di sentire su di esse la lordura della vile magia degli Highborne. Le farò distruggere, perché il loro male a lungo sopito non venga mai più liberato."
+  },
+  "960": {
+    "en_title": "Onu is meditating",
+    "title": "Onu sta meditando",
+    "reward": "Sto meditando sul tuo compito, $N. Medito sulle ragioni per cui i Twilight's Hammer e i naga sono qui.$B$BQuando sarai pront$Go:a;, usa la phial of scrying per creare uno scrying bowl. Poi contattami attraverso la coppa.$B$BSe hai perso la tua phial of scrying, eccone un'altra."
+  },
+  "961": {
+    "en_title": "Onu is meditating",
+    "title": "Onu sta meditando",
+    "reward": "La presenza dei cultisti dei Twilight's Hammer è inquietante. Devo meditare sulle loro intenzioni...$B$BQuando avrai più informazioni, parlami attraverso uno scrying bowl. Se ti serve una phial of scrying per creare una coppa, allora... eccone un'altra."
+  },
+  "963": {
+    "en_title": "For Love Eternal",
+    "en_obj": "Free the spirit of Anaya Dawnrunner and bring her pendant back to Cerellean Whiteclaw in Auberdine.",
+    "title": "Per amore eterno",
+    "desc": "All'indomani delle battaglie al Well of Eternity, seppi che Ameth'Aran era stata distrutta, il suo popolo morto, compreso il mio amore, Anaya.$B$BMai avrei pensato che, migliaia di anni dopo, il ricordo di Anaya avrebbe ancora tormentato i miei sogni. Vagando in stato di stordimento nei boschi di Darkshore, mi sono ritrovato nelle rovine di Ameth'Aran... dove ho visto lo spirito tormentato della mia amata.$B$BDeve essere liberata, ma non ho il cuore di farlo. Il suo spirito deve essere distrutto.",
+    "obj": "Libera lo spirito di Anaya Dawnrunner e riporta il suo pendente a Cerellean Whiteclaw ad Auberdine.",
+    "progress": "Con un grande dolore nel cuore seguii lo Shan'do Stormrage nell'ibernazione, e portai la mia pena nei sogni, dormendo per il trascorrere di migliaia di anni.",
+    "reward": "Grazie, $n. Forse sarebbe stato meglio... se lo avessi fatto io. Ma persino dopo migliaia di anni non ho potuto sopportare di alzare la mano contro la mia amata.$B$BTi prego, vorrei restare solo con il mio dolore..."
+  },
+  "965": {
+    "en_title": "The Tower of Althalaxx",
+    "en_obj": "Find Balthule Shadowstrike near the Tower of Althalaxx in Darkshore.",
+    "title": "La torre di Althalaxx",
+    "desc": "Salute, giovane $r. Sono Elissa Starbreeze, ed è mio compito proteggere Auberdine dai pericoli.$B$BA tal fine ho mandato Balthule Shadowstrike a osservare gli strani eventi attorno alla Tower of Althalaxx a nordest.$B$BÈ passato da un pezzo il momento in cui sarebbe dovuto tornare. Temo che abbia incontrato qualche pericolo imprevisto nella foresta. Ti sarei molto grata se lo trovassi e ti assicurassi che stia bene.",
+    "obj": "Trova Balthule Shadowstrike vicino alla Tower of Althalaxx a Darkshore.",
+    "reward": "Ti ha mandato Elissa? Allora porti buone notizie. Ho notizie preoccupanti da riferirle e non avevo modo di consegnargliele."
+  },
+  "966": {
+    "en_title": "The Tower of Althalaxx",
+    "en_obj": "Collect 4 Worn Parchments for Balthule Shadowstrike near the Tower of Althalaxx.",
+    "title": "La Tower of Althalaxx",
+    "desc": "Un gruppo di stregoni si è stabilito attorno e dentro la torre. Sarei tornato prima ad Auberdine per riferire a Elissa, ma temevo di perdermi qualcosa durante la mia assenza.$B$BDelgren sospettava che una simile congrega si stesse radunando alla torre, ma non sapeva perché.$B$BQualche frammento di pergamena in possesso degli stregoni è finito nelle mie mani, ma me ne servono altri per completare il quadro. Ti avverto però: non avventurarti dentro la torre, gli stregoni là dentro sono molto più potenti!",
+    "obj": "Raccogli 4 Worn Parchments per Balthule Shadowstrike vicino alla Tower of Althalaxx.",
+    "progress": "Hai trovato altri dei loro rotoli? Dovrei riuscire a ricostruire un quadro più ampio del culto, se riesci a trovarli.",
+    "reward": "Molte grazie, $n. Questo dovrebbe far luce sul raduno di questi stregoni...$B$BHmm... il Cult of the Dark Strand... Non ho mai sentito parlare di questo gruppo. Senza alcuna conoscenza della loro storia, è quasi impossibile dire quali siano i loro piani.$B$BNon c'è più tempo da perdere. Delgren deve essere avvisato immediatamente."
+  },
+  "967": {
+    "en_title": "The Tower of Althalaxx",
+    "en_obj": "Deliver Balthule's letter to Delgren the Purifier in Ashenvale Forest.",
+    "title": "La Tower of Althalaxx",
+    "desc": "Il mio maestro, Delgren the Purifier, è un paladino che ha generosamente offerto il suo aiuto nel difendere le nostre foreste dalle forze dei demoni e dei non morti. Mi ha insegnato molto sulla Sacra Luce e sull'arte della battaglia.$B$BDelgren deve essere informato subito delle operazioni del culto.$B$BLo troverai molto a sud di qui, a Maestra's Post nella Ashenvale Forest. Sii rapido$Go:a;, temo che la minaccia del Dark Strand cresca a ogni ora che passa.",
+    "obj": "Consegna la lettera di Balthule a Delgren the Purifier nella Ashenvale Forest.",
+    "progress": "Hai da trattare qualche affare con me, $C?",
+    "reward": "Se non ti dispiace che lo dica, sembri un po' troppo ben equipaggiat$Go:a; per essere un messaggero, eh? Suppongo che Balthule volesse essere certo che la sua lettera giungesse nelle mie mani. Vediamo cosa dice...$B$BQueste sono notizie inquietanti. Quando vengono avvistate forze non morte o demoniache, aiuto le Sentinelle a distruggerle.$B$BAll'inizio non ero abituato ai modi degli elfi della notte, ma sono arrivato a rispettarli profondamente come alleati."
+  },
+  "968": {
+    "en_title": "The Powers Below",
+    "en_obj": "Bring the Book: The Powers Below to Gerrig Bonegrip in the Forlorn Cavern, Ironforge.",
+    "title": "The Powers Below",
+    "desc": "Sebbene terribilmente consumato e graffiato, il titolo di questo libro si legge ancora sulla copertina:$B$BThe Powers Below$B$BAll'interno c'è un elenco di nomi impronunciabili con titoli sinistri, metodi di adorazione e sacrifici preferiti... molti dei quali includono creature umanoidi vive.$B$BSulla copertina interna ci sono queste parole: \"Bonegrip's Runes and Dooms, The Forlorn Cavern, Ironforge. Proprietario: Gerrig Bonegrip.\"$B$BSe Bonegrip vende libri come questo, forse lo ricomprerà.",
+    "obj": "Porta il libro The Powers Below a Gerrig Bonegrip nella Forlorn Cavern, a Ironforge.",
+    "progress": "Salve, $Gsignore:signora;.$B$BPosso interessarvi a uno dei miei tomi?",
+    "reward": "Ah, una copia di The Powers Below. Un testo interessante, questo. E c'è chi potrebbe trovarlo utile...$B$BMa questa copia è ridotta male. E guarda qui! Ci sono appunti a margine in quasi ogni pagina!$B$BHm... conosco questa copia. L'ho venduta a Bolgar l'anno scorso. Sei... un suo amico? Sì, lo pensavo. Hai la stessa fiamma negli occhi!$B$BBene, per definizione, un amico di Bolgar è un amico mio. E noi ci prendiamo cura dei nostri, vero?"
+  },
+  "982": {
+    "en_title": "Deep Ocean, Vast Sea",
+    "en_obj": "Recover the Silver Dawning's Lockbox and the Mist Veil's Lockbox for Gorbold Steelhand in Auberdine.  Both items should be found aboard the wreckage of the ships to the north of the village.",
+    "title": "Oceano profondo, mare sconfinato",
+    "desc": "Al largo della costa di Darkshore, a nord, giacciono due navi naufragate: la Silver Dawning e la Mist Veil. Tempo fa entrambe incapparono nei maledetti murloc mentre solcavano il vasto mare verso Auberdine. Ora riposano in fondo all'oceano come trofei per quei miscredenti.$B$BEntrambi i capitani non sono sopravvissuti quella notte, e i loro diari e i loro effetti personali sono ancora laggiù, in forzieri sigillati. Vorrei che tu li recuperassi per noi: significherebbe molto per i membri dell'equipaggio che si trovano ancora da queste parti.",
+    "obj": "Recupera il Silver Dawning's Lockbox e il Mist Veil's Lockbox per Gorbold Steelhand ad Auberdine. Entrambi gli oggetti dovrebbero trovarsi a bordo dei relitti delle navi, a nord del villaggio.",
+    "progress": "I capitani di quelle navi erano bravi elfi della notte, e meritano un destino migliore di quello che è toccato loro. Forse prendersi cura dei loro effetti personali è il modo migliore per dare pace ai loro spiriti.",
+    "reward": "Hai reso un grande servigio a noi di Auberdine, ragazzo. Ci assicureremo che i loro effetti siano trattati come si deve.$B$BQuanto a te, prendi questo. È il minimo che io possa fare per chi ha il coraggio di rimettere le cose a posto."
+  },
+  "983": {
+    "en_title": "Buzzbox 827",
+    "en_obj": "Collect 6 Crawler Legs and place them in Buzzbox 827.",
+    "title": "Buzzbox 827",
+    "desc": "Ehi! Dammi una mano con la mia ultima invenzione, la buzzbox. Ti permette di parlare con persone lontane!$B$BForse ne hai già viste: sono scatole con delle leve. L'unico problema è che hanno bisogno di manutenzione costante.$B$BOgnuna ha un guasto diverso, ma ho preso una decisione davvero intelligente. Ho piazzato ciascuna vicino a creature che hanno i pezzi giusti per ripararla. In questo momento la Buzzbox 827 è fuori uso. Si trova appena a sud di Auberdine, proprio vicino. Servono 6 Crawler Legs per ripararla. Ti pagherò...",
+    "obj": "Raccogli 6 Crawler Legs e mettili nella Buzzbox 827.",
+    "progress": "La Buzzbox 827 è avvolta da uno strano silenzio. Una singola luce lampeggiante indica che servono 6 Crawler Legs da inserire nel suo scomparto.",
+    "reward": "Mentre inserisci le Crawler Legs nella macchina, senti gli ingranaggi iniziare a stridere. Dai colpi che provengono dalla Buzzbox, intuisci che le Crawler Legs stanno andando al loro posto. Presto la macchina inizia a ronzare, e senti una vocina chiamare dall'interno.$B$B\"Pronto? Ehm... Pronto! L'hai riparata! Qui è Wizbang, comunque! Grazie mille... Ehi, non vorresti ripararne un'altra, eh?\""
+  },
+  "984": {
+    "en_title": "How Big a Threat?",
+    "en_obj": "Find a corrupt furbolg camp in Darkshore and return to Terenthis in Auberdine.",
+    "title": "Quanto è grande la minaccia?",
+    "desc": "Alcuni dei miei fratelli sono stati salvati da un furbolg corrotto a Teldrassil, e ho giurato di fermare altre atrocità prima che altri della nostra specie siano feriti... o peggio.$B$BHo già visto un paio di indizi di corruzione a Darkshore, ma non ho ancora trovato segni diffusi. Credo sarebbe logico proseguire l'indagine con i furbolg. Potresti trovare uno dei loro accampamenti e tornare da me se vedi segni di corruzione?",
+    "obj": "Trova un accampamento di furbolg corrotti a Darkshore e torna da Terenthis ad Auberdine.",
+    "progress": "Come procede la tua ricerca, $N?",
+    "reward": "Notizie davvero terribili, $N.$B$BCon i furbolg così vicini ad Auberdine, dovremo prepararci all'inevitabile.$B$BGrazie, $N."
+  },
+  "985": {
+    "en_title": "How Big a Threat?",
+    "en_obj": "Kill 8 Blackwood Pathfinders and 5 Windtalkers and return to Terenthis in Auberdine.",
+    "title": "Quanto è grande la minaccia?",
+    "desc": "Hai già dimostrato di essere abile nell'esplorare le linee nemiche, $N. Hai ciò che serve anche per combatterli?$B$BNon tutti gli avventurieri preferiscono lo scontro diretto all'arte della furtività e dell'elusione.$B$BSe ti senti all'altezza, l'accampamento di furbolg a sud di Auberdine è al momento la più grande minaccia per il nostro popolo. Lì troverai alcuni membri della tribù Blackwood. Uccidi 8 pathfinder e 5 windtalker, poi torna qui da me.",
+    "obj": "Uccidi 8 Blackwood Pathfinders e 5 Blackwood Windtalkers e torna da Terenthis ad Auberdine.",
+    "progress": "Non trattenere la mano da ciò che va fatto, bambin$Go:a;. So quanto debba sembrarti ripugnante l'idea di uccidere le creature della foresta, ma in questo caso è necessario. Nessun rimedio è stato scoperto per la corruzione scatenata sulla foresta, e dobbiamo fare il possibile per arrestarne l'avanzata finché non se ne trova uno.",
+    "reward": "Lava via il sangue dalle tue vesti, $N, e non piangere ciò che hai dovuto fare. Piuttosto, rendi grazie. Hai ridotto la minaccia per il nostro popolo qui ad Auberdine, anche se Darkshore è ancora in pericolo a causa degli effetti del fel moss."
+  },
+  "986": {
+    "en_title": "A Lost Master",
+    "en_obj": "Find 5 Fine Moonstalker Pelts and return them to Terenthis in Auberdine.",
+    "title": "Un maestro perduto",
+    "desc": "$N, le tue abilità mi hanno già aiutato nella mia impresa. Posso chiederti ancora di aiutare Grimclaw e il suo maestro Volcor? Inoltre posso creare per te un mantello magico che ti permetterà di camminare indisturbat$Go:a; tra le creature di Darkshore mentre lo cerchi.$B$BPer creare il mantello mi servono cinque Fine Moonstalker Pelts, prese da un moonstalker sire o matriarch per avere materiale sufficiente. I felini si trovano vicino al Wildbend River, a sud, o anche più a sud, verso Ashenvale.",
+    "obj": "Trova 5 Fine Moonstalker Pelts e portale a Terenthis ad Auberdine.",
+    "progress": "Non posso in buona coscienza permetterti di cercare Volcor finché non avrò creato quel mantello per te.",
+    "reward": "Andranno benissimo, $N. Mi metterò subito al lavoro sul mantello.$B$BDammi qualche istante, poi torna da me.$B$BAh, un'ultima cosa: dopo aver usato l'incantesimo sul mantello, le tue interazioni con gli altri saranno limitate. Se puoi evitarlo, limitati a parlare con gli altri. Fare di più potrebbe dissolvere l'illusione."
+  },
+  "990": {
+    "en_title": "Trek to Ashenvale",
+    "en_obj": "Find Raene Wolfrunner in Ashenvale.",
+    "title": "Viaggio verso Ashenvale",
+    "desc": "$N, la mia signora, Raene Wolfrunner, ti attende nella città di Astranaar, ad Ashenvale. Con il tuo aiuto, forse potremo almeno alleviare parte della corruzione che si è radicata laggiù.$B$BDirigiti a sud da qui e resta vicin$Go:a; alla strada: se segui queste indicazioni arriverai senza problemi.",
+    "obj": "Trova Raene Wolfrunner ad Ashenvale.",
+    "reward": "Ah, un $C da Darkshore. Selarin ha fatto bene a mandarti qui così in fretta, $N. Vorrei che il tuo viaggio non fosse avvenuto in circostanze così gravi. Forse con il tuo aiuto potremo migliorare la situazione.$B$BIo comincerei la tua visita parlando con gli altri cittadini di Astranaar. Alcuni potrebbero davvero aver bisogno del tuo aiuto."
+  },
+  "991": {
+    "en_title": "Raene's Cleansing",
+    "en_obj": "Find Teronis in Ashenvale.",
+    "title": "La purificazione di Raene",
+    "desc": "$N, un mio vecchio amico sta aiutando anche lui le Sentinelle qui ad Ashenvale, ma non è ancora tornato.$B$BAveva una pista per trovare un oggetto che pensava potesse rallentare gli attacchi dei furbolg al nostro popolo: un bastone creato da un malvagio stregone ormai morto.$B$BPrima di partire accennò alla ricerca di una gemma per il bastone.$B$BDisse che la gemma poteva essere nascosta al santuario di Lake Falathim, ai piedi della montagna a ovest. La gemma era custodita lì prima che il luogo fosse invaso.$B$BTrova il mio amico, $N, ti prego.",
+    "obj": "Trova Teronis ad Ashenvale.",
+    "reward": "Il corpo di Teronis giace straziato in cima all'isola. Per qualche ignota ragione, i murloc lo hanno lasciato in pace.$B$BI profondi squarci sul suo cadavere sono ovviamente opera delle armi e degli artigli dei murloc."
+  },
+  "993": {
+    "en_title": "A Lost Master",
+    "en_obj": "Find Volcor in Darkshore and give him the Enchanted Moonstalker Cloak.",
+    "title": "Un maestro perduto",
+    "desc": "Il mantello è pronto, $N. È giunto il momento di trovare Volcor. Posso solo sperare che siamo in tempo.$B$BLa magia del mantello, una volta invocata, non durerà a lungo; forse cinque minuti. Sta a te capire quando usarlo: ti suggerisco di aspettare di aver trovato Grimclaw.$B$BSe ciò che mi ha detto è vero, troverai il suo maestro in una caverna a sud di qui. Grimclaw ti aspetterà lungo la strada. Fagli un cenno di saluto quando lo vedi, e lui ti indicherà la via verso il suo maestro.",
+    "obj": "Trova Volcor a Darkshore e consegnagli l'Enchanted Moonstalker Cloak.",
+    "reward": "Meraviglioso! Terenthis ha trovato qualcuno che mi aiutasse.$B$BE guarda. un mantello di moonstalker... <tossisce> Oh... che dolore. Grazie, $N.$B$BI furbolg mi hanno ferito prima che riuscissi a sfuggire loro. Dammi un momento, e dovrei essere in grado di parlare ancora un po'."
+  },
+  "995": {
+    "en_title": "Escape Through Stealth",
+    "en_obj": "Escape the Furbolg cave and meet Terenthis in Auberdine.",
+    "title": "Fuga attraverso la furtività",
+    "desc": "Bene, allora... se ne sei certo$Go:a;, sgattaioleremo via di qui. Partiamo quando sei pront$Go:a;.$B$BRicorda, dopo la fuga, raggiungi Terenthis ad Auberdine. Andrò là per conto mio, dato che probabilmente mi muoverò più velocemente di te.",
+    "obj": "Fuggi dalla caverna dei Furbolg e raggiungi Terenthis ad Auberdine.",
+    "progress": "Sì, $n?",
+    "reward": "$N! Sono lieto di vedere che sei tornat$Go:a; con successo. Il tuo aiuto a Volcor mi ha dato fiducia che potremo superare le sfide che ci attendono qui a Darkshore e oltre."
+  },
+  "997": {
+    "en_title": "Denalan's Earth",
+    "en_obj": "Bring the package of Rare Earth to Denalan at Lake Al'Ameth.",
+    "title": "La terra di Denalan",
+    "desc": "Stai andando a sud? A Lake Al'Ameth? Se è così, avrei un compito da chiederti...$B$BIl mio collega Denalan ha un accampamento sulla sponda orientale del lago, dove studia e sperimenta sulla flora di Teldrassil. Ha richiesto un pacco di terre rare da Darnassus ed è arrivato in ritardo, giungendo qui a Dolanaar solo di recente.$B$BPuoi portarglielo?",
+    "obj": "Porta il pacco di Rare Earth a Denalan a Lake Al'Ameth.",
+    "progress": "Hai qualcosa per me?",
+    "reward": "Ah, è arrivata! Ho atteso questa terra rara per parecchio tempo. Spero sia ancora fresca...$B$BGrazie per avermela portata, $N. Sei un $R che ha a cuore il proprio tempo per gli altri... anzi, che lo dona con generosità."
+  },
+  "1001": {
+    "en_title": "Buzzbox 411",
+    "en_obj": "Collect 3 Thresher Eyes from Darkshore Threshers in the deep sea near Buzzbox 411.",
+    "title": "Buzzbox 411",
+    "desc": "Una vocina gracchia dal profondo della macchina.$B$B\"Qui Wizbang! La prossima Buzzbox è a nord di Auberdine, sulla spiaggia.$B$BQuindi, quella Buzzbox è la numero 411 e per le riparazioni servono 3 Thresher Eyes. Si trovano appena al largo! I darkshore thresher... *Hic*... Scusa, mi è scappato...$B$BCome l'altra volta, quando darai alla Buzzbox il materiale, ti sputerà fuori la ricompensa. *Hic*... Cosa? No, sto benissimo!\"",
+    "obj": "Raccogli 3 Thresher Eyes dai Darkshore Threshers nel mare profondo vicino alla Buzzbox 411.",
+    "progress": "Lo sportello della macchina è aperto e sembra attendere con impazienza che vengano inseriti 3 Thresher Eyes.",
+    "reward": "La Buzzbox si anima con un ronzio subito dopo che hai inserito i Thresher Eyes. C'è un momento di statica prima che senta una familiare vocina chiamare.$B$B\"Il vino di crawler è il migliore...\" *hic*$B$B\"Cosa? Oh, l'hai già riparata? Wow, sei un fulmine. Allora, ne vuoi riparare un'altra?\"$B$BTi sembra di sentire un liquido versato in una tazza, seguito da forti sorsate."
+  },
+  "1002": {
+    "en_title": "Buzzbox 323",
+    "en_obj": "Collect 6 Moonstalker Fangs and place them in Buzzbox 323.",
+    "title": "Buzzbox 323",
+    "desc": "La Buzzbox emette una raffica di statica mentre Wizbang inizia a parlare.$B$B\"La prossima Buzzbox è la numero 323. È a nord di Auberdine ma... dov'è la birra? Eh? Oh, è sulla strada quindi non dovresti avere problemi a trovarla vicino al ponte.\"$B$BWizbang borbotta qualcosa di incomprensibile prima di un forte rumore di sorsate.$B$B\"Questa richiede Moonstalker Fangs... 6 di esse.\"",
+    "obj": "Raccogli 6 Moonstalker Fangs e mettile nella Buzzbox 323.",
+    "progress": "Anche se non hai ancora inserito le 6 Moonstalker Fangs, ti sembra di sentire statica e sproloqui incomprensibili di gnomo provenire dall'interno. Che qualcun altro abbia già riparato la macchina?",
+    "reward": "La Buzzbox entra improvvisamente in azione, e senti distintamente il rumore di denti macinati in polvere provenire dall'interno.$B$B\"Allora, ce l'hai fatta! Ottime notizie... Allora... Perché non ti muovi? Oh! A meno che non vuoi un altro lavoretto!\""
+  },
+  "1003": {
+    "en_title": "Buzzbox 525",
+    "en_obj": "Collect 4 Grizzled Scalps from Grizzled Thistle Bears to the south of Auberdine and place them in Buzzbox 525.",
+    "title": "Buzzbox 525",
+    "desc": "Sopra i rumori di bollore e il gocciolio che provengono dalla macchina, senti la voce tremolante di Wizbang.$B$B\"La prosshima è poco più a sud lungo la strada. Non dovresshi fare fatica a trovarla... appena fuori dal sentiero... vicino a una shteccionata. Credo di averla nashosta in mezzo ai cheshpugli... Cheshpuglii. Eheheh... Shì, la Buzzbox 525 funzionsha con i scalpi grizzled dei Grizzled Thistle Bear. Che boccone... Grizzshled... Eheheh...\"$B$BSenti altri rumori di gola mentre la macchina si spegne. Poi, all'improvviso, torna a vivere con uno scoppio.$B$B\"4!\"",
+    "obj": "Raccogli 4 Grizzled Scalp dai Grizzled Thistle Bear a sud di Auberdine e mettili nella Buzzbox 525.",
+    "progress": "Dalla Buzzbox 525 senti provenire un canto.$B$B\"Il vino di granchio è dolce, la birra di thresher è fine, e il liquore di moonstalker è grandioso. Ma niente è più caro d'una birra d'orso di cardo, e preshto ne avrò una gran scorta!\"$B$BIl portello è aperto e attende i 4 scalpi, mentre la canzone si ripete all'infinito.",
+    "reward": "\"Shì che hai portato gli scalpi? Che meraviglia... Eh? Beh, shì, immagino tu abbia capito che posso parlarti anche shenza i materiali nella macchina. Ma dicevo la verità quando ho detto che erano rotte!$B$BVedi, oltre a esshere shtrumenti di comunimacazione, le Buzzbox producono e distillano anche liquori pregiati. Scusha per l'inganno, ma agli elfi della notte il mio commercio di liquori non piace, nelle loro città. In questa scatola ho messho qualcosa di shpeciale per ringraziarti dei tuoi shforzi. Goditela!\""
+  },
+  "1007": {
+    "en_title": "The Ancient Statuette",
+    "en_obj": "Bring the Ancient Statuette to Talen, in his camp near the Zoram Strand.",
+    "title": "L'antica statuetta",
+    "desc": "Ho un compito da affidarti, $N.$B$BMi trovavo sulla mia piccola imbarcazione, scivolando sulle rovine sommerse di Zoram, quando i naga mi hanno attaccato, balzando fuori dall'acqua e dilaniandomi con gli artigli! Sono fuggito, portando con me quel poco che potevo per allestire questo misero accampamento.$B$BMa quando ho raggiunto la riva e sono corso via... ho perso il mio bene più prezioso.$B$BTi prego, $N, trova il luogo dell'agguato, lungo la costa a nord, e cerca un'antica statuetta. È la ragione per cui ho sfidato i pericoli della Zoram Strand.",
+    "obj": "Porta l'Ancient Statuette a Talen, nel suo accampamento vicino alla Zoram Strand.",
+    "progress": "Hai trovato la statuetta, $N?",
+    "reward": "L'hai trovata! Grazie, $N!$B$BLa vecchia città di Zoram custodisce molti segreti, e questa statuetta potrebbe essere la chiave di molti di essi."
+  },
+  "1008": {
+    "en_title": "The Zoram Strand",
+    "en_obj": "Bring 20 Wrathtail Heads to Shindrell Swiftfire in Astranaar.",
+    "title": "La Zoram Strand",
+    "desc": "Un male si annida sulla nostra costa nordoccidentale, nota come Zoram Strand.$B$BÈ il luogo di riposo della città condannata di Zoram, distrutta durante lo Sundering e sommersa dai mari. Gli elfi della notte l'hanno perduta da secoli. Perduta, e quasi dimenticata.$B$BOra i naga sono tornati, e non ne conosciamo il motivo. Ma il motivo conta poco: dobbiamo uccidere questi demoni e ricacciarli negli abissi!$B$BTorna da me quando la tua missione sarà compiuta.",
+    "obj": "Porta 20 Wrathtail Head a Shindrell Swiftfire ad Astranaar.",
+    "progress": "Non possiamo permettere ai naga di invadere le nostre coste, $N. È vitale che tu vada alla Zoram Strand e porti a termine la tua missione.",
+    "reward": "Ben fatto, $N. Le tue azioni contro i naga alla Zoram Strand sono encomiabili.$B$BSo che l'impresa non è stata facile, perché la forza e l'astuzia dei naga sono ben note agli elfi della notte. Lo sappiamo, perché condividiamo con loro una storia.$B$BÈ una storia che non ho alcun desiderio di ripetere."
+  },
+  "1010": {
+    "en_title": "Bathran's Hair",
+    "en_obj": "Bring 5 Bathran's Hair to Orendil Broadleaf in Ashenvale.",
+    "title": "I capelli di Bathran",
+    "desc": "C'è una pianta che un tempo cresceva nelle antiche rovine di Bathran's Haunt, a nord. Si chiamava Bathran's Hair ed era nota per curare i mali dello spirito.$B$BNel villaggio c'è un bambino malato, e credo che il suo male sia più di una semplice malattia del corpo. Andrai a Bathran's Haunt a cercare la Bathran's Hair? Potrei averne bisogno per curare bene il piccolo.$B$BBathran's Haunt si trova a nord di Maestra's Post e appena a sud del confine con Darkshore.",
+    "obj": "Porta 5 Bathran's Hair a Orendil Broadleaf ad Ashenvale.",
+    "progress": "Hai raccolto la Bathran's Hair, $N? La salute del bambino peggiora di ora in ora...",
+    "reward": "Ah, hai i capelli! Ora preparerò un rimedio per il bambino, e pregherò che il mio intruglio funzioni.$B$BE... i Forsaken a Bathran's Haunt? È davvero preoccupante. Davvero molto preoccupante..."
+  },
+  "1020": {
+    "en_title": "Orendil's Cure",
+    "en_obj": "Bring Orendil's Cure to Pelturas Whitemoon in Astranaar.",
+    "title": "Il rimedio di Orendil",
+    "desc": "$N, ho preparato un rimedio che credo aiuterà il bambino malato. Portalo ad Astranaar e consegnalo al genitore del piccolo, Pelturas Whitemoon.$B$BPer raggiungere Astranaar, segui la strada verso sud, poi verso est.",
+    "obj": "Porta l'Orendil's Cure a Pelturas Whitemoon ad Astranaar.",
+    "progress": "Devo scusarmi, non ho tempo di parlare. Mia figlia Relara è gravemente malata!",
+    "reward": "Questo viene da Orendil?$B$BLa sua abilità con le erbe e la guarigione è grande. Questo rimedio mi dà speranza, quando prima ne avevo ben poca..."
+  },
+  "1056": {
+    "en_title": "Journey to Stonetalon Peak",
+    "en_obj": "Travel to Keeper Albagorm on Stonetalon Peak.",
+    "title": "Viaggio a Stonetalon Peak",
+    "desc": "Gli spiriti della foresta mi dicono che sei coraggios$Go:a; e pront$Go:a; a viaggiare.$B$BA sud, non lontano da Mystral Lake, si trova un tunnel chiamato Talondeep Path. Attraverso questo tunnel giungerai in una zona detta Windshear Crag, nelle Stonetalon Mountains. Una volta lì, prosegui verso sudovest oltre Cragpool Lake e poi verso nord, su per il ripido pendio, fino a raggiungere Stonetalon Peak.$B$BLì ti attende Keeper Albagorm. Ascolta il suo volere, $r.$B$BIl viaggio sarà pericoloso.",
+    "obj": "Recati da Keeper Albagorm a Stonetalon Peak.",
+    "reward": "Ahimè, sei giunt$Go:a;. Vedo che Faldreas ha dato ascolto agli spiriti della foresta..."
+  },
+  "1060": {
+    "en_title": "Letter to Jin'Zil",
+    "en_obj": "Deliver Darsok's letter to Jin'Zil within his cave in Malaka'Jin, in Stonetalon.",
+    "title": "Lettera per Jin'Zil",
+    "desc": "Hai fatto un ottimo lavoro per me, $n. Sei un vero portafortuna, e c'è una cosa che voglio mostrarti.$B$BLe arpie non vengono dai Barrens. Vengono da un luogo chiamato Stonetalon, lontano a nordovest di qui. Per te è probabilmente un posto pericoloso, ma ho bisogno che questa lettera sia consegnata a un vecchio amico che vive là, uno stregone guaritore di nome Jin'Zil.$B$BSarà felice di sapere che Serena Bloodfeather è morta, e credo che troverai Stonetalon un luogo interessante.",
+    "obj": "Consegna la lettera di Darsok a Jin'Zil, nella sua grotta a Malaka'Jin, a Stonetalon.",
+    "progress": "Hai l'aria di un tipo losco. Hai qualcosa da mostrarmi?",
+    "reward": "Ahh, una lettera di Darsok. Non ho sue notizie da molti anni.$B$BQuindi l'ultima dei Bloodfeather è morta, eh? Ottima notizia: ricordo quando il mio amico Rokhan andò con quel pazzo di mok'nathal a uccidere sua sorella maggiore. Ah, essere giovani come te..."
+  },
+  "1061": {
+    "en_title": "The Spirits of Stonetalon",
+    "en_obj": "Speak with Seereth Stonebreak in the Stonetalon Mountains.",
+    "title": "Gli spiriti di Stonetalon",
+    "desc": "Gli spiriti delle Stonetalon Mountains sono adirati, perché i goblin e i loro servi stanno saccheggiando e bruciando la terra. Così la terra ha gridato, e coloro che sanno ascoltare certe cose... hanno sentito.$B$BSeereth Stonebreak, una promettente sciamana dell'Orda, è stata mandata a Stonetalon. Riferisce di una massiccia deforestazione per mano dei goblin e chiede aiuto.$B$BIncontra Seereth a Stonetalon. Per raggiungerla, segui la strada a ovest del Crossroads dei Barrens. È accampata vicino a Greatwood Vale.",
+    "obj": "Parla con Seereth Stonebreak nelle Stonetalon Mountains.",
+    "reward": "Ah, $Gun:una; $C. Molto bene. Avremo bisogno delle tue capacità per occuparci di questi predoni!"
+  },
+  "1062": {
+    "en_title": "Goblin Invaders",
+    "en_obj": "Kill 15 Venture Co. Loggers, then return to Seereth Stonebreak on the border of Stonetalon and the Barrens.",
+    "title": "Invasori goblin",
+    "desc": "La Venture Company, gestita dai goblin, si è insediata nelle Stonetalon Mountains, abbattendo alberi e bruciando enormi tratti di foresta. Gli spiriti di questo luogo sono quasi accecati dal dolore e dalla rabbia. Dobbiamo fermare la Venture Company!$B$BDirigiti a nordovest, oltre Greatwood Vale e dentro Windshear Crag. Troverai i goblin e i loro servi al lavoro: mostra loro che l'Orda non permetterà lo sfruttamento di Stonetalon. Mostraglielo nella lingua che capiscono meglio...$B$BLa violenza.",
+    "obj": "Uccidi 15 Venture Co. Logger, poi torna da Seereth Stonebreak al confine tra Stonetalon e i Barrens.",
+    "progress": "Greatwood Vale si trova a nordovest, $N. Va'. Semina la paura in chi vorrebbe saccheggiare questa terra!",
+    "reward": "Coraggiosamente fatto, $N.$B$BAlla fine potremmo aver bisogno della saggezza degli anziani tauren per calmare gli spiriti di Stonetalon, ma...$B$BLiberarsi del personale della Venture Company è un'ottima prima mossa contro di loro."
+  },
+  "1063": {
+    "en_title": "The Elder Crone",
+    "en_obj": "Speak with Magatha in Thunder Bluff.",
+    "title": "L'anziana megera",
+    "desc": "Per prenderci davvero cura degli spiriti di Stonetalon dobbiamo consultare gli anziani tauren.$B$BNon conosco i nomi di molti dei loro capi, ma di uno sì: Magatha. Ho sentito dire che è molto anziana e che sa molte cose. Se c'è qualcuno in grado di radunare un aiuto spirituale dai tauren, è lei.$B$BMagatha risiede nella capitale dei tauren, Thunder Bluff, su Elder Rise, l'altura nordorientale della città. Parla con Magatha e raccontale del pericolo che incombe sulle Stonetalon Mountains.",
+    "obj": "Parla con Magatha a Thunder Bluff.",
+    "reward": "Ti porgo il mio saluto. Sei qui in cerca di consiglio?"
   },
   "1064": {
     "en_title": "Forsaken Aid",
@@ -3360,6 +3836,15 @@
     "progress": "Ah, sei qui con i miei nuovi soggetti di prova?",
     "reward": "Una nota di Zamah? Le sue necessità devono essere grandi, se manda un messaggio da così lontano. Vediamo cosa dice...$B$BAh, splendido! So esattamente cosa fare!"
   },
+  "1069": {
+    "en_title": "Deepmoss Spider Eggs",
+    "en_obj": "Bring 15 Deepmoss Eggs to Mebok Mizzyrix in Ratchet.",
+    "title": "Uova di ragno Deepmoss",
+    "desc": "Le frittate di uova di ragno sono l'ultima moda a Booty Bay! Il problema è... che a Booty Bay non ci sono uova.$B$BPercepisco un'occasione!$B$BA Windshear Crag e a Sishir Canyon, nelle Stonetalon Mountains a nordovest, vive il ragno deepmoss. Portami le sue uova e ti pagherò una fortuna!$B$BA Windshear Crag le uova si trovano a grappoli sotto i pochi alberi rimasti.$B$BA Sishir Canyon... beh, se hai lo stomaco debole forse faresti meglio a raccogliere solo le uova di Windshear Crag...",
+    "obj": "Porta 15 Deepmoss Egg a Mebok Mizzyrix a Ratchet.",
+    "progress": "Hai preso le uova, $N? Ho già concluso un accordo di spedizione con Wharfmaster Dizzywig!",
+    "reward": "Le hai prese! Grazie!$B$BLe farò mandare a Dizzywig e spedire a Booty Bay. Sento già il profumo dei profitti!$B$BEcco la tua parte, $N. Senza di te non avrei mai concluso l'affare."
+  },
   "1097": {
     "en_title": "Elmore's Task",
     "en_obj": "Speak with Grimand Elmore.",
@@ -3367,6 +3852,40 @@
     "desc": "C'è un fabbro d'armi nano a Stormwind, Grimand Elmore, che mi ha fatto sapere di aver bisogno di aiuto per una consegna. Credo voglia far recapitare un pacco nella sua terra natale, a nord.$B$BHai un bel paio di gambe robuste! Quindi, se ti va di fare un po' di strada, parla con Grimand. Ci faresti comodo qui, ma dobbiamo anche mantenere saldi i legami con i nani.$B$BPuoi trovare Grimand Elmore nell'armeria del Dwarven District di Stormwind, nella zona nordest della città.",
     "obj": "Parla con Grimand Elmore.",
     "reward": "Sei qui per aiutarmi con la consegna? Benissimo!"
+  },
+  "1132": {
+    "en_title": "Fiora Longears",
+    "en_obj": "Speak with Fiora Longears on the docks at Theramore in Dustwallow Marsh.",
+    "title": "Fiora Longears",
+    "desc": "Oh, tornare ancora una volta per mare! Sentire il bacio del vento e farmi cullare dalle onde come da mia madre, tanto tempo fa!$B$BOh, vorrei avere la tua fortuna, $Gbravo:brava; $c, perché vedo il mare nel tuo futuro!$B$BIl mio compito è parlare alle anime desiderose della terra di Kalimdor, la terra delle opportunità! Se sei $Gdisposto:disposta; a tentare la sorte oltre il mare, prendi una nave da qui fino all'incantevole porto di Theramore. Là parla con la mia socia, l'elfa Fiora Longears.$B$BLei ti farà iniziare la tua avventura a Kalimdor!",
+    "obj": "Parla con Fiora Longears sui moli di Theramore, a Dustwallow Marsh.",
+    "reward": "Buongiorno! Ti ha mandato Mr. Flint di Menethil Harbor? Beh, Mr. Flint ha un ottimo intuito per le persone. Se ha mandato te, non c'è dubbio che il tuo posto sia qui a Kalimdor!"
+  },
+  "1133": {
+    "en_title": "Journey to Astranaar",
+    "en_obj": "Speak with Shindrell Swiftfire in Astranaar.",
+    "title": "Viaggio ad Astranaar",
+    "desc": "Se sei appena sbarcat$Go:a; da Menethil, la prima cosa da fare è... andare ad Astranaar. Sono certo che $Gun:una; $Gvolenteroso:volenterosa; membro dell'Alleanza come te possa fare del vero bene lassù. Parla con Shindrell Swiftfire e offri i tuoi servigi.$B$BMa non preoccuparti di dire chi ti manda. Shindrell non mi conosce...",
+    "obj": "Parla con Shindrell Swiftfire ad Astranaar.",
+    "reward": "Sei qui per offrire i tuoi servigi all'Alleanza, $N? Accogliamo volentieri l'aiuto, perché sebbene la sua bellezza rimanga... Ashenvale Forest non è più il luogo pacifico di un tempo."
+  },
+  "1138": {
+    "en_title": "Fruit of the Sea",
+    "en_obj": "Collect 6 Fine Crab Chunks for Gubber Blump in Auberdine.",
+    "title": "Frutti di mare",
+    "desc": "Adoro il granchio. I granchi sono il frutto del mare! Si può cuocere al forno, alla griglia, bollire e arrostire. Si friggono in padella, si friggono in olio, si saltano. C'è l'insalata di granchio, la zuppa di granchio, lo stufato di granchio, il granchio al pepe, il granchio al limone, il granchio alla whipper root e il granchio a sorpresa di Ironforge. Ecco... più o meno è tutto.$B$BIo sono qui a pescare, quindi non posso procurarmi dei bei pezzi di granchio. Tu puoi prenderli dai reef crawler e dagli encrusted tide crawler. Se ne fanno un sacco di cose. Si può cuocere al forno, alla griglia, bollire...",
+    "obj": "Raccogli 6 Fine Crab Chunk per Gubber Blump ad Auberdine.",
+    "progress": "...il granchio al limone, alla whipper root e a sorpresa di Ironforge. Più o meno è tutto.$B$BOh, ciao $N. Hai quei bei pezzi di granchio di cui ti parlavo?",
+    "reward": "Wow, questi pezzi di granchio sono proprio quello che mi serve. Grazie $N! Ho trovato questa cosa mentre pescavo tempo fa, e non so che farmene. Magari tu ci combini qualcosa. Di sicuro non ci si fanno buoni piatti di granchio.$B$BTi ho parlato di tutto sui granchi, vero?"
+  },
+  "1141": {
+    "en_title": "The Family and the Fishing Pole",
+    "en_obj": "Catch 6 Darkshore Grouper for Gubber Blump in Auberdine.",
+    "title": "La famiglia e la canna da pesca",
+    "desc": "Adoro pescare. La famiglia Blump è famosa per la pesca. Mi chiamo Gubber Blump; io pesco.$B$BC'è un tipo di pesce che mi piace prendere da queste parti, il Darkshore grouper. Prima andavo in barca a pescare cernie, ma nessuna barca esce più da quando quei cattivi murloc si sono insediati. Scommetto che si sono pure mangiati tutte le cernie.$B$BSenti, vuoi aiutarmi a pescare dei Darkshore grouper? Ti darei una vera Blump Family Fishing Pole, se lo facessi! È una canna davvero ottima per pescare.",
+    "obj": "Pesca 6 Darkshore Grouper per Gubber Blump ad Auberdine.",
+    "progress": "Ci sono un sacco di bei piatti da fare con i Darkshore grouper. Sono buoni da mangiare, ma secondo me è più divertente pescarli.$B$BNe hai già pescato qualcuno?",
+    "reward": "Questi sì che sono dei bei grouper, $N! Grazie per l'aiuto!$B$BSei bravo a pescare almeno quanto mia cugina, Graun Blump. Ha pure la barba e puzza un po' strano, ma questo non le impedisce di pescare. Mi sa che hai quel che serve per usare una Blump Family Fishing Pole."
   },
   "1338": {
     "en_title": "Stormpike's Order",
@@ -3403,13 +3922,32 @@
     "progress": "Hai qualcosa per me?",
     "reward": "Ah sì, i campioni di cuore di cui parlava Renferrel. Sono ansiosa di sperimentare con questi... alla Royal Apothecary Society interessa sempre quando si scoprono nuove forme di tossine."
   },
+  "1492": {
+    "en_title": "Wharfmaster Dizzywig",
+    "en_obj": "Bring the Secure Crate to Wharfmaster Dizzywig in Ratchet.",
+    "title": "Wharfmaster Dizzywig",
+    "desc": "Devo spedire una cassa di pozioni, reagenti e altri oggetti ai miei soci nel Vecchio Mondo. Ho poco tempo per portarla personalmente al molo di Ratchet, e l'ultima carovana è già partita.$B$BSe puoi, porta questa cassa a Wharfmaster Dizzywig. Lui farà in modo che venga caricata sulla prossima nave diretta a Blackwater Cove.",
+    "obj": "Porta la Secure Crate a Wharfmaster Dizzywig a Ratchet.",
+    "progress": "Cercate un passaggio sulla prossima nave, o avete qualcosa da spedire a bordo?",
+    "reward": "Una cassa abbastanza piccola. Sì, dovrei riuscire a trovarle posto a bordo. La nave salpa con la prossima marea, spero che vada bene. Eccellente. Lasciate che la annoti sul mio registro.$B$BTutto sistemato! Buona giornata a te, $C."
+  },
   "1599": {
     "en_title": "Beginnings",
     "en_obj": "Bring 3 Feather Charms to Alamar Grimm in Anvilmar.",
     "title": "Inizi",
-    "desc": "Devi essere lo stregone nuovo di cui tutti bisbigliano. Qualcuno deve avertela presa a benvolere, se mi hanno chiesto di distogliermi dalle mie ricerche per iniziare il tuo addestramento.\n\nNon preoccuparti, non te ne farò una colpa.\n\nIl più semplice degli incantesimi di evocazione che imparerai è quello dell'imp. Prima però di insegnartelo, devi dimostrare di possedere le capacità magiche e fisiche necessarie.\n\nPortami tre feather charms dai frostmane novices della caverna a sud-ovest.",
+    "desc": "Devi essere $Glo stregone nuovo:la strega nuova; di cui tutti bisbigliano. Qualcuno deve avertela presa a benvolere, se mi hanno chiesto di distogliermi dalle mie ricerche per iniziare il tuo addestramento.$B$BNon preoccuparti, non te ne farò una colpa.$B$BIl più semplice degli incantesimi di evocazione che imparerai è quello dell'imp. Prima però di insegnartelo, devi dimostrare di possedere le capacità magiche e fisiche necessarie.$B$BPortami tre feather charms dai frostmane novices della caverna a sud-ovest.",
     "obj": "Porta 3 Feather Charms ad Alamar Grimm ad Anvilmar.",
-    "progress": "Quei feather charms che portano i novizi hanno una qualche forma di potere magico. Sarà interessante studiarli. Non me lo sarei aspettato dai troll."
+    "progress": "Quei feather charms che portano i novizi hanno una qualche forma di potere magico. Sarà interessante studiarli. Non me lo sarei aspettato dai troll.",
+    "reward": "Molto bene, molto bene! Hai fatto un buon lavoro, $n. Forse l'interesse che si mostra nei tuoi confronti è meritato, dopotutto.$B$BQuesto lo decideranno gli altri... sempre che il tuo imp non ti sopraffaccia e non stronchi la tua carriera sul nascere. Per ora mi basta che tu probabilmente sopravviverai ai tuoi primi mesi da $Gstregone:strega;.$B$BUna parola sull'imp, $n. Come sa ogni gnomo, non farti ingannare dalle dimensioni: la sua magia può essere molto pericolosa."
+  },
+  "1656": {
+    "en_title": "A Task Unfinished",
+    "en_obj": "Bring the Bundle of Furs to Innkeeper Kauth in Bloodhoof Village.",
+    "title": "Un compito incompiuto",
+    "desc": "$N, ti prego, puoi aiutarmi? Non ho ancora finito i miei compiti qui sulla Mesa... sono nel mezzo del mio Rito della Forza... e mio padre mi ha chiesto di consegnare queste pellicce alla locanda di Bloodhoof.$B$BSono ben lontan$Go:a; dall'essere abbastanza riposat$Go:a; per completare sia il mio rito sia questo incarico per mio padre. Andresti tu al posto mio?$B$BLa locanda è accogliente e perfetta per riposarsi durante i tuoi lunghi viaggi. Sono certo che concorderai quando la vedrai.",
+    "obj": "Porta il Bundle of Furs a Innkeeper Kauth a Bloodhoof Village.",
+    "progress": "Sì, giovane? Che cosa può fare Kauth per te?$B$BIl viaggio fin qui dalla Mesa può essere un fardello enorme per alcuni, ma una vista gradita per altri. Chissà quale dei due è il tuo caso?",
+    "reward": "Ah, le pellicce che aspettavo. Grazie.$B$BSono arrivate più in fretta del previsto. Faranno ottime coperte per chiunque voglia fermarsi qui.$B$BSentiti libero di restare quanto vuoi. La mia locanda è sempre aperta e tutta la nostra gente è la benvenuta. E non sottovalutare una buona notte di riposo: può fare una grande differenza mentre sei in viaggio."
   },
   "2038": {
     "en_title": "Bingles' Missing Supplies",
@@ -3436,6 +3974,68 @@
     "obj": "Parla con Shoni the Shilent a Stormwind.",
     "reward": "Porti notizie dal comando centrale?"
   },
+  "2078": {
+    "en_title": "Gyromast's Revenge",
+    "en_obj": "Find Gelkak's First Mate, the Threshwackonator 4100, and lead it back to Gelkak.",
+    "title": "La vendetta di Gyromast",
+    "desc": "Marinaio d'acqua dolce, devi trovare il mio primo ufficiale.$B$BPrendi questa chiave, infilagliela nella testa e riportalo qui a servire il Capitano.$B$BQuei murloc e il loro capo non saranno per niente contenti quando il mio primo ufficiale metterà le mani su di loro!",
+    "obj": "Trova il Primo Ufficiale di Gelkak, il Threshwackonator 4100, e riportalo da Gelkak.",
+    "progress": "Dov'è il mio primo ufficiale, $N? Catene e squali ti aspettano se non ti sbrighi!",
+    "reward": "Arrr... Ti stai dimostrando più di un vigliacco lupo di mare, marinaio d'acqua dolce.$B$BIl Capitano potrebbe promuoverti a sguattero di poppa se continui così..."
+  },
+  "2098": {
+    "en_title": "Gyromast's Retrieval",
+    "en_obj": "Find and return the three pieces of Gelkak's Key to Gelkak Gyromast.",
+    "title": "Il recupero di Gyromast",
+    "desc": "La vita del pirata non è facile, marinaio d'acqua dolce. Non è solo saccheggi e rum! Ahimè, la mia nave è affondata poco al largo per colpa di quei fastidiosi Threshadon.$B$BQuello che mi serve è il mio primo ufficiale di nuovo in funzione!$B$BQuando sono approdato a riva, la chiave del mio primo ufficiale si è spezzata sugli scogli ed è stata trafugata dalle bestie di Darkshore. Con la coda dell'occhio ho visto dei Ragin' Crawler, dei Ferocious Foreststrider e dei murloc frugare tra i relitti...",
+    "obj": "Trova e riporta i tre pezzi della Gelkak's Key a Gelkak Gyromast.",
+    "progress": "Hai trovato la mia chiave rotta, marinaio d'acqua dolce?",
+    "reward": "Ohé, vecchio lupo di mare! Ce l'hai fatta! Presto il mio primo ufficiale sarà di nuovo in funzione e quelle bestiacce non sapranno cosa le ha colpite!$B$BHmm, hai per caso visto il mio primo ufficiale?"
+  },
+  "2118": {
+    "en_title": "Plagued Lands",
+    "en_obj": "Capture a living Rabid Thistle Bear and bring it back to Tharnariun.$B$BShould you fail to capture a Rabid Thistle Bear and lose your trap, return to Tharnariun Treetender and request another trap.",
+    "title": "Terre appestate",
+    "desc": "Una malattia si diffonde per Darkshore, stringendo menti e corpi di tutto ciò che tocca.$B$BI Thistle Bear sono i più colpiti da questa piaga. Quelle un tempo nobili creature sono ora strumenti di distruzione: rabbiose e frenetiche. Forse ho una cura per questo male.$B$BPrendi questa trappola, portala nella foresta e posala a terra. Ogni Rabid Thistle Bear che attraverserà la luce diventerà docile per breve tempo. Quando l'orso sarà docile, ti seguirà. Riportalo qui, $N.",
+    "obj": "Cattura un Rabid Thistle Bear vivo e portalo a Tharnariun.$B$BSe non riesci a catturare un Rabid Thistle Bear e perdi la trappola, torna da Tharnariun Treetender e chiedine un'altra.",
+    "progress": "Mi hai portato l'animale malato, $N?$B$BSe la trappola non è scattata, non preoccuparti: la Speranza di Tharnariun è eterna. Se ti serve un'altra trappola, abbandona il tuo compito e torna da me.",
+    "reward": "Il nostro lavoro è appena cominciato, $N. Sei pronto$Go:a; per il prossimo compito?"
+  },
+  "2138": {
+    "en_title": "Cleansing of the Infected",
+    "en_obj": "Cleanse the forest of 20 Rabid Thistle Bears and return to Tharnariun Treetender in Darkshore.",
+    "title": "La purificazione degli infetti",
+    "desc": "Come temevo, la cura non funziona.$B$BMi addolora profondamente ordinare la morte di una qualsiasi bestia della natura, ma gli orsi malati e contaminati devono essere abbattuti.$B$BTorna nella foresta e distruggi 20 Rabid Thistle Bear, $N. Di certo non fermerà la piaga, ma rallenterà per un breve periodo il danno che questi animali infliggono alla nostra foresta e ai suoi abitanti.",
+    "obj": "Purifica la foresta da 20 Rabid Thistle Bear e torna da Tharnariun Treetender a Darkshore.",
+    "progress": "Il tuo compito è concluso?",
+    "reward": "Hai reso un grande servizio ad Auberdine, $N, ma il tuo compito non è ancora finito."
+  },
+  "2139": {
+    "en_title": "Tharnariun's Hope",
+    "en_obj": "Find and kill the Den Mother.",
+    "title": "La speranza di Tharnariun",
+    "desc": "La sopravvivenza del nostro popolo e delle nostre terre ha un prezzo sfortunato, $N.$B$BHai versato il sangue dei servitori della natura; hai abbattuto molti animali malati. La gente di Auberdine è in debito con te, perché il dolore della foresta si è alleviato, anche se solo per un istante.$B$BHo un ultimo compito per te, ma sii avvisat$Go:a;: dovrai uccidere ancora. È mia speranza che questa sia l'ultima volta che ti chiamo in causa, $N.$B$BIn una caverna a nordest, vicino a Bashal'Aran, dimora la Den Mother. Uccidila.",
+    "obj": "Trova e uccidi la Den Mother.",
+    "progress": "Con la Den Mother infetta morta, il numero di Rabid Thistle Bear che entrano nelle nostre terre diminuirà. Non perdere tempo, $N.",
+    "reward": "Hai combattuto per Auberdine con coraggio e onore, $N. Nelle nostre terre dilaniate dalla guerra, morte e disperazione sono comuni. Molti non sapranno affrontare la sfida della vita nella nostra nuova casa, scegliendo invece di nascondersi nelle proprie dimore o di fuggire verso le terre più fortificate dell'Alleanza.$B$BGrazie, $N. Forse un giorno non lontano combatteremo fianco a fianco come compagni contro un altro nemico."
+  },
+  "2158": {
+    "en_title": "Rest and Relaxation",
+    "en_obj": "Speak with Innkeeper Farley at the Lion's Pride Inn.",
+    "title": "Riposo e relax",
+    "desc": "Ogni avventuriero dovrebbe riposare quando la stanchezza si fa sentire, e non c'è posto migliore per riposo e relax della Lion's Pride Inn!$B$BIl mio migliore amico, Innkeeper Farley, gestisce la Lion's Pride. Se gli dici che ti mando io, potrebbe offrirti tariffe speciali scontate su cibo e bevande.$B$BPer trovare la Lion's Pride Inn, viaggia verso sud lungo la strada da qui: non puoi sbagliare!",
+    "obj": "Parla con Innkeeper Farley alla Lion's Pride Inn.",
+    "reward": "Riposo e relax per chi è stanco e infreddolito: questo è il nostro motto! Prego, siediti accanto al fuoco e riposa le tue stanche ossa.$B$BVuoi assaggiare un po' del nostro ottimo cibo e delle nostre bevande?"
+  },
+  "2159": {
+    "en_title": "Dolanaar Delivery",
+    "en_obj": "Bring the Dolanaar Delivery to Innkeeper Keldamyr.",
+    "title": "Consegna a Dolanaar",
+    "desc": "Salute, giovane $c. Puoi offrirmi il tuo aiuto? Ho un pacco di erbe che devo consegnare alla città di Dolanaar. Ma ho ancora faccende da sbrigare con i druidi di Shadowglen e non posso partire.$B$BPuoi consegnare tu questo pacco al posto mio? Deve andare a Innkeeper Keldamyr, alla locanda di Dolanaar. Si trova lungo la strada, a sud.",
+    "obj": "Porta la Dolanaar Delivery a Innkeeper Keldamyr.",
+    "progress": "Come posso esserti utile, giovane? Sei qui per riposare alla locanda? Ti serve una pietra del ritorno?",
+    "reward": "Ah sì, la consegna di erbe da Shadowglen. Peccato che Porthannius non abbia potuto portarla di persona, perché abbiamo molto da discutere, lui e io. Ma sono comunque lieto di avere le erbe, e sono lieto che tu sia venut$Go:a;.$B$BFinché sei qui, ti prego, riposati. Gli eroi devono mantenere alte le forze e lo spirito, e trovare riposo e conforto ogni volta che possono. Perché trascurare la pace del corpo e della mente è una via sicura verso il fallimento.$B$BDunque... riposa."
+  },
   "2160": {
     "en_title": "Supplies to Tannok",
     "title": "Provviste per Tannok",
@@ -3444,6 +4044,55 @@
     "progress": "Salve! Entra, siediti accanto al fuoco e scaldati con un boccale di birra.",
     "reward": "Ah, finalmente le provviste di Hands! Cominciavo a preoccuparmi: da quando i trogg hanno invaso il passo abbiamo avuto pochissime notizie da Anvilmar.$B$BGrazie per avermele portate, $N. E ti prego, mettiti comod$Go:a;. Devi essere stanc$Go:a; dopo il viaggio.",
     "en_obj": "Deliver the Crate of Inn Supplies to Tannok Frosthammer in Kharanos."
+  },
+  "2161": {
+    "en_title": "A Peon's Burden",
+    "en_obj": "Bring Ukor's Burden to Innkeeper Grosk in Razor Hill.",
+    "title": "Il fardello di un Peon",
+    "desc": "Scusa? Puoi aiutarmi?$B$BHo un carico di cibo qui. Ho percorso la strada affrontando scorpidi, ragni e di peggio! Ho portato il cibo alla Valley of Trials perché pensavo ne avessero bisogno e mi piace dare una mano. Ma non ne hanno bisogno! Ora devo riportarlo a Razor Hill e ho paura di tutte le bestie lungo il cammino...$B$BPuoi portarlo tu al posto mio? Io sono solo un peon, ma tu sei un eroe. Non temi nulla!$B$BPortalo a Innkeeper Grosk alla locanda di Razor Hill. Grazie!",
+    "obj": "Porta Ukor's Burden a Innkeeper Grosk a Razor Hill.",
+    "progress": "Benvenut$Go:a; a Razor Hill!",
+    "reward": "Ah, questo è il cibo che Ukor ha portato alla Valley of Trials. Non ne avevano bisogno? Beh, immagino che amino far morire di fame voi eroi in addestramento. Tempra lo spirito, dicono!$B$BGrazie per aver riportato il cibo. Lo rimetterò sugli scaffali... ma prima, lascia che ti offra un ristoro!$B$BE non dimenticare di riposare qui alla locanda. Sarai anche un coraggioso $C pront$Go:a; ad affrontare il mondo, ma se le tue energie sono esaurite non farai un gran bene né a te stess$Go:a; né alla Horde."
+  },
+  "2399": {
+    "en_title": "The Sprouted Fronds",
+    "title": "Le fronde germogliate",
+    "reward": "Le fronde che Denalan ha piantato nel suo giardino sono germogliate e cresciute. Tremano, impazienti di essere raccolte..."
+  },
+  "2438": {
+    "en_title": "The Emerald Dreamcatcher",
+    "en_obj": "Bring the Emerald Dreamcatcher to Tallonkai Swiftroot in Dolanaar.",
+    "title": "L'Emerald Dreamcatcher",
+    "desc": "Un tempo ricevetti un acchiappasogni di smeraldo da Gaerolas Talvethen, il custode dei druidi della Ban'ethil Barrow Den. Questo potente amuleto è in grado di attingere energia dall'Emerald Dream, concedendo fortuna a chi lo porta.$B$BPurtroppo non sono riuscito a recuperarlo dal mio comò a Starbreeze Village... Un tempo Starbreeze era un luogo tranquillo, ma ora è caduta preda della corruzione dei furbolg che vi risiedono.$B$BForse saresti disposto a recuperare il mio acchiappasogni, $c? ",
+    "obj": "Porta l'Emerald Dreamcatcher a Tallonkai Swiftroot a Dolanaar.",
+    "progress": "Ti prego, fa' in fretta. Posso solo sperare che il mio acchiappasogni di smeraldo non sia stato danneggiato dai furbolg.$B$BL'hai già recuperato, $N?",
+    "reward": "Il mio acchiappasogni di smeraldo è di grande importanza per me. È un dono concesso a pochi. Grazie per averlo riportato, $N."
+  },
+  "2459": {
+    "en_title": "Ferocitas the Dream Eater",
+    "en_obj": "Tallonkai Swiftroot in Dolanaar wants you to kill 7 Gnarlpine Mystics and find the Missing Jewel.",
+    "title": "Ferocitas the Dream Eater",
+    "desc": "Lo smeraldo... è sparito! Il mio acchiappasogni è stato danneggiato!$B$BC'è una banda di mistici Gnarlpine a nord di Starbreeze. Ho sentito dire che il loro capo, Ferocitas the Dream Eater, porta una collana che brilla di verde nella notte. Ora, vedendo il mio acchiappasogni, sono certo che ha rubato il mio smeraldo... Non si renderebbe mai conto che il suo potere è inutile per lui.$B$BTrova questo gioiello scomparso, $N. E, già che ci sei, elimina anche un po' di quei mistici corrotti.",
+    "obj": "Tallonkai Swiftroot a Dolanaar vuole che tu uccida 7 Gnarlpine Mystic e trovi il Missing Jewel.",
+    "progress": "Ferocitas e i Gnarlpine Mystic devono restituire ciò che è mio. Ti prego, recupera lo smeraldo così che io possa riparare il mio acchiappasogni di smeraldo.",
+    "reward": "Ora posso riparare il mio acchiappasogni. Grazie, $N."
+  },
+  "2498": {
+    "en_title": "Return to Denalan",
+    "en_obj": "Rellian Greenspyre wants you to speak with Denalan at Lake Al'Ameth.",
+    "title": "Ritorno da Denalan",
+    "desc": "Ho appena ricevuto notizia che Denalan, a Lake Al'Ameth, ha scoperto quella che potrebbe essere la causa dei tumori che affliggono i timberling. Ti prego, parlagli e digli che ti mando io.$B$BSbrigati, $N: ha bisogno del nostro aiuto.",
+    "obj": "Rellian Greenspyre vuole che tu parli con Denalan a Lake Al'Ameth.",
+    "reward": "Ah, dunque Rellian ti ha mandat$Go:a; ad aiutarmi. Sono lieto che tu sia arrivat$Go:a; così presto.$B$BHo scoperto qualcosa di piuttosto inquietante!"
+  },
+  "2499": {
+    "en_title": "Oakenscowl",
+    "en_obj": "Denalan at Lake Al'Ameth wants you to collect the Gargantuan Tumor from Oakenscowl.",
+    "title": "Oakenscowl",
+    "desc": "In una caverna lungo la riva meridionale del lago, un timberling di nome Oakenscowl sta diffondendo la corruzione a tutte le creature che hanno fatto di Lake Al'Ameth la loro casa.$B$BNon ho osato avvicinarmi troppo, ma anche da lontano è evidente: Oakenscowl è avvelenato dal tumore più grande che io abbia mai visto... Lo definirei persino gargantuesco.$B$B$N, hai già fatto molto per aiutare i miei sforzi, ma ti chiedo un ultimo compito. Dai la caccia a Oakenscowl e raccogli il tumore; rimuovi questa fonte di corruzione dalla mia casa.",
+    "obj": "Denalan a Lake Al'Ameth vuole che tu raccolga il Gargantuan Tumor da Oakenscowl.",
+    "progress": "Hai già individuato Oakenscowl, $R?",
+    "reward": "Sapevo che eri più che capace di liberare il lago da quella orribile bestia.$B$BÈ una situazione angosciante: Oakenscowl era un tempo un grande capo tra i suoi simili... ma la corruzione non fa distinzione tra umili e nobili.$B$BLe dimensioni di questo tumore sono davvero inquietanti, ma devo studiarlo per saperne di più sulla malattia che sconvolge la popolazione dei timberling.$B$BGrazie, $N."
   },
   "2500": {
     "en_title": "Badlands Reagent Run",
@@ -3489,14 +4138,32 @@
     "progress": "Hai deposto il sacrificio alla fontana, $n?",
     "reward": "La perdita di Lady Sathrah è angosciante, ma solo così può rinascere con uno spirito rinnovato.$B$BPossa Elune accogliere di buon grado il sacrificio che le hai offerto."
   },
+  "2541": {
+    "en_title": "The Sleeping Druid",
+    "en_obj": "Bring a Shaman Voodoo Charm to Oben Rageclaw in the Ban'ethil Barrow Den.",
+    "title": "Il druido addormentato",
+    "desc": "Gli sciamani Gnarlpine che abitano questo luogo hanno scoperto il modo di separare lo spirito di un druido addormentato dal suo corpo fisico. I furbolg hanno animato la mia forma fisica e la usano per attaccare chiunque tenti di esplorare la Ban'ethil Barrow Den. Ora sono intrappolato nell'Emerald Dream, impotente di fronte a tutto questo.$B$BDevi aiutarmi. Gli sciamani Gnarlpine portano con sé uno strano amuleto usato per compiere questo rituale, e vorrei esaminarlo. Ti prego, $N, portamene uno.",
+    "obj": "Porta un Shaman Voodoo Charm a Oben Rageclaw nella Ban'ethil Barrow Den.",
+    "progress": "Se riuscirò a esaminare l'amuleto, forse scoprirò come spezzare l'incantesimo. Ne hai trovato uno?",
+    "reward": "Grazie, $N.$B$BChe strano ninnolo... Percepisco l'aura malvagia che emana: è un incantesimo potentissimo."
+  },
+  "2561": {
+    "en_title": "Druid of the Claw",
+    "en_obj": "Oben Rageclaw wants you to kill his soulless body, and then use the Voodoo Charm.",
+    "title": "Druido dell'Artiglio",
+    "desc": "Dopo aver esaminato questo amuleto, $N, ora vedo cosa va fatto. Ti prego, prendilo e fai ciò che ti chiedo.$B$BDevi esplorare le zone più profonde della Ban'ethil Barrow Den. Là troverai il mio corpo senz'anima... Per quanto mi dispiaccia dirtelo, non vedo altro modo per liberarmi dal controllo dei Gnarlpine.$B$BPerché io possa sfuggire loro, devi uccidere la mia forma fisica. Fatto questo, usa l'amuleto voodoo sul mio corpo caduto. Quando avrai terminato, torna da me.",
+    "obj": "Oben Rageclaw vuole che tu uccida il suo corpo senz'anima, e che poi usi il Voodoo Charm.",
+    "progress": "$N, sii prudente quando ti avvicini alla mia forma fisica: l'incantesimo che la tiene prigioniera è molto potente.",
+    "reward": "Finalmente sono libero dal controllo dei Gnarlpine. Grazie, $N.$B$BOra il mio spirito potrà riposare in pace per sempre nell'Emerald Dream.$B$BForse un giorno ci rivedremo, giovane $C. Ma per ora, accetta questa ricompensa come simbolo della mia gratitudine."
+  },
   "3115": {
     "en_title": "Tainted Memorandum",
     "en_obj": "Read the Tainted Memorandum and speak to Alamar Grimm inside Anvilmar above Coldridge Valley.",
     "title": "Il memorandum contaminato",
     "desc": "Mentre mi davi una mano, mi hanno consegnato questo memorandum da passare a te. Leggilo quando hai un momento. Credo che venga dall'addestratore di stregoni, Alamar. Dagli un'occhiata e vai a cercarlo dentro Anvilmar quando puoi.$B$BE sta' attent$Go:a;, $N: quelli come te non godono di molta fiducia da queste parti.",
     "obj": "Leggi il Tainted Memorandum e parla con Alamar Grimm dentro Anvilmar, sopra Coldridge Valley.",
-    "progress": "Meraviglioso! A quanto pare hai ricevuto il mio memorandum.\n\nIgnora gli sciocchi che ti circondano, $N. La Sacra Luce?! La spada e lo scudo?! Non sono strade per menti aperte come le nostre. Guarda cosa ha fatto alla nostra patria la magia \"normale\". Insieme a quei maledetti armeggiatori, la nostra razza per poco non si è estinta. E ora dobbiamo dipendere dai nani, che preferiscono passare il tempo ad allearsi con gli umani piuttosto che aiutarci a ricostruire la nostra casa. Siamo come cittadini di seconda classe. Hai visto come ci guardano?",
-    "reward": "Ma niente di tutto questo conta. Quello che conta è che hai visto la tua vera Sacra Luce! Sai da dove viene davvero il potere. Ti rendi conto che avere alleati nostri è molto più... prudente. Alleati speciali. Alleati che, qualunque sia il compito, obbediranno fino all'ultimo respiro.\n\nEd è qui che entro in gioco io, $N. Posso addestrarti agli inizi di quei poteri speciali. Cercami spesso e farò il possibile per insegnarti altri incantesimi."
+    "progress": "Meraviglioso! A quanto pare hai ricevuto il mio memorandum.$B$BIgnora gli sciocchi che ti circondano, $N. La Sacra Luce?! La spada e lo scudo?! Non sono strade per menti aperte come le nostre. Guarda cosa ha fatto alla nostra patria la magia \"normale\". Insieme a quei maledetti armeggiatori, la nostra razza per poco non si è estinta. E ora dobbiamo dipendere dai nani, che preferiscono passare il tempo ad allearsi con gli umani piuttosto che aiutarci a ricostruire la nostra casa. Siamo come cittadini di seconda classe. Hai visto come ci guardano?",
+    "reward": "Ma niente di tutto questo conta. Quello che conta è che hai visto la tua vera Sacra Luce! Sai da dove viene davvero il potere. Ti rendi conto che avere alleati nostri è molto più... prudente. Alleati speciali. Alleati che, qualunque sia il compito, obbediranno fino all'ultimo respiro.$B$BEd è qui che entro in gioco io, $N. Posso addestrarti agli inizi di quei poteri speciali. Cercami spesso e farò il possibile per insegnarti altri incantesimi."
   },
   "3182": {
     "en_title": "Proof of Deed",
@@ -3506,6 +4173,40 @@
     "obj": "Porta il Margol's Gigantic Horn a Curator Thorius a Ironforge.",
     "progress": "Oh, salve, $Ggiovanotto:signorina;. Ti andrebbe una visita guidata del museo?",
     "reward": "Cos'è questo?$B$BOh, cielo, non ci credo! Ti rendi conto di cos'hai qui, $R? Questo è il corno di Margol the Rager! Margol, la rovina di ogni archeologo che abbia mai messo piede nella Searing Gorge.$B$BPosso tenerlo?"
+  },
+  "3221": {
+    "en_title": "Speak with Renferrel",
+    "en_obj": "Speak with Apothecary Renferrel at the Sepulcher.",
+    "title": "Parla con Renferrel",
+    "desc": "Mentre eri via ad aiutare i nostri deathstalker, l'Apothecary Renferrel ti ha mandato a chiamare. Non mi ha dato dettagli, ma voleva parlarti dei cuori di lupo che gli hai consegnato.",
+    "obj": "Parla con l'Apothecary Renferrel al Sepulcher.",
+    "reward": "Ah, molto bene. C'è una questione riguardo ai cuori di lupo che mi hai portato in precedenza che richiede la nostra attenzione."
+  },
+  "3261": {
+    "en_title": "Jorn Skyseer",
+    "en_obj": "Speak with Jorn Skyseer at Camp Taurajo.",
+    "title": "Jorn Skyseer",
+    "desc": "Il tuo tempo con me è finito, $N. Per imparare di più, devi recarti a Camp Taurajo, a sud, e parlare con Jorn Skyseer. Sarà lui a proseguire la tua guida.",
+    "obj": "Parla con Jorn Skyseer a Camp Taurajo.",
+    "reward": "Salute, giovane. Sei qui per percorrere la via del cacciatore?$B$BMolto bene. Cominciamo."
+  },
+  "3281": {
+    "en_title": "Stolen Silver",
+    "en_obj": "Bring the Stolen Silver to Gazrog in the Crossroads.",
+    "title": "Argento rubato",
+    "desc": "Avrai anche ucciso i raptor, ma l'argento che hanno rubato dev'essere recuperato! Mi dicono che i raptor hanno una vasta area di nidi a sud di Ratchet, nota come Raptor Grounds. È probabile che abbiano portato là il nostro argento rubato.$B$BVai in quel rifugio di raptor e cerca l'argento rubato. Quando lo troverai, riportamelo.",
+    "obj": "Porta lo Stolen Silver a Gazrog al Crossroads.",
+    "progress": "Hai l'argento?",
+    "reward": "Aha! Quindi i raptor hanno nascosto l'argento nella loro tana. Stento a credere che queste bestie desiderino l'argento. Forse le storie sulla loro intelligenza non sono poi così lontane dal vero!$B$BGrazie, $N. Prendi questo come ricompensa per il tuo servizio, e sappi che le guardie del Crossroads devono a te la paga del prossimo mese."
+  },
+  "3301": {
+    "en_title": "Mura Runetotem",
+    "en_obj": "Speak with Mura Runetotem in the Sepulcher.",
+    "title": "Mura Runetotem",
+    "desc": "Una mia compagna di clan, Mura Runetotem, è andata a Silverpine per aiutare i nostri alleati non morti. Silverpine è una foresta malata, una foresta morente, e Mura sperava di donarle nuova vita. Forse la strana vita che si trova qui nei Barrens potrà aiutare il suo lavoro a Silverpine.$B$BPrendi un campione dei gusci che hai raccolto e portalo a Mura a Silverpine. Si trova al Sepulcher. Con un po' di fortuna, lo studio del guscio le darà l'intuizione necessaria per guarire quel luogo morente.",
+    "obj": "Parla con Mura Runetotem al Sepulcher.",
+    "progress": "Sento addosso a te la polvere dei Barrens, $C. Hai viaggiato a lungo.",
+    "reward": "Ah, cos'è questo? Questo guscio ha un bagliore interiore, come se pulsasse ancora di vita. Straordinario! Devo studiarlo ancora.$B$BGrazie, $N. Con un po' di fortuna, questo guscio custodirà un segreto che potrò usare per aiutare la povera terra di Silverpine."
   },
   "3361": {
     "en_title": "A Refugee's Quandary",
@@ -3534,6 +4235,417 @@
     "reward": "Eccellente, $N! Saresti sorpres$Go:a; di quanti corrieri dimenticano una cosa semplice come riportare il boccale. I boccali non crescono sugli alberi, o almeno così mi dicono!$B$BEcco un piccolo compenso per il disturbo. Grazie ancora per l'aiuto.",
     "en_obj": "Return Nori's Mug to Nori Pridedrift."
   },
+  "3376": {
+    "en_title": "Break Sharptusk!",
+    "en_obj": "Bring the head of Chief Sharptusk Thornmantle to Brave Windfeather in Red Cloud Mesa.",
+    "title": "Spezza Sharptusk!",
+    "desc": "$N, ho sentito parlare di te, nuov$Go:a; arrivat$Go:a;. Forse sarai tu ad aiutarci, dove altri hanno fallito.$B$BNoi tauren ci siamo ricavati una casa in questa terra, ma non senza un prezzo. I quilboar Bristleback di Brambleblade Ravine, guidati dal Chief Sharptusk Thornmantle, ci rendono la vita difficile con la loro guerra incessante contro di noi. Ti incarico di portarmi la testa del capo!$B$BLo troverai nella gola a est, nel loro villaggio improvvisato.",
+    "obj": "Porta la testa del Chief Sharptusk Thornmantle a Brave Windfeather a Red Cloud Mesa.",
+    "progress": "Sharptusk non ci darà più problemi quando mi avrai portato la prova della sua morte. È la sua testa che cerco, $N.$B$BNoi tauren viviamo per la caccia, e non esiste caccia più grande di quella contro chi è abbastanza astuto da poterci dare la caccia a sua volta. Se avrai successo in questo compito, giovane, inizierai a capire cosa intendo.",
+    "reward": "Oggi è stata fatta giustizia grazie alla tua rapidità, $N. Che questa impresa sia un monito per chiunque minacci la nostra casa.$B$BTi sei guadagnat$Go:a; questa ricompensa per aiutarti nel tuo cammino, giovane $C."
+  },
+  "3519": {
+    "en_title": "A Friend in Need",
+    "en_obj": "Speak to Dirania Silvershine in Shadowglen.",
+    "title": "Un amico in difficoltà",
+    "desc": "Uhhh... Sono stato morso malamente da un ragno di nome Githyiss the Vile mentre esploravo la caverna dei ragni qui vicino. Sono certo di essere stato avvelenato gravemente: devi aiutarmi.$B$BTi prego, avvisa Dirania Silvershine. Lei saprà come aiutarmi.$B$BSbrigati... Mi gira la testa...",
+    "obj": "Parla con Dirania Silvershine a Shadowglen.",
+    "reward": "Oh cielo; mi chiedevo perché oggi non avessi ancora visto Iverron. E l'ho sempre avvertito riguardo a quei ragni..."
+  },
+  "3521": {
+    "en_title": "Iverron's Antidote",
+    "en_obj": "Collect 7 Hyacinth Mushrooms, 4 Moonpetal Lilies, and 1 Webwood Ichor for Dirania Silveshine in Shadowglen.",
+    "title": "L'antidoto di Iverron",
+    "desc": "Forse possiamo aiutare Iverron: conosco un antidoto che dovrebbe funzionare contro il veleno. Ma servono alcuni ingredienti prima che io possa prepararlo.$B$BMi serviranno dei funghi Hyacinth. Li trovi che crescono sotto gli alberi, oppure puoi prenderli ai grell a sud di qui; sembra che li apprezzino molto. Mi serviranno anche dei Moonpetal Lily, che crescono solo vicino agli specchi d'acqua.$B$BL'ultimo ingrediente potrebbe rivelarsi il più difficile. Dagli stessi ragni che hanno avvelenato Iverron, raccogli del Webwood Ichor.",
+    "obj": "Raccogli 7 Hyacinth Mushroom, 4 Moonpetal Lily e 1 Webwood Ichor per Dirania Silvershine a Shadowglen.",
+    "progress": "Ti prego, raccogli gli ingredienti, $N. Iverron ha bisogno del nostro aiuto.",
+    "reward": "Sia ringraziata Elune, hai raccolto questi ingredienti così in fretta!$B$BTra un attimo l'antidoto sarà pronto."
+  },
+  "3522": {
+    "en_title": "Iverron's Antidote",
+    "en_obj": "Bring Iverron's Antidote to Iverron before the time limit is up. Iverron can be found by the cave to the north.",
+    "title": "L'antidoto di Iverron",
+    "desc": "L'antidoto è pronto, $N. Fai in modo che Iverron lo beva.$B$BC'è una cosa che devi sapere: l'antidoto rimarrà efficace solo per 5 minuti. Devi portarglielo in tempo.$B$BChe la velocità sia con te, $N.",
+    "obj": "Porta l'Iverron's Antidote a Iverron prima che scada il tempo. Iverron si trova vicino alla caverna a nord.",
+    "progress": "Oh... $N, sono così felice che tu sia tornat$Go:a;.",
+    "reward": "Cos'è questo, $N?$B$BOh, sapevo che Dirania avrebbe saputo aiutarmi!$B$B<Iverron beve l'antidoto>$B$BMi caccio sempre nei guai e Dirania, beh, riesce sempre a tirarmene fuori.$B$BMi sento molto meglio, ma credo che resterò seduto qui ancora un po', finché non starò del tutto bene. Beh, e speravo che mi aprissi un varco tra quei feroci ragni Webwood..."
+  },
+  "3524": {
+    "en_title": "Washed Ashore",
+    "en_obj": "Recover Sea Creature Bones from the beached sea creature just south of Auberdine, and then return with it to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Spiaggiato",
+    "desc": "È noto che maestose creature marine si lanciano contro la costa di Darkshore, restando spiaggiate fino alla morte. Ultimamente queste bestie arrivano a riva in numero sempre maggiore. Sono stata mandata qui dal Temple of the Moon per indagare, ma la presenza di murloc lungo la riva rende difficile la mia ricerca.$B$BC'è una creatura gigantesca spiaggiata subito a sud di Auberdine, circondata dai vili murloc Greymist. Potresti andare là e recuperare delle ossa della creatura per il nostro studio?",
+    "obj": "Recupera delle Sea Creature Bones dalla creatura marina spiaggiata subito a sud di Auberdine, poi torna da Gwennyth Bly'Leggonde ad Auberdine.",
+    "progress": "È solo da poco che queste creature hanno cominciato ad approdare sulla costa di Darkshore in numero così allarmante. Non posso fare a meno di pensare che sia un cattivo presagio. Recuperare un campione delle ossa di quella creatura a sud aiuterebbe noi di Darnassus a valutare la situazione!",
+    "reward": "Spero che i murloc non ti abbiano dato troppi problemi nel raccoglierle per noi! Mi assicurerò che arrivino sul prossimo ippogrifo diretto a Darnassus. Il Temple of the Moon mi ha dato dei fondi da distribuire a chi ci aiuta: prendine un po', con i nostri ringraziamenti.$B$BIl tuo successo qui mi spinge a offrirti la possibilità di aiutare ancora il Temple of the Moon, se ti interessa..."
+  },
+  "3741": {
+    "en_title": "Hilary's Necklace",
+    "en_obj": "Find Hilary's Necklace, and return it to Hilary in Lakeshire.",
+    "title": "La collana di Hilary",
+    "desc": "La mia amica Hilary ha perso la collana e non riusciamo a trovarla. Abbiamo pescato qui tutto il giorno e abbiamo già cercato qui intorno. L'unica cosa che mi viene in mente è che sia caduta nel lago. I nostri genitori non vogliono che nuotiamo nel lago... mia mamma dice che sott'acqua ci sono cose cattive, ma tu non sembri uno che ha paura delle cose cattive.$B$BPotresti trovarla per lei, per favore?",
+    "obj": "Trova la collana di Hilary e riportala a Hilary a Lakeshire.",
+    "progress": "Ciao. Mi manca la mia collana. Me l'ha regalata il mio papà. Papà dice che nel lago ci sono dei mostri. Hai picchiato qualche mostro?",
+    "reward": "Grazie per aver trovato la mia collana, signor $C... sei molto gentile! Anche il mio gattino ti ringrazia, vero Effsee?"
+  },
+  "3901": {
+    "en_title": "Rattling the Rattlecages",
+    "en_obj": "Kill 12 Rattlecage Skeletons, and then return to Shadow Priest Sarvis in Deathknell when you are done.",
+    "title": "Scuotere i Rattlecage",
+    "desc": "Hai mostrato il tuo valore ai Forsaken in circostanze normali, $N: ora vediamo come te la cavi sotto pressione.$B$BGli scheletri Rattlecage, altri servi senza cervello del Lich King, sono un nemico più ostico degli zombie che hai affrontato finora. Ancora una volta, assottiglia le loro fila e dimostra il tuo valore ai Forsaken. Non indugiare: quando avrai finito, parla di nuovo con me.",
+    "obj": "Uccidi 12 Rattlecage Skeleton, poi torna dallo Shadow Priest Sarvis a Deathknell quando avrai finito.",
+    "progress": "Chi si attarda in questo compito potrebbe finire a vagare senza meta come i nostri fratelli e sorelle caduti nel villaggio. Speriamo che tu faccia meglio di loro, sì? $B$B",
+    "reward": "Con te ho finito, $N: ti sei dimostrat$Go:a; degn$Go:a; della libertà che ti è stata donata. Molti si opporranno a te per ciò che sei diventat$Go:a;, ma sappi che, qualunque cosa tentino contro di noi, siamo liberi e non saremo mai più incatenati.$B$BPrendi questi e va' per la tua strada. Hai molto da compiere, $C."
+  },
+  "3902": {
+    "en_title": "Scavenging Deathknell",
+    "en_obj": "Search Deathknell and the vicinity for 6 pieces of Scavenged Goods, and return them to Deathguard Saltain.",
+    "title": "Rovistare a Deathknell",
+    "desc": "Ehi, tu! Se cerchi qualcosa per renderti utile, ascolta bene!$B$BCi servono reclute appena uscite dalla terra che vadano a Deathknell e cerchino qualsiasi equipaggiamento utile. Molto probabilmente si trova nelle pile di casse. Ci aspettiamo che presto sorgano altre reclute e, a meno che non vogliamo vederle andare in giro nude, è meglio darsi da fare a rovistare!$B$BAllora al lavoro, miserabile sacco di ossa! Non ricompenserò chi non si dà una mossa.",
+    "obj": "Cerca a Deathknell e nei dintorni 6 Scavenged Goods e portali al Deathguard Saltain.",
+    "progress": "Sei riuscit$Go:a; a recuperare qualche oggetto utile per noi? Non c'è vergogna nel riutilizzare ciò che è stato gettato via. Nessuno ci farà regali: noi Forsaken ci arrangeremo da soli!",
+    "reward": "Ottimo lavoro $N, sapevo che non eri inutile. Tieni: prendi uno degli oggetti migliori che ho trovato tra quelli raccolti finora."
+  },
+  "3903": {
+    "en_title": "Milly Osworth",
+    "en_obj": "Speak with Milly Osworth.",
+    "title": "Milly Osworth",
+    "desc": "Ti sei dimostrat$Go:a; $Gun:una; $C affidabile, $N. Affidabile e per niente timoros$Go:a; di sporcarti le mani, eh?$B$BHo un'amica, Milly Osworth, che è nei guai. Si trova col suo carro dall'altra parte dell'abbazia, vicino alle stalle. Sono certo che una coppia di mani come le tue le farebbe comodo.",
+    "obj": "Parla con Milly Osworth.",
+    "reward": "Oh, il Deputy Willem ti ha detto di parlare con me? È un uomo coraggioso e sempre pronto ad aiutare, ma i suoi doveri lo tengono bloccato a Northshire Abbey e temo che il problema che ho oggi sia oltre le sue possibilità.$B$BForse puoi aiutarmi tu?"
+  },
+  "3904": {
+    "en_title": "Milly's Harvest",
+    "en_obj": "Bring 8 crates of Milly's Harvest to Milly Osworth at Northshire Abbey.",
+    "title": "Il raccolto di Milly",
+    "desc": "Una banda di briganti, i Defias, si è insediata nei Northshire Vineyards mentre stavo raccogliendo! L'ho riferito alle guardie di Northshire e mi hanno assicurato che se ne occuperanno, ma... temo per il mio raccolto d'uva! Se i Defias non lo rubano, ho paura che le nostre guardie lo calpestino mentre scacciano quei furfanti.$B$BTi prego, devi aiutarmi! Ho messo la maggior parte dell'uva in dei secchi, ma li ho lasciati nei vigneti a sudest.$B$BPortami quei secchi! Salva il mio raccolto!",
+    "obj": "Porta 8 casse di Milly's Harvest a Milly Osworth a Northshire Abbey.",
+    "progress": "Hai il mio raccolto, $N?",
+    "reward": "Oh, grazie, $N! Hai salvato il mio raccolto! Spero che tu abbia fatto capire a quei Defias che qui non possono creare problemi.$B$BForse di questi tempi abbiamo poche guardie, ma siamo fortunati ad avere eroi come te a proteggerci!"
+  },
+  "3905": {
+    "en_title": "Grape Manifest",
+    "en_obj": "Bring the Grape Manifest to Brother Neals in Northshire Abbey.",
+    "title": "Il registro dell'uva",
+    "desc": "Ora che il mio raccolto è salvo, porta questo Grape Manifest a Brother Neals. Si occupa delle scorte di cibo e bevande a Northshire, e sono certa che sarà felicissimo di sapere che ha uva fresca.$B$BTroverai Brother Neals nell'abbazia, nel campanile... dove ama assaggiare il suo vino.",
+    "obj": "Porta il Grape Manifest a Brother Neals a Northshire Abbey.",
+    "progress": "Sembri di ottimo umore! Vieni! Siediti e bevi qualcosa!",
+    "reward": "Vediamo un po'...$B$BOh cielo! L'uva di Milly è salva! Quando mi ha detto che dei briganti avevano invaso i suoi vigneti ho quasi disperato, ma la mia fede nella Luce non ha vacillato!$B$BE grazie al tuo coraggio ora avremo uva per altro vino! Che la Luce ti benedica, $N, e ti protegga!"
+  },
+  "3921": {
+    "en_title": "Wenikee Boltbucket",
+    "en_obj": "Bring the Broken Samophlange to Wenikee Boltbucket.",
+    "title": "Wenikee Boltbucket",
+    "desc": "Credo di aver rotto quel Samophlange. Non va bene, perché ne ho già parlato ad alcuni colleghi di Undermine e ne erano molto incuriositi. Dobbiamo trovare un modo per ripararlo!$B$BPorta il samophlange rotto a Wenikee Boltbucket, appena a sud di Mor'shan Rampart, l'avamposto dell'Orda tra i Barrens e Ashenvale. È molto intelligente e curiosa. Se le mostri il samophlange, scommetto che non si lascerà sfuggire l'occasione di ripararlo.",
+    "obj": "Porta il Broken Samophlange a Wenikee Boltbucket.",
+    "progress": "Sono molto occupata con il mio lavoro, $C. A meno che tu non abbia qualcosa per me, faresti meglio a levarti di torno...",
+    "reward": "Oh, cos'è questo? Un samophlange, dici? Che cos'è un samophlange??$B$BAh... ma guarda come si muove quando lo maneggi. E senti il rumore di ingranaggi complessi all'interno. Oh cielo! Voglio ripararlo e vedere cosa fa, e tu no??"
+  },
+  "3922": {
+    "en_title": "Nugget Slugs",
+    "en_obj": "Bring 15 Nugget Slugs to Wenikee Boltbucket in the Barrens.",
+    "title": "Nugget Slugs",
+    "desc": "Voglio riparare questo samophlange, ma per farlo mi serviranno delle scorte. Ho finito i nugget slug calibro diciassette virgola cinque e me ne serviranno un bel po' per il lavoro che mi aspetta.$B$BIl posto più vicino dove trovarli è il Sludge Fen, a est. La Venture Company di solito li tiene nelle sue cassette degli attrezzi. Vai al Sludge Fen e cerca nelle cassette degli attrezzi che troverai, poi torna da me quando avrai raccolto abbastanza nugget slug.",
+    "obj": "Porta 15 Nugget Slugs a Wenikee Boltbucket nei Barrens.",
+    "progress": "Hai i nugget slug, $N? Ho gli occhi puntati su questo Samophlange e non vedo l'ora di metterci le mani.",
+    "reward": "Ottimo, li hai presi! Ora posso mettermi al lavoro..."
+  },
+  "3923": {
+    "en_title": "Rilli Greasygob",
+    "en_obj": "Bring the Broken and Battered Samophlange to Rilli Greasygob in Orgrimmar.",
+    "title": "Rilli Greasygob",
+    "desc": "Beh, non ha funzionato. Ho aggiunto qualche indicatore al samophlange per misurarne l'integrità strutturale, e segnano un livello più basso che mai. Potrei aggiungere altri quadranti e magari una leva o due per provare a ripararlo, ma... credo che peggiorerebbe solo le cose.$B$BDovresti portare il samophlange da Rilli Greasygob. Lavorava per la Venture Company: se qualcuno sa come ripararlo, è Rilli.$B$BLo trovi al Nogg's Machine Shop a Orgrimmar, nella Valley of Honor.",
+    "obj": "Porta il Broken and Battered Samophlange a Rilli Greasygob a Orgrimmar.",
+    "progress": "Attento alla testa! Non voglio che intralci il mio lavoro!",
+    "reward": "Cos'è questo? Ma è un samophlange! Dove hai trovato questa cosa? Sei andat$Go:a; a ficcare il naso nei possedimenti della Venture Company nei Barrens?$B$BDevi essere molto coraggios$Go:a;, o molto stupid$Go:a;."
+  },
+  "3924": {
+    "en_title": "Samophlange Manual",
+    "en_obj": "Bring the Samophlange Manual to Rilli Greasygob in Orgrimmar.",
+    "title": "Il manuale del Samophlange",
+    "desc": "Credo di poter riparare il samophlange, ma prima mi serve il manuale d'uso. Quando ero nella Venture Company avevo un rivale, Boss Copperplug, che custodiva gelosamente i segreti del samophlange, concedendo piccole nozioni sul congegno solo a chi si fidava di lui. Io non ero tra i fortunati...$B$BBoss Copperplug stava di solito alla Boulder Lode Mine, nei Barrens nordorientali. Prendigli il manuale, e se ha dato delle pagine a qualcuno, dovrai recuperare anche quelle.",
+    "obj": "Porta il Samophlange Manual a Rilli Greasygob a Orgrimmar.",
+    "progress": "Hai il manuale?",
+    "reward": "Hai il manuale! Non vedo l'ora di leggerlo e scoprire come riparare il Samophlange! Ho parlato con Sputtervalve a Ratchet: voleva ringraziarti per il tuo aiuto e ricompensare i tuoi sforzi.$B$BVoglio ringraziarti anch'io, e se mai riuscirò a ripararlo te lo farò sapere..."
+  },
+  "4021": {
+    "en_title": "Counterattack!",
+    "en_obj": "Bring a Piece of Krom'zar's Banner to Regthar Deathgate, west of the Crossroads.",
+    "title": "Contrattacco!",
+    "desc": "L'Orda elogia i tuoi successi contro i Kolkar, ma i Kolkar stessi sono furiosi. Ho notizia che un contingente di Kolkar è giunto nei Barrens dalla sua patria, Desolace, in cerca di vendetta. L'ultimo rapporto diceva che, proprio ora, avanzano contro questi bunker da ovest!$B$BAffronta gli invasori Kolkar e poni fine alla loro minaccia nei Barrens. Uccidili finché non comparirà il loro capo, Warlord Krom'zar. Sconfiggilo e portami un pezzo del suo stendardo come prova.$B$BContiamo su di te, $N.",
+    "obj": "Porta un Piece of Krom'zar's Banner a Regthar Deathgate, a ovest di Crossroads.",
+    "progress": "Hai lo stendardo?",
+    "reward": "Ce l'hai fatta! Hai sconfitto i Kolkar!$B$BMi assicurerò che Thrall riceva notizia delle tue gesta qui, $N.$B$BTieni la testa alta. Fai onore a te stess$Go:a; e all'Orda."
+  },
+  "4402": {
+    "en_title": "Galgar's Cactus Apple Surprise",
+    "en_obj": "Bring Galgar 10 Cactus Apples. You remember him saying that they could be found near cactuses.",
+    "title": "La sorpresa di mele di cactus di Galgar",
+    "desc": "Fa proprio caldo qui nella Valley of Trials.$B$B<Galgar si asciuga la fronte.>$B$BSe solo avessi delle mele di cactus, potrei preparare la mia famosa sorpresa di mele di cactus! Niente rinfresca più in fretta di un pezzo di quella squisita delizia.$B$BTi dico io, $N. Se mi porti 10 mele di cactus, ti preparerò qualche porzione di sorpresa di mele di cactus da portare con te nelle tue avventure. Se ti interessa, le mele di cactus crescono vicino alle piante di cactus qui intorno.",
+    "obj": "Porta a Galgar 10 Cactus Apples. Ricordi che ha detto che si trovano vicino ai cactus.",
+    "progress": "Hai finito di raccogliere le mele di cactus?",
+    "reward": "Meraviglioso, $N! Come promesso, ecco la tua sorpresa di mele di cactus più un piccolo extra."
+  },
+  "4495": {
+    "en_title": "A Good Friend",
+    "en_obj": "Find Iverron by the cave to the north.",
+    "title": "Un buon amico",
+    "desc": "Un mio amico di nome Iverron viene a trovarmi ogni giorno alla stessa ora. La cosa strana è che oggi non si è fatto vedere affatto: ha, anzi, parecchie ore di ritardo.$B$BLo ammetto, $N, sono un po' preoccupato. Iverron passa molto tempo vicino alla caverna a nord, e sono sicuro che sai quanto sia pericoloso laggiù: ragni ovunque!$B$BSe dovessi passare da quelle parti, potresti tenere gli occhi aperti per lui?",
+    "obj": "Trova Iverron vicino alla caverna a nord.",
+    "reward": "Sono così felice che tu mi abbia trovato, $N. Come facevi a sapere che ero qui?"
+  },
+  "4641": {
+    "en_title": "Your Place In The World",
+    "en_obj": "Speak with Gornek. You recall Kaltunk marking your map with his location and mentioning that Gornek resided in the Den, a building to the west. ",
+    "title": "Il tuo posto nel mondo",
+    "desc": "Finalmente sei in età, $N... in età per combattere nel nome dell'Orda. Per conquistare per la gloria del Warchief.$B$BSì...$B$B<Kaltunk ti squadra da capo a piedi.>$B$BAndrai bene.$B$BSenza dubbio vorresti trovare un grande drago o un demone e strangolarlo a mani nude, ma forse sarebbe saggio iniziare con qualcosa di meno... pericoloso.$B$B<Kaltunk ride.>$B$BPresentati da Gornek, saprà assegnarti un compito più adatto a un giovane $c. Troverai Gornek nel Den, a ovest.",
+    "obj": "Parla con Gornek. Ricordi che Kaltunk ha segnato la sua posizione sulla tua mappa e ha detto che Gornek risiede nel Den, un edificio a ovest. ",
+    "progress": "La corazza di uno scorpide non è così spessa da fermare la forza di un $C determinato. Colpisci con vigore e senza esitare, e gli scorpidi si riveleranno facili prede.",
+    "reward": "Un'altra recluta di Kaltunk, eh?$B$BTriste stato di cose, se questo è il meglio che l'Orda sa produrre. Non importa. Quando penseremo che sei pront$Go:a; a lasciare la Valley, sarai un fiero $C dell'Orda."
+  },
+  "4681": {
+    "en_title": "Washed Ashore",
+    "en_obj": "Recover the Sea Turtle Remains from the Skeletal Sea Turtle in the waters west of Auberdine, and then speak with Gwennyth Bly'Leggonde back in Auberdine.",
+    "title": "Spiaggiati",
+    "desc": "Quella creatura spiaggiata non è un caso isolato qui a Darkshore. Ce ne sono altre lungo la costa e persino in acqua. Vorrei che tu ne esaminassi un'altra di cui siamo a conoscenza: è stata segnalata in acqua, a ovest di Auberdine, vicino a un relitto affondato. Torna da me con tutto ciò che riuscirai a recuperare che possa aiutare la nostra ricerca.$B$BInoltre, durante i tuoi viaggi potresti imbatterti in altre creature. Se dovessi scoprire qualcosa, ti prego di portarlo alla nostra attenzione!",
+    "obj": "Recupera i Sea Turtle Remains dallo Skeletal Sea Turtle nelle acque a ovest di Auberdine, poi parla con Gwennyth Bly'Leggonde di nuovo ad Auberdine.",
+    "progress": "Una volta che avrai esaminato i resti della creatura nell'acqua a ovest di qui, potrò presentare un rapporto adeguato al Temple of the Moon a Darnassus. Forse allora saremo più vicini a scoprire perché queste sfortunate creature scelgono di porre fine ai propri giorni spiaggiandosi sulla costa di Darkshore.",
+    "reward": "Oggi ci sei stato di enorme aiuto; ora abbiamo una concreta possibilità di svelare il mistero del perché queste creature scelgano di spiaggiarsi sulla costa di Darkshore. L'idea che possano fuggire dall'area intorno a Teldrassil è inquietante. Se ne incontrerai altre nei tuoi viaggi, fammelo sapere. La nostra ricerca è appena agli inizi.$B$BA nome del Temple of the Moon, accetta questo come ringraziamento per l'impegno che hai dedicato. Grazie, $N!"
+  },
+  "4722": {
+    "en_title": "Beached Sea Turtle",
+    "en_obj": "Take the Sea Turtle Remains to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Tartaruga marina spiaggiata",
+    "desc": "Trovi la carcassa di una tartaruga marina che si era spiaggiata sulla costa di Darkshore qualche tempo fa. È stata saccheggiata dai murloc che si sono accampati attorno ai suoi resti. Tuttavia sembrano rimasti dei campioni utili sui resti della creatura, che Gwennyth Bly'Leggonde ad Auberdine potrebbe riuscire a sfruttare.",
+    "obj": "Porta i Sea Turtle Remains a Gwennyth Bly'Leggonde ad Auberdine.",
+    "progress": "Salve, $N - hai da riferire qualche scoperta su creature spiaggiate?",
+    "reward": "Un'altra scoperta da studiare - ben fatto, $N! Questi resti saranno studiati a dovere una volta giunti a Darnassus. Ti prego di accettare questo piccolo compenso in cambio dei resti che ci hai fornito per il nostro studio."
+  },
+  "4723": {
+    "en_title": "Beached Sea Creature",
+    "en_obj": "Take the Sea Creature Bones to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Creatura marina spiaggiata",
+    "desc": "I resti di un thresher gigante - molto più grande di quelli che ci si aspetterebbe di trovare a Darkshore - giacciono spiaggiati sulla costa di Mist's Edge. Come questa creatura sia finita qui è un mistero; il gruppo di murloc che ora banchetta con la sua carcassa sembra troppo debole, anche in gran numero, per aver abbattuto la bestia.$B$BSebbene parte di essa sia stata spolpata, ne rimane abbastanza per prelevare un campione da far studiare a Gwennyth Bly'Leggonde ad Auberdine.",
+    "obj": "Porta le Sea Creature Bones a Gwennyth Bly'Leggonde ad Auberdine.",
+    "progress": "Di nuovo salve, $N! Sei qui per riferire su un'altra scoperta?",
+    "reward": "Le ossa che hai portato appartengono a gentili mammiferi marini che abitano le acque attorno alla base di Teldrassil. Non si era mai saputo che si spiaggiassero violentemente come i thresher. Perché mai queste creature lo farebbero, mi chiedo? Beh, forse lo studio dei loro resti porterà i frutti di conoscenza che cerchiamo.$B$BAncora una volta, grazie per il tuo aiuto. Ti prego di accettare questo compenso dal Temple of the Moon."
+  },
+  "4725": {
+    "en_title": "Beached Sea Turtle",
+    "en_obj": "Take the Strangely Marked Box to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Tartaruga marina spiaggiata",
+    "desc": "Altri resti di tartarughe marine giacciono spiaggiati lungo la costa. Questo esemplare ha una carrozza abbandonata attaccata al guscio. Forse questa creatura è stata spinta a riva da esseri sconosciuti, invece di spiaggiarsi da sola come suggerivano altri resti. I murloc Greymist hanno ora fatto dei resti di questa creatura la propria dimora, banchettando con la carogna.$B$BNella carrozza trovi una scatola con strani segni; forse Gwennyth Bly'Leggonde ad Auberdine saprà dar loro un senso.",
+    "obj": "Porta la Strangely Marked Box a Gwennyth Bly'Leggonde ad Auberdine.",
+    "progress": "È un piacere rivederti, $N. Stiamo facendo grandi progressi nello svelare il mistero del perché le maestose creature marine si spiaggino sulla costa di Darkshore, ma a ogni domanda risolta ne sorgono altre due, a quanto pare.$B$BSei qui per offrirci altro aiuto nella nostra ricerca?",
+    "reward": "Ho sentito parlare del tipo di carrozze trovate sul dorso della tartaruga che hai scoperto. Credo siano carrozze dei naga, usate sia in battaglia sia per trasportare i rifornimenti sulla terraferma. I segni sulla scatola che hai trovato sono dei naga; questo spiegherebbe la loro presenza invasiva nell'estremo nord di Darkshore.$B$BInvierò questa scatola a Darnassus insieme al resto delle tue scoperte. Questo è per te - grazie ancora per la tua assistenza."
+  },
+  "4727": {
+    "en_title": "Beached Sea Turtle",
+    "en_obj": "Take the Sea Turtle Remains to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Tartaruga marina spiaggiata",
+    "desc": "I resti scheletrici di una tartaruga marina giacciono sulla sabbia delle spiagge settentrionali di Darkshore. I murloc Greymist o non hanno trovato questa carcassa, o forse l'hanno trovata e la evitano per qualche ragione ignota. In ogni caso, della tartaruga rimane abbastanza da prelevare un campione e portarlo a Gwennyth Bly'Leggonde ad Auberdine, perché il Temple of the Moon lo studi.",
+    "obj": "Porta i Sea Turtle Remains a Gwennyth Bly'Leggonde ad Auberdine.",
+    "progress": "Di nuovo salve, $N! Sei qui per riferire su un'altra scoperta?",
+    "reward": "Hai trovato altre creature spiaggiate, $N? Le tartarughe marine si vedevano spesso scorrazzare alla base di Nordrassil prima della sua distruzione. Con la nascita di Teldrassil, però, sono state viste in numero sempre minore. Alcune, come abbiamo scoperto, finiscono i propri giorni qui per ragioni ignote.$B$BIl tuo aiuto forse scioglierà il mistero che abbiamo davanti. Ti prego di accettare questo in cambio dei resti che ci hai fornito per il nostro studio."
+  },
+  "4728": {
+    "en_title": "Beached Sea Creature",
+    "en_obj": "Take the Sea Creature Bones to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Creatura marina spiaggiata",
+    "desc": "Il cadavere di quella che sembra una specie di gigantesca creatura marina giace sulla spiaggia, in parte sventrato. Una carriola e vari attrezzi sono abbandonati accanto all'enorme creatura spiaggiata, come se qualcuno avesse già tentato di studiarla. Sebbene i murloc abbiano banchettato con la carcassa, ne resta abbastanza per raccogliere un campione adatto per Gwennyth Bly'Leggonde, ad Auberdine.",
+    "obj": "Porta le Sea Creature Bones a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "progress": "Salve ancora, $N! Cosa ti riporta ad Auberdine? Sei qui per riferire di un'altra scoperta, forse?",
+    "reward": "Ah, credo tu abbia trovato quella che stava già esaminando la Lega degli Esploratori. Hanno una presenza qui a Darkshore e avevano accennato a uno studio su una delle creature spiaggiate, finché i murloc non li hanno cacciati. Tu sembri esserci riuscit$Go:a; dove entrambi abbiamo fallito. Prego, accetta questo compenso a nome del Tempio della Luna."
+  },
+  "4730": {
+    "en_title": "Beached Sea Creature",
+    "en_obj": "Take the Sea Creature Bones to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Creatura marina spiaggiata",
+    "desc": "Il cadavere mezzo divorato di quella che doveva essere una gigantesca creatura marina giace sulla spiaggia. Un gruppo di murloc, più forti di quelli che si trovano vicino ad Auberdine, si è stabilito attorno alla carcassa. Ne resta abbastanza da poter consegnare un campione di ossa a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "obj": "Porta le Sea Creature Bones a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "progress": "Salve di nuovo, $N! Sei qui per riferire di un'altra scoperta?",
+    "reward": "Le ossa che hai portato appartengono a pacifici mammiferi marini che abitano le acque attorno alla base di Teldrassil. Non si era mai sentito dire che si spiaggiassero in modo violento, come facevano i threshers. Perché mai lo avranno fatto? Forse lo studio dei loro resti porterà il frutto di conoscenza che cerchiamo.$B$BDi nuovo, grazie per il tuo aiuto. Accetta questo compenso dal Tempio della Luna."
+  },
+  "4731": {
+    "en_title": "Beached Sea Turtle",
+    "en_obj": "Take the Strangely Marked Box to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Tartaruga marina spiaggiata",
+    "desc": "Un altro insieme di resti di tartaruga marina giace spiaggiato sulla costa. Questi resti hanno una carrozza abbandonata, fissata a metà al guscio della tartaruga. Forse la creatura è stata spinta a riva da esseri sconosciuti, invece di spiaggiarsi da sola come suggerivano altri resti. Potenti murloc Greymist hanno fatto della carcassa la loro attuale dimora.$B$BNella carrozza trovi una scatola con strani segni; forse Gwennyth Bly'Leggonde, ad Auberdine, saprà decifrarli.",
+    "obj": "Porta la Strangely Marked Box a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "progress": "Salve di nuovo, $N. Il lavoro che hai svolto per conto del Tempio della Luna è stato eccezionale. Saremo benedetti da altri tuoi sforzi in nostro favore?",
+    "reward": "Ho sentito parlare del tipo di carrozze trovate sul dorso di quella tartaruga. Credo siano carrozze naga, usate sia in battaglia sia per trasportare le provviste sulla terraferma. I segni sulla scatola che hai trovato sono dei naga; forse la creatura è stata uccisa mentre si dirigeva più a sud... magari verso Ashenvale?$B$BMi assicurerò di inviare questa scatola a Darnassus insieme alle altre tue scoperte. Questo è per te: grazie ancora per l'aiuto."
+  },
+  "4732": {
+    "en_title": "Beached Sea Turtle",
+    "en_obj": "Take the Sea Turtle Remains to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Tartaruga marina spiaggiata",
+    "desc": "Trovi il cadavere di una tartaruga marina che si è spiaggiata sulla costa di Darkshore tempo fa. È stato spolpato quasi del tutto dai murloc Greymist, gli stessi che ora si sono accampati attorno ai suoi resti. Eppure sulla carcassa sembrano rimanere campioni adatti, di cui Gwennyth Bly'Leggonde, ad Auberdine, potrebbe fare uso.",
+    "obj": "Porta i Sea Turtle Remains a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "progress": "Salve ancora, $N. Hai altre scoperte da riferire al Tempio della Luna?",
+    "reward": "Hai trovato altre creature spiaggiate, $N? Le tartarughe marine un tempo si vedevano spesso scorrazzare alla base di Nordrassil, prima della sua distruzione. Con la nascita di Teldrassil, però, se ne vedono sempre meno. Alcune, come abbiamo scoperto, finiscono i loro giorni qui per qualche ragione ignota.$B$BIl tuo aiuto forse scioglierà il mistero che abbiamo davanti. Accetta questo in cambio dei resti che ci hai fornito per il nostro studio."
+  },
+  "4733": {
+    "en_title": "Beached Sea Creature",
+    "en_obj": "Take the Sea Creature Bones to Gwennyth Bly'Leggonde in Auberdine.",
+    "title": "Creatura marina spiaggiata",
+    "desc": "I resti di quello che sembra un gigantesco thresher sono stati portati a riva nella baia rocciosa di Twilight Shore. Questo thresher è molte volte più grande di qualsiasi altro avvistato da queste parti. Da qualunque luogo provenga, non sembra originario di Darkshore.$B$BSebbene la creatura sia stata spolpata in alcuni punti, ne resta abbastanza per raccogliere un campione adatto per Gwennyth Bly'Leggonde, ad Auberdine.",
+    "obj": "Porta le Sea Creature Bones a Gwennyth Bly'Leggonde, ad Auberdine.",
+    "progress": "Sia lode a Elune, sono lieta di rivederti, caro $N. Il lavoro del Tempio della Luna sugli strani spiaggiamenti prosegue qui a Darkshore. Hai forse qualcos'altro da offrirci?",
+    "reward": "Le dimensioni del thresher che descrivi sono sbalorditive. Persino i più anziani dei thresher di questa regione raggiungono solo una frazione di quella stazza. Alcuni esemplari più grandi erano noti nei pressi di Teldrassil, ma il loro numero è calato costantemente. Non posso fare a meno di chiedermi se queste creature spiaggiate siano in qualche modo legate a ciò.$B$BMentre analizziamo le ossa che ci hai portato, accetta questo a nome del Tempio della Luna. Grazie, $N."
+  },
+  "4740": {
+    "en_title": "WANTED: Murkdeep!",
+    "en_obj": "Find and slay the murloc known as Murkdeep.  The creature is thought to be defending the murloc huts south of Auberdine along the water.$B$BReport the death of Murkdeep to Sentinel Glynda Nal'Shea in Auberdine.",
+    "title": "RICERCATO: Murkdeep!",
+    "desc": "Attenzione!$B$BÈ offerta una ricompensa per la morte del murloc \"Murkdeep\". Questa immonda bestia è nota per essere responsabile della morte di almeno una Sentinella e si sospetta abbia causato l'affondamento di almeno due navi da carico nelle acque al largo di Darkshore!$B$BMurkdeep è stato visto per l'ultima volta in un accampamento di capanne murloc a sud di Auberdine e si ritiene che protegga le capanne di quel luogo. La taglia va riscossa presso Sentinel Glynda Nal'Shea, ad Auberdine.$B$BIl Consiglio del Villaggio di Auberdine",
+    "obj": "Trova e uccidi il murloc noto come Murkdeep. Si ritiene che difenda le capanne murloc a sud di Auberdine, lungo l'acqua.$B$BRiferisci la morte di Murkdeep a Sentinel Glynda Nal'Shea, ad Auberdine.",
+    "progress": "Salve, $c. In cosa possono aiutarti oggi le Sentinelle? Forse sei qui per informarti sulla taglia su Murkdeep?",
+    "reward": "Be', pare che tu sia qui per più di una semplice richiesta di informazioni! I cittadini saranno lieti di sapere che stanotte dormiranno un po' più sereni e al sicuro.$B$BOggi sei stat$Go:a; il braccio della giustizia per la gente di Auberdine, $N. Per questo vorrei offrirti questo come giusta ricompensa... per un vero eroe del popolo di Auberdine."
+  },
+  "4761": {
+    "en_title": "Thundris Windweaver",
+    "en_obj": "Speak with Thundris Windweaver in Auberdine.",
+    "title": "Thundris Windweaver",
+    "desc": "Il tuo sopralluogo all'accampamento dei furbolg è un'informazione di cui Thundris Windweaver dovrebbe essere messo al corrente. Egli serve con grazia come anziano di Auberdine, offrendo una guida saggia e giusta negli affari quotidiani del villaggio. Ti prego, condividi con lui quanto hai scoperto finora sulla questione dei furbolg.$B$BCredo che abbia delle idee personali sulle ragioni della loro corruzione. Forse potrai collaborare con lui per attuare un piano che ristabilisca l'equilibrio della natura qui!",
+    "obj": "Parla con Thundris Windweaver ad Auberdine.",
+    "reward": "Ben trovat$Go:a;, $c. Il tuo sopralluogo sulla situazione dei furbolg arriva in un momento propizio per noi di Auberdine. Da tempo ci troviamo a fare i conti non solo con gli abitanti della foresta, ormai apertamente ostili alla nostra presenza, ma anche con la vera e propria corruzione della foresta stessa. Spero che tu possa offrire il tuo aiuto ad Auberdine in questi tempi difficili."
+  },
+  "4762": {
+    "en_title": "The Cliffspring River",
+    "en_obj": "Travel north of Auberdine to the first waterfall along the Cliffspring River and draw a sample from the pool there.$B$BReturn to Thundris Windweaver in Auberdine with the Cliffspring River Sample.",
+    "title": "Il fiume Cliffspring",
+    "desc": "Il fiume Cliffspring ha iniziato a diventare sporco e corrotto. Sfocia nel Mist's Edge e temo che la contaminazione raggiungerà presto Auberdine. Sospetto che i furbolg Blackwood a monte siano la causa del morbo, ma sospetto anche che non ne siano la vera origine.$B$BPrendi questa provetta e vai alla foce del fiume, a nord. Risali verso l'entroterra fino alla prima cascata e preleva un campione dalla pozza. Vedrai un ponte sopra di te. Una volta ottenuto il campione, torna da me ad Auberdine.",
+    "obj": "Viaggia a nord di Auberdine fino alla prima cascata lungo il fiume Cliffspring e preleva un campione dalla pozza.$B$BTorna da Thundris Windweaver ad Auberdine con il Cliffspring River Sample.",
+    "progress": "L'inquinamento del fiume Cliffspring è solo l'inizio di una tendenza allarmante qui a Darkshore. Il campione che porterai ci aiuterà a formulare un piano... un piano d'attacco, comincio a sospettare.",
+    "reward": "Non mi sorprende quanto sia contaminata quest'acqua, ma guarda quanto sta diventando putrida! Sembra che sia necessario agire il prima possibile, eh, $N?$B$BA est si trova Felwood; è quella la vera fonte di questa corruzione, che ho già visto in passato. Prevedo che questo campione lo confermerà. Potremmo riuscire ad attuare una cura qui, ma per tentare avremo bisogno di aiuto. Quando verrà il momento, $N, spero che potrai darci l'aiuto che ci serve."
+  },
+  "4763": {
+    "en_title": "The Blackwood Corrupted",
+    "en_obj": "Fill the Empty Cleansing Bowl at the Auberdine Moonwell.$B$BGather a sample of fruit, nut, and grain from the northern Blackwood furbolg camps.$B$BMix the bowl and place it near the bonfire closest to the Cliffspring River at the northern camp, thus summoning the satyr corruptor.$B$BTake the Talisman of Corruption and bring it to Thundris Windweaver in Auberdine.",
+    "title": "I Blackwood corrotti",
+    "desc": "Abbiamo scoperto che una fonte della corruzione dei furbolg sono i satiri. Esercitano il loro dominio tramite talismani attraverso cui incanalano la magia. Se i furbolg hanno una possibilità di salvezza, dobbiamo attirare allo scoperto il satiro corruttore e prendere quel talismano!$B$BRiempi questa ciotola al nostro pozzo lunare e raccogli campioni del cibo dei furbolg dal loro accampamento a nord. Mescolali e posali vicino al falò presso il fiume; tutti i furbolg che mangeranno saranno purificati giusto il tempo di attirare fuori il satiro corruttore... che dovrai uccidere!",
+    "obj": "Riempi l'Empty Cleansing Bowl al Pozzo Lunare di Auberdine.$B$BRaccogli un campione di frutta, noci e cereali dagli accampamenti settentrionali dei furbolg Blackwood.$B$BMescola il contenuto della ciotola e posala vicino al falò più prossimo al fiume Cliffspring nell'accampamento a nord, evocando così il satiro corruttore.$B$BPrendi il Talisman of Corruption e portalo a Thundris Windweaver ad Auberdine.",
+    "progress": "Il Talisman of Corruption è un oggetto sinistro che serve solo a pervertire l'equilibrio della natura. Quando ti procurerai questo oggetto dal satiro che tormenta i furbolg e me lo porterai perché venga distrutto, oggi avremo ottenuto una grande vittoria!",
+    "reward": "Abbiamo appena iniziato questa guerra per riconquistare la nostra foresta dalle forze della corruzione, ma oggi una battaglia è stata vinta! $N, il popolo di Auberdine ha nei tuoi confronti un debito di gratitudine che non sarà facile ripagare. Ti prego, accetta questo insieme ai nostri ringraziamenti. Ciò che abbiamo appreso oggi potrebbe un giorno liberare per sempre i nostri amici furbolg dalle catene del tormento."
+  },
+  "4811": {
+    "en_title": "The Red Crystal",
+    "en_obj": "Travel east of Auberdine and look for a large, red crystal along Darkshore's eastern mountain range.  Report back what you find to Sentinel Glynda Nal'Shea in Auberdine.",
+    "title": "Il Cristallo Rosso",
+    "desc": "Moonkin ostili vagano in numero sempre maggiore a est di qui. Un tempo si pensava fossero creature miti, quasi mistiche. Sebbene alcuni continuino a venerarli, la sicurezza di Auberdine mi costringe ad avere una visione più realistica.$B$BHo ricevuto notizie secondo cui i moonkin sono attratti da un grande cristallo rosso lungo la catena montuosa orientale di Darkshore. Nessuno ha idea di cosa sia quel cristallo, né se esista davvero. Voglio che tu lo individui laggiù e mi riferisca ciò che trovi.",
+    "obj": "Viaggia a est di Auberdine e cerca un grande cristallo rosso lungo la catena montuosa orientale di Darkshore. Riferisci quanto scoperto a Sentinel Glynda Nal'Shea ad Auberdine.",
+    "progress": "Cos'hai da riferire su quel cristallo rosso? Esiste davvero?",
+    "reward": "Dunque il cristallo esiste, $N? Affascinante... comunque, hai svolto bene il tuo compito: ottimo lavoro!$B$BCos'è esattamente questo cristallo? È solo una domanda in un mare di domande. Un'altra che mi viene in mente è perché i moonkin ne siano attratti. Il cristallo è benigno, oppure nasconde uno scopo più sinistro?$B$BHo molte altre domande, ma per trovare risposte dovremo esaminare il cristallo da vicino."
+  },
+  "4812": {
+    "en_title": "As Water Cascades",
+    "en_obj": "Fill the Empty Water Tube at the Auberdine moonwell, and then investigate the red crystal along Darkshore's eastern mountain wall.",
+    "title": "Come scorre l'acqua",
+    "desc": "Usa questa fiala vuota e riempila con l'acqua del pozzo lunare qui ad Auberdine. Una magia così potente dovrebbe fornire un indizio sulla composizione del cristallo. Per farlo, verserai il liquido sul cristallo; al resto dovrebbe pensare lui.$B$BNon prevedo che ti accada nulla di male, ma voglio comunque che tu stia attent$Go:a;. Sopra di noi, a est, si trova Felwood; se quel cristallo è legato a quel luogo come sospetto, potrebbe rivelarsi molto pericoloso.",
+    "obj": "Riempi l'Empty Water Tube al pozzo lunare di Auberdine, poi indaga sul cristallo rosso lungo la parete montuosa orientale di Darkshore.",
+    "progress": "Il cristallo appare davvero alieno sullo sfondo boscoso di Darkshore. Ti sembra di udire un leggerissimo ronzio provenire dal suo profondo.",
+    "reward": "Sei giunt$Go:a; ancora una volta al misterioso cristallo. Togli il tappo dalla provetta di acqua del pozzo lunare e ne versi con cautela il contenuto sulla cima del cristallo. Mentre l'acqua scorre lungo i suoi reticoli, vedi la superficie opaca farsi trasparente..."
+  },
+  "4813": {
+    "en_title": "The Fragments Within",
+    "en_obj": "Report back what you have found to Sentinel Glynda Nal'Shea in Auberdine.",
+    "title": "I frammenti all'interno",
+    "desc": "L'acqua del pozzo lunare ha rivelato che all'interno del cristallo sono incastonati alcuni piccoli frammenti d'osso, oltre a metà di una mandibola. La mandibola sembra appartenere a un umanoide, ma senza spezzare il cristallo non è chiaro, impresa che persino la magia più potente troverebbe quasi impossibile.$B$BCompiuto il tuo compito, non resta che riferire a Sentinel Glynda Nal'Shea ad Auberdine.",
+    "obj": "Riferisci ciò che hai scoperto a Sentinel Glynda Nal'Shea ad Auberdine.",
+    "reward": "Be', pare che, pur sapendo di più su questo cristallo, ne risultino ancora più domande senza risposta!$B$BPorterò le informazioni che hai scoperto al consiglio di Auberdine. Forse sapranno quale linea d'azione seguire riguardo al cristallo. Ammesso che ce ne sia una; per ora la minaccia resta abbastanza a est da non essere pericolosa.$B$BQuanto a te, prendi questo. Consideralo una ricompensa per un lavoro ben fatto, $N."
+  },
+  "4921": {
+    "en_title": "Lost in Battle",
+    "en_obj": "Find Mankrik's wife and then return to him in the Crossroads.",
+    "title": "Perduta in battaglia",
+    "desc": "Combattevamo in un piccolo accampamento dei tauren quando siamo stati separati: lei ha tenuto a bada da sola tre dei Bristleback. Ma il numero dei nemici ha cominciato a sopraffarci. Ne ho portati via alcuni, solo per vederla travolta da nuovi arrivati. Preso dalla rabbia, mi sono voltato ad affrontare i miei nemici, ma mi hanno abbattuto con facilità, forti del loro gran numero.$B$BMi sono svegliato con un druido tauren che curava le mie ferite: mi aveva trovato sulla Gold Road mentre cadevo.$B$BTi prego, $c, trova qualche traccia di mia moglie.",
+    "obj": "Trova la moglie di Mankrik, poi torna da lui al Crossroads.",
+    "progress": "Hai trovato qualche segno di lei? Il dolore al petto mi dice che è accaduto il peggio, ma spero che tu la trovi sana e salva.",
+    "reward": "Capisco. Grazie, $C."
+  },
+  "5041": {
+    "en_title": "Supplies for the Crossroads",
+    "en_obj": "Find and return Crossroads' Supply Crates to Thork in the Barrens.",
+    "title": "Rifornimenti per il Crossroads",
+    "desc": "L'attacco alla carovana conteneva rifornimenti di cui avevamo disperatamente bisogno.$B$BHai già avuto il coraggio di affrontare la tribù dei Razormane e ti chiedo di farlo ancora, ma stavolta tieni gli occhi aperti per i nostri rifornimenti perduti. Probabilmente li troverai sparsi nei loro accampamenti, mentre i quilboar si ingrassano con le loro azioni disonorevoli.$B$BLa gente del Crossroads ti sarebbe debitrice.",
+    "obj": "Trova e riporta le Crossroads' Supply Crates a Thork, nei Barrens.",
+    "progress": "Come procede la ricerca dei rifornimenti, $N? Immagino che i quilboar cadano facilmente sotto la tua forza.",
+    "reward": "Haha! Grazie, $N! Ci sarà di grande aiuto. Sei una benedizione per il Crossroads e per l'Orda. Se posso fare qualcosa per te, non esitare a chiedere."
+  },
+  "5042": {
+    "en_title": "Agamaggan's Strength",
+    "title": "La forza di Agamaggan",
+    "progress": "Mi serviranno 4 blood shards se desideri la forza di Agamaggan, $r.$B$BI tuoi nemici tremeranno davanti alla tua forza, se riceverai questa benedizione. <sbuffa>$B$BI più grandi guerrieri dei Razormane sono pervasi da tale potere!",
+    "reward": "Se solo Mangletooth fosse libero di vederti annientare coloro che lo hanno tradito! <sbuffa>$B$BTi ringrazio per aver distrutto altri Bristleback raccogliendo questi frammenti. Ti prego, continua a farlo, e io continuerò ad aiutarti. <sbuffa>"
+  },
+  "5043": {
+    "en_title": "Agamaggan's Agility",
+    "title": "L'agilità di Agamaggan",
+    "progress": "Si dice che i più grandi esploratori della mia tribù siano ineguagliabili nella mira, e che nessun rogue <sbuffo> possa stare al pari alla loro rapidità in battaglia.$B$BPortami 4 blood shard e ti renderò più agile di qualsiasi quilboar mai nato.",
+    "reward": "Possa la tua mira essere infallibile e il colpo della tua arma andare sempre a segno, $R.$B$BLo spirito di Agamaggan è con te. Torna <sbuffo> da me, se vuoi. Mangletooth ti benedirà di nuovo, se il grande dio cinghiale mi riterrà degno. <sbuffo>"
+  },
+  "5044": {
+    "en_title": "Wisdom of Agamaggan",
+    "title": "La saggezza di Agamaggan",
+    "progress": "Gli sciamani e i geomanti delle tribù dei quilboar <sbuffo> invocano la forza di Agamaggan per aiutarli in battaglia e nei loro rituali, $r.$B$BSe anche tu desideri il potere aggiunto della benedizione di Agamaggan per i tuoi incantesimi, portami 4 blood shard e Mangletooth ti aiuterà. <sbuffo>",
+    "reward": "I tuoi nemici dovrebbero temerti ancora di più, $R. <sbuffo>$B$BRaccontate a Mangletooth le storie della tua astuzia in battaglia, quando ci incontreremo di nuovo... in questa vita o nella prossima. <sbuffo>"
+  },
+  "5045": {
+    "en_title": "Rising Spirit",
+    "title": "Spirito ascendente",
+    "progress": "I guerrieri di ogni sorta <sbuffo> hanno bisogno di uno spirito forte. Ti spinge a imprese più grandi quando ogni speranza è perduta. Neppure i Razormane <sbuffo> lo ignorano. Siamo una tribù spirituale: siamo più orgogliosi del nostro legame con Agamaggan che della nostra abilità <sbuffo> in battaglia.$B$BPortami 4 blood shard e benedirò il tuo spirito per la battaglia. <sbuffo>",
+    "reward": "I nostri guerrieri più grandi, e i nostri più grandi <sbuffo> sciamani, invidierebbero la tua volontà, $R.$B$BSconfiggi altri Bristleback sapendo che non possono fermarti! <sbuffo>"
+  },
+  "5046": {
+    "en_title": "Razorhide",
+    "title": "Razorhide",
+    "progress": "Tutti coloro che <sbuffo> entrano in battaglia hanno bisogno di protezione. Le loro ossa devono essere forti. La loro pelle dura. <sbuffo> Anche la mia tribù lo sa e, oltre alla protezione naturale che ci donano aculei e pelle, <sbuffo> spesso invochiamo Agamaggan perché ci protegga dal male prima di andare in guerra.$B$BPortami 4 blood shard <sbuffo> e ti concederò la stessa protezione.",
+    "reward": "Va' in guerra, $R."
+  },
+  "5261": {
+    "en_title": "Eagan Peltskinner",
+    "en_obj": "Speak with Eagan Peltskinner.",
+    "title": "Eagan Peltskinner",
+    "desc": "Eagan Peltskinner cerca qualcuno che cacci lupi per lui. È una buona notizia, perché ultimamente a Northshire Valley vediamo molti più lupi.$B$BSe sei interessat$Go:a;, parla con Eagan. Lo trovi sul lato dell'abbazia, a sinistra.",
+    "obj": "Parla con Eagan Peltskinner.",
+    "reward": "È vero. Cerco qualcuno che cacci un po' di lupi per me! Sei tu quella persona?"
+  },
+  "5321": {
+    "en_title": "The Sleeper Has Awakened",
+    "en_obj": "Escort Kerlonian Evershade to Liladris Moonriver at Maestra's Post in Ashenvale.",
+    "title": "Il Dormiente si è risvegliato",
+    "desc": "Stavo andando a Maestra's Post per incontrare Liladris Moonriver, ma ho deciso di fermarmi qui a fare un breve pisolino. Da quando mi sono svegliato dal sogno di smeraldo, ho tanto sonno...$B$B<sbadiglio>$B$BTi dispiacerebbe mostrarmi la strada? Mi pare che Maestra's Post sia a sud di qui, lungo la strada di Ashenvale. Può essere pericoloso, quindi spero tu abbia degli amici che si uniscano a noi.$B$BInfine, potrei addormentarmi: se mai dovessi svegliarmi, usa il mio corno. Lo troverai nel baule qui.",
+    "obj": "Scorta Kerlonian Evershade da Liladris Moonriver a Maestra's Post, ad Ashenvale.",
+    "progress": "Kerlonian è arrivato?",
+    "reward": "Oh, sono così felice che Kerlonian ce l'abbia fatta! E sono certa che lo troverò addormentato da qualche parte qui intorno, vero?$B$BGrazie per avergli mostrato la strada, $N."
+  },
+  "5441": {
+    "en_title": "Lazy Peons",
+    "en_obj": "Use the Foreman's Blackjack on Lazy Peons when they're sleeping.  Wake up 5 peons, then return the Foreman's Blackjack to Foreman Thazz'ril in the Valley of Trials.",
+    "title": "Peon pigri",
+    "desc": "Maledetti peon! Lavorano duramente raccogliendo legname dagli alberi della valle, ma fanno sempre pisolini! Mi serve qualcuno che aiuti a tenerli in riga.$B$BSembri proprio il $r giusto per il mio compito. Tieni, prendi questo blackjack e usalo su ogni peon pigro che trovi addormentato sul lavoro. Una bella botta li rimetterà subito al lavoro! Restituisci il blackjack quando hai finito.$B$BPeon fannulloni...",
+    "obj": "Usa il Foreman's Blackjack sui Lazy Peon quando dormono. Sveglia 5 peon, poi riporta il Foreman's Blackjack a Foreman Thazz'ril nella Valley of Trials.",
+    "progress": "Pigri buoni a nulla...$B$BEh? Hai il mio blackjack? Hai trovato dei peon addormentati sul lavoro?!",
+    "reward": "Bene, bene. Magari la prossima volta ci penseranno due volte prima di battere la fiacca! Grazie dell'aiuto!"
+  },
+  "5481": {
+    "en_title": "Gordo's Task",
+    "en_obj": "Collect 3 Gloom Weed and deliver them to Junior Apothecary Holland in the Brill graveyard.",
+    "title": "Il compito di Gordo",
+    "desc": "Padrone vuole erbacce. Noi avere mani grosse e non bravi a raccogliere. Tu aiuti noi e noi non fa' male a te. Noi serve gloom weed. Tante erbe qui intorno e vicino strada.$B$BQuando hai gloom weed, tu porti a Padrone Holland nel cimitero di Brill.",
+    "obj": "Raccogli 3 Gloom Weed e consegnale a Junior Apothecary Holland nel cimitero di Brill.",
+    "progress": "Dov'è quella inutile abominazione? O hai ciò che mi serve, o faresti meglio ad andare là fuori a trovarlo.",
+    "reward": "Che cos'è questo? Gloom weed?! Non so che farmene della gloom weed! Quel cumulo di carne senza cervello è là fuori a raccogliere margherite e a convincere la Lady sa quanti babbei come te a fare lo stesso. Senza offesa.$B$BVa bene, ormai sei qui e questo è ciò che conta. Dato che non mi prenderò il disturbo di spiegare le cose a quell'abominazione, perché non raccogli ciò che mi serve davvero... la doom weed!"
+  },
+  "5482": {
+    "en_title": "Doom Weed",
+    "en_obj": "Collect 10 Doom Weed and deliver them back to Junior Apothecary Holland.$B",
+    "title": "Doom Weed",
+    "desc": "Dunque vedi il guaio in cui mi trovo, $N. Quella cosa là fuori raccoglie le erbe sbagliate! Ti ricompenserò a dovere se raccoglierai ciò che mi serve. Portami abbastanza doom weed e avrai una ricompensa adeguata.$B$BPer quanto ne so, amano infestare la flora vicino alla fossa comune, a nord del cimitero di Brill. Sbrigati e fai attenzione ai gnoll della zona.",
+    "obj": "Raccogli 10 Doom Weed e riportale a Junior Apothecary Holland.$B",
+    "progress": "Spero proprio che sia roba buona. Immagino tu abbia tutta la doom weed che mi serve?",
+    "reward": "Ah, la mia doom weed. Eccellente!$B$B<Junior Apothecary Holland si strofina le mani con avidità.>$B$BQuesta mi tornerà molto utile. Oggi hai fatto un bel servizio a me, ehm, alla Lady, $N. Come promesso, ecco la ricompensa che meriti."
+  },
   "5541": {
     "en_title": "Ammo for Rumbleshot",
     "title": "Munizioni per Rumbleshot",
@@ -3542,6 +4654,24 @@
     "progress": "Spero che tu non sia qui per le munizioni, perché le ho quasi finite!",
     "reward": "Fantastico, altre munizioni! Finalmente è arrivata la spedizione del vecchio Loslor! Saranno anche in ritardo, ma come diceva sempre mio nonno: meglio tardi che mai!$B$BGrazie mille, $N. Ho già dei clienti che non vedono l'ora di averle!",
     "en_obj": "Bring Rumbleshot's Ammo to Hegnar Rumbleshot in Dun Morogh."
+  },
+  "5545": {
+    "en_title": "A Bundle of Trouble",
+    "en_obj": "Bring 8 Bundles of Wood to Raelen at the Eastvale Logging Camp.",
+    "title": "Un fascio di guai",
+    "desc": "Ho un bel problema per le mani. Ho una scadenza incombente per un ordine di legname e il tempo stringe. I lupi e gli orsi a nord di qui hanno cacciato i miei operai lontano dai fasci di legna che avevano già tagliato.$B$BHo già parlato con Deputy Rainer per far sgombrare gli animali, ma mi serve qualcuno che vada a raccogliere la legna per me. Se riuscissi a portarmi otto fasci di legna, potrei rispettare la scadenza.",
+    "obj": "Porta 8 Bundle of Wood a Raelen all'Eastvale Logging Camp.",
+    "progress": "Quella scadenza non si allontana di certo, $C. Ti prego, sbrigati a raccogliere quei fasci di legna.",
+    "reward": "Eccellente! Grazie a te dovrei riuscire a completare l'ordine in tempo. Per dimostrarti la mia gratitudine, vorrei offrirti qualche moneta come compenso per il disturbo.$B$BGrazie e addio."
+  },
+  "5713": {
+    "en_title": "One Shot. One Kill.",
+    "en_obj": "Protect Sentinel Aynasha, then speak with Onaeya at Maestra's Post in Ashenvale.",
+    "title": "Un colpo. Un morto.",
+    "desc": "Stavo viaggiando verso Auberdine con un messaggio importante quando sono stata attaccata dal furbolg Marosh e dai suoi segugi. Durante l'attacco sono stata avvelenata e riesco a malapena a reggermi in piedi. Posso preparare un antidoto, ma ci vorrà del tempo prima che sia pronto.$B$BTi chiedo di difendermi finché non potrò applicarlo. Ti aiuterò con il mio arco come meglio posso.$B$BSe sopravviviamo, potrò consegnare il mio messaggio ad Auberdine, mentre tu parlerai con Onaeya a Maestra's Post per informarla dell'accaduto.",
+    "obj": "Proteggi Sentinel Aynasha, poi parla con Onaeya a Maestra's Post, ad Ashenvale.",
+    "progress": "Hai visto Sentinel Aynasha lungo la strada? È partita per una missione importante ma non è ancora tornata.",
+    "reward": "Porti notizie quanto mai gradite, $C. È bello sapere che Aynasha è viva e in salute grazie a te. Spero che vorrai accettare una ricompensa per il tuo valore. Che Elune vegli su di te e illumini il tuo cammino."
   },
   "5726": {
     "en_title": "Hidden Enemies",
@@ -3577,6 +4707,15 @@
     "obj": "Parla con Thrall a Orgrimmar e digli ciò che hai appreso.",
     "reward": "Ashenvale? Hmm, non avevo sentito di alcuna presenza del Council o dei Burning Blade ad Ashenvale. I miei informatori indagheranno, $N. Hai fatto bene.$B$BPer ora riposa e tieniti occupat$Go:a; con altri compiti. Presto ti chiamerò di nuovo.$B$BLok-Tar Ogar!"
   },
+  "5805": {
+    "en_title": "Welcome!",
+    "en_obj": "Bring the Northshire Gift Voucher to Merissa Stilwell.",
+    "title": "Benvenut$Go:a;!",
+    "desc": "Benvenut$Go:a; in World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Merissa Stilwell a Northshire Valley. Riceverai in dono un piccolo compagno che si unirà alla tua ricerca di avventura e gloria.$B$BGrazie ancora, e goditi il tuo soggiorno in World of Warcraft!$B",
+    "obj": "Porta il Northshire Gift Voucher a Merissa Stilwell.",
+    "progress": "Salute! È un piacere conoscerti!$B$BVedo che hai un buono speciale. Dammelo e ti offrirò qualcosa in cambio.",
+    "reward": "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!"
+  },
   "5841": {
     "en_title": "Welcome!",
     "title": "Benvenut$Go:a;!",
@@ -3586,6 +4725,141 @@
     "reward": "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!",
     "en_obj": "Bring the Coldridge Valley Gift Voucher to Yori Crackhelm."
   },
+  "5842": {
+    "en_title": "Welcome!",
+    "en_obj": "Bring the Shadowglen Gift Voucher to Orenthil Whisperwind.",
+    "title": "Benvenut$Go:a;!",
+    "desc": "Benvenut$Go:a; in World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Orenthil Whisperwind a Shadowglen. Riceverai in dono un piccolo compagno che si unirà alla tua ricerca di avventura e gloria.$B$BGrazie ancora, e goditi il tuo soggiorno in World of Warcraft!",
+    "obj": "Porta lo Shadowglen Gift Voucher a Orenthil Whisperwind.",
+    "progress": "Salute! È un piacere conoscerti!$B$BVedo che hai un buono speciale. Dammelo e ti offrirò qualcosa in cambio.",
+    "reward": "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!"
+  },
+  "5843": {
+    "en_title": "Welcome!",
+    "en_obj": "Bring the Valley of Trials Gift Voucher to Magga.",
+    "title": "Benvenut$Go:a;!",
+    "desc": "Benvenut$Go:a; in World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Magga nella Valley of Trials. Riceverai in dono un piccolo compagno che si unirà alla tua ricerca di avventura e gloria.$B$BGrazie ancora, e goditi il tuo soggiorno in World of Warcraft!",
+    "obj": "Porta il Valley of Trials Gift Voucher a Magga.",
+    "progress": "Ciao! È un piacere conoscerti!$B$BVedo che hai un buono speciale. Dammelo e ti offrirò qualcosa in cambio.",
+    "reward": "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!"
+  },
+  "5844": {
+    "en_title": "Welcome!",
+    "en_obj": "Bring the Camp Narache Gift Voucher to Vorn Skyseer.",
+    "title": "Benvenut$Go:a;!",
+    "desc": "Benvenut$Go:a; in World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Vorn Skyseer a Camp Narache. Riceverai in dono un piccolo compagno che si unirà alla tua ricerca di avventura e gloria.$B$BGrazie ancora, e goditi il tuo soggiorno in World of Warcraft!",
+    "obj": "Porta il Camp Narache Gift Voucher a Vorn Skyseer.",
+    "progress": "Salute! È un piacere conoscerti!$B$BVedo che hai un buono speciale. Dammelo e ti offrirò qualcosa in cambio.",
+    "reward": "Sei davvero $Gun eroe speciale:un'eroina speciale;, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!"
+  },
+  "5847": {
+    "en_title": "Welcome!",
+    "en_obj": "Bring the Deathknell Gift Voucher to Claire Willower in Deathknell.",
+    "title": "Benvenuto!",
+    "desc": "Benvenuto nel World of Warcraft!$B$BCome ringraziamento speciale per aver acquistato la Collector's Edition di World of Warcraft, consegna questo buono regalo a Claire Willower a Deathknell. Riceverai in dono un piccolo compagno che ti accompagnerà nella tua ricerca di avventura e gloria.$B$BGrazie ancora, e buona permanenza nel World of Warcraft!",
+    "obj": "Porta il Deathknell Gift Voucher a Claire Willower a Deathknell.",
+    "progress": "Salute! È un piacere conoscerti!$B$BVedo che hai un buono speciale. Consegnamelo e ti offrirò qualcosa in cambio.",
+    "reward": "Sei davvero un eroe speciale, $N. Ti diamo il benvenuto nel mondo di Azeroth e ti offriamo uno di questi doni unici!"
+  },
+  "6181": {
+    "en_title": "A Swift Message",
+    "en_obj": "Bring Lewis' Note to Thor the gryphon master.",
+    "title": "Un messaggio urgente",
+    "desc": "Anche se da Stormwind non riceviamo molto aiuto diretto, in città ho un contatto che ci rifornisce di armature. Si chiama Osric Strang. La sua bottega, Limited Immunity, si trova nella Old Town di Stormwind.$B$BLe nostre scorte di armature stanno finendo e devo chiederne altre a Osric. Puoi portargli questa nota?$B$BIl modo più rapido per raggiungere Stormwind è passare da Thor, il nostro maestro dei grifoni. Si trova poco più in basso, lungo la collina: consegnagli la mia nota e poi prendi un grifone per Stormwind.",
+    "obj": "Porta la Lewis' Note a Thor, il maestro dei grifoni.",
+    "progress": "Hai l'aria di chi ha fretta. Bene, allora sei venut$Go:a; nel posto giusto!",
+    "reward": "Devi portare questa nota a Stormwind? Nessun problema, puoi prendere uno dei miei grifoni!"
+  },
+  "6261": {
+    "en_title": "Dungar Longdrink",
+    "en_obj": "Bring Osric's Crate to Dungar Longdrink the gryphon master.",
+    "title": "Dungar Longdrink",
+    "desc": "$N, ho raccolto in questa cassa tutto ciò che Lewis aveva chiesto. Puoi portargliela?$B$BSe hai già parlato con Thor a Westfall, puoi prendere un grifone per tornare da lui. Dungar Longdrink è il nostro maestro dei grifoni, qui nel quartiere dei mercanti.$B$BParla con Dungar, poi porta questa cassa a Lewis il più in fretta possibile. Non vogliamo che i nostri uomini e le nostre donne a Westfall restino senza equipaggiamento nuovo!",
+    "obj": "Porta la Osric's Crate a Dungar Longdrink, il maestro dei grifoni.",
+    "progress": "È sudore quello sulla tua fronte, $Gragazzo:ragazza;? Hai corso troppo. La prossima volta prendi un grifone!",
+    "reward": "Una cassa per Westfall, eh? Ci sei già stat$Go:a;? Se è così, nessun problema, $Gamico:amica; mi$Go:a;. Ho molti grifoni addestrati per volare su quella rotta!"
+  },
+  "6281": {
+    "en_title": "Continue to Stormwind",
+    "en_obj": "Buy a gryphon ride from the gryphon master Thor, then bring Lewis' Note to Osric Strang, in the shop Limited Immunity, in the Old Town of Stormwind.",
+    "title": "Prosegui verso Stormwind",
+    "desc": "Per una piccola somma puoi prendere un grifone per Stormwind e consegnare la nota di Lewis a Osric. In nessun altro modo arriverai più in fretta.$B$BSe ti sembra accettabile, parlami di nuovo quando sei pront$Go:a; per il viaggio. Ti chiederò poco, ma fidati: ne varrà la pena!",
+    "obj": "Acquista un volo in grifone dal maestro dei grifoni Thor, poi porta la Lewis' Note a Osric Strang, nella bottega Limited Immunity, nella Old Town di Stormwind.",
+    "progress": "Hai viaggiato, eh? Sei stat$Go:a; in qualche posto interessante?",
+    "reward": "Ah, una nota del Quartermaster Lewis? Non mi sorprende che abbia bisogno di altro equipaggiamento. Sentinel Hill è lontana, in una terra che Stormwind ha quasi dimenticato.$B$BBene, grazie, $N. Ecco un po' di denaro per coprire le spese di viaggio."
+  },
+  "6285": {
+    "en_title": "Return to Lewis",
+    "en_obj": "Buy a gryphon ride to Sentinel Hill from the gryphon master Dungar Longdrink, then take Osric's Crate to Lewis at Sentinel Hill.",
+    "title": "Ritorno da Lewis",
+    "desc": "Il maestro dei grifoni di Westfall è Thor. Se hai già parlato con lui, puoi prendere uno dei miei grifoni per raggiungerlo.$B$BÈ una lezione utile da ricordare: i grifoni sono sempre addestrati a volare verso la loro capitale, ma ti portano da un maestro dei grifoni lontano solo dopo che ci sei già stat$Go:a;.$B$BSei già stat$Go:a; da Thor, perciò parlami di nuovo quando sei pront$Go:a; a prendere un grifone per Westfall. Una volta là, potrai consegnare la Osric's Crate al Quartermaster Lewis.",
+    "obj": "Acquista un volo in grifone per Sentinel Hill dal maestro dei grifoni Dungar Longdrink, poi porta la Osric's Crate a Lewis a Sentinel Hill.",
+    "progress": "Sei tornat$Go:a; da Stormwind? Osric ha mandato le armature?",
+    "reward": "Ottimo, hai portato le armature! Le distribuiremo subito a chi ne ha bisogno.$B$BGrazie, $N. I tuoi sforzi ci sono stati di grande aiuto. E ora che i grifoni non hanno più segreti per te, spero che verrai spesso a prestare il tuo aiuto a Sentinel Hill!"
+  },
+  "6321": {
+    "en_title": "Supplying the Sepulcher",
+    "en_obj": "Bring Podrig's Order to Karos Razok.",
+    "title": "Rifornire il Sepulcher",
+    "desc": "L'Executor Hadrec mi ha chiesto di fare l'inventario dell'equipaggiamento al Sepulcher. Con la Scourge, e di peggio, in agguato nei boschi, non vuole che le Deathguard restino a corto di ciò che può servire loro.$B$BHo scoperto che siamo, in generale, ben forniti, ma ci servono altre armi per sostituire quelle perse sul campo.$B$BEcco un ordine di requisizione con ciò che serve, per il mercante di armi Gordon Wendham all'Undercity. Porta l'ordine al nostro maestro dei pipistrelli, Karos Razok, e parla con lui del trasporto verso l'Undercity.",
+    "obj": "Porta il Podrig's Order a Karos Razok.",
+    "progress": "Sembri qui per affari ufficiali...",
+    "reward": "Ah, un ordine di rifornimenti. Senza dubbio vorrai portarlo all'Undercity. E in fretta, perché il Sepulcher non deve restare a corto di scorte."
+  },
+  "6322": {
+    "en_title": "Michael Garrett",
+    "en_obj": "Bring Gordon's Crate to Michael Garrett.",
+    "title": "Michael Garrett",
+    "desc": "Ho messo i rifornimenti del Sepulcher in questa cassa. Se hai già visitato il Sepulcher e parlato con il loro maestro dei pipistrelli, puoi tornare da lui in sella a un pipistrello.$B$BParla con il maestro dei pipistrelli dell'Undercity, Michael Garrett. Può fornirti un pipistrello per il Sepulcher.",
+    "obj": "Porta la Gordon's Crate a Michael Garrett.",
+    "progress": "Se devi percorrere una lunga distanza, un pipistrello è la scelta migliore.",
+    "reward": "Questa cassa deve raggiungere il Sepulcher a Silverpine? Facile: i nostri pipistrelli ci volano ogni giorno."
+  },
+  "6323": {
+    "en_title": "Ride to the Undercity",
+    "en_obj": "Buy a bat ride to the Undercity from the bat master Karos Razok, then take Podrig's Order to Gordon Wendham in the Undercity.",
+    "title": "In volo verso l'Undercity",
+    "desc": "Uno dei miei pipistrelli può portarti all'Undercity, per una piccola somma. Parlami di nuovo quando sei pront$Go:a;, così organizzeremo il tuo trasporto.$B$BTroverai Gordon Wendham nel Trade Quarter dell'Undercity. È lo stesso quartiere dove atterrerà il mio pipistrello.",
+    "obj": "Acquista un volo in pipistrello per l'Undercity dal maestro dei pipistrelli Karos Razok, poi porta il Podrig's Order a Gordon Wendham all'Undercity.",
+    "progress": "Tengo le mie armi in condizioni perfette. Sono pulite e pronte all'uso.",
+    "reward": "Un ordine dal Sepulcher? Molto bene. È un onore servire coloro che servono la nostra Dark Lady."
+  },
+  "6324": {
+    "en_title": "Return to Podrig",
+    "en_obj": "Buy a bat ride to the Sepulcher from the bat master Michael Garrett, then bring Gordon's Crate to Deathguard Podrig in the Sepulcher.",
+    "title": "Ritorno da Podrig",
+    "desc": "Il maestro dei pipistrelli al Sepulcher è Karos Razok. Se lo hai già incontrato, posso darti un pipistrello per volare da lui.$B$BI nostri pipistrelli voleranno sempre verso l'Undercity, ma per raggiungere luoghi più remoti il cavaliere deve prima visitare la zona e parlare con il suo maestro dei pipistrelli.$B$BHai incontrato Karos al Sepulcher, quindi ora puoi volare là in pipistrello. Parlami di nuovo quando sei pront$Go:a;.",
+    "obj": "Acquista un volo in pipistrello per il Sepulcher dal maestro dei pipistrelli Michael Garrett, poi porta la Gordon's Crate alla Deathguard Podrig al Sepulcher.",
+    "progress": "$N, sei tornat$Go:a;. Hai i nostri rifornimenti dall'Undercity?",
+    "reward": "Buon lavoro, $N. Queste armi faranno sì che le nostre Deathguard non siano colte impreparate.$B$BHai reso un servizio prezioso alla nostra Dark Lady."
+  },
+  "6341": {
+    "en_title": "The Bounty of Teldrassil",
+    "en_obj": "Bring Nessa's Collection to Vesprystus.",
+    "title": "L'abbondanza di Teldrassil",
+    "desc": "I pescatori del villaggio di Rut'theran se la cavano molto bene, perché qui i pesci sono enormi e abbondanti. Vorrei confrontare questa abbondanza con quella del continente.$B$BHo una raccolta di lische e squame che vorrei far portare a un mio collega a Darkshore. Si chiama Laird ed è un venditore di pesce nel villaggio di Auberdine.$B$BPorta la mia raccolta al nostro maestro degli ippogrifi, Vesprystus, e parla con lui del viaggio verso Auberdine.",
+    "obj": "Porta la Nessa's Collection a Vesprystus.",
+    "progress": "Come posso aiutarti? Hai bisogno di un trasporto?",
+    "reward": "Ah, vuoi portare questo a Auberdine? Molto bene..."
+  },
+  "6342": {
+    "en_title": "Flight to Auberdine",
+    "en_obj": "Ride a hippogryph to Auberdine from the hippogryph master Vesprystus, then bring Nessa's Collection to Laird.",
+    "title": "Volo verso Auberdine",
+    "desc": "Da Rut'theran ci sono due modi per raggiungere Auberdine: in traghetto o in ippogrifo. Entrambi sono rapidi e affidabili, ma se non sei ancora volat$Go:a; fino a Auberdine in ippogrifo, ti consiglio di farlo.$B$BÈ saggio parlare con il maestro degli ippogrifi di ogni città che ne ha uno. Una volta parlato con il maestro, potrai volare là dalle altre città.$B$BEcco la raccolta di Nessa. Parlami di nuovo quando sei pront$Go:a; a volare a Auberdine e a consegnare la raccolta di Nessa a Laird.",
+    "obj": "Vola in ippogrifo fino a Auberdine con il maestro degli ippogrifi Vesprystus, poi porta la Nessa's Collection a Laird.",
+    "progress": "Vieni da Teldrassil? Dimmi, com'è la pesca laggiù?",
+    "reward": "Un pacco da Nessa? Grazie, $N! Mi aveva detto che mi avrebbe mandato dei campioni dei pesci pescati vicino al villaggio di Rut'theran. Pensa che possano essere molto diversi da quelli pescati qui...$B$BPer tutti i... Questa mascella è grande quasi il doppio di quella dello stesso pesce che si trova qui. E queste squame sono grandi come un pugno chiuso! Incredibile!"
+  },
+  "6343": {
+    "en_title": "Return to Nessa",
+    "en_obj": "Bring Laird's Response to Nessa Shadowsong.",
+    "title": "Ritorno da Nessa",
+    "desc": "Devo mandare una risposta a Nessa. Sarà molto interessata a sapere quanto siano diversi i pesci di qui da quelli lungo la costa di Teldrassil. Possiamo solo ipotizzare la causa, ma sospetto che sia proprio l'albero del mondo a influenzare la fauna che lo circonda!$B$BTi prego, porta questa risposta a Nessa. Se vuoi tornare a Rut'theran in ippogrifo, parla con il maestro degli ippogrifi Caylais Moonfeather. Se preferisci il traghetto, ne parte uno regolarmente dal molo a nordovest.",
+    "obj": "Porta la Laird's Response a Nessa Shadowsong.",
+    "progress": "$N, sei tornat$Go:a; da Auberdine? Hai parlato con Laird?",
+    "reward": "Molto interessante. I pesci di qui sono grandi, ma non pensavo che la differenza di abbondanza tra qui e il continente fosse così grande. Ci dev'essere una ragione...$B$BBene, grazie, $N. Discuterò con gli abitanti del villaggio le notizie che hai portato. Forse, un giorno, troveremo la radice di questa stranezza. Ma fino ad allora, ne raccoglieremo i frutti!"
+  },
   "6344": {
     "en_title": "Nessa Shadowsong",
     "en_obj": "Speak with Nessa Shadowsong.",
@@ -3593,6 +4867,91 @@
     "desc": "Una mia amica, Nessa Shadowsong, è una commerciante di pesce a Rut'theran Village. Ha bisogno che un pacco venga portato a Darkshore e cerca qualcuno che la aiuti.$B$BSe ti interessa, per raggiungere Nessa devi prendere il portale a Darnassus per Rut'theran Village. Il portale si trova a ovest dei Temple Gardens.",
     "obj": "Parla con Nessa Shadowsong.",
     "reward": "Sì, mi serve un corriere che porti un pacco a Darkshore. Mi aiuterai?"
+  },
+  "6361": {
+    "en_title": "A Bundle of Hides",
+    "en_obj": "Bring the Bundle of Hides to the wind rider master Devrak in the Crossroads.",
+    "title": "Un fagotto di pelli",
+    "desc": "Ho un fagotto di pelli di animali dei Barrens e devo farlo arrivare a Thunder Bluff. Un mio collega laggiù, Ahanu, userà le pelli per creare oggetti in cuoio.$B$BPuoi portargli le pelli da parte mia?$B$BIl modo più rapido per raggiungere Thunder Bluff è in groppa a un wind rider. Porta il fagotto di pelli a Devrak, il nostro maestro dei wind rider ai Crossroads, e parla con lui del trasporto verso Thunder Bluff.",
+    "obj": "Porta il Bundle of Hides al maestro dei wind rider Devrak ai Crossroads.",
+    "progress": "Sei qui per un wind rider? Hai qualcosa da trasportare?",
+    "reward": "Se devi portare queste pelli a Thunder Bluff, stai parlando con l'orco giusto!"
+  },
+  "6362": {
+    "en_title": "Ride to Thunder Bluff",
+    "en_obj": "Buy a wind rider to Thunder Bluff from the wind rider master Devrak, then bring the Bundle of Hides to Ahanu in Thunder Bluff.",
+    "title": "In volo verso Thunder Bluff",
+    "desc": "Per una piccola somma ti darò un wind rider per Thunder Bluff. Non esiste un modo più rapido per raggiungere la città!$B$BSe ti sta bene, parlami di nuovo quando sei pront$Go:a; a partire.$B$BSe porti quelle pelli ad Ahanu, credo che si trovi all'Hewa's Armory, alla base della torre dei wind rider di Thunder Bluff. E proprio lì atterrerai!",
+    "obj": "Acquista un volo in wind rider per Thunder Bluff dal maestro dei wind rider Devrak, poi porta il Bundle of Hides ad Ahanu a Thunder Bluff.",
+    "progress": "Hai della polvere sulle spalle, deve venire dai Barrens. Hai parlato con il mio amico Jahan?",
+    "reward": "Ah, un nuovo fagotto di pelli. Mi metterò subito al lavoro!$B$BGrazie, fratello. Mi hai reso un grande servizio. Ecco qualche moneta per il tuo tempo e le spese di viaggio."
+  },
+  "6363": {
+    "en_title": "Tal the Wind Rider Master",
+    "en_obj": "Bring Ahanu's Leather Goods to Tal in Thunder Bluff.",
+    "title": "Tal, il maestro dei wind rider",
+    "desc": "Ho preparato degli oggetti in cuoio che Jahan venderà ai Crossroads. Puoi portarglieli?$B$BSe sei già stat$Go:a; ai Crossroads e hai parlato con il loro maestro dei wind rider, puoi volare da lui con uno dei nostri wind rider di Thunder Bluff.$B$BPorta gli oggetti in cuoio a Tal, il nostro maestro dei wind rider a Thunder Bluff, e parla con lui per organizzare il trasporto verso i Crossroads.",
+    "obj": "Porta gli Ahanu's Leather Goods a Tal a Thunder Bluff.",
+    "progress": "Salute, $C. Cosa posso fare per te?",
+    "reward": "Devi portare questo ai Crossroads, eh? Nessun problema. Se ci sei già stat$Go:a; e hai parlato con Devrak, puoi tornare da lui con uno dei miei wind rider."
+  },
+  "6364": {
+    "en_title": "Return to Jahan",
+    "en_obj": "Buy a wind rider to the Crossroads from the wind rider master Tal, then bring Ahanu's Leather Goods to Jahan Hawkwing.",
+    "title": "Ritorno da Jahan",
+    "desc": "Per volare in una città, devi esserci già stato$Go:a; e aver parlato con il maestro dei cavalcavento del luogo. Sei stato$Go:a; ai Crossroads e hai parlato con il loro maestro dei cavalcavento, Devrak, quindi per una piccola somma puoi raggiungerlo da qui in sella a un cavalcavento.$B$BParla di nuovo con me quando sarai pront$Go:a;. Una volta ai Crossroads, potrai consegnare le merci in cuoio a Jahan Hawkwing.",
+    "obj": "Compra un volo in cavalcavento per i Crossroads dal maestro dei cavalcavento Tal, poi porta le Ahanu's Leather Goods a Jahan Hawkwing.",
+    "progress": "$N, sei tornat$Go:a; da Thunder Bluff? Hai consegnato le pelli ad Ahanu?",
+    "reward": "Ahanu mi ha mandato i prodotti finiti? Molto bene. Ai Crossroads ci sono molti cacciatori e avventurieri ora, e gli affari vanno a gonfie vele. Sono certo che venderò queste merci molto presto.$B$BGrazie per tutti i tuoi sforzi, $N. Ti sono debitore."
+  },
+  "6365": {
+    "en_title": "Meats to Orgrimmar",
+    "en_obj": "Bring Zargh's Meats to Devrak in the Crossroads.",
+    "title": "Carne per Orgrimmar",
+    "desc": "Ho dei tagli di carne scelti che voglio inviare a un'amica. Si chiama Gryshka ed è la locandiera di Orgrimmar. Vuoi consegnarle la carne per me?$B$BIl modo più rapido per arrivare a Orgrimmar è in sella a un cavalcavento. Porta la carne a Devrak, il maestro dei cavalcavento dei Crossroads, e parla con lui del trasporto verso Orgrimmar.",
+    "obj": "Porta le Zargh's Meats a Devrak ai Crossroads.",
+    "progress": "Hai bisogno di andare da qualche parte in fretta? Allora hai trovato l'orco giusto!",
+    "reward": "Devi portare questa carne a Orgrimmar? Nessun problema. Per una piccola somma, il mio cavalcavento può portarti là."
+  },
+  "6382": {
+    "en_title": "The Ashenvale Hunt",
+    "en_obj": "Speak with Senani Thunderheart at Splintertree Post, Ashenvale.",
+    "title": "La Caccia di Ashenvale",
+    "desc": "La tua forza mi impressiona, $c. La tua voglia di abbracciare la caccia mi dà fiducia: potresti passare a prede più grandi... e a sfide più grandi.$B$BLe foreste di Ashenvale sono una vasta terra selvaggia e indomita su cui la Horde cerca di imporre la propria volontà, sia politicamente che spiritualmente. Se desideri metterti alla prova in una terra ancora ignota, cerca la guida di Senani Thunderheart a Splintertree Post. L'avamposto si trova a nord del sentiero che parte dai Barrens.",
+    "obj": "Parla con Senani Thunderheart a Splintertree Post, Ashenvale.",
+    "reward": "Benvenut$Go:a; nella nuova frontiera, $N. Ashenvale è una terra di opportunità, dove un giovane $C come te può trovare infinite occasioni per dimostrare il proprio valore. Dai un'occhiata all'avamposto qui intorno e assicurati di spingerti fino a Zoram Strand, dove la Horde ha un altro avamposto.$B$BLa tua presenza qui mi dice che sei venut$Go:a; per saperne di più sulla caccia. Ascolta con attenzione, e condividerò volentieri con te ciò che devi sapere."
+  },
+  "6383": {
+    "en_title": "The Ashenvale Hunt",
+    "title": "La Caccia di Ashenvale",
+    "reward": "Tre creature leggendarie compongono la Caccia di Ashenvale; puoi cercarle e metterti alla prova contro la loro astuzia e la loro forza. Nel farlo, speriamo che imparerai qualcosa su te stess$Go:a;. Le creature sono: l'orso Ursangous, il gatto notturno Shadumbra e l'ippogrifo Sharptalon.$B$BLe creature della Caccia di Ashenvale sono potenti, e potresti scoprire di aver bisogno di aiuto per abbatterle. Se riuscirai a sconfiggerle, portami una prova della tua impresa."
+  },
+  "6384": {
+    "en_title": "Ride to Orgrimmar",
+    "en_obj": "Buy a wind rider to Orgrimmar from the wind rider master Devrak, then bring Zargh's Meats to Gryshka in Orgrimmar.",
+    "title": "In volo verso Orgrimmar",
+    "desc": "Per poche monete farò portare a Orgrimmar da un cavalcavento. Una volta là, potrai consegnare le Zargh's Meats a Gryshka. La sua locanda si trova nella Valley of Strength, non lontano dalla Skytower, dove il mio cavalcavento ti lascerà.$B$BParla di nuovo con me quando sarai pront$Go:a; per il viaggio.",
+    "obj": "Compra un volo in cavalcavento per Orgrimmar dal maestro dei cavalcavento Devrak, poi porta le Zargh's Meats a Gryshka a Orgrimmar.",
+    "progress": "Che buon profumo! Non hai mica della carne cruda con te, vero?",
+    "reward": "Oh, meraviglioso! Che tagli pregiati! Vengono da Zargh, dunque? Quell'orco sa proprio come arrivare al cuore di una signora...$B$BOh, non vedo l'ora di cucinarla. Ma non troppo! La carne è meglio servirla al sangue, non trovi?"
+  },
+  "6385": {
+    "en_title": "Doras the Wind Rider Master",
+    "en_obj": "Bring Gryshka's Letter to Doras in Orgrimmar.",
+    "title": "Doras, il maestro dei cavalcavento",
+    "desc": "Ho scritto una lettera di ringraziamento per Zargh. Vuoi consegnarla per me? Se sei già stato$Go:a; ai Crossroads e hai parlato con il loro maestro dei cavalcavento, puoi tornarci in volo.$B$BPorta la mia lettera a Doras, il maestro dei cavalcavento di Orgrimmar, e parla con lui del trasporto verso i Crossroads.",
+    "obj": "Porta la Gryshka's Letter a Doras a Orgrimmar.",
+    "progress": "Ti serve uno dei miei cavalcavento?",
+    "reward": "Devi portare questa ai Crossroads, nei Barrens? Sì, posso farti arrivare là..."
+  },
+  "6386": {
+    "en_title": "Return to the Crossroads.",
+    "en_obj": "Buy a wind rider to the Crossroads from the wind rider master Doras, then bring Gryshka's Letter to Zargh at the Crossroads.",
+    "title": "Ritorno ai Crossroads.",
+    "desc": "I miei cavalcavento sono addestrati a volare in molti luoghi diversi, purché tu ci sia già stato$Go:a; e abbia parlato con il maestro dei cavalcavento del posto.$B$BSei stato$Go:a; ai Crossroads e hai parlato con il loro maestro dei cavalcavento, Devrak, quindi ora puoi volare direttamente da lui. Una volta ai Crossroads, potrai consegnare la lettera di Gryshka a Zargh.$B$BParla con me quando sarai pront$Go:a; a partire.",
+    "obj": "Compra un volo in cavalcavento per i Crossroads dal maestro dei cavalcavento Doras, poi porta la Gryshka's Letter a Zargh ai Crossroads.",
+    "progress": "Sei tornat$Go:a; da Orgrimmar? A Gryshka è piaciuta la carne che le ho mandato?",
+    "reward": "Ah! A quanto pare le è piaciuta! Niente fa arrossire una signora come una bella bistecca succosa!$B$BGrazie, $N. Mi hai reso un grande servigio. Ecco un po' di denaro per il disturbo, e non stupirti se ti inviterò al mio matrimonio!"
   },
   "6387": {
     "en_title": "Honor Students",
@@ -3629,6 +4988,134 @@
     "obj": "Compra un volo in grifone per Thelsamar dal maestro dei grifoni Gryth Thurden, poi porta gli Honorary Picks a Brock Stoneseeker a Thelsamar.",
     "progress": "Ah, $N. Sei tornat$Go:a; da Ironforge?",
     "reward": "Hai portato i picconi. Ottimo! Li darò ai miei studenti di estrazione. Sono sicuro che non vedono l'ora di usarli sui giacimenti di Loch Modan.$B$BGrazie per il tuo aiuto, $N. Ti sono debitore, ma spero che questi soldi coprano almeno le spese di viaggio."
+  },
+  "6394": {
+    "en_title": "Thazz'ril's Pick",
+    "en_obj": "Bring Thazz'ril's Pick to Foreman Thazz'ril.",
+    "title": "Il piccone di Thazz'ril",
+    "desc": "$N, sei $Gun:una; $r affidabile. Posso contare su di te per un altro compito?$B$BTempo fa stavo esplorando la caverna a nord in cerca di minerali, e ho lasciato là il mio piccone preferito. Quando sono tornato a riprenderlo ho trovato la caverna piena di bestie feroci! Vuoi entrare nella caverna, il Burning Blade Coven, e recuperare il mio piccone?$B$BL'ho lasciato in una camera con delle cascate. Il mio piccone ha un incantesimo che lo rende visibile al buio, quindi non dovrai preoccuparti di trovarlo... ma di ciò che lo sorveglia!",
+    "obj": "Porta il Thazz'ril's Pick al Foreman Thazz'ril.",
+    "progress": "Sei entrat$Go:a; nel Burning Blade Coven, $N? Hai trovato il mio piccone?",
+    "reward": "Fantastico, l'hai preso! Grazie mille, $N. È il mio piccone preferito! Ora, se i miei scagnozzi finiranno mai di abbattere questi alberi, magari potremo trovare una bella caverna da scavare!"
+  },
+  "6395": {
+    "en_title": "Marla's Last Wish",
+    "en_obj": "Bring Samuel Fipps' Remains to Marla's Grave, then return to Novice Elreth.",
+    "title": "L'ultimo desiderio di Marla",
+    "desc": "La mia amica Marla Fipps viveva con il marito Samuel prima della piaga, ma quando la piaga arrivò Samuel soccombette e si unì ai ranghi della Scourge.$B$BMarla fu risparmiata dalla non-morte solo per morire per mano del marito ormai privo di mente. Così forte era il suo amore che il suo ultimo desiderio in punto di morte fu essere seppellita accanto al suo amato Samuel.$B$BSamuel Fipps vaga in un accampamento in rovina lungo la strada a nordest di Deathknell. Sconfiggilo ed esaudisci il desiderio di Marla: seppelliscilo sulla sua tomba, nella prima fila del nostro cimitero.",
+    "obj": "Porta i Samuel Fipps' Remains alla Marla's Grave, poi torna dalla Novice Elreth.",
+    "progress": "Dobbiamo rispettare i nostri morti, $N. È uno dei modi in cui ci differenziamo dalla Scourge...",
+    "reward": "Hai compiuto una buona azione oggi, $N. Anche se la nostra lotta contro la Scourge continua, speriamo che Marla e Samuel trovino pace insieme nel loro ultimo luogo di riposo."
+  },
+  "6401": {
+    "en_title": "Kaya's Alive",
+    "en_obj": "Tell Tammra Windfield in Sun Rock Retreat the good news.$B",
+    "title": "Kaya è viva",
+    "desc": "Racconta la bella notizia a Tammra Windfield, la zia di Kaya, che si trova a Sun Rock Retreat! Kaya è viva! Pensavamo che fosse perduta dopo il brutale attacco al nostro villaggio. Segui il sentiero a ovest per raggiungere Sun Rock Retreat.$B$B",
+    "obj": "Racconta la bella notizia a Tammra Windfield a Sun Rock Retreat.$B",
+    "reward": "Santo cielo, mia nipote Kaya è viva! Questa sì che è una bella notizia. Grazie, $N."
+  },
+  "6421": {
+    "en_title": "Boulderslide Ravine",
+    "en_obj": "Explore deep into the cave at Boulderslide Ravine and bring back 10 Resonite Crystals for Mor'rogal at Sun Rock Retreat to investigate.",
+    "title": "Boulderslide Ravine",
+    "desc": "Qui a Stonetalon c'è qualcosa che non va. Senti la tensione nell'aria, $N?$B$BA sudest di qui si trova una profonda caverna a Boulderslide Ravine. I kobold laggiù stanno estraendo freneticamente un raro cristallo chiamato Resonite. Ho bisogno che tu mi porti dei campioni di minerale, così da capire cosa sta succedendo in quella caverna. Devi anche scoprire quanto è profonda.$B$BVai, giovane $c, è fondamentale che io sappia quale male si annida sotto queste montagne.",
+    "obj": "Esplora a fondo la caverna di Boulderslide Ravine e riporta 10 Resonite Crystal a Mor'rogal a Sun Rock Retreat per le sue indagini.",
+    "progress": "Quali notizie hai scoperto a Boulderslide Ravine? Ricordo una leggenda che parla della Resonite... ma non riesco a ricordarla con precisione. Forse sapere cosa si trova in fondo alla caverna ci rivelerà le loro subdole intenzioni.",
+    "reward": "Ah... Sì! Ecco! I cristalli di Resonite hanno una traccia di magia della Terra. I Kobold devono aver scavato a fondo, portando alla luce un Earthen.$B$BLa leggenda narra che gli Earthen siano creature create dai Titan. Furono usati per creare la terra su cui camminiamo. Questa è senza dubbio una minaccia che non può essere ignorata.$B$B<Mor'rogal scuote la testa.>$B$BForse posso incantare questi campioni di minerale per usarli contro il complotto dei Kobold."
+  },
+  "6442": {
+    "en_title": "Naga at the Zoram Strand",
+    "en_obj": "Bring 20 Wrathtail Heads to Marukai along the Zoram Strand.",
+    "title": "Naga a Zoram Strand",
+    "desc": "Un male si annida qui lungo la costa, $r.$B$BQuesto è il luogo di riposo della condannata città di Zoram, distrutta da tempo e sommersa dai mari. Perduta e quasi dimenticata.$B$BOra i naga sono tornati, e non sappiamo perché. Ma il motivo conta poco: dobbiamo difendere la terra che abbiamo lavorato così duramente per rivendicare come nostra.$B$BTorna da me con 20 delle loro teste! Ricaccia i naga negli abissi!",
+    "obj": "Porta 20 Wrathtail Head a Marukai a Zoram Strand.",
+    "progress": "I naga aumentano di numero, $n. Ti prego, porta a termine questo compito per me.",
+    "reward": "Ci servirebbero più della tua specie da queste parti, $N. Grazie per il tuo aiuto."
+  },
+  "6461": {
+    "en_title": "Blood Feeders",
+    "en_obj": "Xen'zilla at Malaka'Jin needs you to kill 10 Deepmoss Creepers and 7 Deepmoss Venomspitters.",
+    "title": "Succhiasangue",
+    "desc": "Noi Troll di Malaka'Jin siamo prosperati grazie a questa terra; le Stonetalon Mountains offrono ottima caccia di cui vivere.$B$BDi recente abbiamo attirato ospiti a cena indesiderati... i ragni di queste montagne hanno razziato i nostri accampamenti di notte per rubare la nostra selvaggina.$B$BSe ci aiuterai a sterminare queste orribili bestie, noi di Malaka'Jin ti saremo debitori. I ragni sono ovunque a Stonetalon: dirigiti a nord da qui e vedrai di cosa parlo.",
+    "obj": "Xen'zilla a Malaka'Jin ha bisogno che tu uccida 10 Deepmoss Creeper e 7 Deepmoss Venomspitter.",
+    "progress": "Ehi, mon, hai ucciso quei succhiasangue pelosi? Io non temo nulla qui a Stonetalon, ma di notte non vado a spasso... se capisci cosa intendo, mon!$B$BFinché sto lontano dal loro piatto, va tutto bene.$B$BBuona fortuna, $C!",
+    "reward": "Fantastico, mon! Buone notizie, forse stanotte avremo meno ospiti a cena indesiderati.$b$bMille grazie, $N. Ti saremo per sempre debitori."
+  },
+  "6481": {
+    "en_title": "Earthen Arise",
+    "en_obj": "Open the Resonite cask with the Enchanted Resonite Crystal, and then slay Goggeroc. Return to Mor'rogal with the news and Enchanted Resonite Crystal.",
+    "title": "Earthen, risvegliati",
+    "desc": "Hai scoperto una oscura minaccia per la terra, $c. Il barile di Resonite che hai trovato in quella caverna custodisce un Earthen addormentato di nome Goggeroc.$B$BCon i miei poteri sciamanici ho modificato la miscela dei cristalli di Resonite che hai raccolto. Prendi il cristallo di Resonite incantato e infrangi il barile di Resonite che racchiude l'Earthen.$B$BQuando si sveglierà, Goggeroc sarà indebolito... Uccidilo, $N!",
+    "obj": "Apri il Resonite Cask con l'Enchanted Resonite Crystal, poi uccidi Goggeroc. Torna da Mor'rogal con la notizia e con l'Enchanted Resonite Crystal.",
+    "progress": "Temo che se non ci sbarazziamo subito di questa minaccia, tutta Stonetalon sarà perduta. La potenza di un Earthen non ha eguali. Quando si sveglierà, Goggeroc sarà debole per il lungo sonno: è l'occasione che devi sfruttare... vai ora, $N!",
+    "reward": "Porti buone notizie, $C! Temo le possibilità di ciò che un Earthen avrebbe significato per Kalimdor.$B$BUccidere Goggeroc era un compito per un vero eroe. Hai fatto bene; tutta Stonetalon e Kalimdor ti sono debitrici, nobile $C.$B$BAccetta questo come ricompensa, onorat$Go:a;."
+  },
+  "6523": {
+    "en_title": "Protect Kaya",
+    "en_obj": "Escort Kaya Flathoof to Camp Aparaje, and then return to Makaba Flathoof near the southeastern edge of Stonetalon.$B",
+    "title": "Proteggi Kaya",
+    "desc": "Grazie per avermi salvata! Dobbiamo andarcene in fretta prima che scoprano che sono libera. Ti prego, scortami fino a Camp Aparaje. Da lì conosco la strada.$B$BMio padre, Makaba Flathoof, sarà disperato dal desiderio di sapere che sono al sicuro.",
+    "obj": "Scorta Kaya Flathoof a Camp Aparaje, poi torna da Makaba Flathoof vicino al margine sudorientale di Stonetalon.$B",
+    "reward": "Kaya è viva! $N, devo ringraziare te per averla salvata."
+  },
+  "6541": {
+    "en_title": "Report to Kadrak",
+    "en_obj": "Report to Kadrak at the watch tower in northern Barrens.",
+    "title": "Presentati a Kadrak",
+    "desc": "Sei mai stat$Go:a; ad Ashenvale, a nord? L'Orda ha da poco costruito un avamposto sulla Zoram Strand, e abbiamo sempre bisogno di nuove reclute per difendere i nostri nuovi fronti.$B$BSe ti senti all'altezza, cerca Kadrak nel nord dei Barrens, alla torre di guardia. Guida la campagna di Ashenvale e potrà darti ulteriori ordini.",
+    "obj": "Presentati a Kadrak alla torre di guardia nel nord dei Barrens.",
+    "reward": "Ashenvale è una terra divisa, ma i nostri sforzi più recenti hanno avuto grande successo. Non solo abbiamo un avamposto sulla Zoram Strand, ma anche un altro poco a nord di qui, chiamato Splintertree."
+  },
+  "6542": {
+    "en_title": "Report to Kadrak",
+    "en_obj": "Report to Kadrak at the watch tower in northern Barrens.",
+    "title": "Presentati a Kadrak",
+    "desc": "Sei mai stat$Go:a; ad Ashenvale, a nord? L'Orda ha da poco costruito un avamposto sulla Zoram Strand, e abbiamo sempre bisogno di nuove reclute per difendere i nostri nuovi fronti.$B$BSe ti senti all'altezza, cerca Kadrak nel nord dei Barrens, alla torre di guardia. Guida la campagna di Ashenvale e potrà darti ulteriori ordini.$B",
+    "obj": "Presentati a Kadrak alla torre di guardia nel nord dei Barrens.",
+    "reward": "Ashenvale è una terra divisa, ma i nostri sforzi più recenti hanno avuto grande successo. Non solo abbiamo un avamposto sulla Zoram Strand, ma anche un altro poco a nord di qui, chiamato Splintertree."
+  },
+  "6543": {
+    "en_title": "The Warsong Reports",
+    "en_obj": "Open the Bundle of Reports.  Take the Warsong Reports to the Warsong Scout, Warsong Runner, and Warsong Outrider. Bring back the updates they give you to Kadrak at the northern watch tower in the barrens.",
+    "title": "I rapporti dei Warsong",
+    "desc": "Ho schierato da poco alcuni esploratori ad Ashenvale e mi serve un corriere che porti loro gli ordini e mi riporti un resoconto di ciò che hanno osservato.$B$BLa tua prima tappa dev'essere il Zoram'gar Outpost, lungo la costa a ovest, sulla Zoram Strand, per trovare il primo corriere. Devi fermarti anche a Splintertree Post, a nord, e lungo la strada a est, vicino ad Azshara. Là troverai un esploratore e un battitore.$B$BConsegna a ciascuno un rapporto e fatti dare un aggiornamento sulle loro scoperte.",
+    "obj": "Apri il Bundle of Reports. Porta i Warsong Reports al Warsong Scout, al Warsong Runner e al Warsong Outrider. Riporta gli aggiornamenti che ti daranno a Kadrak, alla torre di guardia nel nord dei Barrens.",
+    "progress": "Fai in fretta, $N. Devono ricevere i loro rapporti: è urgente.",
+    "reward": "Vedo che sei una person$Go:a; su cui si può contare. Questi aggiornamenti sono fondamentali per i nostri piani di rafforzare la nostra presenza ad Ashenvale. Ora possiamo pianificare la prossima mossa."
+  },
+  "6545": {
+    "en_title": "Warsong Runner Update",
+    "title": "Aggiornamento del Warsong Runner",
+    "progress": "Dunque sei qui con i miei ordini? È sempre un piacere vedere una recluta dal carattere esuberante e dalla volontà forte.$B$BFaresti meglio a imparare in fretta, se vuoi tenere il passo qui. La minaccia dei Naga cresce, $N. Da quando sono arrivato ho osservato e respinto diversi attacchi contro questo avamposto.$B$BMa se vuoi dare una mano in questo sforzo, parla con uno degli altri qui all'avamposto.",
+    "reward": "Bene, il mio rapporto spiegherà tutto questo a Kadrak. Devi riportarglielo il più in fretta possibile."
+  },
+  "6548": {
+    "en_title": "Avenge My Village",
+    "en_obj": "Kill 8 Grimtotem Ruffians and 6 Grimtotem Mercenaries, and then return to Makaba Flathoof near the southeastern edge of Stonetalon.$B",
+    "title": "Vendica il mio villaggio",
+    "desc": "Il Grimtotem Clan ha razziato il mio villaggio e ucciso quasi tutti. Ne ho abbattuti quanti ho potuto, ma sono scampato per un soffio.$B$B$N, ora desidero solo che ne muoiano altri. Li troverai poco a ovest di qui.$B$B",
+    "obj": "Uccidi 8 Grimtotem Ruffian e 6 Grimtotem Mercenary, poi torna da Makaba Flathoof, nell'estremo sudest di Stonetalon.$B",
+    "progress": "Li hai già uccisi?",
+    "reward": "$N, ti ringrazio... ma non dimenticherò mai ciò che i Grimtotem hanno fatto al mio villaggio."
+  },
+  "6629": {
+    "en_title": "Kill Grundig Darkcloud",
+    "en_obj": "Kill Grundig Darkcloud and 6 Grimtotem Brutes, and return to Makaba Flathoof near the southeastern edge of Stonetalon.$B",
+    "title": "Uccidi Grundig Darkcloud",
+    "desc": "$N, hai fatto un ottimo lavoro contro i Grimtotem. Se ne hai il coraggio, Grundig Darkcloud e la sua banda personale di bruti sono di gran lunga i peggiori. È stato lui a guidare il brutale attacco al mio villaggio.$B$BLo troverai a Grimtotem Post, un po' più avanti lungo il sentiero a ovest. Uccidilo e ti sarò grato per sempre.$B",
+    "obj": "Uccidi Grundig Darkcloud e 6 Grimtotem Brute, poi torna da Makaba Flathoof, nell'estremo sudest di Stonetalon.$B",
+    "progress": "Hai ucciso Grundig Darkcloud e la sua banda di Brute?",
+    "reward": "Grundig Darkcloud è morto! $N, ti sarò sempre grato per ciò che hai fatto oggi."
+  },
+  "7383": {
+    "en_title": "Crown of the Earth",
+    "en_obj": "Fill the Amethyst Phial and bring it back to Corithras Moonrage in Dolanaar.",
+    "title": "La corona della Terra",
+    "desc": "Non tutto andava bene a Teldrassil, tuttavia. I piani accuratamente elaborati di Staghelm per il nuovo Albero del Mondo avevano dato i frutti sperati, ma c'era un piccolo problema, un problema al quale si possono attribuire molti dei guai di Teldrassil.$B$BTuttavia, non ne parlerò ancora. Devi visitare l'ultimo pozzo lunare, a nordovest, nell'Oracle Glade. Sotto i rami dell'Oracle Tree si trova il primo e più potente dei nostri pozzi. Recupera una fiala della sua acqua e torna da me.",
+    "obj": "Riempi l'Amethyst Phial e riportala a Corithras Moonrage a Dolanaar.",
+    "progress": "Insieme ai druidi, l'Oracle Tree e l'Arch Druid hanno monitorato con cura la crescita di Teldrassil. Ma sebbene abbiamo una nuova casa, le nostre vite immortali non ci sono state restituite.",
+    "reward": "Trovarsi alla presenza dell'Oracle Tree... è quasi sentire la saggezza prendere forma. Lascia che continui il racconto...$B$BCresciuta Teldrassil, l'Arch Druid si rivolse ai draghi per ottenere la loro benedizione, come i draghi avevano concesso a Nordrassil nei tempi antichi. Ma Nozdormu, Signore del Tempo, rifiutò di benedire, rimproverando il druido per la sua arroganza. D'accordo con Nozdormu, anche Alexstrasza rifiutò Staghelm e, senza la sua benedizione, la crescita di Teldrassil è stata viziata e imprevedibile..."
   },
   "7673": {
     "en_title": "Frost Ram Exchange",
@@ -3685,7 +5172,7 @@
     "en_title": "Grund and Gozwin",
     "en_obj": "Find Grund and Gozwin's camp in the hills to the northwest. Recover Gozwin's Mechanic's Log and kill the Snow Leopard Prowler.",
     "title": "Grund e Gozwin",
-    "desc": "Ehi, avevo le spalle voltate mentre preparavo l'arrosto di cinghiale quando ho sentito il mio amico Gozwin urlare per salvarsi la vita!\n\nZanne feroci e un lampo veloce: ecco tutto quello che ho visto voltandomi. Che zampe enormi! Uno snow leopard stava trascinando via la sua preda gnomica. Ho afferrato il mio fucile e ho sparato sopra la bestia. Ha mollato la presa ed è scappata via di corsa.\n\nPer fortuna, non aveva fatto altro che lasciare al vecchio Goz qualche graffio profondo.\n\nTorna al campo sulle colline a nord-ovest e recupera il Gozwin's Mechanic's Log. Se lo vedi, uccidi anche quello snow leopard!",
+    "desc": "Ehi, avevo le spalle voltate mentre preparavo l'arrosto di cinghiale quando ho sentito il mio amico Gozwin urlare per salvarsi la vita!$B$BZanne feroci e un lampo veloce: ecco tutto quello che ho visto voltandomi. Che zampe enormi! Uno snow leopard stava trascinando via la sua preda gnomica. Ho afferrato il mio fucile e ho sparato sopra la bestia. Ha mollato la presa ed è scappata via di corsa.$B$BPer fortuna, non aveva fatto altro che lasciare al vecchio Goz qualche graffio profondo.$B$BTorna al campo sulle colline a nord-ovest e recupera il Gozwin's Mechanic's Log. Se lo vedi, uccidi anche quello snow leopard!",
     "obj": "Trova il campo di Grund e Gozwin sulle colline a nord-ovest. Recupera il Gozwin's Mechanic's Log e uccidi lo Snow Leopard Prowler."
   },
   "98319": {
