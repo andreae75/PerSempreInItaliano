@@ -756,16 +756,16 @@ T[7676] = {
 }
 T[92460] = {
   title = "La maggiore età",
-  desc = "Guarda un po', con gli occhi luminosi e pront$Go:a; all'avventura! Qui al Villaggio di Thendal abbiamo bisogno di tutto l'aiuto possibile, e il tuo arrivo è più che gradito. Immagino che tu sia teso per ciò che ti aspetta. Dopotutto, si diventa adulti una sola volta nella vita.$B$BVai a cercare il nostro capo villaggio, Rorian the Dayseeker, all'ingresso dell'albero del grande padre, poco a ovest di qui. Sarà lui a farti iniziare il tuo viaggio.",
-  obj = "Parla con Rorian the Dayseeker nel Bosco di Thendal.",
+  desc = "Guarda un po', con gli occhi luminosi e pront$Go:a; all'avventura! Qui al Thendal Village abbiamo bisogno di tutto l'aiuto possibile, e il tuo arrivo è più che gradito. Immagino che tu sia teso per ciò che ti aspetta. Dopotutto, si diventa adulti una sola volta nella vita.$B$BVai a cercare il nostro capo villaggio, Rorian the Dayseeker, all'ingresso dell'albero del grande padre, poco a ovest di qui. Sarà lui a farti iniziare il tuo viaggio.",
+  obj = "Parla con Rorian the Dayseeker nel Thendal Grove.",
   reward = "I saluti del Vento, $N. Sono onorato di consegnarti oggi la tua reliquia della maggiore età, ora che ti viene riconosciuto il potenziale che porti agli shen'dorei. Il nostro popolo ha affrontato grandi sofferenze e persecuzioni nella sua complessa storia.$B$BOggi ricevi questa reliquia, una delle tante custodite da chi ti ha preceduto. Un giorno, quando le tue ceneri saranno disperse nei venti, passerà a un altro per proseguire la nostra tradizione.$B$BPortando con te questa reliquia, sappi che i venti di casa ti accompagneranno ovunque viaggerai.",
   en_title = "Coming of Age",
   en_obj = "Speak with Rorian the Dayseeker in Thendal Grove.",
 }
 T[92461] = {
   title = "Armonia nell'equilibrio",
-  desc = "Viviamo tempi di grande incertezza per il nostro popolo. Affrontiamo sfide senza precedenti che potrebbero richiedere soluzioni audaci, ma dobbiamo anche occuparci delle faccende ordinarie e banali qui nel Bosco di Thendal. Prendi, ad esempio, il recente aumento insostenibile della popolazione di vuldren.$B$BI vuldren sono una parte vitale del nostro ecosistema. Tuttavia, gli squilibri vanno corretti per mantenere la delicata armonia che tutte le creature del Bosco di Thendal condividono.$B$BVai a est e abbatti un po' di vuldren.",
-  obj = "Uccidi 8 Vuldren Juveniles nel Bosco di Thendal.",
+  desc = "Viviamo tempi di grande incertezza per il nostro popolo. Affrontiamo sfide senza precedenti che potrebbero richiedere soluzioni audaci, ma dobbiamo anche occuparci delle faccende ordinarie e banali qui nel Thendal Grove. Prendi, ad esempio, il recente aumento insostenibile della popolazione di vuldren.$B$BI vuldren sono una parte vitale del nostro ecosistema. Tuttavia, gli squilibri vanno corretti per mantenere la delicata armonia che tutte le creature del Thendal Grove condividono.$B$BVai a est e abbatti un po' di vuldren.",
+  obj = "Uccidi 8 Vuldren Juveniles nel Thendal Grove.",
   en_title = "Harmony in Balance",
   en_obj = "Slay 8 Vuldren Juveniles in Thendal Grove.",
 }
@@ -826,7 +826,7 @@ G["0b3a27f7"] = "L'arcano corrompe solo i deboli. Continua il tuo addestramento,
 G["270ead6d"] = "Di cosa hai bisogno da me, figlio di Zephras?"  -- Rorian the Dayseeker
 G["2bee4217"] = "Vendo i migliori indumenti di stoffa e di cuoio di tutta la valle!"  -- Durnan Furcutter
 G["2dab3cc7"] = "Servi bene la Luce, cacciatore."  -- Maxan Anvol
-G["3fff2bae"] = "Salve, $Gragazzo:ragazza;. Sono Grelin Barbabianca. Sono qui per esaminare la minaccia rappresentata dal numero crescente di troll nella Valle di Coldridge. Cosa ho scoperto? È un po' preoccupante..."  -- Grelin Whitebeard
+G["3fff2bae"] = "Salve, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per esaminare la minaccia rappresentata dal numero crescente di troll nella Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."  -- Grelin Whitebeard
 G["45cd6d77"] = "Che posso fare per voi?"  -- Thorgas Grimson
 G["48b738dc"] = "Vuoi rendere i tuoi demoni più potenti? Ti costerà, ma sei nel posto giusto."  -- Wren Darkspring
 G["5a5eb173"] = "Come posso aiutarti?"  -- Sally Swiftwrench

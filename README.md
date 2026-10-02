@@ -80,6 +80,10 @@ tools/*.json              testi da tradurre e tradotti
 
 `tools/fonti/` (il database delle quest del gioco originale usato da `importa`) non fa parte di questo repository: va scaricato a parte.
 
+## Licenza
+
+Il codice e i file dell'addon sono distribuiti con licenza [MIT](LICENSE). La licenza non riguarda i testi originali di Blizzard, di cui qui sono presenti solo le traduzioni.
+
 ## Note
 
 Progetto non ufficiale e non affiliato a Blizzard Entertainment. *World of Warcraft* e *WoW Forever* sono marchi di Blizzard Entertainment. I testi originali delle quest appartengono a Blizzard; qui si pubblicano solo le traduzioni.
