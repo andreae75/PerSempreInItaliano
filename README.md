@@ -44,7 +44,7 @@ Il nome della cartella deve essere `PerSempreInItaliano`, uguale a quello del fi
 
 ## Stato delle traduzioni
 
-Le traduzioni coprono per ora una parte delle quest e dei dialoghi: tutta la zona di partenza di Dun Morogh del gioco originale e le quest nuove di Forever incontrate finora. L'elenco cresce man mano che si gioca.
+Le traduzioni coprono oltre 2.400 quest (dal livello 1 al 60 del gioco originale e una parte delle quest nuove di Forever) e alcuni dialoghi. L'elenco cresce man mano che si gioca. Una parte delle quest proviene dall'addon [QuestIT](CREDITS.md) di Drakanast (licenza MIT).
 
 WoW Forever aggiunge molte quest che non esistono nel gioco originale. Per queste non c'è un database pubblico con i testi: l'unica fonte è il gioco stesso, ed è per questo che l'addon salva i testi che incontra.
 
@@ -86,7 +86,7 @@ tools/dialoghi_tradotti.json traduzioni dei dialoghi
 
 ## Licenza
 
-Il codice e i file dell'addon sono distribuiti con licenza [MIT](LICENSE). La licenza non riguarda i testi originali di Blizzard, di cui qui sono presenti solo le traduzioni.
+Il codice e i file dell'addon sono distribuiti con licenza [MIT](LICENSE). Le traduzioni importate da QuestIT sono di Drakanast, anch'esse MIT: vedi [CREDITS.md](CREDITS.md). La licenza non riguarda i testi originali di Blizzard, di cui qui sono presenti solo le traduzioni.
 
 ## Note
 

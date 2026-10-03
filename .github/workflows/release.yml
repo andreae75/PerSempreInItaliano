@@ -27,7 +27,7 @@ jobs:
       - name: Crea lo zip
         run: |
           mkdir -p dist/PerSempreInItaliano
-          cp PerSempreInItaliano.toc Core.lua Traduzioni.lua Data_Esempi.lua README.md LICENSE dist/PerSempreInItaliano/
+          cp PerSempreInItaliano.toc Core.lua Traduzioni.lua Data_Esempi.lua README.md LICENSE LICENSE-QuestIT CREDITS.md dist/PerSempreInItaliano/
           cp -r Media dist/PerSempreInItaliano/
           cd dist
           zip -r "PerSempreInItaliano-${GITHUB_REF_NAME#v}.zip" PerSempreInItaliano
