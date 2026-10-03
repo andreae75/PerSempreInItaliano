@@ -23,11 +23,28 @@ import gzip
 import json
 import os
 import re
+import shutil
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ADDON = os.path.dirname(HERE)
-WOW = os.path.normpath(os.path.join(ADDON, "..", "..", ".."))
+
+def _trova_wow():
+    """Cartella del client WoW (quella con WTF e Interface). Si puo' forzare con la variabile
+    d'ambiente WOW_DIR; altrimenti si prova la copia dentro AddOns e il percorso abituale."""
+    candidati = [
+        os.environ.get("WOW_DIR", ""),
+        os.path.normpath(os.path.join(ADDON, "..", "..", "..")),
+        r"C:\Program Files (x86)\World of Warcraft\_classic_beta_",
+    ]
+    for c in candidati:
+        if c and os.path.isdir(os.path.join(c, "WTF")):
+            return c
+    return candidati[-1]
+
+
+WOW = _trova_wow()
+INSTALLED = os.path.join(WOW, "Interface", "AddOns", os.path.basename(ADDON))
 TODO = os.path.join(HERE, "da_tradurre.json")
 DONE = os.path.join(HERE, "traduzioni.json")
 G_TODO = os.path.join(HERE, "dialoghi_da_tradurre.json")
@@ -441,7 +458,13 @@ def genera():
             lines.append(f"G[{lua_str(key)}] = {lua_str(text)}" + (f"  -- {npc}" if npc else ""))
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"{len(done)} quest e {len(g_done)} dialoghi scritti in {OUT}. In gioco: /reload")
+    print(f"{len(done)} quest e {len(g_done)} dialoghi scritti in {OUT}.")
+    # la copia di lavoro sta fuori da AddOns: porta Traduzioni.lua nell'addon installato
+    if os.path.isdir(INSTALLED) and os.path.abspath(INSTALLED) != os.path.abspath(ADDON):
+        shutil.copyfile(OUT, os.path.join(INSTALLED, "Traduzioni.lua"))
+        print(f"Copiato in {INSTALLED}. In gioco: /reload")
+    else:
+        print("In gioco: /reload")
 
 
 if __name__ == "__main__":
