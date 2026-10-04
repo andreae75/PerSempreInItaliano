@@ -31,6 +31,13 @@ local function QuestData(id)
   return m
 end
 
+-- Da dove viene la traduzione di una quest: nil se è solo nostra
+local function QuestSource(id)
+  local own, qi = QuestTraduttoreData[id], QuestTraduttoreQuestIT[id]
+  if qi and own then return "nostra + QuestIT" end
+  if qi then return "QuestIT" end
+end
+
 local function GossipText(key)
   return QuestTraduttoreGossip[key]
 end
@@ -200,10 +207,11 @@ local function CreatePanel(name)
     self:SetFrameLevel(host:GetFrameLevel() + 10)
   end
 
-  function p:SetHeader(label, id, translated)
+  function p:SetHeader(label, id, translated, source)
     self.idText:SetText(label .. ": |cff000000" .. id .. "|r")
     if translated then
-      self.statusText:SetText("|cff006400tradotta|r")
+      -- la fonte è sempre indicata accanto a "tradotta" (le traduzioni di QuestIT vanno citate)
+      self.statusText:SetText("|cff006400tradotta|r" .. (source and (" |cff5a4020\194\183 " .. source .. "|r") or ""))
     else
       self.statusText:SetText("|cffb00000non tradotta|r")
     end
@@ -302,7 +310,7 @@ local function ShowQuest(kind)
 
   local t = QuestData(id)
   npcPanel:Attach(QuestFrame)
-  npcPanel:SetHeader("Quest ID", id, t ~= nil)
+  npcPanel:SetHeader("Quest ID", id, t ~= nil, QuestSource(id))
   if not t then
     npcPanel:Render({ { "title", GetTitleText() }, { "body", NOT_YET:format(id) } })
   elseif kind == "detail" then
@@ -418,7 +426,7 @@ local function ShowLog(id)
 
   local t = QuestData(id)
   logPanel:Attach(host)
-  logPanel:SetHeader("Quest ID", id, t ~= nil)
+  logPanel:SetHeader("Quest ID", id, t ~= nil, QuestSource(id))
   if not t then
     logPanel:Render({ { "title", title }, { "body", NOT_YET:format(id) } })
   else
@@ -709,6 +717,14 @@ local function CreateAboutPanel()
   end
   local counts = Body(CountsText())
   panel:SetScript("OnShow", function() counts:SetText(CountsText()) end)
+
+  Heading("Crediti")
+  local _, fromQI = CountQuests()
+  Body("|cffffd100QuestIT.|r Gran parte delle traduzioni delle quest (" .. fromQI .. " in questa versione) proviene "
+    .. "da |cffffd100QuestIT|r di Drakanast, mantenuto dalla |cffffd100comunit\195\160 Discord di QuestIT|r e da "
+    .. "|cffffd100#italyforazeroth|r, che ringraziamo. Quelle traduzioni non sono di questo progetto: restano sotto le "
+    .. "condizioni dei loro autori (citare la fonte, nessuno scopo di lucro, niente voci clonate). "
+    .. "In ogni riquadro la fonte \195\168 indicata accanto a \"tradotta\".", "GameFontHighlight")
 
   Heading("Avviso")
   Body("|cffffd100Progetto artigianale.|r Questo addon è un hobby fatto in casa da un appassionato, "
