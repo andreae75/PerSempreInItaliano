@@ -14,6 +14,8 @@ La traduzione compare in un riquadro "pergamena" accanto alla finestra del gioco
 
 - **Quest:** descrizione, obiettivi, avanzamento e completamento nella finestra dell'NPC.
 - **Dialoghi degli NPC** e saluti con l'elenco delle quest disponibili e in corso.
+- **Frasi dei PNG in chat** (dicono, urlano, emote): l'inglese resta com'è e sotto compare una riga in italiano, se la traduzione esiste. Quelle non tradotte si salvano come i dialoghi.
+- **Nomi inglesi evidenziati in blu** nel testo tradotto (luoghi, PNG, oggetti), con un interruttore nelle opzioni. Il riconoscimento è automatico: prende i nomi con l'iniziale maiuscola e non gli oggetti in minuscolo.
 - **Registro delle missioni** (tasto `L`): riquadro con descrizione e obiettivi.
 - **Tracker degli obiettivi e tooltip:** i titoli e gli obiettivi delle quest compaiono in italiano.
 - **Segnaposto:** `$N` (nome), `$C` (classe), `$R` (razza) e le forme maschile/femminile (`$Gmaschile:femminile;`) vengono sostituiti con i dati del tuo personaggio.
@@ -34,7 +36,7 @@ Il nome della cartella deve essere `PerSempreInItaliano`, uguale a quello del fi
 |---|---|
 | `/qt on` / `/qt off` | attiva o disattiva l'addon |
 | `/qt opzioni` | apre il pannello di configurazione |
-| `/qt registro`, `/qt tracker`, `/qt dialoghi` `on\|off` | attiva o disattiva le singole funzioni |
+| `/qt registro`, `/qt tracker`, `/qt dialoghi`, `/qt chat`, `/qt colore` `on\|off` | attiva o disattiva le singole funzioni |
 | `/qt raccolta on\|off` | salva o no i testi inglesi non ancora tradotti |
 | `/qt nome completo\|breve` | usa nome e cognome o solo il nome al posto di `$N` |
 | `/qt scala 0.9` | dimensione dei riquadri (0,5 – 2) |

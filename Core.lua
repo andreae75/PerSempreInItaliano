@@ -9,7 +9,7 @@ local DB
 
 local DEFAULTS = {
   enabled = true, collect = true, scale = 1, offsetX = 6, offsetY = 0,
-  questlog = true, tracker = true, gossip = true,
+  questlog = true, tracker = true, gossip = true, chat = true, highlight = true,
 }
 local LAYOUT_VERSION = 2
 
@@ -135,6 +135,89 @@ end
 ---------------------------------------------------------------------------
 -- Riquadro pergamena (uno per ogni finestra: NPC, dialoghi, registro)
 ---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+-- Evidenziazione dei nomi inglesi (luoghi, PNG, oggetti) nel testo tradotto
+---------------------------------------------------------------------------
+-- Il testo non marca i nomi: si riconoscono le sequenze con l'iniziale maiuscola a metà frase
+-- (anche con "of", "the", "and" in mezzo). È un'euristica: non prende gli oggetti in minuscolo.
+local NAME_COLOR = "|cff1c4f9a"   -- blu scuro: si legge sulla pergamena e si distingue dal giallo
+local NOT_NAMES, TITLES = {}, {}
+for w in ("Orda Alleanza Reietti Rinnegati Flagello Luce Voi Vi Vostro Vostra Vostri Vostre Lei Loro "
+  .. "Sua Suo Dio Maest\195\160 Altezza Signore Signora Re Regina Sacro Sacra Legione"):gmatch("%S+") do
+  NOT_NAMES[w] = true
+end
+-- titoli inglesi: se aprono una frase fanno comunque parte del nome ("Marshal McBride ha detto...")
+for w in ("Marshal Captain Lord Lady Sergeant General Warlord King Queen Apothecary Priestess Priest "
+  .. "Brother Sister Elder Chief Deputy Mountaineer Master Lieutenant Commander Archmage Grand High "
+  .. "Overseer Warden Guard Sentinel Scout Ranger"):gmatch("%S+") do
+  TITLES[w] = true
+end
+local CONNECT = { of = true, the = true, ["and"] = true }
+
+local function HighlightNames(text)
+  if type(text) ~= "string" or text == "" then return text end
+  local _, full = PlayerNames()
+  local mine = {}
+  for w in (full or ""):gmatch("%S+") do mine[w] = true end   -- il nome del giocatore non si evidenzia
+
+  local toks, n = {}, 0
+  for s, w, e in text:gmatch("()([%w\128-\255'%-]+)()") do
+    n = n + 1
+    toks[n] = { s = s, e = e - 1, w = w }
+  end
+
+  local function isName(t)
+    return t.w:find("^%u") and #t.w > 1 and not NOT_NAMES[t.w] and not mine[t.w]
+  end
+  local function adjacent(a, b)   -- separate da un solo spazio
+    return b.s - a.e == 2 and text:sub(a.e + 1, a.e + 1) == " "
+  end
+  local function atStart(t)       -- prima parola di una frase: di solito è italiano comune
+    local before = text:sub(math.max(1, t.s - 8), t.s - 1):match("(%S)%s*$")
+    return before == nil or before:find("^[%.!%?:\"]") ~= nil
+  end
+
+  local out, pos, i = {}, 1, 1
+  while i <= n do
+    local t = toks[i]
+    if isName(t) then
+      local j = i
+      while j < n do
+        local nx = toks[j + 1]
+        if isName(nx) and adjacent(toks[j], nx) then
+          j = j + 1
+        elseif CONNECT[nx.w] and adjacent(toks[j], nx) then
+          -- una o due parole di collegamento ("of", "of the") seguite da un nome
+          local k = j + 1
+          while k <= n and CONNECT[toks[k].w] and adjacent(toks[k - 1], toks[k]) and k - j <= 2 do
+            k = k + 1
+          end
+          if k <= n and isName(toks[k]) and adjacent(toks[k - 1], toks[k]) then
+            j = k
+          else
+            break
+          end
+        else
+          break
+        end
+      end
+      local first = i
+      if atStart(t) and not TITLES[t.w] then first = i + 1 end
+      while first <= j and CONNECT[toks[first].w] do first = first + 1 end
+      if first <= j then
+        out[#out + 1] = text:sub(pos, toks[first].s - 1)
+        out[#out + 1] = NAME_COLOR .. text:sub(toks[first].s, toks[j].e) .. "|r"
+        pos = toks[j].e + 1
+      end
+      i = j + 1
+    else
+      i = i + 1
+    end
+  end
+  out[#out + 1] = text:sub(pos)
+  return table.concat(out)
+end
+
 local WIDTH, PAD = 340, 22
 local STYLE = {
   title = { "QuestTitleFont", 0, 0, 0, 12 },
@@ -235,6 +318,10 @@ local function CreatePanel(name)
         local st = STYLE[style]
         fs:SetFontObject(st[1])
         fs:SetTextColor(st[2], st[3], st[4])
+        if style == "body" and DB and DB.highlight then
+          local ok, colored = pcall(HighlightNames, text)   -- se qualcosa va storto, si mostra il testo normale
+          if ok and colored then text = colored end
+        end
         fs:SetText(text)
         fs:ClearAllPoints()
         fs:SetPoint("TOPLEFT", self.content, "TOPLEFT", 0, -y)
@@ -780,6 +867,8 @@ local function CreateOptionsPanel()
   Checkbox("Riquadro nel registro missioni (tasto L)", "questlog")
   Checkbox("Traduci tracker degli obiettivi e tooltip", "tracker")
   Checkbox("Traduci dialoghi degli NPC", "gossip")
+  Checkbox("Traduci le frasi dei PNG in chat (riga in italiano sotto l'inglese)", "chat")
+  Checkbox("Evidenzia i nomi inglesi nei riquadri (in blu)", "highlight")
   Checkbox("Salva i testi inglesi non ancora tradotti", "collect")
 
   y = y - 12
@@ -869,6 +958,38 @@ local function CreateOptionsPanel()
 end
 
 ---------------------------------------------------------------------------
+-- 5) Frasi dei PNG in chat (dicono, urlano, emote, sussurri)
+---------------------------------------------------------------------------
+-- L'originale inglese resta com'è; sotto compare una riga in italiano, se la traduzione esiste.
+-- Le frasi non tradotte si salvano come i dialoghi (stesso codice, stesso giro con aggiorna.ps1).
+local CHAT_EVENTS = {
+  "CHAT_MSG_MONSTER_SAY", "CHAT_MSG_MONSTER_YELL", "CHAT_MSG_MONSTER_EMOTE",
+  "CHAT_MSG_MONSTER_WHISPER", "CHAT_MSG_MONSTER_PARTY",
+  "CHAT_MSG_RAID_BOSS_EMOTE", "CHAT_MSG_RAID_BOSS_WHISPER",
+}
+local chatEvents = {}
+for _, e in ipairs(CHAT_EVENTS) do chatEvents[e] = true end
+
+local function IsSecret(v)
+  return issecretvalue and issecretvalue(v)
+end
+
+local function OnNpcChat(text, sender)
+  if not DB or not DB.enabled or not DB.chat then return end
+  -- in combattimento o nelle istanze il gioco può nascondere i testi agli addon
+  if type(text) ~= "string" or text == "" or IsSecret(text) then return end
+  local who = (type(sender) == "string" and sender ~= "" and not IsSecret(sender)) and sender or "NPC"
+  local ok, key = pcall(CaptureGossip, text, who)
+  if not ok or not key then return end
+  local tr = GossipText(key)
+  if not tr then return end
+  local body = (Subst(tr):gsub("\n", " "))
+  local line = "|cff7fbf7f[IT]|r |cffd8d8d8" .. who .. ": " .. body .. "|r"
+  -- un istante dopo, così la riga italiana compare sotto quella inglese
+  C_Timer.After(0, function() DEFAULT_CHAT_FRAME:AddMessage(line) end)
+end
+
+---------------------------------------------------------------------------
 -- Eventi
 ---------------------------------------------------------------------------
 local ev = CreateFrame("Frame")
@@ -877,6 +998,8 @@ for _, e in ipairs({ "ADDON_LOADED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_CO
   "PLAYER_ENTERING_WORLD", "QUEST_LOG_UPDATE", "QUEST_WATCH_LIST_CHANGED" }) do
   ev:RegisterEvent(e)
 end
+-- protetto: se un client non conosce un evento, l'addon continua a funzionare senza quello
+for _, e in ipairs(CHAT_EVENTS) do pcall(ev.RegisterEvent, ev, e) end
 
 -- il tracker si ridisegna spesso: ritraduciamo dopo ogni aggiornamento e ogni secondo
 local trackerPending = false
@@ -893,8 +1016,10 @@ C_Timer.NewTicker(1, TranslateTracker)
 C_Timer.NewTicker(15, function()
   if not next(trackerRoots) then DiscoverTracker() end
 end)
-ev:SetScript("OnEvent", function(_, event, arg1)
-  if event == "ADDON_LOADED" then
+ev:SetScript("OnEvent", function(_, event, arg1, arg2)
+  if chatEvents[event] then
+    OnNpcChat(arg1, arg2)
+  elseif event == "ADDON_LOADED" then
     if arg1 ~= ADDON then return end
     QuestTraduttoreDB = QuestTraduttoreDB or {}
     DB = QuestTraduttoreDB
@@ -950,6 +1075,8 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
   elseif cmd == "registro" and Toggle("questlog", arg, "riquadro nel registro missioni") then
   elseif cmd == "tracker" and Toggle("tracker", arg, "traduzione del tracker (vale dal prossimo aggiornamento)") then
   elseif cmd == "dialoghi" and Toggle("gossip", arg, "traduzione dei dialoghi") then
+  elseif cmd == "chat" and Toggle("chat", arg, "traduzione delle frasi dei PNG in chat") then
+  elseif cmd == "colore" and Toggle("highlight", arg, "evidenziazione dei nomi inglesi (vale dal prossimo riquadro)") then
   elseif cmd == "nome" and (arg == "completo" or arg == "breve") then
     DB.nameStyle = (arg == "completo") and "full" or "first"
     local first, full = PlayerNames()
@@ -994,7 +1121,7 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
     Print("versione " .. VERSION .. " - comandi:")
     Print("  /qt on | off - attiva o disattiva l'addon")
     Print("  /qt opzioni - apre il pannello di configurazione")
-    Print("  /qt registro | tracker | dialoghi on | off - singole funzioni")
+    Print("  /qt registro | tracker | dialoghi | chat | colore on | off - singole funzioni")
     Print("  /qt raccolta on | off - salva i testi inglesi non tradotti")
     Print("  /qt nome completo | breve - nome e cognome o solo nome nei testi")
     Print("  /qt scala 0.9 - dimensione dei riquadri")
