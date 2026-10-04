@@ -1,4 +1,8 @@
 {
+  "01003408": {
+    "npc": "Cadoc Winterheart",
+    "text": "Sono lieto che tu me l'abbia chiesto!$B$BLe professioni sono abilità legate alla fabbricazione, alla raccolta e alla sopravvivenza in generale. Ce ne sono molte tra cui scegliere, e ciascuna offre vantaggi e opportunità economiche uniche. Che tu cerchi ricchezza, un modo per rifornire il magazzino della tua gilda di oggetti utili, o semplicemente il piacere di indossare un equipaggiamento creato dalle tue stesse mani, c'è una professione per te.$B$BLe ricette si possono apprendere dagli istruttori, come quelli che trovi qui intorno, e da numerose altre fonti in tutta Azeroth. Una volta apprese, potrai creare quell'oggetto quante volte vorrai, purché tu riesca a procurarti i materiali necessari."
+  },
   "0190addc": {
     "npc": "Ironforge Guard",
     "text": "Per dove vi servono indicazioni?"
@@ -7,9 +11,17 @@
     "npc": "Alamar Grimm",
     "text": "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."
   },
+  "2230ed30": {
+    "npc": "Cadoc Winterheart",
+    "text": "Salve, $N! Hai mai pensato di dedicarti a una professione?$B$BSarò felice di rispondere a qualsiasi tua domanda, o di indicarti gli istruttori del posto.$B$BSe tutto questo ti sembra troppo, non preoccuparti! Potrai sempre tornare qui, o far visita agli istruttori nelle città capitali, per iniziare il tuo cammino di artigiano in qualsiasi momento."
+  },
   "270ead6d": {
     "npc": "Rorian the Dayseeker",
     "text": "Di cosa hai bisogno da me, figlio di Zephras?"
+  },
+  "29d69dbe": {
+    "npc": "Cadoc Winterheart",
+    "text": "Le professioni si dividono in due categorie principali: primarie e secondarie.$B$BPuoi esercitare al massimo due professioni primarie alla volta. Puoi abbandonare una professione primaria quando vuoi, ma tutto il sapere accumulato andrà perduto. Se sceglierai di tornare a quella professione, dovrai ripartire dalle basi e ricercare le ricette già apprese per rifamiliarizzare con esse.$B$BLe professioni secondarie non hanno un limite simile. Queste abilità servono più che altro a renderti autosufficiente nelle necessità di base. Sei libero di addestrarle tutte, o solo alcune, ma troverai meno occasioni di trarne profitto."
   },
   "2bee4217": {
     "npc": "Durnan Furcutter",
@@ -19,9 +31,17 @@
     "npc": "Maxan Anvol",
     "text": "Servi bene la Luce, cacciatore."
   },
+  "338a6eb7": {
+    "npc": "Cadoc Winterheart",
+    "text": "Certamente! Quale professione vuoi che ti indichi?$B$BSegnerò sulla tua mappa la posizione di un istruttore locale a tua scelta. Ricorda che puoi far visita agli istruttori nelle città capitali per un addestramento più completo."
+  },
   "3fff2bae": {
     "npc": "Grelin Whitebeard",
     "text": "Salve, $Gragazzo:ragazza;. Sono Grelin Whitebeard. Sono qui per esaminare la minaccia rappresentata dal numero crescente di troll nella Coldridge Valley. Cosa ho scoperto? È un po' preoccupante..."
+  },
+  "44fbd444": {
+    "npc": "Frostmane Novice",
+    "text": "Yudo a siame fu Or'manley icense."
   },
   "45cd6d77": {
     "npc": "Thorgas Grimson",
@@ -30,6 +50,10 @@
   "48b738dc": {
     "npc": "Wren Darkspring",
     "text": "Vuoi rendere i tuoi demoni più potenti? Ti costerà, ma sei nel posto giusto."
+  },
+  "533746ac": {
+    "npc": "Frostmane Troll Whelp",
+    "text": "Io fare di te un mojo!"
   },
   "546e34b1": {
     "npc": "Swift Yellow Mechanostrider",
@@ -62,6 +86,10 @@
   "9d8be0c9": {
     "npc": "Ailee Farheart",
     "text": "Ciao, $C."
+  },
+  "a89e6437": {
+    "npc": "Frostmane Troll Whelp",
+    "text": "Presto sarai morto!"
   },
   "aadb260f": {
     "npc": "Thamner Pol",

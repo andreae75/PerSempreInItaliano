@@ -72,6 +72,7 @@ Qt estrai
 
 Write-Host '== 2/3 Traduco a blocchi con Claude' -ForegroundColor Cyan
 $fatte = 0
+$fatteD = 0
 $blocchi = 0
 $restoPrima = [int]::MaxValue
 while ($true) {
@@ -116,6 +117,7 @@ while ($true) {
     if ($tradD -gt 0) { Qt unisci-dialoghi nuovi_dialoghi.json }
     Remove-Item nuove_traduzioni.json, nuovi_dialoghi.json -ErrorAction SilentlyContinue
     $fatte += $tradQ
+    $fatteD += $tradD
 }
 Remove-Item lavoro_quest.json, lavoro_dialoghi.json, nuove_traduzioni.json, nuovi_dialoghi.json -ErrorAction SilentlyContinue
 
@@ -129,4 +131,4 @@ if ($LASTEXITCODE -ne 0) { Write-Host '(controllo con QuestIT non eseguito)' -Fo
 Qt estrai   # aggiorna gli elenchi "da tradurre" togliendo quanto e' stato tradotto
 
 Write-Host ''
-Write-Host "Fatto: $fatte quest tradotte in $blocchi blocchi. Ora fai /reload in gioco." -ForegroundColor Green
+Write-Host "Fatto: $fatte quest e $fatteD dialoghi/frasi tradotti in $blocchi blocchi. Ora fai /reload in gioco." -ForegroundColor Green

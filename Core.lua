@@ -9,7 +9,7 @@ local DB
 
 local DEFAULTS = {
   enabled = true, collect = true, scale = 1, offsetX = 6, offsetY = 0,
-  questlog = true, tracker = true, gossip = true, chat = true, highlight = true,
+  questlog = true, tracker = true, gossip = true, chat = true, highlight = true, wowhead = true,
 }
 local LAYOUT_VERSION = 2
 
@@ -218,6 +218,52 @@ local function HighlightNames(text)
   return table.concat(out)
 end
 
+---------------------------------------------------------------------------
+-- Link a Wowhead: il gioco non può aprire il browser, quindi si mostra il link da copiare
+---------------------------------------------------------------------------
+-- Wowhead ha le pagine delle quest di Vanilla (ID fino a circa 9665); quelle nate con Forever
+-- (ID alti) non esistono su Wowhead: per quelle il pulsante non compare.
+local WOWHEAD_QUEST = "https://www.wowhead.com/classic/quest="
+local WOWHEAD_MAX_ID = 9665
+local linkPopup
+
+local function ShowLinkPopup(url)
+  if not linkPopup then
+    local f = CreateFrame("Frame", "QuestTraduttoreLinkPopup", UIParent, "BackdropTemplate")
+    f:SetSize(430, 90)
+    f:SetPoint("CENTER", 0, 140)
+    f:SetFrameStrata("DIALOG")
+    f:SetBackdrop({
+      bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+      edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+      tile = true, tileSize = 32, edgeSize = 32,
+      insets = { left = 8, right = 8, top = 8, bottom = 8 },
+    })
+    local title = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    title:SetPoint("TOP", 0, -16)
+    title:SetText("Wowhead: seleziona il link e copialo con Ctrl+C")
+    local eb = CreateFrame("EditBox", nil, f, "InputBoxTemplate")
+    eb:SetSize(380, 22)
+    eb:SetPoint("TOP", 0, -42)
+    eb:SetAutoFocus(false)
+    eb:SetScript("OnEscapePressed", function() f:Hide() end)
+    eb:SetScript("OnEnterPressed", function() f:Hide() end)
+    eb:SetScript("OnTextChanged", function(self, byUser)
+      if byUser then self:SetText(f.url or "") self:HighlightText() end
+    end)
+    local close = CreateFrame("Button", nil, f, "UIPanelCloseButton")
+    close:SetPoint("TOPRIGHT", -2, -2)
+    f.edit = eb
+    tinsert(UISpecialFrames, "QuestTraduttoreLinkPopup")   -- Esc la chiude
+    linkPopup = f
+  end
+  linkPopup.url = url
+  linkPopup.edit:SetText(url)
+  linkPopup:Show()
+  linkPopup.edit:SetFocus()
+  linkPopup.edit:HighlightText()
+end
+
 local WIDTH, PAD = 340, 22
 local STYLE = {
   title = { "QuestTitleFont", 0, 0, 0, 12 },
@@ -244,6 +290,16 @@ local function CreatePanel(name)
 
   p.statusText = p:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
   p.statusText:SetPoint("TOPRIGHT", -PAD - 4, -PAD)
+
+  -- pulsante Wowhead: su una seconda riga, solo per le quest di Vanilla (vedi SetHeader)
+  p.linkBtn = CreateFrame("Button", nil, p, "UIPanelButtonTemplate")
+  p.linkBtn:SetSize(90, 18)
+  p.linkBtn:SetPoint("TOPLEFT", PAD, -PAD - 16)
+  p.linkBtn:SetText("Wowhead")
+  p.linkBtn:SetScript("OnClick", function()
+    if p.questId then ShowLinkPopup(WOWHEAD_QUEST .. p.questId) end
+  end)
+  p.linkBtn:Hide()
 
   local scroll = CreateFrame("ScrollFrame", name .. "Scroll", p, "UIPanelScrollFrameTemplate")
   scroll:SetPoint("TOPLEFT", PAD, -PAD - 18)
@@ -298,6 +354,12 @@ local function CreatePanel(name)
     else
       self.statusText:SetText("|cffb00000non tradotta|r")
     end
+    -- pulsante Wowhead: solo per le quest di Vanilla; il testo scende di una riga quando c'è
+    local qid = tonumber(id)
+    local showLink = label == "Quest ID" and DB and DB.wowhead and qid and qid > 0 and qid <= WOWHEAD_MAX_ID
+    self.questId = showLink and qid or nil
+    self.scroll:SetPoint("TOPLEFT", PAD, showLink and (-PAD - 38) or (-PAD - 18))
+    if showLink then self.linkBtn:Show() else self.linkBtn:Hide() end
   end
 
   -- blocks = { { "title", testo }, { "body", testo }, ... }
@@ -869,6 +931,7 @@ local function CreateOptionsPanel()
   Checkbox("Traduci dialoghi degli NPC", "gossip")
   Checkbox("Traduci le frasi dei PNG in chat (riga in italiano sotto l'inglese)", "chat")
   Checkbox("Evidenzia i nomi inglesi nei riquadri (in blu)", "highlight")
+  Checkbox("Pulsante Wowhead nelle quest (link da copiare)", "wowhead")
   Checkbox("Salva i testi inglesi non ancora tradotti", "collect")
 
   y = y - 12
@@ -1077,6 +1140,7 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
   elseif cmd == "dialoghi" and Toggle("gossip", arg, "traduzione dei dialoghi") then
   elseif cmd == "chat" and Toggle("chat", arg, "traduzione delle frasi dei PNG in chat") then
   elseif cmd == "colore" and Toggle("highlight", arg, "evidenziazione dei nomi inglesi (vale dal prossimo riquadro)") then
+  elseif cmd == "wowhead" and Toggle("wowhead", arg, "pulsante Wowhead (vale dal prossimo riquadro)") then
   elseif cmd == "nome" and (arg == "completo" or arg == "breve") then
     DB.nameStyle = (arg == "completo") and "full" or "first"
     local first, full = PlayerNames()
@@ -1121,7 +1185,7 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
     Print("versione " .. VERSION .. " - comandi:")
     Print("  /qt on | off - attiva o disattiva l'addon")
     Print("  /qt opzioni - apre il pannello di configurazione")
-    Print("  /qt registro | tracker | dialoghi | chat | colore on | off - singole funzioni")
+    Print("  /qt registro | tracker | dialoghi | chat | colore | wowhead on | off - singole funzioni")
     Print("  /qt raccolta on | off - salva i testi inglesi non tradotti")
     Print("  /qt nome completo | breve - nome e cognome o solo nome nei testi")
     Print("  /qt scala 0.9 - dimensione dei riquadri")
