@@ -31,6 +31,14 @@
     "npc": "Wren Darkspring",
     "text": "Vuoi rendere i tuoi demoni più potenti? Ti costerà, ma sei nel posto giusto."
   },
+  "546e34b1": {
+    "npc": "Swift Yellow Mechanostrider",
+    "text": "<L'etichetta sul mechanostrider recita:$B$BH4z4rd Flashdasher 3X 4000. Ora con nuovi sensori di radiazioni e nebulizzatori di decontaminazione!>"
+  },
+  "567534a5": {
+    "npc": "Gremlock Pilsnor",
+    "text": "Cucinare è una passione per la vita, e vedo che condividiamo lo stesso fuoco!"
+  },
   "5a5eb173": {
     "npc": "Sally Swiftwrench",
     "text": "Come posso aiutarti?"
@@ -67,6 +75,10 @@
     "npc": "Granis Swiftaxe",
     "text": "Tu non sei un guerriero... Non resisteresti nemmeno un giorno sotto il mio addestramento!$B$BUn cacciatore che si crede un guerriero. Ah!"
   },
+  "b3532a61": {
+    "npc": "Hegnar Rumbleshot",
+    "text": "Hegnar Rumbleshot, al vostro servizio!"
+  },
   "b670d8ed": {
     "npc": "Brighid Stormflayer",
     "text": "Vuoi imparare a ricavare il cuoio dalle bestie uccise? O ti servono degli attrezzi nuovi?"
@@ -87,6 +99,10 @@
     "npc": "Talin Keeneye",
     "text": "Salve, stregone! Bella giornata per la caccia, non trovi? Anch'io ho avuto la mia bella fortuna con i cinghiali. Ti andrebbe di provarci?"
   },
+  "d02dcf23": {
+    "npc": "Gretta Ganter",
+    "text": "Cerchi di pescare? Allora ti serviranno gli attrezzi giusti."
+  },
   "d08dcd26": {
     "npc": "Senir Whitebeard",
     "text": "Salute e saluti a voi, buon nano. Magari vi va di condividere un bicchiere con me, per scacciare il gelo del vento? Venite, ne ho più che a sufficienza."
@@ -94,5 +110,9 @@
   "e20388bf": {
     "npc": "Peria Lamenur",
     "text": "Sei venut$Go:a; ad addestrarti per poi trasmettere tutto ai tuoi animali?"
+  },
+  "e995d6f2": {
+    "npc": "Rejold Barleybrew",
+    "text": "Maledetta Brewers' League! Hanno accesso a tutti gli ingredienti migliori, mentre noi qui ci ammazziamo per grano e luppolo!$B$BMi piacerebbe proprio servir loro una giustizia dal sapore amaro..."
   }
 }

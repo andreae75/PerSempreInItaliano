@@ -12,6 +12,9 @@
                                  -> scrive lavoro_quest.json e lavoro_dialoghi.json con il prossimo
                                     blocco di campi ancora da tradurre (usato da aggiorna.ps1)
   python qt.py unisci-dialoghi file.json -> aggiunge nuovi dialoghi a dialoghi_tradotti.json
+  python qt.py verifica          -> controlla che le nostre traduzioni corrispondano al testo inglese di Forever
+                                    (usa le impronte di QuestIT, se installato) e scrive da_rivedere.json
+  python qt.py pulisci           -> toglie da traduzioni_questit.json le quest gia' coperte dalle nostre
   python qt.py genera            -> legge traduzioni.json e dialoghi_tradotti.json
                                     e rigenera ../Traduzioni.lua
 
@@ -47,6 +50,9 @@ WOW = _trova_wow()
 INSTALLED = os.path.join(WOW, "Interface", "AddOns", os.path.basename(ADDON))
 TODO = os.path.join(HERE, "da_tradurre.json")
 DONE = os.path.join(HERE, "traduzioni.json")
+# traduzioni importate da QuestIT: file separato, con le sue condizioni d'uso; le nostre vincono sempre
+DONE_Q = os.path.join(HERE, "traduzioni_questit.json")
+OUT_Q = os.path.join(ADDON, "Traduzioni_QuestIT.lua")
 G_TODO = os.path.join(HERE, "dialoghi_da_tradurre.json")
 G_DONE = os.path.join(HERE, "dialoghi_tradotti.json")
 SOURCES = os.path.join(HERE, "fonti")
@@ -166,9 +172,17 @@ def save_json(path, data):
         json.dump({str(k): data[k] for k in sorted(data)}, f, ensure_ascii=False, indent=2)
 
 
+def load_done_all():
+    """Quest gia' tradotte da noi o da QuestIT (le nostre hanno la precedenza campo per campo)."""
+    done = {q: dict(e) for q, e in load_json(DONE_Q).items()}
+    for q, e in load_json(DONE).items():
+        done.setdefault(q, {}).update(e)
+    return done
+
+
 def merge_todo(found):
     """Aggiunge a da_tradurre.json le quest con campi non ancora tradotti."""
-    done = load_json(DONE)
+    done = load_done_all()
     todo = load_json(TODO)
     added = 0
     for qid, e in found.items():
@@ -214,7 +228,7 @@ def prepara(args=()):
         i = args.index("--blocco")
         blocco = int(args[i + 1])
         del args[i:i + 2]
-    done, todo = load_json(DONE), load_json(TODO)
+    done, todo = load_done_all(), load_json(TODO)
     allowed = None
     if zona:
         zid, _ = find_zone(zona)
@@ -381,9 +395,11 @@ def zone():
 def controlla(qid, src, tr):
     """Avvisa se una traduzione perde segnaposto ($N, $C, $R) o a capo ($B) dell'originale."""
     tok = lambda t: sorted(x.lower() for x in re.findall(r"\$[nNcCrR]\b", t))
+    # i testi raccolti in gioco hanno a capo veri (\r\n), quelli di classic-db hanno $B: sono equivalenti
+    conta_b = lambda t: t.replace("\r\n", "$B").replace("\n", "$B").count("$B")
     for k in FIELDS:
         if src.get(k) and tr.get(k):
-            if tok(src[k]) != tok(tr[k]) or src[k].count("$B") != tr[k].count("$B"):
+            if tok(src[k]) != tok(tr[k]) or conta_b(src[k]) != conta_b(tr[k]):
                 print(f"ATTENZIONE quest {qid}, campo {k}: segnaposto o a capo diversi dall'originale")
 
 
@@ -410,17 +426,72 @@ def unisci(args):
 
 def riempi_inglese():
     """Completa en_title/en_obj delle traduzioni esistenti usando il database classic-db."""
-    quests, done, n = load_quest_db(), load_json(DONE), 0
-    for qid, d in done.items():
-        q = quests.get(qid)
-        if not q:
+    quests, n = load_quest_db(), 0
+    for path in (DONE, DONE_Q):
+        done = load_json(path)
+        for qid, d in done.items():
+            q = quests.get(qid)
+            if not q:
+                continue
+            for en, k in (("en_title", "title"), ("en_obj", "obj")):
+                if q.get(k) and not d.get(en):
+                    d[en] = q[k]
+                    n += 1
+        save_json(path, done)
+    print(f"{n} testi inglesi aggiunti a {DONE} e {DONE_Q}")
+
+
+def verifica():
+    """Controlla se le nostre traduzioni corrispondono al testo inglese di Forever, confrontando l'inglese
+    che abbiamo salvato (en_title, en_obj) con le impronte registrate da QuestIT. Scrive da_rivedere.json."""
+    import impronta
+    qi_dir = os.path.join(WOW, "Interface", "AddOns", "QuestIT")
+    data_f, names_f = os.path.join(qi_dir, "Data_it.lua"), os.path.join(qi_dir, "Names_en.lua")
+    if not (os.path.isfile(data_f) and os.path.isfile(names_f)):
+        sys.exit(f"QuestIT non trovato in {qi_dir}: serve solo come riferimento per il controllo.")
+    classi, razze = impronta.carica_nomi(names_f)
+    src = open(data_f, encoding="utf-8").read()
+    src = src[:src.index("QuestIT.GossipIT")]
+    campo = re.compile(r'^        (\w+) = \{ it = "(?:[^"\\]|\\.)*", enHash = (?:"([0-9a-f]+)"|\{([^}]*)\})', re.M)
+    qi = {}
+    for m in re.finditer(r"^    \[(\d+)\] = \{\n(.*?)^    \},", src, re.M | re.S):
+        d = {}
+        for f in campo.finditer(m.group(2)):
+            d[f.group(1)] = [f.group(2)] if f.group(2) else re.findall(r'"([0-9a-f]+)"', f.group(3))
+        qi[int(m.group(1))] = d
+    ours = load_json(DONE)
+    ok = diversi = senza = 0
+    rivedere = {}
+    for q, e in ours.items():
+        d = qi.get(q)
+        if not d:
+            senza += 1
             continue
-        for en, k in (("en_title", "title"), ("en_obj", "obj")):
-            if q.get(k) and not d.get(en):
-                d[en] = q[k]
-                n += 1
-    save_json(DONE, done)
-    print(f"{n} testi inglesi aggiunti a {DONE}")
+        for en_k, qi_k in (("en_title", "title"), ("en_obj", "objectives")):
+            if not e.get(en_k) or qi_k not in d:
+                continue
+            h = impronta.impronta(impronta.da_nostro_formato(e[en_k]), classi, razze)
+            if h in d[qi_k]:
+                ok += 1
+            else:
+                diversi += 1
+                rivedere.setdefault(str(q), []).append(en_k)
+    with open(os.path.join(HERE, "da_rivedere.json"), "w", encoding="utf-8", newline="\n") as f:
+        json.dump(rivedere, f, ensure_ascii=False, indent=1)
+    print(f"{ok} campi inglesi combaciano con Forever, {diversi} sono diversi (in {len(rivedere)} quest), "
+          f"{senza} quest nostre non sono in QuestIT. Elenco: tools/da_rivedere.json")
+
+
+def pulisci():
+    """Toglie da traduzioni_questit.json le quest che le nostre traduzioni coprono gia' del tutto."""
+    ours, qi = load_json(DONE), load_json(DONE_Q)
+    tolte = [q for q, e in qi.items()
+             if q in ours and all(ours[q].get(k) for k in FIELDS if e.get(k))]
+    for q in tolte:
+        del qi[q]
+    save_json(DONE_Q, qi)
+    print(f"{len(tolte)} quest tolte da QuestIT perche' coperte dalle nostre; ne restano {len(qi)} "
+          f"(nostre: {len(ours)}). Poi: python qt.py genera")
 
 
 # --- generazione di Traduzioni.lua -------------------------------------------
@@ -428,9 +499,36 @@ def lua_str(s):
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n") + '"'
 
 
+def genera_questit():
+    """Traduzioni_QuestIT.lua: tabella separata (QuestTraduttoreQuestIT), con le condizioni di QuestIT."""
+    qi = load_json(DONE_Q)
+    lines = [
+        "-- File GENERATO da tools/qt.py (comando \"genera\"). Non modificarlo a mano.",
+        "-- Traduzioni delle quest importate da QuestIT (Drakanast): NON sono sotto licenza MIT.",
+        "-- Condizioni d'uso: vedi LICENSE-QuestIT-traduzioni.txt e CREDITS.md.",
+        "-- L'addon le usa solo per le quest che non hanno una traduzione in Traduzioni.lua.",
+        "-- Per non usarle, basta togliere questo file dal .toc o cancellarlo.",
+        "",
+        "QuestTraduttoreQuestIT = QuestTraduttoreQuestIT or {}",
+        "local T = QuestTraduttoreQuestIT",
+        "",
+    ]
+    for qid in sorted(qi):
+        e = qi[qid]
+        lines.append(f"T[{qid}] = {{")
+        for k in FIELDS + EN_FIELDS:
+            if e.get(k):
+                lines.append(f"  {k} = {lua_str(e[k])},")
+        lines.append("}")
+    with open(OUT_Q, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+    print(f"{len(qi)} quest di QuestIT scritte in {OUT_Q}.")
+
+
 def genera():
     done = load_json(DONE)
     g_done = load_json(G_DONE, int_keys=False)
+    genera_questit()
     lines = [
         "-- File GENERATO da tools/qt.py (comando \"genera\"). Non modificarlo a mano:",
         "-- modifica tools/traduzioni.json e tools/dialoghi_tradotti.json",
@@ -461,8 +559,10 @@ def genera():
     print(f"{len(done)} quest e {len(g_done)} dialoghi scritti in {OUT}.")
     # la copia di lavoro sta fuori da AddOns: porta Traduzioni.lua nell'addon installato
     if os.path.isdir(INSTALLED) and os.path.abspath(INSTALLED) != os.path.abspath(ADDON):
-        shutil.copyfile(OUT, os.path.join(INSTALLED, "Traduzioni.lua"))
-        print(f"Copiato in {INSTALLED}. In gioco: /reload")
+        # tutti i file dell'addon, non solo le traduzioni: il .toc e Core.lua devono andare d'accordo con i dati
+        for name in ("PerSempreInItaliano.toc", "Core.lua", "Data_Esempi.lua", "Traduzioni.lua", "Traduzioni_QuestIT.lua"):
+            shutil.copyfile(os.path.join(ADDON, name), os.path.join(INSTALLED, name))
+        print(f"Copiati in {INSTALLED}. In gioco: /reload")
     else:
         print("In gioco: /reload")
 
@@ -481,5 +581,9 @@ if __name__ == "__main__":
         genera()
     elif cmd == "inglese":
         riempi_inglese()
+    elif cmd == "pulisci":
+        pulisci()
+    elif cmd == "verifica":
+        verifica()
     else:
         {"estrai": estrai, "zone": zone}.get(cmd, lambda: print(__doc__))()

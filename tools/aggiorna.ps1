@@ -121,6 +121,11 @@ Remove-Item lavoro_quest.json, lavoro_dialoghi.json, nuove_traduzioni.json, nuov
 
 Write-Host '== 3/3 Rigenero Traduzioni.lua' -ForegroundColor Cyan
 Qt genera
+
+# controllo facoltativo: le traduzioni corrispondono ancora al testo inglese di Forever? (usa QuestIT, se installato)
+& $python qt.py verifica
+if ($LASTEXITCODE -ne 0) { Write-Host '(controllo con QuestIT non eseguito)' -ForegroundColor DarkGray }
+
 Qt estrai   # aggiorna gli elenchi "da tradurre" togliendo quanto e' stato tradotto
 
 Write-Host ''

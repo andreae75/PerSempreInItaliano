@@ -44,7 +44,7 @@ Il nome della cartella deve essere `PerSempreInItaliano`, uguale a quello del fi
 
 ## Stato delle traduzioni
 
-Le traduzioni coprono oltre 2.400 quest (dal livello 1 al 60 del gioco originale e una parte delle quest nuove di Forever) e alcuni dialoghi. L'elenco cresce man mano che si gioca. Una parte delle quest proviene dall'addon [QuestIT](CREDITS.md) di Drakanast (licenza MIT).
+Le traduzioni coprono oltre 4.100 quest (circa 600 nostre e circa 3.600 importate da QuestIT, dal livello 1 al 60 del gioco originale e una parte delle quest nuove di Forever) e alcuni dialoghi. Nelle quest nostre i nomi (luoghi, PNG, oggetti) restano in inglese; in quelle importate da QuestIT alcuni nomi sono tradotti in italiano. L'elenco cresce man mano che si gioca. **Gran parte delle quest proviene dall'addon [QuestIT](CREDITS.md) di Drakanast e resta soggetta alle sue condizioni** (citazione della fonte, nessun uso a scopo di lucro): vedi [CREDITS.md](CREDITS.md) e [LICENSE-QuestIT-traduzioni.txt](LICENSE-QuestIT-traduzioni.txt).
 
 WoW Forever aggiunge molte quest che non esistono nel gioco originale. Per queste non c'è un database pubblico con i testi: l'unica fonte è il gioco stesso, ed è per questo che l'addon salva i testi che incontra.
 
@@ -62,7 +62,7 @@ python tools/qt.py genera      # rigenera Traduzioni.lua
 # poi /reload in gioco
 ```
 
-Altri comandi di `qt.py`: `importa "<zona>"` (aggiunge le quest di una zona del gioco originale da un database esterno), `zone`, `unisci`, `unisci-dialoghi`, `inglese`, `prepara`.
+Altri comandi di `qt.py`: `verifica` (controlla che le traduzioni corrispondano al testo di Forever), `pulisci` (toglie da QuestIT le quest già coperte dalle nostre), `importa "<zona>"` (aggiunge le quest di una zona del gioco originale da un database esterno), `zone`, `unisci`, `unisci-dialoghi`, `inglese`, `prepara`.
 
 `tools/aggiorna.ps1` esegue tutto in sequenza, comprese le traduzioni delle voci nuove tramite [Claude Code](https://claude.com/claude-code) da riga di comando: dopo `/reload` lanci lo script, poi fai di nuovo `/reload`. Traduce a blocchi e salva dopo ogni blocco, quindi se lo interrompi puoi rilanciarlo senza perdere nulla. Opzioni: `-Zona "Elwynn Forest"` per una sola zona, `-Blocco 15` per la dimensione dei blocchi, `-Max 50` per fermarsi dopo 50 quest (utile per tenere d'occhio il consumo).
 
@@ -73,12 +73,14 @@ Per segnalare traduzioni mancanti o sbagliate apri una issue. Se non vuoi usare 
 ```
 PerSempreInItaliano.toc   metadati e ordine di caricamento
 Core.lua                  logica dell'addon
-Traduzioni.lua            generato da tools/qt.py (quest e dialoghi in italiano)
+Traduzioni.lua            generato da tools/qt.py (le nostre quest e i dialoghi)
+Traduzioni_QuestIT.lua    generato: quest importate da QuestIT, sotto le sue condizioni (facoltativo)
 Data_Esempi.lua           traduzioni di esempio
 Media/Bandiera.tga        icona
 tools/qt.py               estrazione, importazione e generazione
 tools/aggiorna.ps1        aggiornamento automatico
-tools/traduzioni.json       traduzioni delle quest (sorgente di Traduzioni.lua)
+tools/traduzioni.json       nostre traduzioni delle quest (sorgente di Traduzioni.lua)
+tools/traduzioni_questit.json  quest importate da QuestIT (sorgente di Traduzioni_QuestIT.lua)
 tools/dialoghi_tradotti.json traduzioni dei dialoghi
 ```
 
@@ -86,7 +88,7 @@ tools/dialoghi_tradotti.json traduzioni dei dialoghi
 
 ## Licenza
 
-Il codice e i file dell'addon sono distribuiti con licenza [MIT](LICENSE). Le traduzioni importate da QuestIT sono di Drakanast, anch'esse MIT: vedi [CREDITS.md](CREDITS.md). La licenza non riguarda i testi originali di Blizzard, di cui qui sono presenti solo le traduzioni.
+Il codice e i file dell'addon sono distribuiti con licenza [MIT](LICENSE). **Le traduzioni importate da QuestIT sono di Drakanast e non sono MIT**: restano sotto le sue condizioni, vedi [CREDITS.md](CREDITS.md). La licenza non riguarda i testi originali di Blizzard, di cui qui sono presenti solo le traduzioni.
 
 ## Note
 

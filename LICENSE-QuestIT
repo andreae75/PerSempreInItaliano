@@ -23,7 +23,11 @@ SOFTWARE.
 ---
 
 Quest texts are the property of Blizzard Entertainment. The addon code is
-released under the MIT license.
+released under the MIT license. The Italian translations (data/it/ and
+QuestIT/Data_it.lua) are not covered by the MIT license: see
+LICENSE-traduzioni.txt.
 
 I testi delle quest sono di proprieta' di Blizzard Entertainment. Il codice
-dell'addon e' rilasciato con licenza MIT.
+dell'addon e' rilasciato con licenza MIT. Le traduzioni italiane (data/it/ e
+QuestIT/Data_it.lua) non sono coperte dalla licenza MIT: vedi
+LICENSE-traduzioni.txt.

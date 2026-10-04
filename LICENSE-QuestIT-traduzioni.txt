@@ -1,0 +1,13 @@
+Traduzioni italiane di QuestIT (data/it/ e QuestIT/Data_it.lua)
+
+I testi originali sono di Blizzard Entertainment. Le traduzioni italiane sono
+lavoro degli autori di QuestIT: tutti i diritti riservati, salvo i permessi qui sotto.
+
+È permesso usarle, copiarle e modificarle, gratis, a queste condizioni:
+1. citare QuestIT come fonte;
+2. nessun uso a scopo di lucro;
+3. nessun uso per sintesi vocale, doppiaggio o audio generato che imiti la voce
+   di persone reali (doppiatori compresi) senza il loro consenso scritto.
+
+Chi non rispetta queste condizioni perde il permesso.
+Il codice dell'addon resta sotto licenza MIT (file LICENSE).

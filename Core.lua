@@ -1,6 +1,9 @@
 local ADDON = ...
 
 QuestTraduttoreData = QuestTraduttoreData or {}
+-- Traduzioni importate da QuestIT (file Traduzioni_QuestIT.lua, facoltativo): si usano solo
+-- per le quest che non hanno una traduzione nostra
+QuestTraduttoreQuestIT = QuestTraduttoreQuestIT or {}
 QuestTraduttoreGossip = QuestTraduttoreGossip or {}
 local DB
 
@@ -10,8 +13,22 @@ local DEFAULTS = {
 }
 local LAYOUT_VERSION = 2
 
+-- Se una quest è in tutte e due le tabelle (es. noi abbiamo tradotto solo il testo di avanzamento
+-- che a QuestIT manca), si usano i campi nostri e, per quelli che mancano, quelli di QuestIT.
+local mergedQuests = {}
 local function QuestData(id)
-  return QuestTraduttoreData[id]
+  local own, qi = QuestTraduttoreData[id], QuestTraduttoreQuestIT[id]
+  if not (own and qi) then return own or qi end
+  local m = mergedQuests[id]
+  if not m then
+    m = setmetatable({}, { __index = function(_, k)
+      local v = own[k]
+      if v == nil then v = qi[k] end
+      return v
+    end })
+    mergedQuests[id] = m
+  end
+  return m
 end
 
 local function GossipText(key)
@@ -616,6 +633,15 @@ local function CountEntries(t)
   return n
 end
 
+-- Quest tradotte: le nostre più quelle di QuestIT che non abbiamo (nTotale, nDaQuestIT)
+local function CountQuests()
+  local own, extra = CountEntries(QuestTraduttoreData), 0
+  for id in pairs(QuestTraduttoreQuestIT) do
+    if not QuestTraduttoreData[id] then extra = extra + 1 end
+  end
+  return own + extra, extra
+end
+
 local function CreateAboutPanel()
   local panel = CreateFrame("Frame")
   panel.name = "Informazioni"
@@ -676,7 +702,8 @@ local function CreateAboutPanel()
 
   Heading("Traduzioni disponibili")
   local function CountsText()
-    return CountEntries(QuestTraduttoreData) .. " quest e " .. CountEntries(QuestTraduttoreGossip)
+    local total, fromQI = CountQuests()
+    return total .. " quest (di cui " .. fromQI .. " da QuestIT) e " .. CountEntries(QuestTraduttoreGossip)
       .. " dialoghi tradotti. Quando manca una traduzione il riquadro mostra \"non tradotta\" "
       .. "e il testo inglese viene salvato per poterlo tradurre in seguito."
   end
@@ -926,13 +953,13 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
       Print("pannello opzioni non disponibile in questo client; usa i comandi /qt.")
     end
   elseif cmd == "stato" then
-    local nT, nG = 0, 0
-    for _ in pairs(QuestTraduttoreData) do nT = nT + 1 end
-    for _ in pairs(QuestTraduttoreGossip) do nG = nG + 1 end
+    local nT, nQI = CountQuests()
+    local nG = CountEntries(QuestTraduttoreGossip)
     local nR, nD = 0, 0
     for id in pairs(DB.raccolta) do if not QuestData(id) then nR = nR + 1 end end
     for k in pairs(DB.dialoghi) do if not GossipText(k) then nD = nD + 1 end end
-    Print(nT .. " quest tradotte, " .. nR .. " raccolte in attesa di traduzione")
+    Print(nT .. " quest tradotte (" .. (nT - nQI) .. " nostre, " .. nQI .. " da QuestIT), "
+      .. nR .. " raccolte in attesa di traduzione")
     Print(nG .. " dialoghi tradotti, " .. nD .. " raccolti in attesa di traduzione")
     Print("ricorda: i testi raccolti vengono scritti su disco con /reload o all'uscita")
   elseif cmd == "diag" then

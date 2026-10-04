@@ -1,14 +1,15 @@
 ## Interface: 11507, 11508, 16000, 16001
 ## Title: Per Sempre in Italiano
 ## Notes: Traduce quest e dialoghi in italiano per WoW Forever, in un riquadro accanto alla finestra dell'NPC.
-## Author: Andrea
+## Author: NeRvOuX
 ## Category: Localization
 ## X-Curse-Project-ID: 1723113
 ## X-Website: https://github.com/andreae75/PerSempreInItaliano
-## Version: 0.6.1
+## Version: 0.7.0
 ## IconTexture: Interface\AddOns\PerSempreInItaliano\Media\Bandiera.tga
 ## SavedVariables: QuestTraduttoreDB
 
 Data_Esempi.lua
 Traduzioni.lua
+Traduzioni_QuestIT.lua
 Core.lua

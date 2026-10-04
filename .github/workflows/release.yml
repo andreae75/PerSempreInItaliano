@@ -27,7 +27,7 @@ jobs:
       - name: Crea lo zip
         run: |
           mkdir -p dist/PerSempreInItaliano
-          cp PerSempreInItaliano.toc Core.lua Traduzioni.lua Data_Esempi.lua README.md LICENSE LICENSE-QuestIT CREDITS.md dist/PerSempreInItaliano/
+          cp PerSempreInItaliano.toc Core.lua Traduzioni.lua Traduzioni_QuestIT.lua Data_Esempi.lua README.md LICENSE LICENSE-QuestIT LICENSE-QuestIT-traduzioni.txt CREDITS.md dist/PerSempreInItaliano/
           cp -r Media dist/PerSempreInItaliano/
           cd dist
           zip -r "PerSempreInItaliano-${GITHUB_REF_NAME#v}.zip" PerSempreInItaliano
@@ -37,12 +37,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          quest=$(grep -c '^T\[' Traduzioni.lua)
+          proprie=$(grep -c '^T\[' Traduzioni.lua)
+          questit=$(grep -c '^T\[' Traduzioni_QuestIT.lua || true)
+          quest=$((proprie + questit))
           dialoghi=$(grep -c '^G\[' Traduzioni.lua)
           {
             echo "## Traduzioni incluse"
             echo
-            echo "- **$quest quest** tradotte"
+            echo "- **$quest quest** tradotte ($proprie nostre, $questit importate da QuestIT)"
             echo "- **$dialoghi dialoghi** tradotti"
             echo
             echo "## Installazione"
