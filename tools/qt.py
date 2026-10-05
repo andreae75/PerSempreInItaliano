@@ -53,6 +53,8 @@ TODO = os.path.join(HERE, "da_tradurre.json")
 DONE = os.path.join(HERE, "traduzioni.json")
 # traduzioni importate da QuestIT: file separato, con le sue condizioni d'uso; le nostre vincono sempre
 DONE_Q = os.path.join(HERE, "traduzioni_questit.json")
+SALUTI_Q = os.path.join(HERE, "saluti_questit.json")     # saluti dei PNG di QuestIT: { impronta: testo }
+NOMI_Q = os.path.join(HERE, "nomi_questit.json")         # classi e razze inglesi usate per l'impronta
 OUT_Q = os.path.join(ADDON, "Traduzioni_QuestIT.lua")
 G_TODO = os.path.join(HERE, "dialoghi_da_tradurre.json")
 G_DONE = os.path.join(HERE, "dialoghi_tradotti.json")
@@ -206,7 +208,20 @@ def estrai():
 
     g_done = load_json(G_DONE, int_keys=False)
     g_todo = {k: v for k, v in dialoghi.items() if k not in g_done}
+    # i saluti che QuestIT ha gia' tradotto non si ritraducono (si riconoscono con la sua impronta)
+    coperti = 0
+    if os.path.isfile(SALUTI_Q) and os.path.isfile(NOMI_Q):
+        import impronta
+        saluti = load_json(SALUTI_Q, int_keys=False)
+        nomi = json.load(open(NOMI_Q, encoding="utf-8"))
+        for k in list(g_todo):
+            testo = g_todo[k].get("text") if isinstance(g_todo[k], dict) else g_todo[k]
+            if testo and impronta.impronta(testo, nomi["classi"], nomi["razze"]) in saluti:
+                del g_todo[k]
+                coperti += 1
     save_json(G_TODO, g_todo)
+    if coperti:
+        print(f"{coperti} frasi/saluti raccolti sono gia' tradotti da QuestIT: non servono")
     print(f"Dialoghi: {len(dialoghi)} raccolti, {len(g_todo)} da tradurre -> {G_TODO}")
 
 
@@ -492,8 +507,8 @@ def importa_questit():
     qi_file = os.path.join(WOW, "Interface", "AddOns", "QuestIT", "Data_it.lua")
     if not os.path.isfile(qi_file):
         sys.exit(f"QuestIT non trovato: {qi_file}")
-    raw = open(qi_file, encoding="utf-8").read()
-    raw = raw[:raw.index("QuestIT.GossipIT")]
+    tutto = open(qi_file, encoding="utf-8").read()
+    raw = tutto[:tutto.index("QuestIT.GossipIT")]
     mappa = {"title": "title", "text": "desc", "objectives": "obj", "progress": "progress", "reward": "reward"}
 
     def unesc(x):
@@ -538,6 +553,20 @@ def importa_questit():
           f"coperte dalle nostre e saltate {coperte} | sparite da QuestIT {len(sparite)}")
     print(f"Copia del file precedente: {DONE_Q}.prima")
 
+    # saluti dei PNG (QuestIT.GossipIT): chiave = impronta del testo inglese, calcolata dall'addon in gioco
+    blocco = tutto[tutto.index("QuestIT.GossipIT"):tutto.index("QuestIT.OptionsIT")]
+    saluti = {}
+    for k, t in re.findall(r'^    \["([0-9a-f]+)"\] = \{ it = "((?:[^"\\]|\\.)*)"', blocco, re.M):
+        testo = norm(unesc(t))
+        if testo:
+            saluti[k] = testo
+    save_json(SALUTI_Q, saluti)
+    import impronta
+    classi, razze = impronta.carica_nomi(os.path.join(os.path.dirname(qi_file), "Names_en.lua"))
+    with open(NOMI_Q, "w", encoding="utf-8", newline="\n") as f:
+        json.dump({"classi": classi, "razze": razze}, f, ensure_ascii=False, indent=1)
+    print(f"Saluti dei PNG: {len(saluti)} (classi {len(classi)}, razze {len(razze)})")
+
 
 def pulisci():
     """Toglie da traduzioni_questit.json le quest che le nostre traduzioni coprono gia' del tutto."""
@@ -577,9 +606,24 @@ def genera_questit():
             if e.get(k):
                 lines.append(f"  {k} = {lua_str(e[k])},")
         lines.append("}")
+
+    # saluti dei PNG: chiave = impronta del testo inglese (la calcola Core.lua, vedi QuestITGreeting)
+    saluti = load_json(SALUTI_Q, int_keys=False)
+    if saluti and os.path.isfile(NOMI_Q):
+        nomi = json.load(open(NOMI_Q, encoding="utf-8"))
+        lista = lambda xs: "{ " + ", ".join(lua_str(x) for x in xs) + " }"
+        lines += [
+            "",
+            "-- Saluti dei PNG di QuestIT. Le classi e le razze inglesi servono a calcolare l'impronta.",
+            f"QuestTraduttoreQuestITNames = {{ classes = {lista(nomi['classi'])}, races = {lista(nomi['razze'])} }}",
+            "QuestTraduttoreQuestITGossip = QuestTraduttoreQuestITGossip or {}",
+            "local S = QuestTraduttoreQuestITGossip",
+        ]
+        for k in sorted(saluti):
+            lines.append(f"S[{lua_str(k)}] = {lua_str(saluti[k])}")
     with open(OUT_Q, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"{len(qi)} quest di QuestIT scritte in {OUT_Q}.")
+    print(f"{len(qi)} quest e {len(saluti)} saluti di QuestIT scritti in {OUT_Q}.")
 
 
 def genera():

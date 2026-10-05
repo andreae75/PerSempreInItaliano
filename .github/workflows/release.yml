@@ -41,11 +41,12 @@ jobs:
           questit=$(grep -c '^T\[' Traduzioni_QuestIT.lua || true)
           quest=$((proprie + questit))
           dialoghi=$(grep -c '^G\[' Traduzioni.lua)
+          saluti=$(grep -c '^S\[' Traduzioni_QuestIT.lua || true)
           {
             echo "## Traduzioni incluse"
             echo
             echo "- **$quest quest** tradotte ($proprie nostre, $questit importate da QuestIT)"
-            echo "- **$dialoghi dialoghi** tradotti"
+            echo "- **$dialoghi dialoghi** nostri e **$saluti saluti dei PNG** da QuestIT"
             echo
             echo "## Installazione"
             echo

@@ -5,6 +5,9 @@ QuestTraduttoreData = QuestTraduttoreData or {}
 -- per le quest che non hanno una traduzione nostra
 QuestTraduttoreQuestIT = QuestTraduttoreQuestIT or {}
 QuestTraduttoreGossip = QuestTraduttoreGossip or {}
+-- Saluti dei PNG importati da QuestIT (file Traduzioni_QuestIT.lua): si usano solo se non ne abbiamo uno nostro
+QuestTraduttoreQuestITGossip = QuestTraduttoreQuestITGossip or {}
+QuestTraduttoreQuestITNames = QuestTraduttoreQuestITNames or { classes = {}, races = {} }
 local DB
 
 local DEFAULTS = {
@@ -424,6 +427,59 @@ local function NeedsCapture(id, keys)
   end
 end
 
+---------------------------------------------------------------------------
+-- Saluti di QuestIT: chiave = impronta del testo inglese
+---------------------------------------------------------------------------
+-- QuestIT riconosce un saluto da un codice calcolato sul testo inglese (nome del giocatore -> $N $L,
+-- classi -> $C, razze -> $R, a capo normalizzati, minuscole, h = h * 31 + byte). Qui lo stesso metodo,
+-- per ritrovare le sue traduzioni (vedi Text.lua di QuestIT, hashVersion 6).
+local function QIPattern(s)
+  local p = s:gsub("[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0")
+  p = p:gsub("%a", function(c) return "[" .. c:lower() .. c:upper() .. "]" end)
+  return "%f[%w]" .. p .. "%f[%W]"
+end
+
+local function QINamePlaceholders(text)
+  local a, b = UnitName("player")
+  local first, last
+  if type(a) == "string" and a ~= "" then
+    local space = a:find(" ", 1, true)
+    if space then
+      first, last = a:sub(1, space - 1), a:sub(space + 1)
+    else
+      first, last = a, (type(b) == "string" and b ~= "") and b or nil
+    end
+  end
+  if first and last then text = text:gsub(QIPattern(first .. " " .. last), "$N $L") end
+  if first then text = text:gsub(QIPattern(first), "$N") end
+  if last then text = text:gsub(QIPattern(last), "$L") end
+  return text
+end
+
+local function QIHash(text)
+  text = QINamePlaceholders(text)
+  local names = QuestTraduttoreQuestITNames
+  for _, name in ipairs(names.classes) do text = text:gsub(QIPattern(name), "$C") end
+  for _, name in ipairs(names.races) do text = text:gsub(QIPattern(name), "$R") end
+  text = text:gsub("\r\n", "\n")
+  text = text:gsub("[ \t\n\r\v\f]+$", "")
+  text = text:gsub("[A-Z]", function(c) return string.char(c:byte() + 32) end)
+  local h = 0
+  for i = 1, #text do
+    h = (h * 31 + text:byte(i)) % 4294967296
+  end
+  return string.format("%04x%04x", math.floor(h / 65536), h % 65536)
+end
+
+-- Traduzione di un saluto presa da QuestIT, o nil (non rompe mai l'addon: ogni errore dà nil)
+local function QuestITGreeting(text)
+  if next(QuestTraduttoreQuestITGossip) == nil then return end
+  if type(text) ~= "string" or text == "" or (issecretvalue and issecretvalue(text)) then return end
+  local ok, key = pcall(QIHash, text)
+  if not ok then return end
+  return QuestTraduttoreQuestITGossip[key]
+end
+
 local function CaptureGossip(text, npc)
   local anon = Anonymize(text)
   if not anon then return end
@@ -500,6 +556,11 @@ local function ShowDialogue(panel, host, text, quests)
   local npc = NpcName()
   local key = CaptureGossip(text, npc)
   local tr = key and GossipText(key)
+  local source
+  if not tr then
+    tr = QuestITGreeting(text)
+    if tr then source = "QuestIT" end
+  end
   -- i titoli delle quest in elenco si salvano anche senza aprirle, così sappiamo cosa manca
   for _, q in ipairs(quests) do
     if q.id and q.id ~= 0 and q.title and not QuestData(q.id) then
@@ -507,7 +568,7 @@ local function ShowDialogue(panel, host, text, quests)
     end
   end
   panel:Attach(host)
-  panel:SetHeader("Dialogo ID", key or "-", tr ~= nil)
+  panel:SetHeader("Dialogo ID", key or "-", tr ~= nil, source)
   local blocks = {
     { "title", npc },
     { "body", tr and Subst(tr) or NOT_YET:format(key or "-") },
@@ -860,8 +921,10 @@ local function CreateAboutPanel()
   Heading("Traduzioni disponibili")
   local function CountsText()
     local total, fromQI = CountQuests()
-    return total .. " quest (di cui " .. fromQI .. " da QuestIT) e " .. CountEntries(QuestTraduttoreGossip)
-      .. " dialoghi tradotti. Quando manca una traduzione il riquadro mostra \"non tradotta\" "
+    local greetQI = CountEntries(QuestTraduttoreQuestITGossip)
+    return total .. " quest (di cui " .. fromQI .. " da QuestIT) e "
+      .. (CountEntries(QuestTraduttoreGossip) + greetQI) .. " dialoghi (di cui " .. greetQI
+      .. " da QuestIT) tradotti. Quando manca una traduzione il riquadro mostra \"non tradotta\" "
       .. "e il testo inglese viene salvato per poterlo tradurre in seguito."
   end
   local counts = Body(CountsText())
@@ -869,7 +932,7 @@ local function CreateAboutPanel()
 
   Heading("Crediti")
   local _, fromQI = CountQuests()
-  Body("|cffffd100QuestIT.|r Gran parte delle traduzioni delle quest (" .. fromQI .. " in questa versione) proviene "
+  Body("|cffffd100QuestIT.|r Gran parte delle traduzioni delle quest (" .. fromQI .. " in questa versione) e dei saluti dei PNG proviene "
     .. "da |cffffd100QuestIT|r di Drakanast, mantenuto dalla |cffffd100comunit\195\160 Discord di QuestIT|r e da "
     .. "|cffffd100#italyforazeroth|r (https://italy-for-azeroth.vercel.app/), che ringraziamo. "
     .. "Quelle traduzioni non sono di questo progetto: restano sotto le "
@@ -1046,7 +1109,7 @@ local function OnNpcChat(text, sender)
   local who = (type(sender) == "string" and sender ~= "" and not IsSecret(sender)) and sender or "NPC"
   local ok, key = pcall(CaptureGossip, text, who)
   if not ok or not key then return end
-  local tr = GossipText(key)
+  local tr = GossipText(key) or QuestITGreeting(text)
   if not tr then return end
   local body = (Subst(tr):gsub("\n", " "))
   local line = "|cff7fbf7f[IT]|r |cffd8d8d8" .. who .. ": " .. body .. "|r"
@@ -1164,12 +1227,13 @@ SlashCmdList.QUESTTRADUTTORE = function(msg)
   elseif cmd == "stato" then
     local nT, nQI = CountQuests()
     local nG = CountEntries(QuestTraduttoreGossip)
+    local nGQI = CountEntries(QuestTraduttoreQuestITGossip)
     local nR, nD = 0, 0
     for id in pairs(DB.raccolta) do if not QuestData(id) then nR = nR + 1 end end
     for k in pairs(DB.dialoghi) do if not GossipText(k) then nD = nD + 1 end end
     Print(nT .. " quest tradotte (" .. (nT - nQI) .. " nostre, " .. nQI .. " da QuestIT), "
       .. nR .. " raccolte in attesa di traduzione")
-    Print(nG .. " dialoghi tradotti, " .. nD .. " raccolti in attesa di traduzione")
+    Print(nG .. " dialoghi nostri + " .. nGQI .. " da QuestIT tradotti, " .. nD .. " raccolti in attesa di traduzione")
     Print("ricorda: i testi raccolti vengono scritti su disco con /reload o all'uscita")
   elseif cmd == "diag" then
     Print("registro missioni: " .. (hooks.registro or "|cffff4040nessun aggancio trovato|r"))
