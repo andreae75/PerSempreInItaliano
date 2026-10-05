@@ -1,7 +1,7 @@
 # Per Sempre in Italiano
 
 > **Progetto artigianale.** Questo addon è un hobby fatto in casa da un appassionato, non un prodotto professionale.
-> Le traduzioni sono parziali e in gran parte prodotte con l'aiuto di un'intelligenza artificiale (Claude): possono contenere errori, imprecisioni o scelte discutibili.
+> **Gran parte delle traduzioni delle quest viene da [QuestIT](https://www.curseforge.com/wow/addons/questit-forever)** di Drakanast, con l'aiuto della comunità Discord di QuestIT. #italyforazeroth https://italy-for-azeroth.vercel.app/ (vedi [CREDITS.md](CREDITS.md)). Le altre (circa 600 quest e i dialoghi) sono nostre e prodotte con l'aiuto di un'intelligenza artificiale (Claude): possono contenere errori, imprecisioni o scelte discutibili.
 > Lo sviluppo procede quando c'è tempo, senza garanzie di aggiornamenti, tempi o supporto. Usalo a tuo rischio; segnalazioni e correzioni sono benvenute.
 
 Addon per **WoW Forever** (client Classic) che traduce in italiano quest e dialoghi degli NPC.
@@ -67,7 +67,7 @@ python tools/qt.py genera      # rigenera Traduzioni.lua
 
 Altri comandi di `qt.py`: `verifica` (controlla che le traduzioni corrispondano al testo di Forever), `pulisci` (toglie da QuestIT le quest già coperte dalle nostre), `importa "<zona>"` (aggiunge le quest di una zona del gioco originale da un database esterno), `zone`, `unisci`, `unisci-dialoghi`, `inglese`, `prepara`.
 
-`tools/aggiorna.ps1` esegue tutto in sequenza, comprese le traduzioni delle voci nuove tramite [Claude Code](https://claude.com/claude-code) da riga di comando: dopo `/reload` lanci lo script, poi fai di nuovo `/reload`. Traduce a blocchi e salva dopo ogni blocco, quindi se lo interrompi puoi rilanciarlo senza perdere nulla. Opzioni: `-Zona "Elwynn Forest"` per una sola zona, `-Blocco 15` per la dimensione dei blocchi, `-Max 50` per fermarsi dopo 50 quest (utile per tenere d'occhio il consumo).
+`tools/aggiorna.ps1` esegue tutto in sequenza, comprese le traduzioni nostre delle voci nuove tramite [Claude Code](https://claude.com/claude-code) da riga di comando (le traduzioni di QuestIT vengono dal suo addon, vedi [CREDITS.md](CREDITS.md)): dopo `/reload` lanci lo script, poi fai di nuovo `/reload`. Traduce a blocchi e salva dopo ogni blocco, quindi se lo interrompi puoi rilanciarlo senza perdere nulla. Opzioni: `-Zona "Elwynn Forest"` per una sola zona, `-Blocco 15` per la dimensione dei blocchi, `-Max 50` per fermarsi dopo 50 quest (utile per tenere d'occhio il consumo).
 
 Per segnalare traduzioni mancanti o sbagliate apri una issue. Se non vuoi usare gli strumenti, puoi mandare i file `*_da_tradurre.json`: contengono solo il testo inglese e l'ID, nessun dato personale.
 

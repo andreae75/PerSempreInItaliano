@@ -25,9 +25,15 @@ SOFTWARE.
 Quest texts are the property of Blizzard Entertainment. The addon code is
 released under the MIT license. The Italian translations (data/it/ and
 QuestIT/Data_it.lua) are not covered by the MIT license: see
-LICENSE-traduzioni.txt.
+LICENSE-traduzioni.txt. The QuestIT logo (QuestIT/logo.tga and the images in
+grafica/) belongs to the author named in the copyright line above: all rights
+reserved, not covered by the MIT license; it may not be used, copied or
+modified without the author's written permission.
 
 I testi delle quest sono di proprieta' di Blizzard Entertainment. Il codice
 dell'addon e' rilasciato con licenza MIT. Le traduzioni italiane (data/it/ e
 QuestIT/Data_it.lua) non sono coperte dalla licenza MIT: vedi
-LICENSE-traduzioni.txt.
+LICENSE-traduzioni.txt. Il logo di QuestIT (QuestIT/logo.tga e le immagini di
+grafica/) e' dell'autore indicato nella riga del copyright qui sopra: tutti i
+diritti riservati, non e' coperto dalla licenza MIT e non si puo' usare,
+copiare o modificare senza il suo permesso scritto.

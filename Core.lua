@@ -871,14 +871,16 @@ local function CreateAboutPanel()
   local _, fromQI = CountQuests()
   Body("|cffffd100QuestIT.|r Gran parte delle traduzioni delle quest (" .. fromQI .. " in questa versione) proviene "
     .. "da |cffffd100QuestIT|r di Drakanast, mantenuto dalla |cffffd100comunit\195\160 Discord di QuestIT|r e da "
-    .. "|cffffd100#italyforazeroth|r, che ringraziamo. Quelle traduzioni non sono di questo progetto: restano sotto le "
+    .. "|cffffd100#italyforazeroth|r (https://italy-for-azeroth.vercel.app/), che ringraziamo. "
+    .. "Quelle traduzioni non sono di questo progetto: restano sotto le "
     .. "condizioni dei loro autori (citare la fonte, nessuno scopo di lucro, niente voci clonate). "
     .. "In ogni riquadro la fonte \195\168 indicata accanto a \"tradotta\".", "GameFontHighlight")
 
   Heading("Avviso")
   Body("|cffffd100Progetto artigianale.|r Questo addon è un hobby fatto in casa da un appassionato, "
-    .. "non un prodotto professionale. Le traduzioni sono parziali e in gran parte prodotte con l'aiuto "
-    .. "di un'intelligenza artificiale (Claude): possono contenere errori, imprecisioni o scelte discutibili. "
+    .. "non un prodotto professionale. Gran parte delle traduzioni delle quest viene da |cffffd100QuestIT|r "
+    .. "(vedi Crediti); le nostre (circa 600 quest e i dialoghi) sono prodotte con l'aiuto di un'intelligenza "
+    .. "artificiale (Claude). Possono contenere errori, imprecisioni o scelte discutibili. "
     .. "Lo sviluppo procede quando c'è tempo, senza garanzie di aggiornamenti, tempi o supporto. "
     .. "Usalo a tuo rischio; segnalazioni e correzioni sono benvenute.", "GameFontHighlight")
 

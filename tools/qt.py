@@ -12,6 +12,7 @@
                                  -> scrive lavoro_quest.json e lavoro_dialoghi.json con il prossimo
                                     blocco di campi ancora da tradurre (usato da aggiorna.ps1)
   python qt.py unisci-dialoghi file.json -> aggiunge nuovi dialoghi a dialoghi_tradotti.json
+  python qt.py importa-questit   -> riversa le quest di QuestIT (cartella AddOns/QuestIT) in traduzioni_questit.json
   python qt.py verifica          -> controlla che le nostre traduzioni corrispondano al testo inglese di Forever
                                     (usa le impronte di QuestIT, se installato) e scrive da_rivedere.json
   python qt.py pulisci           -> toglie da traduzioni_questit.json le quest gia' coperte dalle nostre
@@ -482,6 +483,62 @@ def verifica():
           f"{senza} quest nostre non sono in QuestIT. Elenco: tools/da_rivedere.json")
 
 
+def importa_questit():
+    """Riversa le quest di QuestIT (cartella AddOns\\QuestIT, Data_it.lua) in traduzioni_questit.json.
+
+    Il file si RIGENERA da quello di QuestIT, quindi segue le sue correzioni. Le nostre traduzioni non si
+    toccano mai: le quest che le nostre coprono gia' del tutto non vengono importate. L'inglese di
+    riferimento (en_title, en_obj) gia' presente nel nostro file si conserva."""
+    qi_file = os.path.join(WOW, "Interface", "AddOns", "QuestIT", "Data_it.lua")
+    if not os.path.isfile(qi_file):
+        sys.exit(f"QuestIT non trovato: {qi_file}")
+    raw = open(qi_file, encoding="utf-8").read()
+    raw = raw[:raw.index("QuestIT.GossipIT")]
+    mappa = {"title": "title", "text": "desc", "objectives": "obj", "progress": "progress", "reward": "reward"}
+
+    def unesc(x):
+        return re.sub(r"\\(.)", lambda m: {"n": "\n", "r": "", "t": "\t"}.get(m.group(1), m.group(1)), x)
+
+    def norm(t):
+        t = t.replace("\r", "")
+        t = re.sub(r"[ \t\n]+$", "", t)
+        t = t.replace("\n", "$B")
+        return re.sub(r"\$P(?=[^:;$]*:[^;]*;)", "$G", t)   # refuso di QuestIT: $Psicuro:sicura;
+
+    campo = re.compile(r'^        (\w+) = \{ it = "((?:[^"\\]|\\.)*)"', re.M)
+    qi = {}
+    for m in re.finditer(r"^    \[(\d+)\] = \{\n(.*?)^    \},", raw, re.M | re.S):
+        e = {}
+        for f in campo.finditer(m.group(2)):
+            if f.group(1) in mappa:
+                testo = norm(unesc(f.group(2)))
+                if testo:
+                    e[mappa[f.group(1)]] = testo
+        qi[int(m.group(1))] = e
+
+    ours, old = load_json(DONE), load_json(DONE_Q)
+    new, coperte = {}, 0
+    for qid, e in qi.items():
+        if not e:
+            continue
+        if qid in ours and all(ours[qid].get(k) for k in e):
+            coperte += 1
+            continue
+        d = dict(e)
+        for k in EN_FIELDS:
+            if old.get(qid, {}).get(k):
+                d[k] = old[qid][k]
+        new[qid] = d
+    nuove = [q for q in new if q not in old]
+    sparite = [q for q in old if q not in new and q not in qi]
+    cambiate = sum(1 for q in new if q in old and any(new[q].get(k) != old[q].get(k) for k in FIELDS))
+    shutil.copyfile(DONE_Q, DONE_Q + ".prima")
+    save_json(DONE_Q, new)
+    print(f"QuestIT: {len(qi)} quest | importate {len(new)} (nuove {len(nuove)}, con testi cambiati {cambiate}) | "
+          f"coperte dalle nostre e saltate {coperte} | sparite da QuestIT {len(sparite)}")
+    print(f"Copia del file precedente: {DONE_Q}.prima")
+
+
 def pulisci():
     """Toglie da traduzioni_questit.json le quest che le nostre traduzioni coprono gia' del tutto."""
     ours, qi = load_json(DONE), load_json(DONE_Q)
@@ -583,6 +640,8 @@ if __name__ == "__main__":
         riempi_inglese()
     elif cmd == "pulisci":
         pulisci()
+    elif cmd == "importa-questit":
+        importa_questit()
     elif cmd == "verifica":
         verifica()
     else:
