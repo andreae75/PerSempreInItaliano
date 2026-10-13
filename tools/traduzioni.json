@@ -5168,6 +5168,15 @@
     "progress": "Sei qui per imparare ad accamparti nelle terre selvagge?",
     "reward": "Dici che arrivano dai montanari? Eh, mi torneranno utili. Grazie, cacciatore.$B$BEhi, anche tu hai l'aspetto di un avventuriero. Ti andrebbe di imparare come si accampa?"
   },
+  "97263": {
+    "en_title": "Your Package Has Arrived",
+    "en_obj": "Deliver Eldrun's misplaced package.",
+    "title": "Il tuo pacco è arrivato",
+    "desc": "<Accanto alla cassetta delle lettere sono stati lasciati diversi pacchi fuori posto. Noti che uno di essi è destinato a Eldrun Stormbreaker, a Ironforge, e proviene da Aerie Peak. Porta la dicitura \"urgente\".>",
+    "obj": "Consegna il pacco smarrito di Eldrun.",
+    "progress": "Cos'è quello che hai lì?",
+    "reward": "Cosa! Ogni giorno vado alla cassetta delle lettere vicino alla banca a cercare questo pacco! Questa città dovrebbe darsi una sistemata. Non è facile orientarsi come ad Aerie Peak!$B$BVediamo cosa c'è qui... attrezzi per intagliare totem... un'ascia di scorta... una specie di congegno goblin? Io non l'ho ordinato! Ah, lo rimanderò indietro.$B$BEhm, cioè... volevo dire... grazie per avermi portato tutto questo. Ecco un piccolo compenso per il disturbo."
+  },
   "97277": {
     "en_title": "Grund and Gozwin",
     "en_obj": "Find Grund and Gozwin's camp in the hills to the northwest. Recover Gozwin's Mechanic's Log and kill the Snow Leopard Prowler.",

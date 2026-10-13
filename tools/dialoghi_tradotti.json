@@ -7,9 +7,17 @@
     "npc": "Ironforge Guard",
     "text": "Per dove vi servono indicazioni?"
   },
+  "08c62b7b": {
+    "npc": "Suzanne",
+    "text": "Se usiamo la teoria di Suria, sì, ma non se seguiamo l'approccio di Y'seria."
+  },
   "0b3a27f7": {
     "npc": "Alamar Grimm",
     "text": "L'arcano corrompe solo i deboli. Continua il tuo addestramento, o potresti fare la stessa fine."
+  },
+  "0c02d45e": {
+    "npc": "Rema Schneider",
+    "text": "Corbett, caro. Harlan ha bisogno di un carico di camicie e pantaloni di maglia il prima possibile."
   },
   "2230ed30": {
     "npc": "Cadoc Winterheart",
@@ -31,9 +39,17 @@
     "npc": "Maxan Anvol",
     "text": "Servi bene la Luce, cacciatore."
   },
+  "2ffe8758": {
+    "npc": "Quznar",
+    "text": "Daz maz A maev ze shi melar rikk veni zilthuras, thorje azgala maz a toralar?"
+  },
   "338a6eb7": {
     "npc": "Cadoc Winterheart",
     "text": "Certamente! Quale professione vuoi che ti indichi?$B$BSegnerò sulla tua mappa la posizione di un istruttore locale a tua scelta. Ricorda che puoi far visita agli istruttori nelle città capitali per un addestramento più completo."
+  },
+  "3f5ca164": {
+    "npc": "Lisan Pierce",
+    "text": "Ma se lo spostamento di frequenza risultante mandasse un riflusso magico lungo i flussi?"
   },
   "3fff2bae": {
     "npc": "Grelin Whitebeard",
@@ -54,6 +70,10 @@
   "533746ac": {
     "npc": "Frostmane Troll Whelp",
     "text": "Io fare di te un mojo!"
+  },
+  "53775a4f": {
+    "npc": "Grund Drokda",
+    "text": "Quando ti avremo rimesso in piedi, cominceremo a lavorare a quel fucile da tasca! Gliela faremo vedere noi!"
   },
   "546e34b1": {
     "npc": "Swift Yellow Mechanostrider",
@@ -82,6 +102,10 @@
   "81398f94": {
     "npc": "Mountaineer Gretchen",
     "text": "Cerchi il corriere? È volato via come un uccellino.$B$BNon posso biasimare il poveretto. Questi wendigo sono una brutta faccenda."
+  },
+  "95704911": {
+    "npc": "Pilot Bellowfiz",
+    "text": "Ah! Io temo piuttosto che quei vecchi buchi e squarci la facciano scoppiare, e che mi piova addosso una pioggia di schegge!"
   },
   "9d8be0c9": {
     "npc": "Ailee Farheart",
@@ -123,6 +147,10 @@
     "npc": "Tognus Flintfire",
     "text": "Buon giorno a te, ragazzo. Posso esserti utile?"
   },
+  "cb4f51c2": {
+    "npc": "Quznar",
+    "text": "Questo è meglio che sia l'ultimo!"
+  },
   "cd3555d3": {
     "npc": "Talin Keeneye",
     "text": "Salve, stregone! Bella giornata per la caccia, non trovi? Anch'io ho avuto la mia bella fortuna con i cinghiali. Ti andrebbe di provarci?"
@@ -142,5 +170,9 @@
   "e995d6f2": {
     "npc": "Rejold Barleybrew",
     "text": "Maledetta Brewers' League! Hanno accesso a tutti gli ingredienti migliori, mentre noi qui ci ammazziamo per grano e luppolo!$B$BMi piacerebbe proprio servir loro una giustizia dal sapore amaro..."
+  },
+  "fed4a200": {
+    "npc": "Pilot Stonegear",
+    "text": "Haha! Il robusto vecchio Trollplow ha solo qualche misera cicatrice di battaglia!"
   }
 }
