@@ -473,9 +473,9 @@
     "reward": "Un lavoro ben fatto, $N! So bene quali strade hai dovuto percorrere per procurare questa splendida scorta di liquori. Ma i miei clienti saranno di nuovo felici! $B$BMia moglie è una brava sarta. Ti prego di accettare questo mantello che ha cucito, in cambio dei tuoi servigi."
   },
   "117": {
-    "en_title": "Thunderbrew Lager",
+    "en_title": "Thunderbrew",
     "en_obj": "Bring Grimbooze Thunderbrew 5 hops to complete his special brew.",
-    "title": "Thunderbrew Lager",
+    "title": "Thunderbrew",
     "desc": "Presto, amico mio, muoviti in fretta $BPerché la nostra ricca birra abbia il gusto $BPiù di birra e meno di stufato, $BServe il luppolo per prepararla.",
     "obj": "Porta 5 luppoli a Grimbooze Thunderbrew per completare la sua birra speciale.",
     "progress": "Presto, amico mio, muoviti in fretta $BPerché la nostra ricca birra abbia il gusto $BPiù di birra e meno di stufato, $BServe il luppolo per prepararla.",
@@ -528,7 +528,7 @@
   },
   "123": {
     "en_title": "The Collector",
-    "en_obj": "Go to Marshal Dughan in Goldshire and give him The Collector's Schedule.",
+    "en_obj": "Go to Marshal Dughan in Goldshire and give him The Collector's Schedule",
     "title": "Il Collettore",
     "desc": "Questa nota è un calendario con un elenco di giorni e orari in cui una persona, descritta soltanto come \"il Collettore\", riceverà una spedizione d'oro dalle miniere di Elwynn Forest.$B$BDal calendario sembra che il Collettore risieda vicino al Brackwell Pumpkin Patch, nell'Elwynn orientale.$B$BSembra importante. Dovresti riferirlo a Marshal Dughan a Goldshire.",
     "obj": "Vai da Marshal Dughan a Goldshire e consegnagli The Collector's Schedule.",
@@ -764,7 +764,7 @@
     "en_obj": "Balir Frosthammer wants you to kill 6 Rockjaw Troggs and 6 Burly Rockjaw Troggs."
   },
   "176": {
-    "en_title": "Wanted:  \"Hogger\"",
+    "en_title": "Wanted: \"Hogger\"",
     "en_obj": "Slay the gnoll Hogger and bring his Huge Gnoll Claw to Marshal Dughan.",
     "title": "Ricercato: \"Hogger\"",
     "desc": "Ricercato: Hogger$B$BUn enorme gnoll, Hogger, si aggira per i boschi del sudovest di Elwynn. Ha sopraffatto ogni tentativo di cattura.$B$BLo Stormwind Army ha posto una generosa taglia sullo Gnoll. Per ottenere la ricompensa, i cacciatori di taglie devono portare la prova della morte di Hogger a Marshal Dughan a Goldshire.",
@@ -1739,10 +1739,10 @@
   },
   "429": {
     "en_title": "Wild Hearts",
-    "en_obj": "Gather 6 discolored worg hearts and bring them to Apothecary Renferrel at the Sepulcher.",
+    "en_obj": "Gather 3 discolored worg hearts and bring them to Apothecary Renferrel at the Sepulcher.",
     "title": "Cuori selvaggi",
     "desc": "Mio fratello Quinn è stato ferito gravemente dal ghoul Ivar the Foul, e non so se guarirà a dovere senza aiuto magico. Anche se non sono un apothecary, so che i nostri apothecary possono preparare pozioni curative con i cuori scoloriti dei worg.$B$BRaccogli quei cuori e portali ad Apothecary Renferrel al Sepulcher, a sud. Poi torna qui con la pozione.$B$BTroverai molti worg tra qui e il Malden's Orchard, a est.",
-    "obj": "Raccogli 6 discolored worg hearts e portali ad Apothecary Renferrel al Sepulcher.",
+    "obj": "Raccogli 3 discolored worg hearts e portali ad Apothecary Renferrel al Sepulcher.",
     "progress": "Il mio tempo è poco, $c, perché la Dama Oscura mi ha affidato un compito grave.",
     "reward": "<Renferrel prende i cuori>$B$BÈ preoccupante sapere che i nostri Deathstalker hanno fallito la missione.$B$BSperiamo che simili fallimenti siano rari.$B$BTra un momento ti darò la pozione, ma ecco la sua ricetta: se quei Deathstalker dovessero avere bisogno di altro aiuto, forse potrai prepararla tu stess$Go:a;."
   },
@@ -3426,10 +3426,10 @@
   },
   "940": {
     "en_title": "Teldrassil",
-    "en_obj": "Deliver the Oracle Tree's report to Arch Druid Fandral Staghelm in Darnassus.",
+    "en_obj": "Deliver the Inscribed Bark to Arch Druid Fandral Staghelm in Darnassus.",
     "title": "Teldrassil",
     "desc": "La foresta mormora delle tue gesta valorose, $N. Mentre sentivo le arpie cacciate dai loro nidi, una calma più profonda si è diffusa nel bosco, e le sue creature si sentono di nuovo al sicuro. Ho temuto di mandare un altro messaggero all'Arcidruido, ma so che tu porterai il mio messaggio da lui sano e salvo.$B$BConsegnaglielo e sappi che la foresta ti guiderà al sicuro lungo i suoi sentieri fino alla foresta di pietra.",
-    "obj": "Consegna il rapporto dell'Oracle Tree all'Arch Druid Fandral Staghelm a Darnassus.",
+    "obj": "Consegna l'Inscribed Bark all'Arch Druid Fandral Staghelm a Darnassus.",
     "progress": "Hmm... Porti con te il forte spirito della foresta, $C. Che affari hai con l'Arcidruido dei Kaldorei?",
     "reward": "Mi chiedevo perché l'Oracle Tree non comunicasse con me da così tanto tempo... Pare che alcuni problemi si attenuino mentre altri diventino più gravi.$B$BTemo che il mio lavoro su Teldrassil non sarà mai completato e che la nostra immortalità non sarà mai restituita.$B$BCiononostante, hai svolto bene il compito dell'Oracle Tree e meriti di essere ricompensat$Go:a; per la tua diligenza."
   },
@@ -3629,7 +3629,7 @@
   },
   "982": {
     "en_title": "Deep Ocean, Vast Sea",
-    "en_obj": "Recover the Silver Dawning's Lockbox and the Mist Veil's Lockbox for Gorbold Steelhand in Auberdine.  Both items should be found aboard the wreckage of the ships to the north of the village.",
+    "en_obj": "Recover the Silver Dawning's Lockbox and the Mist Veil's Lockbox for Gorbold Steelhand in Auberdine. Both items should be found aboard the wreckage of the ships to the north of the village.",
     "title": "Oceano profondo, mare sconfinato",
     "desc": "Al largo della costa di Darkshore, a nord, giacciono due navi naufragate: la Silver Dawning e la Mist Veil. Tempo fa entrambe incapparono nei maledetti murloc mentre solcavano il vasto mare verso Auberdine. Ora riposano in fondo all'oceano come trofei per quei miscredenti.$B$BEntrambi i capitani non sono sopravvissuti quella notte, e i loro diari e i loro effetti personali sono ancora laggiù, in forzieri sigillati. Vorrei che tu li recuperassi per noi: significherebbe molto per i membri dell'equipaggio che si trovano ancora da queste parti.",
     "obj": "Recupera il Silver Dawning's Lockbox e il Mist Veil's Lockbox per Gorbold Steelhand ad Auberdine. Entrambi gli oggetti dovrebbero trovarsi a bordo dei relitti delle navi, a nord del villaggio.",
@@ -3855,10 +3855,10 @@
   },
   "1132": {
     "en_title": "Fiora Longears",
-    "en_obj": "Speak with Fiora Longears on the docks at Theramore in Dustwallow Marsh.",
+    "en_obj": "Speak with Fiora Longears in Theramore.",
     "title": "Fiora Longears",
     "desc": "Oh, tornare ancora una volta per mare! Sentire il bacio del vento e farmi cullare dalle onde come da mia madre, tanto tempo fa!$B$BOh, vorrei avere la tua fortuna, $Gbravo:brava; $c, perché vedo il mare nel tuo futuro!$B$BIl mio compito è parlare alle anime desiderose della terra di Kalimdor, la terra delle opportunità! Se sei $Gdisposto:disposta; a tentare la sorte oltre il mare, prendi una nave da qui fino all'incantevole porto di Theramore. Là parla con la mia socia, l'elfa Fiora Longears.$B$BLei ti farà iniziare la tua avventura a Kalimdor!",
-    "obj": "Parla con Fiora Longears sui moli di Theramore, a Dustwallow Marsh.",
+    "obj": "Parla con Fiora Longears a Theramore.",
     "reward": "Buongiorno! Ti ha mandato Mr. Flint di Menethil Harbor? Beh, Mr. Flint ha un ottimo intuito per le persone. Se ha mandato te, non c'è dubbio che il tuo posto sia qui a Kalimdor!"
   },
   "1133": {
@@ -4945,9 +4945,9 @@
     "reward": "Devi portare questa ai Crossroads, nei Barrens? Sì, posso farti arrivare là..."
   },
   "6386": {
-    "en_title": "Return to the Crossroads.",
+    "en_title": "Return to the Crossroads",
     "en_obj": "Buy a wind rider to the Crossroads from the wind rider master Doras, then bring Gryshka's Letter to Zargh at the Crossroads.",
-    "title": "Ritorno ai Crossroads.",
+    "title": "Ritorno ai Crossroads",
     "desc": "I miei cavalcavento sono addestrati a volare in molti luoghi diversi, purché tu ci sia già stato$Go:a; e abbia parlato con il maestro dei cavalcavento del posto.$B$BSei stato$Go:a; ai Crossroads e hai parlato con il loro maestro dei cavalcavento, Devrak, quindi ora puoi volare direttamente da lui. Una volta ai Crossroads, potrai consegnare la lettera di Gryshka a Zargh.$B$BParla con me quando sarai pront$Go:a; a partire.",
     "obj": "Compra un volo in cavalcavento per i Crossroads dal maestro dei cavalcavento Doras, poi porta la Gryshka's Letter a Zargh ai Crossroads.",
     "progress": "Sei tornat$Go:a; da Orgrimmar? A Gryshka è piaciuta la carne che le ho mandato?",

@@ -480,12 +480,12 @@ T[116] = {
   en_obj = "Barkeep Daniels of Lakeshire needs a keg of Thunderbrew Lager, a cask of Merlot, a bottle of Moonshine and a skin of Sweet Rum.",
 }
 T[117] = {
-  title = "Thunderbrew Lager",
+  title = "Thunderbrew",
   desc = "Presto, amico mio, muoviti in fretta $BPerché la nostra ricca birra abbia il gusto $BPiù di birra e meno di stufato, $BServe il luppolo per prepararla.",
   obj = "Porta 5 luppoli a Grimbooze Thunderbrew per completare la sua birra speciale.",
   progress = "Presto, amico mio, muoviti in fretta $BPerché la nostra ricca birra abbia il gusto $BPiù di birra e meno di stufato, $BServe il luppolo per prepararla.",
   reward = "Luppolo e orzo, lievito e malto $BLe papille assaporano un vero assalto, $BNon serve implorare, non serve pregare $BLa Thunderbrew Lager arriva in barile!",
-  en_title = "Thunderbrew Lager",
+  en_title = "Thunderbrew",
   en_obj = "Bring Grimbooze Thunderbrew 5 hops to complete his special brew.",
 }
 T[118] = {
@@ -540,7 +540,7 @@ T[123] = {
   progress = "Cosa?!? Non abbiamo gente che lavora nelle miniere di Elwynn da mesi!$B$BFammi vedere quella nota che hai...",
   reward = "Hm... ho sentito parlare di questo \"Collettore\", ma non so per chi lavori. Grazie per il calendario. Ci aiuterà a risolvere questo mistero.",
   en_title = "The Collector",
-  en_obj = "Go to Marshal Dughan in Goldshire and give him The Collector's Schedule.",
+  en_obj = "Go to Marshal Dughan in Goldshire and give him The Collector's Schedule",
 }
 T[124] = {
   title = "Un ululato di Gnoll",
@@ -776,7 +776,7 @@ T[176] = {
   obj = "Uccidi lo gnoll Hogger e porta il suo Huge Gnoll Claw a Marshal Dughan.",
   progress = "Sì, Hogger è stato un vero tormento per me e i miei uomini. Hai qualcosa da riferire sulla bestia?",
   reward = "Ah! Ben fatto! Cominciavo a pensare che nessuno avrebbe abbattuto quel mostro!$B$BEcco a te, $N. E grazie: quello Gnoll mi dava un mal di testa grande quanto Blackrock Spire!",
-  en_title = "Wanted:  \"Hogger\"",
+  en_title = "Wanted: \"Hogger\"",
   en_obj = "Slay the gnoll Hogger and bring his Huge Gnoll Claw to Marshal Dughan.",
 }
 T[179] = {
@@ -1747,11 +1747,11 @@ T[428] = {
 T[429] = {
   title = "Cuori selvaggi",
   desc = "Mio fratello Quinn è stato ferito gravemente dal ghoul Ivar the Foul, e non so se guarirà a dovere senza aiuto magico. Anche se non sono un apothecary, so che i nostri apothecary possono preparare pozioni curative con i cuori scoloriti dei worg.$B$BRaccogli quei cuori e portali ad Apothecary Renferrel al Sepulcher, a sud. Poi torna qui con la pozione.$B$BTroverai molti worg tra qui e il Malden's Orchard, a est.",
-  obj = "Raccogli 6 discolored worg hearts e portali ad Apothecary Renferrel al Sepulcher.",
+  obj = "Raccogli 3 discolored worg hearts e portali ad Apothecary Renferrel al Sepulcher.",
   progress = "Il mio tempo è poco, $c, perché la Dama Oscura mi ha affidato un compito grave.",
   reward = "<Renferrel prende i cuori>$B$BÈ preoccupante sapere che i nostri Deathstalker hanno fallito la missione.$B$BSperiamo che simili fallimenti siano rari.$B$BTra un momento ti darò la pozione, ma ecco la sua ricetta: se quei Deathstalker dovessero avere bisogno di altro aiuto, forse potrai prepararla tu stess$Go:a;.",
   en_title = "Wild Hearts",
-  en_obj = "Gather 6 discolored worg hearts and bring them to Apothecary Renferrel at the Sepulcher.",
+  en_obj = "Gather 3 discolored worg hearts and bring them to Apothecary Renferrel at the Sepulcher.",
 }
 T[430] = {
   title = "Ritorno da Quinn",
@@ -3434,11 +3434,11 @@ T[938] = {
 T[940] = {
   title = "Teldrassil",
   desc = "La foresta mormora delle tue gesta valorose, $N. Mentre sentivo le arpie cacciate dai loro nidi, una calma più profonda si è diffusa nel bosco, e le sue creature si sentono di nuovo al sicuro. Ho temuto di mandare un altro messaggero all'Arcidruido, ma so che tu porterai il mio messaggio da lui sano e salvo.$B$BConsegnaglielo e sappi che la foresta ti guiderà al sicuro lungo i suoi sentieri fino alla foresta di pietra.",
-  obj = "Consegna il rapporto dell'Oracle Tree all'Arch Druid Fandral Staghelm a Darnassus.",
+  obj = "Consegna l'Inscribed Bark all'Arch Druid Fandral Staghelm a Darnassus.",
   progress = "Hmm... Porti con te il forte spirito della foresta, $C. Che affari hai con l'Arcidruido dei Kaldorei?",
   reward = "Mi chiedevo perché l'Oracle Tree non comunicasse con me da così tanto tempo... Pare che alcuni problemi si attenuino mentre altri diventino più gravi.$B$BTemo che il mio lavoro su Teldrassil non sarà mai completato e che la nostra immortalità non sarà mai restituita.$B$BCiononostante, hai svolto bene il compito dell'Oracle Tree e meriti di essere ricompensat$Go:a; per la tua diligenza.",
   en_title = "Teldrassil",
-  en_obj = "Deliver the Oracle Tree's report to Arch Druid Fandral Staghelm in Darnassus.",
+  en_obj = "Deliver the Inscribed Bark to Arch Druid Fandral Staghelm in Darnassus.",
 }
 T[941] = {
   title = "Piantare il Cuore",
@@ -3641,7 +3641,7 @@ T[982] = {
   progress = "I capitani di quelle navi erano bravi elfi della notte, e meritano un destino migliore di quello che è toccato loro. Forse prendersi cura dei loro effetti personali è il modo migliore per dare pace ai loro spiriti.",
   reward = "Hai reso un grande servigio a noi di Auberdine, ragazzo. Ci assicureremo che i loro effetti siano trattati come si deve.$B$BQuanto a te, prendi questo. È il minimo che io possa fare per chi ha il coraggio di rimettere le cose a posto.",
   en_title = "Deep Ocean, Vast Sea",
-  en_obj = "Recover the Silver Dawning's Lockbox and the Mist Veil's Lockbox for Gorbold Steelhand in Auberdine.  Both items should be found aboard the wreckage of the ships to the north of the village.",
+  en_obj = "Recover the Silver Dawning's Lockbox and the Mist Veil's Lockbox for Gorbold Steelhand in Auberdine. Both items should be found aboard the wreckage of the ships to the north of the village.",
 }
 T[983] = {
   title = "Buzzbox 827",
@@ -3863,10 +3863,10 @@ T[1097] = {
 T[1132] = {
   title = "Fiora Longears",
   desc = "Oh, tornare ancora una volta per mare! Sentire il bacio del vento e farmi cullare dalle onde come da mia madre, tanto tempo fa!$B$BOh, vorrei avere la tua fortuna, $Gbravo:brava; $c, perché vedo il mare nel tuo futuro!$B$BIl mio compito è parlare alle anime desiderose della terra di Kalimdor, la terra delle opportunità! Se sei $Gdisposto:disposta; a tentare la sorte oltre il mare, prendi una nave da qui fino all'incantevole porto di Theramore. Là parla con la mia socia, l'elfa Fiora Longears.$B$BLei ti farà iniziare la tua avventura a Kalimdor!",
-  obj = "Parla con Fiora Longears sui moli di Theramore, a Dustwallow Marsh.",
+  obj = "Parla con Fiora Longears a Theramore.",
   reward = "Buongiorno! Ti ha mandato Mr. Flint di Menethil Harbor? Beh, Mr. Flint ha un ottimo intuito per le persone. Se ha mandato te, non c'è dubbio che il tuo posto sia qui a Kalimdor!",
   en_title = "Fiora Longears",
-  en_obj = "Speak with Fiora Longears on the docks at Theramore in Dustwallow Marsh.",
+  en_obj = "Speak with Fiora Longears in Theramore.",
 }
 T[1133] = {
   title = "Viaggio ad Astranaar",
@@ -4952,12 +4952,12 @@ T[6385] = {
   en_obj = "Bring Gryshka's Letter to Doras in Orgrimmar.",
 }
 T[6386] = {
-  title = "Ritorno ai Crossroads.",
+  title = "Ritorno ai Crossroads",
   desc = "I miei cavalcavento sono addestrati a volare in molti luoghi diversi, purché tu ci sia già stato$Go:a; e abbia parlato con il maestro dei cavalcavento del posto.$B$BSei stato$Go:a; ai Crossroads e hai parlato con il loro maestro dei cavalcavento, Devrak, quindi ora puoi volare direttamente da lui. Una volta ai Crossroads, potrai consegnare la lettera di Gryshka a Zargh.$B$BParla con me quando sarai pront$Go:a; a partire.",
   obj = "Compra un volo in cavalcavento per i Crossroads dal maestro dei cavalcavento Doras, poi porta la Gryshka's Letter a Zargh ai Crossroads.",
   progress = "Sei tornat$Go:a; da Orgrimmar? A Gryshka è piaciuta la carne che le ho mandato?",
   reward = "Ah! A quanto pare le è piaciuta! Niente fa arrossire una signora come una bella bistecca succosa!$B$BGrazie, $N. Mi hai reso un grande servigio. Ecco un po' di denaro per il disturbo, e non stupirti se ti inviterò al mio matrimonio!",
-  en_title = "Return to the Crossroads.",
+  en_title = "Return to the Crossroads",
   en_obj = "Buy a wind rider to the Crossroads from the wind rider master Doras, then bring Gryshka's Letter to Zargh at the Crossroads.",
 }
 T[6387] = {
