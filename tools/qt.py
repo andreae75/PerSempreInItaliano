@@ -554,12 +554,16 @@ def importa_questit():
     print(f"Copia del file precedente: {DONE_Q}.prima")
 
     # saluti dei PNG (QuestIT.GossipIT): chiave = impronta del testo inglese, calcolata dall'addon in gioco
-    blocco = tutto[tutto.index("QuestIT.GossipIT"):tutto.index("QuestIT.OptionsIT")]
+    blocchi = [tutto[tutto.index("QuestIT.GossipIT"):tutto.index("QuestIT.OptionsIT")]]
+    if "QuestIT.ChatIT" in tutto:     # frasi dei PNG in chat (da Rev3): stessa impronta dei saluti
+        fine = tutto.index("QuestIT.FemaleEN") if "QuestIT.FemaleEN" in tutto else len(tutto)
+        blocchi.append(tutto[tutto.index("QuestIT.ChatIT"):fine])
     saluti = {}
-    for k, t in re.findall(r'^    \["([0-9a-f]+)"\] = \{ it = "((?:[^"\\]|\\.)*)"', blocco, re.M):
-        testo = norm(unesc(t))
-        if testo:
-            saluti[k] = testo
+    for blocco in blocchi:
+        for k, t in re.findall(r'^    \["([0-9a-f]+)"\] = \{ it = "((?:[^"\\]|\\.)*)"', blocco, re.M):
+            testo = norm(unesc(t))
+            if testo:
+                saluti[k] = testo
     save_json(SALUTI_Q, saluti)
     import impronta
     classi, razze = impronta.carica_nomi(os.path.join(os.path.dirname(qi_file), "Names_en.lua"))

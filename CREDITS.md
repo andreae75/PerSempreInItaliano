@@ -6,8 +6,8 @@
 
 ## QuestIT, la sua comunità e #italyforazeroth
 
-Gran parte delle traduzioni delle quest di questo addon (oltre 3.500 quest, dal livello 1 al 60 e molte quest
-nuove di WoW Forever) e **i saluti dei PNG** (oltre 3.300) **non sono di questo progetto**: provengono da **QuestIT** di **Drakanast**
+Gran parte delle traduzioni delle quest di questo addon (oltre 3.800 quest, dal livello 1 al 60 e molte quest
+nuove di WoW Forever) e **i saluti e le frasi dei PNG** (oltre 3.600) **non sono di questo progetto**: provengono da **QuestIT** di **Drakanast**
 (https://www.curseforge.com/wow/addons/questit-forever).
 
 Quelle traduzioni sono il lavoro della **comunità Discord di QuestIT**, che raccoglie i testi, li traduce con
