@@ -432,35 +432,111 @@ end
 ---------------------------------------------------------------------------
 -- QuestIT riconosce un saluto da un codice calcolato sul testo inglese (nome del giocatore -> $N $L,
 -- classi -> $C, razze -> $R, a capo normalizzati, minuscole, h = h * 31 + byte). Qui lo stesso metodo,
--- per ritrovare le sue traduzioni (vedi Text.lua di QuestIT, hashVersion 6).
+-- per ritrovare le sue traduzioni (vedi Text.lua di QuestIT 0.9.8, hashVersion 6).
 local function QIPattern(s)
   local p = s:gsub("[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0")
   p = p:gsub("%a", function(c) return "[" .. c:lower() .. c:upper() .. "]" end)
   return "%f[%w]" .. p .. "%f[%W]"
 end
 
-local function QINamePlaceholders(text)
-  local a, b = UnitName("player")
-  local first, last
-  if type(a) == "string" and a ~= "" then
-    local space = a:find(" ", 1, true)
-    if space then
-      first, last = a:sub(1, space - 1), a:sub(space + 1)
-    else
-      first, last = a, (type(b) == "string" and b ~= "") and b or nil
-    end
+-- Come QIPattern, ma senza le frontiere di parola (il gioco incolla il nome ad altre lettere: "$Nama")
+local function QIAttachedPattern(s)
+  local p = s:gsub("[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0")
+  return (p:gsub("%a", function(c) return "[" .. c:lower() .. c:upper() .. "]" end))
+end
+
+-- Nome e cognome del giocatore: Forever li dà in un'unica stringa "<nome> <cognome>", divisa al primo spazio
+local function QISplitName()
+  local a = UnitName("player")
+  if type(a) ~= "string" or a == "" then return nil, nil end
+  local space = a:find(" ", 1, true)
+  if not space then return a, nil end
+  local first, last = a:sub(1, space - 1), a:sub(space + 1)
+  if first == "" then first = nil end
+  if last == "" then last = nil end
+  return first, last
+end
+
+-- Una parola seguita da 't, 'll, 're, 've, 'd o 'm non è il nome del giocatore ("don't" per uno che si chiama Don)
+local QI_CONTRACTIONS = { t = true, ll = true, re = true, ve = true, d = true, m = true }
+local function QIContraction(text, pos)
+  local after
+  if text:sub(pos, pos) == "'" then
+    after = pos + 1
+  elseif text:sub(pos, pos + 2) == "\226\128\153" then
+    after = pos + 3
+  else
+    return false
   end
+  local word = text:match("^%a+", after)
+  return word ~= nil and QI_CONTRACTIONS[word:lower()] == true
+end
+
+local function QIReplace(text, pattern, placeholder)
+  return (text:gsub("()(" .. pattern .. ")()", function(_, found, after)
+    if QIContraction(text, after) then return found end
+    return placeholder
+  end))
+end
+
+-- Nomi che sono parole inglesi comuni ("In", "The", "Don"): diventano $N solo dove sono usati come nome
+local QI_COMMON = {}
+for w in ("a an the in on of to at by for from with and or but nor so as is it be am are was were do does did go "
+    .. "no not yes my me we us our you your he him his she her they them their this that these those there here "
+    .. "what who how why when all any one some out up off over into onto upon if then than too very can will may "
+    .. "must shall should would could have has had get got let new old more most less many much each every own "
+    .. "same such only just also still even"):gmatch("%a+") do
+  QI_COMMON[w] = true
+end
+
+local function QINameIsWord()
+  local first, last = QISplitName()
+  return (first ~= nil and QI_COMMON[first:lower()] == true) or (last ~= nil and QI_COMMON[last:lower()] == true)
+end
+
+local function QINamePlaceholders(text)
+  local first, last = QISplitName()
   if first and last then text = text:gsub(QIPattern(first .. " " .. last), "$N $L") end
-  if first then text = text:gsub(QIPattern(first), "$N") end
-  if last then text = text:gsub(QIPattern(last), "$L") end
+  if first then text = QIReplace(text, QIPattern(first), "$N") end
+  if last then text = QIReplace(text, QIPattern(last), "$L") end
   return text
 end
 
-local function QIHash(text)
-  text = QINamePlaceholders(text)
+-- Il nome del giocatore solo subito prima di una punteggiatura (o a fine testo): per i nomi che sono parole comuni
+local function QIVocativeNames(text)
+  local first, last = QISplitName()
+  if first and last then text = text:gsub(QIPattern(first .. " " .. last) .. "(%s*[,%.!%?;:])", "$N $L%1") end
+  if first then
+    text = text:gsub(QIPattern(first) .. "(%s*[,%.!%?;:])", "$N%1"):gsub(QIPattern(first) .. "$", "$N")
+  end
+  if last then
+    text = text:gsub(QIPattern(last) .. "(%s*[,%.!%?;:])", "$L%1"):gsub(QIPattern(last) .. "$", "$L")
+  end
+  return text
+end
+
+-- Nome, cognome, classe e razza del giocatore anche dentro altre parole
+local function QIAttached(text)
+  local first, last = QISplitName()
+  if first and last then text = text:gsub(QIAttachedPattern(first .. " " .. last), "$N $L") end
+  if first then text = QIReplace(text, QIAttachedPattern(first), "$N") end
+  if last then text = QIReplace(text, QIAttachedPattern(last), "$L") end
+  local className, raceName = UnitClass("player"), UnitRace("player")
+  if type(className) == "string" and className ~= "" then text = text:gsub(QIAttachedPattern(className), "$C") end
+  if type(raceName) == "string" and raceName ~= "" then text = text:gsub(QIAttachedPattern(raceName), "$R") end
+  return text
+end
+
+-- Tutte le classi -> $C e tutte le razze -> $R (l'impronta non dipende dal personaggio)
+local function QIGeneric(text)
   local names = QuestTraduttoreQuestITNames
   for _, name in ipairs(names.classes) do text = text:gsub(QIPattern(name), "$C") end
   for _, name in ipairs(names.races) do text = text:gsub(QIPattern(name), "$R") end
+  return text
+end
+
+-- a capo normalizzati, niente spazi in fondo, minuscole, h = h * 31 + byte
+local function QIFinish(text)
   text = text:gsub("\r\n", "\n")
   text = text:gsub("[ \t\n\r\v\f]+$", "")
   text = text:gsub("[A-Z]", function(c) return string.char(c:byte() + 32) end)
@@ -471,13 +547,27 @@ local function QIHash(text)
   return string.format("%04x%04x", math.floor(h / 65536), h % 65536)
 end
 
--- Traduzione di un saluto presa da QuestIT, o nil (non rompe mai l'addon: ogni errore dà nil)
+local function QIHash(text)
+  return QIFinish(QIGeneric(QINamePlaceholders(text)))
+end
+
+-- Traduzione di un saluto presa da QuestIT, o nil (non rompe mai l'addon: ogni errore dà nil).
+-- Come QuestIT (Text.lua, lookup): prima l'impronta di sempre, poi quella con le forme attaccate, poi (nome del
+-- giocatore uguale a una parola inglese) quella con il nome solo dove è usato come nome.
 local function QuestITGreeting(text)
   if next(QuestTraduttoreQuestITGossip) == nil then return end
   if type(text) ~= "string" or text == "" or (issecretvalue and issecretvalue(text)) then return end
+  local store = QuestTraduttoreQuestITGossip
   local ok, key = pcall(QIHash, text)
   if not ok then return end
-  return QuestTraduttoreQuestITGossip[key]
+  if store[key] then return store[key] end
+  local ok2, attached = pcall(function() return QIFinish(QIAttached(QIGeneric(QINamePlaceholders(text)))) end)
+  if ok2 and attached ~= key and store[attached] then return store[attached] end
+  local ok3, isWord = pcall(QINameIsWord)
+  if ok3 and isWord then
+    local ok4, vocative = pcall(function() return QIFinish(QIGeneric(QIVocativeNames(text))) end)
+    if ok4 and store[vocative] then return store[vocative] end
+  end
 end
 
 local function CaptureGossip(text, npc)

@@ -1,4 +1,4 @@
-Traduzioni italiane di QuestIT (data/it/ e QuestIT/Data_it.lua)
+Traduzioni italiane di QuestIT (data/it/ e QuestIT/Data/)
 
 I testi originali sono di Blizzard Entertainment. Le traduzioni italiane sono
 lavoro degli autori di QuestIT: tutti i diritti riservati, salvo i permessi qui sotto.

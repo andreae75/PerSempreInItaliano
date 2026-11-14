@@ -47,7 +47,7 @@ Il nome della cartella deve essere `PerSempreInItaliano`, uguale a quello del fi
 
 ## Stato delle traduzioni
 
-Le traduzioni coprono oltre 4.100 quest (circa 600 nostre e circa 3.800 importate da QuestIT, dal livello 1 al 60 del gioco originale e una parte delle quest nuove di Forever) e oltre 3.600 saluti e frasi dei PNG (da QuestIT, più alcuni nostri). Nelle quest nostre i nomi (luoghi, PNG, oggetti) restano in inglese; in quelle importate da QuestIT alcuni nomi sono tradotti in italiano. L'elenco cresce man mano che si gioca. **Gran parte delle quest proviene da [QuestIT](https://www.curseforge.com/wow/addons/questit-forever) di Drakanast, mantenuto dalla comunità Discord di QuestIT e da #italyforazeroth, e resta soggetta alle loro condizioni** (citare la fonte, nessuno scopo di lucro, niente voci clonate): vedi [CREDITS.md](CREDITS.md) e [LICENSE-QuestIT-traduzioni.txt](LICENSE-QuestIT-traduzioni.txt). In gioco la fonte è indicata accanto a "tradotta".
+Le traduzioni coprono oltre 5.200 quest (circa 600 nostre e circa 4.700 importate da QuestIT, dal livello 1 al 60 del gioco originale e una parte delle quest nuove di Forever) e oltre 11.000 saluti e frasi dei PNG (da QuestIT, più alcuni nostri). I nomi (luoghi, PNG, oggetti) restano in inglese: nelle quest importate da QuestIT l'addon usa il dizionario dei nomi di QuestIT al livello "usato" (l'inglese del gioco) e rifà l'articolo davanti al nome, quindi qualche accordo grammaticale può risultare imperfetto. L'elenco cresce man mano che si gioca. **Gran parte delle quest proviene da [QuestIT](https://www.curseforge.com/wow/addons/questit-forever) di Drakanast, mantenuto dalla comunità Discord di QuestIT e da #italyforazeroth, e resta soggetta alle loro condizioni** (citare la fonte, nessuno scopo di lucro, niente voci clonate): vedi [CREDITS.md](CREDITS.md) e [LICENSE-QuestIT-traduzioni.txt](LICENSE-QuestIT-traduzioni.txt). In gioco la fonte è indicata accanto a "tradotta".
 
 WoW Forever aggiunge molte quest che non esistono nel gioco originale. Per queste non c'è un database pubblico con i testi: l'unica fonte è il gioco stesso, ed è per questo che l'addon salva i testi che incontra.
 
@@ -81,6 +81,7 @@ Traduzioni_QuestIT.lua    generato: quest importate da QuestIT, sotto le sue con
 Data_Esempi.lua           traduzioni di esempio
 Media/Bandiera.tga        icona
 tools/qt.py               estrazione, importazione e generazione
+tools/qit_nomi.py          nomi in inglese nelle quest di QuestIT (dizionario dei nomi, articolo rifatto)
 tools/aggiorna.ps1        aggiornamento automatico
 tools/traduzioni.json       nostre traduzioni delle quest (sorgente di Traduzioni.lua)
 tools/traduzioni_questit.json  quest importate da QuestIT (sorgente di Traduzioni_QuestIT.lua)

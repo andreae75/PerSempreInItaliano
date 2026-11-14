@@ -22,7 +22,7 @@ QuestIT, e la scheda *Informazioni* delle opzioni cita QuestIT, la sua comunità
 
 Le traduzioni di QuestIT **NON sono rilasciate con licenza MIT**, anche se il resto di questo repository lo è.
 Restano soggette alle condizioni degli autori, riportate nel file
-[LICENSE-QuestIT-traduzioni.txt](LICENSE-QuestIT-traduzioni.txt) (copia della versione 0.9.0 di QuestIT),
+[LICENSE-QuestIT-traduzioni.txt](LICENSE-QuestIT-traduzioni.txt) (copia della versione 0.9.8 di QuestIT),
 valide per tutte le versioni e anche per un uso parziale. In sintesi:
 
 - chi le usa, anche solo in parte, deve citare in modo chiaro **QuestIT, la comunità Discord che le mantiene e

@@ -39,12 +39,13 @@ def _trova_wow():
     candidati = [
         os.environ.get("WOW_DIR", ""),
         os.path.normpath(os.path.join(ADDON, "..", "..", "..")),
+        r"C:\Program Files (x86)\World of Warcraft\_forever_",
         r"C:\Program Files (x86)\World of Warcraft\_classic_beta_",
     ]
     for c in candidati:
         if c and os.path.isdir(os.path.join(c, "WTF")):
             return c
-    return candidati[-1]
+    return candidati[-2]
 
 
 WOW = _trova_wow()
@@ -457,24 +458,36 @@ def riempi_inglese():
     print(f"{n} testi inglesi aggiunti a {DONE} e {DONE_Q}")
 
 
-def verifica():
-    """Controlla se le nostre traduzioni corrispondono al testo inglese di Forever, confrontando l'inglese
-    che abbiamo salvato (en_title, en_obj) con le impronte registrate da QuestIT. Scrive da_rivedere.json."""
-    import impronta
+def _cartella_questit():
+    r"""Cartella dei dati di QuestIT (0.9.8 o piu' recente: AddOns\QuestIT\Data, con Quest.lua)."""
     qi_dir = os.path.join(WOW, "Interface", "AddOns", "QuestIT")
-    data_f, names_f = os.path.join(qi_dir, "Data_it.lua"), os.path.join(qi_dir, "Names_en.lua")
-    if not (os.path.isfile(data_f) and os.path.isfile(names_f)):
-        sys.exit(f"QuestIT non trovato in {qi_dir}: serve solo come riferimento per il controllo.")
-    classi, razze = impronta.carica_nomi(names_f)
-    src = open(data_f, encoding="utf-8").read()
-    src = src[:src.index("QuestIT.GossipIT")]
-    campo = re.compile(r'^        (\w+) = \{ it = "(?:[^"\\]|\\.)*", enHash = (?:"([0-9a-f]+)"|\{([^}]*)\})', re.M)
+    data = os.path.join(qi_dir, "Data")
+    if not os.path.isfile(os.path.join(data, "Quest.lua")):
+        sys.exit(f"QuestIT (0.9.8 o piu' recente) non trovato in {qi_dir}: serve la cartella Data con Quest.lua.")
+    return data
+
+
+def _quest_questit(data):
+    r"""Le quest di Data\Quest.lua: { id: { campo: (testo con i segnaposto dei nomi, [impronte inglesi]) } }."""
+    src = open(os.path.join(data, "Quest.lua"), encoding="utf-8").read()
+    campo = re.compile(r'^        ([\w#]+) = \{ it = "((?:[^"\\]|\\.)*)", enHash = (?:"([0-9a-f]+)"|\{([^}]*)\})', re.M)
     qi = {}
     for m in re.finditer(r"^    \[(\d+)\] = \{\n(.*?)^    \},", src, re.M | re.S):
         d = {}
         for f in campo.finditer(m.group(2)):
-            d[f.group(1)] = [f.group(2)] if f.group(2) else re.findall(r'"([0-9a-f]+)"', f.group(3))
+            hs = [f.group(3)] if f.group(3) else re.findall(r'"([0-9a-f]+)"', f.group(4))
+            d[f.group(1)] = (f.group(2), hs)
         qi[int(m.group(1))] = d
+    return qi
+
+
+def verifica():
+    """Controlla se le nostre traduzioni corrispondono al testo inglese di Forever, confrontando l'inglese
+    che abbiamo salvato (en_title, en_obj) con le impronte registrate da QuestIT. Scrive da_rivedere.json."""
+    import impronta
+    data = _cartella_questit()
+    classi, razze = impronta.carica_nomi(os.path.join(data, "ClassiRazze.lua"))
+    qi = {q: {k: v[1] for k, v in d.items()} for q, d in _quest_questit(data).items()}
     ours = load_json(DONE)
     ok = diversi = senza = 0
     rivedere = {}
@@ -499,37 +512,34 @@ def verifica():
 
 
 def importa_questit():
-    """Riversa le quest di QuestIT (cartella AddOns\\QuestIT, Data_it.lua) in traduzioni_questit.json.
+    r"""Riversa le quest e i saluti di QuestIT (cartella AddOns\QuestIT\Data, 0.9.8 o piu' recente) nei nostri json.
 
-    Il file si RIGENERA da quello di QuestIT, quindi segue le sue correzioni. Le nostre traduzioni non si
+    I file si RIGENERANO da quelli di QuestIT, quindi seguono le sue correzioni. Le nostre traduzioni non si
     toccano mai: le quest che le nostre coprono gia' del tutto non vengono importate. L'inglese di
-    riferimento (en_title, en_obj) gia' presente nel nostro file si conserva."""
-    qi_file = os.path.join(WOW, "Interface", "AddOns", "QuestIT", "Data_it.lua")
-    if not os.path.isfile(qi_file):
-        sys.exit(f"QuestIT non trovato: {qi_file}")
-    tutto = open(qi_file, encoding="utf-8").read()
-    raw = tutto[:tutto.index("QuestIT.GossipIT")]
+    riferimento (en_title, en_obj) gia' presente nel nostro file si conserva.
+    I nomi propri tornano in inglese (qit_nomi.py: il livello 1 "usato" di QuestIT, con l'articolo rifatto)."""
+    import qit_nomi
+    data = _cartella_questit()
+    nomi = qit_nomi.carica_nomi(os.path.join(data, "Nomi.lua"))
+    mancanti = set()
     mappa = {"title": "title", "text": "desc", "objectives": "obj", "progress": "progress", "reward": "reward"}
 
-    def unesc(x):
-        return re.sub(r"\\(.)", lambda m: {"n": "\n", "r": "", "t": "\t"}.get(m.group(1), m.group(1)), x)
-
     def norm(t):
+        t = qit_nomi.rendi(qit_nomi.unesc(t), nomi, mancanti)
         t = t.replace("\r", "")
         t = re.sub(r"[ \t\n]+$", "", t)
         t = t.replace("\n", "$B")
         return re.sub(r"\$P(?=[^:;$]*:[^;]*;)", "$G", t)   # refuso di QuestIT: $Psicuro:sicura;
 
-    campo = re.compile(r'^        (\w+) = \{ it = "((?:[^"\\]|\\.)*)"', re.M)
     qi = {}
-    for m in re.finditer(r"^    \[(\d+)\] = \{\n(.*?)^    \},", raw, re.M | re.S):
+    for qid, d in _quest_questit(data).items():
         e = {}
-        for f in campo.finditer(m.group(2)):
-            if f.group(1) in mappa:
-                testo = norm(unesc(f.group(2)))
-                if testo:
-                    e[mappa[f.group(1)]] = testo
-        qi[int(m.group(1))] = e
+        for k, (testo, _) in d.items():
+            if k in mappa:
+                t = norm(testo)
+                if t:
+                    e[mappa[k]] = t
+        qi[qid] = e
 
     ours, old = load_json(DONE), load_json(DONE_Q)
     new, coperte = {}, 0
@@ -547,29 +557,32 @@ def importa_questit():
     nuove = [q for q in new if q not in old]
     sparite = [q for q in old if q not in new and q not in qi]
     cambiate = sum(1 for q in new if q in old and any(new[q].get(k) != old[q].get(k) for k in FIELDS))
-    shutil.copyfile(DONE_Q, DONE_Q + ".prima")
+    if os.path.isfile(DONE_Q):
+        shutil.copyfile(DONE_Q, DONE_Q + ".prima")
     save_json(DONE_Q, new)
     print(f"QuestIT: {len(qi)} quest | importate {len(new)} (nuove {len(nuove)}, con testi cambiati {cambiate}) | "
           f"coperte dalle nostre e saltate {coperte} | sparite da QuestIT {len(sparite)}")
     print(f"Copia del file precedente: {DONE_Q}.prima")
 
-    # saluti dei PNG (QuestIT.GossipIT): chiave = impronta del testo inglese, calcolata dall'addon in gioco
-    blocchi = [tutto[tutto.index("QuestIT.GossipIT"):tutto.index("QuestIT.OptionsIT")]]
-    if "QuestIT.ChatIT" in tutto:     # frasi dei PNG in chat (da Rev3): stessa impronta dei saluti
-        fine = tutto.index("QuestIT.FemaleEN") if "QuestIT.FemaleEN" in tutto else len(tutto)
-        blocchi.append(tutto[tutto.index("QuestIT.ChatIT"):fine])
+    # saluti dei PNG (Data\Saluti.lua) e frasi in chat (Data\Frasi.lua): chiave = impronta del testo inglese,
+    # calcolata dall'addon in gioco; stessa impronta, quindi un unico elenco
     saluti = {}
-    for blocco in blocchi:
-        for k, t in re.findall(r'^    \["([0-9a-f]+)"\] = \{ it = "((?:[^"\\]|\\.)*)"', blocco, re.M):
-            testo = norm(unesc(t))
+    for nome in ("Saluti.lua", "Frasi.lua"):
+        f = os.path.join(data, nome)
+        if not os.path.isfile(f):
+            continue
+        for k, t in re.findall(r'^    \["([0-9a-f]+)"\] = \{ it = "((?:[^"\\]|\\.)*)"', open(f, encoding="utf-8").read(), re.M):
+            testo = norm(t)
             if testo:
-                saluti[k] = testo
+                saluti.setdefault(k, testo)
     save_json(SALUTI_Q, saluti)
     import impronta
-    classi, razze = impronta.carica_nomi(os.path.join(os.path.dirname(qi_file), "Names_en.lua"))
+    classi, razze = impronta.carica_nomi(os.path.join(data, "ClassiRazze.lua"))
     with open(NOMI_Q, "w", encoding="utf-8", newline="\n") as f:
         json.dump({"classi": classi, "razze": razze}, f, ensure_ascii=False, indent=1)
-    print(f"Saluti dei PNG: {len(saluti)} (classi {len(classi)}, razze {len(razze)})")
+    print(f"Saluti e frasi dei PNG: {len(saluti)} (classi {len(classi)}, razze {len(razze)})")
+    if mancanti:
+        print(f"ATTENZIONE: {len(mancanti)} segnaposto di nomi senza voce nel dizionario: {sorted(mancanti)[:10]}")
 
 
 def pulisci():
